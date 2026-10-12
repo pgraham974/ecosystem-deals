@@ -23,8 +23,7 @@ tbody tr{cursor:pointer}tbody tr:hover td{background:#f1f5ff}.scroll{max-height:
 @media(max-width:1100px){.g2{grid-template-columns:1fr}.steps{flex-direction:column}}
 </style></head><body>
 <header><div><h1>Ecosystem Deals</h1><div id="status">connecting...</div></div></header>
-<div id="login" class="card" style="max-width:360px;margin:60px auto"><h2>Sign in</h2><input id="lem" placeholder="email" style="width:100%;margin:4px 0;padding:7px;border:1px solid var(--line);border-radius:4px"><input id="lpw" type="password" placeholder="password" style="width:100%;margin:4px 0;padding:7px;border:1px solid var(--line);border-radius:4px"><button id="lbtn" class="btn" style="margin-top:6px">Sign in</button> <span id="lerr" style="color:var(--bad)"></span></div>
-<div id="app" class="hidden">
+<div id="app">
 <div class="legend"><b>How to read this.</b> <u>Click a name to drill down. Click any number to see exactly where it comes from.</u> Step 1 ranks sub-areas (postcode districts) by how much target stock and how many pressured landlords they contain. Step 2 lists the landlords in the sub-area you picked, most pressured first. Step 3 shows that landlord's properties, with EPC rating and the works bill the 2030 rule will force on them. Pressure = Companies House signals: specialist or bridging lender, new charge in the last 18 months, overdue filings, insolvency. Costs are EPC indicative midpoints.</div>
 <div class="steps"><div class="step on" data-s="1"><b>1. Where</b><small>best sub-areas</small></div><div class="step" data-s="2"><b>2. Who</b><small id="s2sub">distressed landlords in the sub-area</small></div><div class="step" data-s="3"><b>3. What</b><small id="s3sub">their properties</small></div></div>
 <main>
@@ -42,7 +41,7 @@ tbody tr{cursor:pointer}tbody tr:hover td{background:#f1f5ff}.scroll{max-height:
 <script>
 const SUPA_URL='https://kkdfprhrgxbkydqeifgz.supabase.co', SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtrZGZwcmhyZ3hia3lkcWVpZmd6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3OTgzMDEsImV4cCI6MjEwNzM3NDMwMX0.dd32w-wmLe1vlwzPwZsTpoGra3cFghE2bb5LGorJjJM';
 const LS={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},rm:k=>{try{localStorage.removeItem(k)}catch(e){}}};
-const $=s=>document.querySelector(s);let TOKEN=LS.get('sb_token')||'';const AUTHH=()=>({apikey:SUPA_KEY,Authorization:'Bearer '+(TOKEN||SUPA_KEY)});
+const $=s=>document.querySelector(s);let TOKEN='';const AUTHH=()=>({apikey:SUPA_KEY,Authorization:'Bearer '+(TOKEN||SUPA_KEY)});
 const fmt=n=>n==null?'-':Math.round(n).toLocaleString('en-GB');const f1=n=>n==null?'-':(+n).toFixed(1);const f2=n=>n==null?'-':(+n).toFixed(2);
 async function qall(path,size=1000){let out=[],from=0;while(true){const r=await fetch(SUPA_URL+'/rest/v1/'+path,{headers:{...AUTHH(),Range:from+'-'+(from+size-1)}});if(r.status===401){LS.rm('sb_token');location.reload()}if(!r.ok)throw new Error(path+' '+r.status);const j=await r.json();out=out.concat(j);if(j.length<size)break;from+=size}return out}
 
@@ -125,6 +124,6 @@ async function init(){try{const [c,s,o]=await Promise.all([qall('councils?select
 async function login(){$('#lerr').textContent='';const r=await fetch(SUPA_URL+'/auth/v1/token?grant_type=password',{method:'POST',headers:{apikey:SUPA_KEY,'Content-Type':'application/json'},body:JSON.stringify({email:$('#lem').value,password:$('#lpw').value})});const j=await r.json();if(!j.access_token){$('#lerr').textContent=j.error_description||j.msg||'sign-in failed';return}TOKEN=j.access_token;LS.set('sb_token',TOKEN);LS.set('sb_refresh',j.refresh_token||'');start()}
 async function refreshToken(){const rt=LS.get('sb_refresh');if(!rt)return false;const r=await fetch(SUPA_URL+'/auth/v1/token?grant_type=refresh_token',{method:'POST',headers:{apikey:SUPA_KEY,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:rt})});const j=await r.json();if(j.access_token){TOKEN=j.access_token;LS.set('sb_token',TOKEN);LS.set('sb_refresh',j.refresh_token||rt);return true}return false}
 async function start(){$('#login').classList.add('hidden');$('#app').classList.remove('hidden');await init()}
-$('#lbtn').onclick=login;$('#lpw').addEventListener('keydown',e=>{if(e.key==='Enter')login()});
-(async()=>{if(TOKEN){if(await refreshToken())return start()}$('#status').textContent='sign in to load data'})();
+
+init();
 </script></body></html>
