@@ -1,0 +1,65 @@
+[
+  {
+    "city": "Bristol",
+    "title": "Emergency Accommodation Framework (DN677298)",
+    "buyer": "Bristol City Council / South Gloucestershire Council",
+    "status": "ongoing route",
+    "description": "Open framework / DPS for emergency accommodation, including spot purchases and block contracts. New suppliers can apply during its life.",
+    "deadline": "Current DPS round ends 3 Dec 2027, 20:00. Initial 2023 deadline is not the current admission deadline.",
+    "eligibility": "Accommodation for families, singles and couples; landlord/provider manages housing, repairs, safety certification and safeguarding. Council inspection before use.",
+    "value_term": "£96m framework-wide, not guaranteed income. Council advert/register: 4 Dec 2023 to 3 Dec 2027, optional extensions subject to buyer confirmation.",
+    "next_step": "Open the live council advert, check application documents and supplier requirements, then apply through ProContract.",
+    "url": "https://procontract.due-north.com/Advert?advertId=e5643a26-ce53-ee11-8124-005056b64545",
+    "notice_url": "https://www.contractsfinder.service.gov.uk/Notice/d0a0df17-9153-4300-b5a9-f427115ceff0"
+  },
+  {
+    "city": "Bristol",
+    "title": "Private Renting Team property leasing",
+    "buyer": "Bristol City Council",
+    "status": "ongoing route",
+    "description": "Direct landlord supply/leasing route, not a competitive tender. Council considers different property types and may consider locations outside Bristol.",
+    "deadline": "No fixed deadline published; confirm availability with the Private Renting Team.",
+    "eligibility": "Rental safety regulations, certificates and condition checked on a council visit. Landlord manages the property or appoints an agent.",
+    "value_term": "Leasing contracts: 2 years. Pricing and detailed risk allocation to be agreed. Tenant-finding incentives are not automatically leasing terms.",
+    "next_step": "Contact private.renting@bristol.gov.uk through the official enquiry route; ask for current leasing terms and property demand.",
+    "url": "https://www.bristol.gov.uk/business/housing-for-business-and-professionals/private-landlords/get-help-with-renting-out-your-property"
+  },
+  {
+    "city": "Bristol",
+    "title": "Supported Temporary Accommodation Framework (DN792893)",
+    "buyer": "Bristol City Council",
+    "status": "closed / awarded",
+    "description": "Watchlist, not a current invitation. Initial procurement has closed and an award notice was published. Next tender notice estimated 1 Jan 2027, not confirmed open admission.",
+    "deadline": "Initial deadline passed: 30 Apr 2026, 17:00.",
+    "eligibility": "Partner Registered Providers; family self-contained units or supported family/single accommodation. Lot-specific unit sizes, staffing and shared-entrance limits apply.",
+    "value_term": "£26,730,931 excluding VAT across lots. 1 Jul 2026 to 30 Jun 2031, possible extensions to 2034.",
+    "next_step": "Monitor the official procurement for reopening; do not submit as a presently open tender.",
+    "url": "https://www.find-tender.service.gov.uk/Notice/030770-2026",
+    "notice_url": "https://www.find-tender.service.gov.uk/Notice/055857-2026"
+  },
+  {
+    "city": "Edinburgh",
+    "title": "Private Sector Leasing scheme",
+    "buyer": "City of Edinburgh Council / Link C~urb",
+    "status": "ongoing route",
+    "description": "Council-linked property leasing route for households needing housing. Operator is recruiting landlords; this is not a competitive tender.",
+    "deadline": "No fixed deadline published. Confirm current acceptance and property valuation with C~urb.",
+    "eligibility": "Private landlords; landlord registration, repairing standards, gas/fire safety and HMO licence where applicable. Operator acceptance and inspection required.",
+    "value_term": "Operator offers 3 or 5 years, quarterly rent in advance, no management fee; guaranteed rent under scheme terms. No property-specific rate published.",
+    "next_step": "Ask psllandlord@curb.scot or 0330 303 0087 for valuation, demand and full lease obligations.",
+    "url": "https://www.curb.scot/PSL",
+    "notice_url": "https://www.edinburgh.gov.uk/private-housing/private-landlords"
+  },
+  {
+    "city": "Manchester",
+    "title": "Long-term temporary-accommodation leasing",
+    "buyer": "Manchester City Council",
+    "status": "intake unverified",
+    "description": "Operating supply route last reported in the council update dated 7 Jan 2026. Current admission is not verified, so this is a buyer-enquiry lead, not a live bid.",
+    "deadline": "No application deadline evidenced; current intake must be confirmed.",
+    "eligibility": "Privately sourced properties inside Manchester city boundaries. Bedroom, EPC and supplier criteria not specified in the cited report.",
+    "value_term": "Individual leases: 10 years + 1 day. Rent / supplier contract value unpublished. 350 properties then on scheme; figures are last reported, not current.",
+    "next_step": "Ask council report contacts nicola.rea@manchester.gov.uk or Rob.McCartney@manchester.gov.uk whether intake is open and request specification.",
+    "url": "https://democracy.manchester.gov.uk/documents/s59852/Homelessness+and+Housing+Access+Update+Report.pdf"
+  }
+]
