@@ -44,7 +44,7 @@ tbody tr{cursor:pointer}tbody tr:hover td{background:#f1f5ff}.scroll{max-height:
 .prb{display:inline-block;color:#fff;font-size:10.5px;font-weight:600;border-radius:9px;padding:1px 7px;margin:1px 3px 1px 0;white-space:nowrap}.prdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}.segb{border:0;background:#fff;padding:5px 12px;cursor:pointer;font:inherit;font-size:13px}.segb.on{background:#0f1a2e;color:#fff}.segb small{opacity:.7}
 .prk{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 10px}.prkb{border:1px solid var(--line);background:#fff;border-radius:16px;padding:3px 10px;cursor:pointer;font:inherit;font-size:12px}.prkb.on{border-color:#0f1a2e;box-shadow:inset 0 0 0 1px #0f1a2e}.prkb i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
-#prt tbody tr{cursor:pointer}#prt tbody tr:hover{background:#f4f7ff}#prt tr.prlead td:first-child{box-shadow:inset 3px 0 0 #1a9c5b}
+#operators_view main,#op_body,#op_body>*,#op_pres{min-width:0;max-width:100%}#op_body{overflow:hidden}#op_pres .card{overflow:hidden}#prt{min-width:980px}#prt tbody tr{cursor:pointer}#prt tbody tr:hover{background:#f4f7ff}#prt tr.prlead td:first-child{box-shadow:inset 3px 0 0 #1a9c5b}
 .fitb{display:inline-block;width:46px;height:7px;background:#eef1f5;border-radius:4px;vertical-align:middle}.fitb span{display:block;height:7px;border-radius:4px;background:#4f86f7}
 .opchip{display:inline-flex;align-items:center;gap:5px;border:1.5px solid;border-radius:12px;padding:1px 8px;font-size:12px;white-space:nowrap}.opchip i{width:8px;height:8px;border-radius:50%;display:inline-block}
 .rule td,.rule th{text-align:left;white-space:normal}.rule td:first-child{white-space:nowrap;font-weight:700}
@@ -752,7 +752,8 @@ const prCell=evs=>{if(!evs||!evs.length)return '';const seen=new Set();return ev
 const prIsLead=p=>p.kind==='Lettings / leasing firm'&&!['Housing association','Charity / support'].includes(p.kind)&&Object.values(p.cities).some(v=>v.some(e=>/contract|framework$/.test(e.e)));
 async function presRender(){const el=$('#op_pres');if(!el)return;await presLoad();
  const all=PRES.providers;const inCity=p=>!PRF.city||p.cities[PRF.city];
- const rows=all.filter(p=>inCity(p)&&(!PRF.kind||p.kind===PRF.kind)&&(!PRF.leads||prIsLead(p)));
+ const evS=e=>/^contract|block/.test(e.e)?3:/framework$|council report/.test(e.e)?2:e.e==='owns homes'?1:0;const str=p=>Math.max(0,...Object.entries(p.cities).filter(([c])=>!PRF.city||c===PRF.city).flatMap(([c,v])=>v.map(evS)));
+ const rows=all.filter(p=>inCity(p)&&(!PRF.kind||p.kind===PRF.kind)&&(!PRF.leads||prIsLead(p))).sort((a,b)=>str(b)-str(a)||prIsLead(b)-prIsLead(a)||(b.kind==='Lettings / leasing firm')-(a.kind==='Lettings / leasing firm')||b.score-a.score||a.name.localeCompare(b.name));
  const cityAll=all.filter(inCity);const kinds=Object.keys(PR_KIND_COL).filter(k=>cityAll.some(p=>p.kind===k));
  const leadsN=cityAll.filter(prIsLead).length,called=cityAll.filter(p=>Object.entries(p.cities).some(([c,v])=>(!PRF.city||c===PRF.city)&&v.some(e=>e.e==='block contract'||e.e.startsWith('contract')))).length;
  const cnt={};for(const [c] of PR_CITIES)cnt[c]=all.filter(p=>p.cities[c]).length;
