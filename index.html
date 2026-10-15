@@ -854,18 +854,18 @@ function dlSavedWire(el){const all=()=>JSON.parse(localStorage.getItem('ed_deals
 function dealStart(){renderDeal()}
 // deal score per sector (map colour): LHA rent cover 40, cheapness 20, motivated sellers 15, evidenced manager 25 (percentile ranks within the city)
 const DS={};
-async function dsCompute(city){if(DS[city])return DS[city];const d=await mLoadCity(city);const M=await opCompute(city);const prev=MP.city;MP.city=city;
- const secs=Object.keys(d.sectors);const raw=secs.map(s=>{const st=secStats(s);return {s,ly:st.ly,pp:st.ppsqm,dist:st.dist||0,mgr:(M[s]&&M[s].rec)?M[s].rec.score:0}});MP.city=prev;
+async function dsCompute(city){if(DS[city])return DS[city];const d=await mLoadCity(city);const M=await opCompute(city);const haveDist=!!(MP.dist&&MP.dist.city===city);const prev=MP.city;MP.city=city;
+ const secs=Object.keys(d.sectors);const raw=secs.map(s=>{const st=secStats(s);return {s,ly:st.ly,pp:st.ppsqm,dist:haveDist?(st.dist||0):0,mgr:(M[s]&&M[s].rec)?M[s].rec.score:0}});MP.city=prev;
  const rank=(k,inv)=>{const v=raw.map(r=>r[k]).filter(x=>x!=null).sort((a,b)=>a-b);return x=>x==null||!v.length?null:(inv?1-v.filter(y=>y<=x).length/v.length:v.filter(y=>y<=x).length/v.length)};
  const rL=rank('ly'),rP=rank('pp',true),rD=rank('dist'),mx=Math.max(1,...raw.map(r=>r.mgr));const out={};
  for(const r of raw){if(r.ly==null&&r.pp==null){out[r.s]=null;continue}const p={rent:Math.round((rL(r.ly)||0)*40),price:Math.round((rP(r.pp)||0)*20),sellers:r.dist?Math.round((rD(r.dist)||0)*15):0,manager:Math.round(r.mgr/mx*25)};out[r.s]={score:p.rent+p.price+p.sellers+p.manager,p,mgr:M[r.s]&&M[r.s].rec?M[r.s].rec.o.short:null}}
- DS[city]=out;return out}
+ if(haveDist)DS[city]=out;else if(MP.city===city&&!DS['_w'+city]){DS['_w'+city]=1;mDistress().then(()=>{DS['_w'+city]=0;if(MP.city===city&&MP.metric==='deal')mRecolorDeal()}).catch(()=>{DS['_w'+city]=0})}return out}
 const DS_RAMP=['#fdecea','#fbd3a6','#f6e58d','#a8dc8f','#2e9e5b'];
 async function mRecolorDeal(){const c=MP.city;const S=await dsCompute(c);if(MP.city!==c||MP.metric!=='deal')return;
  for(const s of Object.keys(MP.bySec)){const v=S[s];const col=v?DS_RAMP[Math.min(4,Math.floor(v.score/20))]:'#d9dde3';for(const cell of MP.bySec[s])cell.setStyle({fillColor:col,color:col,fillOpacity:s===MP.sel?0.8:0.55,opacity:0.55})}
  $('#map_legend').innerHTML='<b>Deal score</b> (council rent cover 40 + cheapness 20 + motivated sellers 15 + evidenced manager 25) '+DS_RAMP.map((c,i)=>'<span class="sw" style="background:'+c+'"></span>'+(i*20)+'-'+(i*20+20)).join(' ')+' <span class="sw" style="background:#d9dde3"></span>no data'}
 async function dealMapBlock(el,sec){const S=await dsCompute(MP.city);const v=S[sec];
- el.insertAdjacentHTML('afterbegin','<div class="dlmb">'+(v?'<div><small>Deal score</small><b>'+v.score+'</b><span class="foot">/100</span></div><div class="foot" style="flex:1">rent cover '+v.p.rent+'/40 · cheapness '+v.p.price+'/20 · motivated sellers '+v.p.sellers+'/15 · manager '+v.p.manager+'/25'+(v.mgr?' ('+esc(v.mgr)+')':'')+'</div>':'<div class="foot" style="flex:1">No deal score (too little data).</div>')+'<button class="btn" id="dl_here">Underwrite a deal here &rarr;</button></div>');
+ el.insertAdjacentHTML('afterbegin','<div class="dlmb">'+(v?'<div><small>Deal score</small><b>'+v.score+'</b><span class="foot">/100</span></div><div class="foot" style="flex:1">rent cover '+v.p.rent+'/40 · cheapness '+v.p.price+'/20 · motivated sellers '+v.p.sellers+'/15'+(DS[MP.city]?'':' (loading)')+' · manager '+v.p.manager+'/25'+(v.mgr?' ('+esc(v.mgr)+')':'')+'</div>':'<div class="foot" style="flex:1">No deal score (too little data).</div>')+'<button class="btn" id="dl_here">Underwrite a deal here &rarr;</button></div>');
  $('#dl_here').onclick=()=>{DL={...DL_DEF,city:MP.city,pc:sec};navGo('deal')}}
 // ----- navigation: 4 groups, sub-tabs keep every existing view -----
 const NAVG={find:['Find',[['map','Map'],['assets','Funnel'],['accom','Demand (TA / DA)']]],deal:['Deal',[['deal','Deal sheet']]],partners:['Partners',[['operators','Operators'],['frameworks','Frameworks']]],pipe:['Pipeline',[['pipeline','Landlord pipeline'],['shortlist','Shortlist']]]};
