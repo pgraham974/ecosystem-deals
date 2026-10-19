@@ -1,1 +1,229 @@
-{"generated":"2026-10-14","sources":[{"name":"Land Registry company ownership (CCOD)","gives":"Every company-owned title and owner","period":"Oct 2026 file (to end Sep 2026)","refreshed":"2026-10-14","cadence_days":31,"routine":"Monthly run (3rd)","url":"https://use-land-property-data.service.gov.uk/datasets/ccod"},{"name":"Land Registry Price Paid","gives":"Every sale: price, date, flat","period":"Oct 2025 - Aug 2026","refreshed":"2026-10-13","cadence_days":31,"routine":"Monthly run (3rd)","url":"https://landregistry.data.gov.uk/app/ppd"},{"name":"Energy certificates, England","gives":"Homes per building, rating, tenure, size, works","period":"Full file of 1 Oct 2026","refreshed":"2026-10-13","cadence_days":31,"routine":"Monthly run (3rd)","url":"https://get-energy-performance-data.communities.gov.uk/"},{"name":"Energy certificates, Scotland","gives":"Same for Edinburgh","period":"To Q2 2026 (next 30 Nov 2026)","refreshed":"2026-10-13","cadence_days":92,"routine":"Monthly run checks","url":"https://www.data.gov.scot/"},{"name":"Companies House","gives":"Charges, lenders, insolvency filings, overdue accounts","period":"Live (checked 13 Oct 2026)","refreshed":"2026-10-13","cadence_days":7,"routine":"Weekly run (Mon 7am)","url":"https://find-and-update.company-information.service.gov.uk/"},{"name":"Auction catalogues","gives":"Lots sold by receivers, lenders, administrators","period":"Catalogues seen 13 Oct 2026","refreshed":"2026-10-13","cadence_days":7,"routine":"Weekly run (Mon 7am)","url":"https://www.allsop.co.uk/"},{"name":"Gazette insolvency notices","gives":"New winding-up petitions and administrations","period":"Not yet run","refreshed":null,"cadence_days":7,"routine":"Weekly run (Mon 7am)","url":"https://www.thegazette.co.uk/insolvency"},{"name":"ONS private rents","gives":"2-bed market rent per council","period":"Released 16 Sep 2026","refreshed":"2026-10-14","cadence_days":31,"routine":"Weekly run (mid-month)","url":"https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics"},{"name":"LHA rates (VOA)","gives":"Council rent cap by size","period":"2026/27","refreshed":"2026-09-30","cadence_days":365,"routine":"Monthly run (April)","url":"https://lha-direct.voa.gov.uk/"},{"name":"Temporary accommodation (MHCLG / Scottish Gov)","gives":"Households in TA by type","period":"31 Mar 2026","refreshed":"2026-10-14","cadence_days":92,"routine":"Monthly run","url":"https://www.gov.uk/government/statistical-data-sets/live-tables-on-homelessness"},{"name":"Asylum support (Home Office)","gives":"People in dispersal and hotels","period":"30 Jun 2026","refreshed":"2026-10-14","cadence_days":92,"routine":"Monthly run","url":"https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables"},{"name":"Council spend over £500","gives":"TA and supported-housing payments by supplier","period":"Latest 12 months published","refreshed":"2026-10-14","cadence_days":92,"routine":"Monthly run","url":""},{"name":"HMO registers","gives":"Licensed HMOs (Edinburgh bulk only)","period":"Edinburgh register Oct 2026","refreshed":"2026-10-14","cadence_days":92,"routine":"Manual","url":""},{"name":"Scottish Landlord Register","gives":"Owner per flat, Edinburgh","period":"70 blocks checked","refreshed":"2026-10-13","cadence_days":null,"routine":"Manual, light use","url":"https://landlordregistrationscotland.gov.uk/"},{"name":"Land Registry overseas companies (OCOD)","gives":"Titles owned by non-UK companies","period":"Oct 2026 file","refreshed":"2026-10-14","cadence_days":31,"routine":"Monthly run (3rd)","url":"https://use-land-property-data.service.gov.uk/datasets/ocod"},{"name":"OS Open UPRN","gives":"Exact location of each home (sales pinned to the property)","period":"Sep 2026 release","refreshed":"2026-10-14","cadence_days":92,"routine":"Quarterly","url":"https://www.ordnancesurvey.co.uk/products/os-open-uprn"},{"name":"Planning constraints (planning.data.gov.uk)","gives":"HMO Article 4 areas, conservation areas, listed buildings, flood zones 2/3","period":"Pulled 14 Oct 2026","refreshed":"2026-10-14","cadence_days":92,"routine":"Quarterly","url":"https://www.planning.data.gov.uk/"},{"name":"Land Registry INSPIRE polygons","gives":"Freehold title boundaries (not yet linked to owners)","period":"Oct 2026","refreshed":"2026-10-14","cadence_days":31,"routine":"Monthly run (3rd)","url":"https://use-land-property-data.service.gov.uk/datasets/inspire"},{"name":"Land Registry Registered Leases","gives":"Lease term, date, UPRN (no rent)","period":"Licence not yet applied for","refreshed":null,"cadence_days":31,"routine":"Blocked: licence needed","url":"https://use-land-property-data.service.gov.uk/datasets/leases"}],"build":[{"name":"Buildings with 5+ homes","n":14451,"note":"England 6,141 (Manchester, Cheltenham, Bristol) + Edinburgh 8,310","refreshed":"2026-10-14"},{"name":"Company titles in target cities","n":101130,"note":"From the CCOD full file","refreshed":"2026-10-14"},{"name":"Homes with a certificate (England, 3 cities)","n":417000,"note":"Latest certificate per home","refreshed":"2026-10-13"},{"name":"Auction lots scanned","n":80,"note":"All sellers; forced sellers counted separately","refreshed":"2026-10-13"},{"name":"Sales pinned to exact home","n":10272,"note":"of 11,288 sales in 12 months (OS Open UPRN)","refreshed":"2026-10-14"},{"name":"Overseas-owned titles","n":2404,"note":"Manchester 1,606, Bristol 659, Cheltenham 139","refreshed":"2026-10-14"}]}
+{
+  "generated": "2026-10-19",
+  "sources": [
+    {
+      "name": "Land Registry company ownership (CCOD)",
+      "gives": "Every company-owned title and owner",
+      "period": "Oct 2026 file (to end Sep 2026)",
+      "refreshed": "2026-10-14",
+      "cadence_days": 31,
+      "routine": "Monthly run (3rd)",
+      "url": "https://use-land-property-data.service.gov.uk/datasets/ccod"
+    },
+    {
+      "name": "Land Registry Price Paid",
+      "gives": "Every sale: price, date, flat",
+      "period": "Oct 2025 - Aug 2026",
+      "refreshed": "2026-10-13",
+      "cadence_days": 31,
+      "routine": "Monthly run (3rd)",
+      "url": "https://landregistry.data.gov.uk/app/ppd"
+    },
+    {
+      "name": "Energy certificates, England",
+      "gives": "Homes per building, rating, tenure, size, works",
+      "period": "Full file of 1 Oct 2026",
+      "refreshed": "2026-10-13",
+      "cadence_days": 31,
+      "routine": "Monthly run (3rd)",
+      "url": "https://get-energy-performance-data.communities.gov.uk/"
+    },
+    {
+      "name": "Energy certificates, Scotland",
+      "gives": "Same for Edinburgh",
+      "period": "To Q2 2026 (next 30 Nov 2026)",
+      "refreshed": "2026-10-13",
+      "cadence_days": 92,
+      "routine": "Monthly run checks",
+      "url": "https://www.data.gov.scot/"
+    },
+    {
+      "name": "Companies House",
+      "gives": "Charges, lenders, insolvency filings, overdue accounts",
+      "period": "Live (checked 13 Oct 2026)",
+      "refreshed": "2026-10-13",
+      "cadence_days": 7,
+      "routine": "Weekly run (Mon 7am)",
+      "url": "https://find-and-update.company-information.service.gov.uk/"
+    },
+    {
+      "name": "Auction catalogues",
+      "gives": "Lots sold by receivers, lenders, administrators",
+      "period": "Catalogues seen 13 Oct 2026",
+      "refreshed": "2026-10-13",
+      "cadence_days": 7,
+      "routine": "Weekly run (Mon 7am)",
+      "url": "https://www.allsop.co.uk/"
+    },
+    {
+      "name": "Gazette insolvency notices",
+      "gives": "New winding-up petitions and administrations",
+      "period": "Not yet run",
+      "refreshed": null,
+      "cadence_days": 7,
+      "routine": "Weekly run (Mon 7am)",
+      "url": "https://www.thegazette.co.uk/insolvency"
+    },
+    {
+      "name": "ONS private rents",
+      "gives": "2-bed market rent per council",
+      "period": "Released 16 Sep 2026",
+      "refreshed": "2026-10-14",
+      "cadence_days": 31,
+      "routine": "Weekly run (mid-month)",
+      "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics"
+    },
+    {
+      "name": "LHA rates (VOA)",
+      "gives": "Council rent cap by size",
+      "period": "2026/27",
+      "refreshed": "2026-09-30",
+      "cadence_days": 365,
+      "routine": "Monthly run (April)",
+      "url": "https://lha-direct.voa.gov.uk/"
+    },
+    {
+      "name": "Temporary accommodation (MHCLG / Scottish Gov)",
+      "gives": "Households in TA by type",
+      "period": "31 Mar 2026",
+      "refreshed": "2026-10-14",
+      "cadence_days": 92,
+      "routine": "Monthly run",
+      "url": "https://www.gov.uk/government/statistical-data-sets/live-tables-on-homelessness"
+    },
+    {
+      "name": "Asylum support (Home Office)",
+      "gives": "People in dispersal and hotels",
+      "period": "30 Jun 2026",
+      "refreshed": "2026-10-14",
+      "cadence_days": 92,
+      "routine": "Monthly run",
+      "url": "https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables"
+    },
+    {
+      "name": "Council spend over £500",
+      "gives": "TA and supported-housing payments by supplier",
+      "period": "Latest 12 months published",
+      "refreshed": "2026-10-14",
+      "cadence_days": 92,
+      "routine": "Monthly run",
+      "url": ""
+    },
+    {
+      "name": "HMO registers",
+      "gives": "Licensed HMOs (Edinburgh bulk only)",
+      "period": "Edinburgh register Oct 2026",
+      "refreshed": "2026-10-14",
+      "cadence_days": 92,
+      "routine": "Manual",
+      "url": ""
+    },
+    {
+      "name": "Scottish Landlord Register",
+      "gives": "Owner per flat, Edinburgh",
+      "period": "70 blocks checked",
+      "refreshed": "2026-10-13",
+      "cadence_days": null,
+      "routine": "Manual, light use",
+      "url": "https://landlordregistrationscotland.gov.uk/"
+    },
+    {
+      "name": "Land Registry overseas companies (OCOD)",
+      "gives": "Titles owned by non-UK companies",
+      "period": "Oct 2026 file",
+      "refreshed": "2026-10-14",
+      "cadence_days": 31,
+      "routine": "Monthly run (3rd)",
+      "url": "https://use-land-property-data.service.gov.uk/datasets/ocod"
+    },
+    {
+      "name": "OS Open UPRN",
+      "gives": "Exact location of each home (sales pinned to the property)",
+      "period": "Sep 2026 release",
+      "refreshed": "2026-10-14",
+      "cadence_days": 92,
+      "routine": "Quarterly",
+      "url": "https://www.ordnancesurvey.co.uk/products/os-open-uprn"
+    },
+    {
+      "name": "Planning constraints (planning.data.gov.uk)",
+      "gives": "HMO Article 4 areas, conservation areas, listed buildings, flood zones 2/3",
+      "period": "Pulled 14 Oct 2026",
+      "refreshed": "2026-10-14",
+      "cadence_days": 92,
+      "routine": "Quarterly",
+      "url": "https://www.planning.data.gov.uk/"
+    },
+    {
+      "name": "Land Registry INSPIRE polygons",
+      "gives": "Freehold title boundaries (not yet linked to owners)",
+      "period": "Oct 2026",
+      "refreshed": "2026-10-14",
+      "cadence_days": 31,
+      "routine": "Monthly run (3rd)",
+      "url": "https://use-land-property-data.service.gov.uk/datasets/inspire"
+    },
+    {
+      "name": "Land Registry Registered Leases",
+      "gives": "Lease term, date, UPRN (no rent)",
+      "period": "Licence not yet applied for",
+      "refreshed": null,
+      "cadence_days": 31,
+      "routine": "Blocked: licence needed",
+      "url": "https://use-land-property-data.service.gov.uk/datasets/leases"
+    },
+    {
+      "name": "RP / charity property-partnership research",
+      "gives": "14 deduplicated routes, lease terms, exact entities, regulatory and covenant caveats; accounts not fully re-underwritten",
+      "period": "Official pages checked 19 Oct 2026; underlying reporting dates vary",
+      "refreshed": "2026-10-19",
+      "cadence_days": 31,
+      "routine": "Manual review; no new routine created",
+      "url": "https://www.gov.uk/government/organisations/regulator-of-social-housing"
+    }
+  ],
+  "build": [
+    {
+      "name": "Buildings with 5+ homes",
+      "n": 14451,
+      "note": "England 6,141 (Manchester, Cheltenham, Bristol) + Edinburgh 8,310",
+      "refreshed": "2026-10-14"
+    },
+    {
+      "name": "Company titles in target cities",
+      "n": 101130,
+      "note": "From the CCOD full file",
+      "refreshed": "2026-10-14"
+    },
+    {
+      "name": "Homes with a certificate (England, 3 cities)",
+      "n": 417000,
+      "note": "Latest certificate per home",
+      "refreshed": "2026-10-13"
+    },
+    {
+      "name": "Auction lots scanned",
+      "n": 80,
+      "note": "All sellers; forced sellers counted separately",
+      "refreshed": "2026-10-13"
+    },
+    {
+      "name": "Sales pinned to exact home",
+      "n": 10272,
+      "note": "of 11,288 sales in 12 months (OS Open UPRN)",
+      "refreshed": "2026-10-14"
+    },
+    {
+      "name": "Overseas-owned titles",
+      "n": 2404,
+      "note": "Manchester 1,606, Bristol 659, Cheltenham 139",
+      "refreshed": "2026-10-14"
+    },
+    {
+      "name": "RP / charity researched profiles",
+      "n": 14,
+      "note": "4 published landlord routes; 7 enquiry-only; 3 no route verified. No confirmed 5–30-unit acceptance.",
+      "refreshed": "2026-10-19"
+    }
+  ]
+}

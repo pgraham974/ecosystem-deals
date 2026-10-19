@@ -1,0 +1,976 @@
+{
+  "updated": "2026-10-19",
+  "scope": "Official-source property-partnership research; not credit approval; local intake and portfolio capacity unconfirmed unless stated",
+  "partners": [
+    {
+      "name": "Jigsaw Support / Jigsaw Homes Group",
+      "legal_entity": "Jigsaw Support, community benefit society RS008241 (FCA 8241), part of Jigsaw Homes Group Limited, society 29433R and RSH LH4345. The property lease/management counterparty must be confirmed; the group parent and support society are not interchangeable.",
+      "region": "Greater Manchester",
+      "type": "Housing-group supported-housing and agency property-management service",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": {
+        "published": "Agency-managed housing sourced from registered providers and private landlords, for people with support needs or leaving supported accommodation. Some homes are specially adapted for residents needing 24-hour staff support.",
+        "portfolio_fit": "Existing service includes multiple properties and tenancies, but no published 5–30-unit intake threshold, block specification, bedroom mix, EPC threshold or current acquisition requirement was verified."
+      },
+      "terms": {
+        "published": "Jigsaw describes sourcing, management and maintenance, health-and-safety duties and financial obligations under individual agreements.",
+        "not_published": "No landlord lease length, rent level, indexation, void-payment commitment, repairs allocation, break rights or guaranteed-rent offer verified. Resident service charges are not evidence of a landlord rent guarantee."
+      },
+      "coverage_evidence": {
+        "observation_date": "2026-10-19",
+        "scope": "Official agency-managed-properties page reports 119 properties and 407 tenancies, supported by 35 agencies in eight Greater Manchester local-authority areas. Page is undated as to those figures; treat them as published scale, not a verified current inventory.",
+        "source_url": "https://support.jigsawhomes.org.uk/information-article/agency-managed-properties"
+      },
+      "covenant_evidence": {
+        "date": "2025-12-17",
+        "scope": "RSH assessment of Jigsaw Homes Group Limited LH4345, not a guarantee by that entity of Jigsaw Support obligations.",
+        "evidence": "December 2025 stability check confirms G1/V1, forecast financial-covenant compliance and sufficient liquidity to deliver plans. Jigsaw Support FY ended 31 March 2025 accounts separately identify society RS008241 and the group parent.",
+        "limitations": "No executed parent guarantee, lease covenant or ring-fenced landlord security inspected. Assess the actual contracting entity and latest entity accounts before underwriting."
+      },
+      "regulator_evidence": {
+        "entity": "Jigsaw Homes Group Limited",
+        "registration": "LH4345",
+        "latest_judgement_found": "2025-12-17",
+        "grades": {
+          "governance": "G1",
+          "viability": "V1",
+          "consumer": "Not assessed yet"
+        },
+        "scope": "December 2025 stability check. Does not assess consumer-standard outcomes and does not establish a standalone grade for Jigsaw Support."
+      },
+      "contact_url": "https://support.jigsawhomes.org.uk/information-article/agency-managed-properties",
+      "next_step": "Prepare a postcode/unit schedule and ask the agency-managed-properties team at the published jigsawsupport@jigsawhomes.org.uk / 0300 111 1212 whether it is currently accepting investor-owned 5–30-unit schemes, which boroughs/cohorts are funded, and which legal entity signs. No outreach conducted.",
+      "risks": [
+        "Published operational private-landlord sourcing is not an open intake commitment.",
+        "Current borough-level demand, nomination/support funding and unit acceptance require confirmation.",
+        "Do not transfer parent G1/V1 status or liquidity to a subsidiary lease without a documented guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://support.jigsawhomes.org.uk/information-article/agency-managed-properties",
+          "title": "Agency managed properties - Jigsaw Support"
+        },
+        {
+          "url": "https://mutuals.fca.org.uk/Search/Society/30505",
+          "title": "Jigsaw Support - FCA Mutuals Public Register"
+        },
+        {
+          "url": "https://www.jigsawhomes.org.uk/wp-content/uploads/sites/2/2025/09/Jigsaw-Support-24-25-signed.pdf",
+          "title": "Jigsaw Support Financial Statements year ended 31 March 2025"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/regulatory-judgement-jigsaw-homes-group-limited/jigsaw-homes-group-limited-lh4345-regulatory-judgement-15-january-2025",
+          "title": "Jigsaw Homes Group Limited LH4345 - Regulatory Judgement 17 December 2025"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Manchester"
+      ],
+      "summary_terms": "Private-landlord sourcing evidenced; rent and lease term not published.",
+      "summary_risk": "Parent G1/V1 is not a guarantee from the support subsidiary."
+    },
+    {
+      "name": "Stepping Stone Projects",
+      "legal_entity": "Stepping Stone Projects, charitable company limited by guarantee, company 02647645, charity 1004375.",
+      "region": "Greater Manchester and Lancashire / wider North West",
+      "type": "Homelessness accommodation and support charity; historical evidence of direct and RP-intermediated private leasing",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": {
+        "published": "Official parliamentary submission describes predominantly self-contained homes, some shared/HMO accommodation and fully furnished properties. It documents private rented homes, direct leases and RP lease/management structures. Current Manchester NRPF service page describes 10 fully furnished self-contained flats.",
+        "portfolio_fit": "Documented small schemes are relevant to a 5–30-unit discussion; no current published portfolio intake size, property procurement specification or investor acceptance policy was found."
+      },
+      "terms": {
+        "published": "Historical submission: some privately rented homes are leased to registered providers then sub-leased/managed by SSP; other commissioned services do not involve an RP. Commissioners or RP partners set high property standards.",
+        "not_published": "No current landlord lease length, rent level, void cover, rent guarantee, repairs split or indexation verified. Do not assume that historical RP intermediation is available for a new scheme."
+      },
+      "coverage_evidence": {
+        "observation_date": "2026-10-19",
+        "scope": "Current official homepage says over 700 homes and support to over 1,200 people across the North West; Manchester NRPF project explicitly provides 10 self-contained flats. Parliamentary EXA 024 evidence documents actual privately rented supply in Greater Manchester/Lancashire, rather than inferring it from stock ownership.",
+        "source_url": "https://www.stepping-stone.org.uk/projects/manchester-nrpf"
+      },
+      "covenant_evidence": {
+        "date": "2025-03-31",
+        "scope": "Stepping Stone Projects charity 1004375, financial-year figures on Charity Commission register.",
+        "evidence": "Total income £14,458,467 and expenditure £14,100,239; income includes £6,085,420 from 24 government contracts. Official website provides 2024–25 annual report/accounts.",
+        "limitations": "These are scale/annual-flow figures, not unrestricted cash, a credit rating or security for landlord payments. Downloaded accounts were image-only and not fully reviewed; reserves, liquidity, lease commitments, contract expiry and guarantees remain unverified."
+      },
+      "regulator_evidence": {
+        "registration": "Charity Commission 1004375; company 02647645",
+        "latest_judgement_found": null,
+        "scope": "SSP told Parliament in its historical EXA 024 submission that it was not then a registered housing provider. No current individual RSH judgement located. Do not treat charity status or an RP partner’s supervision as an RSH grade for SSP; confirm current registration and the specific RP counterparty for any proposed structure."
+      },
+      "contact_url": "https://www.stepping-stone.org.uk/contact/",
+      "next_step": "Use general partnership/property enquiry to central@stepping-stone.org.uk or 01706 353000 to establish current borough/cohort demand, whether SSP or an RP would lease, and minimum specification, rent approval and funding duration. Request latest unrestricted reserves/cash and commissioner-contract schedule. No outreach conducted.",
+      "risks": [
+        "Historical leasing evidence is not confirmation of current open landlord intake.",
+        "Material commissioning exposure; lease obligations may outlast support contracts.",
+        "RP-intermediated and direct-charity structures create different Housing Benefit and counterparty risks.",
+        "NRPF accommodation is not funded by ordinary resident Housing Benefit; do not extrapolate an exempt-rent model."
+      ],
+      "sources": [
+        {
+          "url": "https://www.stepping-stone.org.uk/",
+          "title": "Stepping Stone Projects official homepage"
+        },
+        {
+          "url": "https://committees.parliament.uk/writtenevidence/43310/html",
+          "title": "Stepping Stone Projects written evidence EXA 024 on exempt accommodation"
+        },
+        {
+          "url": "https://www.stepping-stone.org.uk/projects/manchester-nrpf",
+          "title": "Manchester No recourse to Public Funds"
+        },
+        {
+          "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1004375",
+          "title": "Stepping Stone Projects - Charity Commission 1004375"
+        },
+        {
+          "url": "https://www.stepping-stone.org.uk/about/annual-accounts/",
+          "title": "Annual Accounts - Stepping Stone Projects"
+        },
+        {
+          "url": "https://www.stepping-stone.org.uk/contact/",
+          "title": "Contact Stepping Stone Projects"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Manchester"
+      ],
+      "summary_terms": "Direct or RP-intermediated leasing evidenced; no standard offer verified.",
+      "summary_risk": "Confirm lease entity and local commissioned demand."
+    },
+    {
+      "name": "Depaul Housing Services",
+      "legal_entity": "Depaul Housing Services, company limited by guarantee 08561164, charity 1155073, RSH registered provider 4792. Sole member is Depaul UK (company 02440093, charity 802384), a separate entity.",
+      "region": "Greater Manchester, plus London, North Tyneside and Middlesbrough",
+      "type": "Registered-provider charity operating landlord and supported-housing partnerships",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": {
+        "published": "2025 accounts document short-tenure supported accommodation for rough sleepers/single homeless people and partnership provision for young people and vulnerable adults. Safestop Manchester is a 12-bed accommodation facility.",
+        "portfolio_fit": "A 12-bed leased Manchester scheme and recent GM lease additions make a 5–30-unit conversation evidence-based, but no advertised current investor intake or property specification verified. An existing 35-year institutional lease is not an offered lease term."
+      },
+      "terms": {
+        "published": "Official 2025 accounts state new leases for several Greater Manchester properties during the year, seven short-tenure properties across London/GM, and a 35-year Safestop lease with 27 years remaining. Management agreements include Depaul UK and external partners.",
+        "not_published": "No prospective-landlord rent guarantee, void cover, standard term, rent level, repairs split, indexation or minimum portfolio size verified."
+      },
+      "coverage_evidence": {
+        "date": "2025-12-31",
+        "scope": "Official 2025 trustees/accounts source reports registered-landlord role for an additional 236 units across Greater Manchester with Caritas, CarePoint, Revolving Doors and SSG, up from 149 in the comparative figure; it expressly reports new Greater Manchester leases. These are year-end reporting facts, not current available intake.",
+        "source_url": "https://www.depaul.org.uk/wp-content/uploads/2026/09/DHS-SIGNED-ACCOUNTS-2025.pdf"
+      },
+      "covenant_evidence": {
+        "date": "2025-12-31",
+        "scope": "DHS standalone trustees/accounts report, available through official governance publication; not consolidated Depaul group covenant.",
+        "evidence": "2025 accounts identify charity/company/RP structure and growth by 87 partnership units; this supports operating experience but is not financial-strength proof.",
+        "limitations": "Financial statements numeric reserves/cash and going-concern disclosures were not fully retrieved owing to official-site timeouts. No current quantified covenant conclusion, parent guarantee or landlord payment assurance is asserted. Earlier 2024 accounts state the sole member’s liability is limited to £10, which must not be confused with an unlimited group guarantee."
+      },
+      "regulator_evidence": {
+        "entity": "Depaul Housing Services",
+        "registration": "4792",
+        "latest_judgement_found": null,
+        "grades": null,
+        "scope": "Official governance page and 2025 accounts identify RSH registration 4792. No individual published G/V/C judgement located. RSH says it publishes grades for landlords with more than 1,000 social housing homes; absence of a found grade is not a regulatory pass or failure."
+      },
+      "contact_url": "https://www.depaul.org.uk/governance",
+      "next_step": "Ask DHS through the published depaulhousingservices@depauluk.org Charity Commission contact whether it will consider new Manchester investor-owned accommodation, which support partners/commissioners would underpin it, and request the current lease template, financial accounts and any proposed parent security. No outreach conducted.",
+      "risks": [
+        "DHS registration and existing leases do not prove an open landlord intake scheme.",
+        "Separate DHS, Depaul UK and care/support partners must not be conflated.",
+        "Underlying lease, nominations, support funding and Housing Benefit assumptions need scheme-specific approval.",
+        "Official site returned timeouts during checks; 2025 accounts evidence was retrieved through indexed official-source passages, not a full financial audit."
+      ],
+      "sources": [
+        {
+          "url": "https://www.depaul.org.uk/governance",
+          "title": "Governance - Depaul UK, including DHS structure and 2025 audited accounts"
+        },
+        {
+          "url": "https://www.depaul.org.uk/wp-content/uploads/2026/09/DHS-SIGNED-ACCOUNTS-2025.pdf",
+          "title": "Depaul Housing Services trustees report and financial statements year ended 31 December 2025"
+        },
+        {
+          "url": "https://www.depaul.org.uk/wp-content/uploads/2025/09/03.-DHS-2024-Report-and-Accounts.pdf",
+          "title": "Depaul Housing Services report and accounts year ended 31 December 2024"
+        },
+        {
+          "url": "https://register-of-charities.charitycommission.gov.uk/en/about-the-register-of-charities/-/charity-details/5038926/full-print?_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_organisationNumber=5038926",
+          "title": "Depaul Housing Services - Charity Commission 1155073"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/regulatory-judgement-salix-homes-limited/salix-homes-limited-4609-regulatory-judgement-14-august-2024",
+          "title": "RSH explanation of published-grade scope within current regulatory judgement"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Manchester"
+      ],
+      "summary_terms": "Greater Manchester leases evidenced; no open standard landlord terms.",
+      "summary_risk": "Depaul UK and Depaul Housing Services are different entities."
+    },
+    {
+      "name": "Salix Homes / Salix Living",
+      "legal_entity": "Salix Homes Limited, charitable community benefit society FCA 7051, RSH registered provider 4609. Salix Living is described as its private-sector leasing/property-management arm. Confirm contracting entity rather than assuming a similarly named subsidiary provides the covenant.",
+      "region": "Salford, Greater Manchester; council guidance also points Manchester landlords to Salix",
+      "type": "Registered provider with private-sector leasing and management service relevant to homelessness/temporary accommodation",
+      "route_status": "Published landlord route",
+      "property_criteria": {
+        "published": "Official GM Housing Providers member profile offers property owners leasing or management of properties in Salford. Wigan Council’s current landlord guidance directs owners with Salford/Manchester properties to Salix Homes.",
+        "portfolio_fit": "No verified current 5–30-unit block minimum/maximum, bedroom mix, EPC threshold or supported-housing specification. Ask separately whether a portfolio is accepted for temporary accommodation rather than ordinary private lettings."
+      },
+      "terms": {
+        "published": "GM Housing Providers member profile states a three-year lease or management arrangement and says the lease offers guaranteed rent for the lease term; it also describes a tenant-finding service.",
+        "limitations": "The guarantee is a published lease-service claim, not a government guarantee and not automatically applicable to the management or tenant-find option. The member profile has older background content; current availability and executed terms must be reconfirmed. No verified rent level, indexation, repairs/dilapidations allocation or termination schedule."
+      },
+      "coverage_evidence": {
+        "observation_date": "2026-10-19",
+        "scope": "GMHP official member profile expressly describes Salford landlord leasing. Wigan Council expressly recommends Salix for landlords with properties in Salford/Manchester. A historical LGA report documents Salix Living private landlord leasing for temporary accommodation, including a five-year specific scheme; this is precedent, not a current standard five-year offer.",
+        "source_url": "https://gmhousing.co.uk/members/salix-homes/"
+      },
+      "covenant_evidence": {
+        "date": "2025-12-17",
+        "scope": "RSH assessment of Salix Homes Limited 4609, not any separate Salix-branded subsidiary.",
+        "evidence": "G1/V2; RSH says business plan adequately funded with sufficient security and forecast financial-covenant compliance. V2 reflects material risks, including increased stock investment/development debt and low operating margins reducing capacity to withstand adverse scenarios.",
+        "limitations": "No property-specific guarantee or lender security inspected. Official 2025–26 financial statements published on the provider’s site are identified but not fully reviewed; judge actual lessee accounts and security before treating rent as covenant-backed."
+      },
+      "regulator_evidence": {
+        "entity": "Salix Homes Limited",
+        "registration": "4609",
+        "latest_judgement_found": "2025-12-17",
+        "grades": {
+          "consumer": "C1",
+          "governance": "G1",
+          "viability": "V2"
+        },
+        "scope": "G1/V2 confirmed by December 2025 stability check; C1 carried forward from August 2024 inspection, not freshly reassessed in December 2025."
+      },
+      "contact_url": "https://www.salixhomes.co.uk/contact-us/",
+      "next_step": "Contact the private-sector leasing team via published enquiries@salixhomes.co.uk / 0800 218 2000 to reconfirm intake, geography and the three-year lease route; request block/unit criteria, current TA commissioner/nomination arrangements, lessee identity and draft lease. No outreach conducted.",
+      "risks": [
+        "Official member profile is live but contains older contextual figures; do not assume all advertised terms remain available without written confirmation.",
+        "Lease, management and tenant-finding are different risk/fee products.",
+        "RSH V2 is compliant but explicitly flags material viability risks; it is not V1 or a rent-payment guarantee.",
+        "Private-sector leasing does not itself establish supported exempt accommodation eligibility."
+      ],
+      "sources": [
+        {
+          "url": "https://gmhousing.co.uk/members/salix-homes/",
+          "title": "Salix Homes - Greater Manchester Housing Providers official member profile"
+        },
+        {
+          "url": "https://www.wigan.gov.uk/Business/Property-and-Land/Private-Landlords/Ethical-lettings-agency.aspx",
+          "title": "Wigan Council Ethical lettings agency - other Greater Manchester landlord providers"
+        },
+        {
+          "url": "https://www.local.gov.uk/sites/default/files/documents/5.12%20HOUSING%20AND%20HOMELESSNESS_v08_0.pdf",
+          "title": "LGA Housing Our Homeless Households - historical Salix leasing precedent"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/regulatory-judgement-salix-homes-limited/salix-homes-limited-4609-regulatory-judgement-14-august-2024",
+          "title": "Salix Homes Limited 4609 - Regulatory Judgement 17 December 2025"
+        },
+        {
+          "url": "https://www.salixhomes.co.uk/about-us/reports-policies-and-transparency/financial-reports",
+          "title": "Salix Homes Financial reports, including 2025–26 financial statements"
+        },
+        {
+          "url": "https://www.salixhomes.co.uk/contact-us/",
+          "title": "Contact Salix Homes"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Manchester"
+      ],
+      "summary_terms": "Published leasing / guaranteed-rent route; older terms need reconfirmation.",
+      "summary_risk": "Salix Living intake, exact terms and portfolio capacity remain unconfirmed."
+    },
+    {
+      "name": "ACH",
+      "legal_entity": "Ashley Community & Housing Ltd (ACH); registered society 9839; RSH 4716. Current official footer identifies the society; an older Companies House company 06630015 linked by ACH should not automatically be treated as the current lease counterparty.",
+      "region": "Bristol City; also Birmingham, Wolverhampton and Coventry. Bristol route does not establish wider West of England intake.",
+      "type": "Registered provider; refugee and migrant supported housing / integration social enterprise",
+      "route_status": "Published landlord route",
+      "property_criteria": [
+        "Properties in Bristol City or the named West Midlands cities.",
+        "No published minimum/maximum portfolio size, bedroom mix, block specification or EPC threshold on the landlord page; 5-30 units requires specific approval.",
+        "A separate official Borderlands case study verifies ACH leasing and managing a four-bedroom supported house owned by a charity."
+      ],
+      "terms": [
+        "Published 3-5 year leases and competitive monthly rent.",
+        "No setup costs; free compliance advice; ACH handles tenancy agreements, full property management and monthly inspections at no extra cost.",
+        "ACH manages responsive maintenance requests and says it can manage larger renovations; this does not specify who ultimately pays each repair.",
+        "No published void guarantee, rent formula, indexation, break clauses, repairing split or FRI commitment verified. Do not infer guaranteed rent."
+      ],
+      "coverage_evidence": "Current official Rent your property page explicitly limits operations to Bristol City and the named West Midlands locations. Official Borderlands partnership confirms third-party property management in Bristol.",
+      "covenant_evidence": {
+        "date": "2026-10-19",
+        "scope": "ACH entity-level document availability and governance only, not a completed credit review",
+        "evidence": "Official Governance & Assurance Standards page links individual and group accounts for 2025-26. It describes ACH as a small housing association and voluntary adoption of NHF Code of Governance 2020. Accounts were identified but balance sheet, audit opinion and lease-liability capacity were not extracted; no covenant strength or parent guarantee asserted."
+      },
+      "regulator_evidence": {
+        "date": "2026-09-17",
+        "scope": "RSH register identity; no published graded judgment located",
+        "evidence": "Official register lists Ashley Community & Housing Ltd, 4716, registered 1 June 2012, non-profit registered society. ACH says it is below 1,000 homes. No current individual G/V/C judgment located; registration is not a credit rating."
+      },
+      "contact_url": "https://ach.org.uk/get-involved/rent-your-property/",
+      "next_step": "Use the published landlord enquiry route only if authorised later. First request a Bristol postcode demand map, 5-30-unit appetite, exact lessee legal name, specimen lease, rent/void obligations, repair schedule, licensing confirmation and current individual accounts.",
+      "risks": [
+        "Bristol City coverage only is verified.",
+        "Published “No license needed” marketing must be independently checked for the particular property, use and lease structure; do not assume a blanket HMO/licensing exemption.",
+        "Current registration/legal-entity change versus older company links needs clarification before execution.",
+        "Supported/refugee demand does not itself establish a funded temporary accommodation contract."
+      ],
+      "sources": [
+        {
+          "url": "https://ach.org.uk/get-involved/rent-your-property/",
+          "title": "Rent your property - ACH"
+        },
+        {
+          "url": "https://ach.org.uk/news/working-borderlands-reduce-homelessness-refugees-bristol",
+          "title": "Working with Borderlands to reduce homelessness for refugees in Bristol"
+        },
+        {
+          "url": "https://ach.org.uk/governance-assurance-standards/",
+          "title": "Governance & Assurance Standards - ACH"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/registered-providers-of-social-housing/list-of-registered-providers-24-july-2026-accessible-version",
+          "title": "RSH list of registered providers - 17 September 2026"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "City Of Bristol"
+      ],
+      "summary_terms": "3–5-year leases; competitive monthly rent; full management.",
+      "summary_risk": "No verified void guarantee; confirm current society as lessee."
+    },
+    {
+      "name": "Home Turf Lettings / Developing Health & Independence (DHI)",
+      "legal_entity": "Developing Health and Independence; company 03830311; charity 1078154. Home Turf Lettings is presented as DHI’s social lettings service, not a separately verified registered provider or lessee.",
+      "region": "Bristol, South Gloucestershire, Bath & North East Somerset",
+      "type": "Charity-operated social lettings and leasing service for low-income / housing-need tenants; relevant move-on route, not necessarily commissioned supported or temporary accommodation",
+      "route_status": "Published landlord route",
+      "property_criteria": [
+        "Privately owned rental housing at Local Housing Allowance rents; investor/landlord enquiry expressly invited.",
+        "Properties are viewed and surveyed for rental standards; proof of ownership and safety documentation required.",
+        "Empty Homes Scheme specifically requires Bristol / South Gloucestershire / B&NES location, consent to let, and an empty property requiring upgrading.",
+        "No published 5-30-unit block acceptance, minimum unit count, EPC threshold or current intake capacity verified."
+      ],
+      "terms": [
+        "Landlord page publishes a five-year lease.",
+        "Published contractual offer: monthly rent throughout lease, including voids and tenant arrears; no setup, ongoing administration or agency fees. This is provider-published, not an inferred government guarantee.",
+        "Rent review every two years where LHA rates increase.",
+        "HTL pays vacant-period council tax/utilities, initial independent inventory and final checkout, between-tenancy cosmetic decoration and annual gas certificate renewals after landlord supplies the initial certificate.",
+        "HTL pays majority of day-to-day internal repairs; rechargeable repairs remain possible. Manages evictions at its cost and says it hands back empty, condition subject to fair wear and tear. Not a verified FRI lease.",
+        "Empty-home refurbishment loans advertised as interest-free, repaid from rents; at least five years affordable/LHA letting required; availability and final terms need confirmation."
+      ],
+      "coverage_evidence": "DHI official service page explicitly names Bristol, South Gloucestershire and B&NES and links to Home Turf Lettings. Current accessible HTL landlord page invites investors and describes the leasing process.",
+      "covenant_evidence": {
+        "date": "2025-03-31",
+        "scope": "DHI whole-charity accounts/Charity Commission return, not a standalone HTL covenant or insurance-backed guarantee",
+        "evidence": "Charity Commission reports income £11,522,611 and expenditure £11,879,158, with £9,075,792 income from 26 government contracts. Register records 2025 accounts/TAR received 30 January 2026 and flags those accounts as qualified. Qualification reason not established in this review; investigate before reliance. Published rent promise remains subject to DHI/actual lessee solvency and executed lease."
+      },
+      "regulator_evidence": {
+        "date": "2026-10-19",
+        "scope": "Charity regulation, not verified RSH graded provider",
+        "evidence": "Charity Commission 1078154, reporting up to date; no DHI or Home Turf entry found in inspected September 2026 RSH register and no RSH judgment located. Do not apply an RSH grade."
+      },
+      "contact_url": "https://www.hometurflettings.co.uk/landlords/",
+      "next_step": "Prioritise alongside ACH for later authorised landlord enquiry. Ask about grouped 5-30-unit intake, agreed LHA-based rent, exact lessee, repair exclusions/caps, breaks, handback, guarantee wording and qualified 2025 accounts before underwriting.",
+      "risks": [
+        "LHA affordability may be materially below investment underwriting rents.",
+        "Website includes older news/copyright; published offer was accessible on check date but fresh operational capacity and lease terms remain unconfirmed.",
+        "2025 charity accounts are flagged qualified; reason and current reserves/liquidity must be reviewed.",
+        "Not evidence of an LA rent guarantee or supported exempt accommodation entitlement."
+      ],
+      "sources": [
+        {
+          "url": "https://www.hometurflettings.co.uk/landlords/",
+          "title": "Landlords - Home Turf Lettings"
+        },
+        {
+          "url": "https://www.dhi-online.org.uk/get-help/housing-provision/home-turf-lettings",
+          "title": "Home Turf Lettings - DHI"
+        },
+        {
+          "url": "https://register-of-charities.charitycommission.gov.uk/charity-details?regid=1078154&subid=0",
+          "title": "Charity Commission: Developing Health and Independence 1078154"
+        },
+        {
+          "url": "https://prd-ds-register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/3965271/accounts-and-annual-returns?_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_organisationNumber=3965271",
+          "title": "DHI accounts and annual returns, including qualification flag"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "City Of Bristol"
+      ],
+      "summary_terms": "Five-year lease; monthly rent including voids/arrears; LHA-linked reviews.",
+      "summary_risk": "2025 charity accounts flagged qualified; inspect reason and liquidity."
+    },
+    {
+      "name": "Places for People Living+ (including former Elim Housing)",
+      "legal_entity": "Places for People Living+ Limited; registered charitable society 20014R; RSH LH3926; within Places for People Group Limited (RSH L4236). Elim Housing transferred engagements into Living+ on 1 October 2026; do not count Elim as an independent current counterparty.",
+      "region": "England nationally; verified Bristol, Gloucestershire and surrounding former-Elim operating footprint",
+      "type": "Registered provider / specialist landlord and supported living group",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": [
+        "Official specialist landlord offer is predominantly property PURCHASE, adaptation and management, not an open investor-retained leasing offer.",
+        "Detached bungalows preferred; houses and blocks considered depending on referrals, area and location.",
+        "Local commissioner support, local Housing Benefit support and a nominated care provider usually required.",
+        "Works with private/social developers and welcomes off-market and turnkey opportunities. No published 5-30-unit lease criteria."
+      ],
+      "terms": [
+        "No verified published third-party landlord headlease rent, term, indexation, void guarantee or repairing allocation.",
+        "Can buy supported properties from private landlords / care providers.",
+        "Service-level agreements with care/support providers; housing management agreements may permit the care provider to undertake management, for example short-stay services. This is not a promise to lease investor stock.",
+        "Provider accreditation is available for new care providers; acquisition/refurbishment/move-in process averages 6-9 months according to FAQ."
+      ],
+      "coverage_evidence": "Official 1 October 2026 integration announcement confirms 820 former-Elim homes and continuing supported/homelessness services across Bristol, Gloucestershire and surrounding areas; reports 20 Bristol temporary modular homes. Specialist service operates nationally. Stock and delivery evidence is not landlord intake evidence.",
+      "covenant_evidence": {
+        "date": "2026-01-28",
+        "scope": "Places for People Group regulatory assessment, not a lease-specific guarantee or standalone Living+ credit rating",
+        "evidence": "RSH confirms G1/V2 following January 2026 stability check. Forecast covenant compliance under reasonable adverse scenarios, but reliance on home sales for short-term covenant requirements and material risk exposure reduce capacity for adverse events. Separate Living+ statements for year ended 31 March 2026 are published; no parent guarantee of a proposed property lease is established."
+      },
+      "regulator_evidence": {
+        "date": "2026-01-28",
+        "scope": "Current published RSH judgement for Places for People Group Limited L4236; Living+ is registered LH3926",
+        "evidence": "G1 and V2 assessed January 2026; consumer C1 carried forward from March 2025 inspection. January stability check did not reassess consumer outcomes. Do not present these as a fresh October 2026 inspection or an independent Elim rating."
+      },
+      "contact_url": "https://www.placesforpeople.co.uk/investors-business/our-business/our-markets/specialist-landlord-services",
+      "next_step": "Ask acquisitions/specialist landlord team whether any Bristol investor-retained lease or third-party management structure is currently accepted, distinguishing it from their published buy-and-adapt model. If not, consider only a commissioned sale/turnkey exit. Confirm Living+ as prospective counterparty after Elim integration.",
+      "risks": [
+        "Elim brand / historical partnership pages may be stale after 1 October 2026 transfer.",
+        "Published acquisition route does not evidence landlord-retained lease intake.",
+        "Group G1/V2 is not a rent guarantee; V2 explicitly denotes material financial risks to manage.",
+        "Commissioner/referral-led model, compatibility and care-provider accreditation can constrain generic block acquisition."
+      ],
+      "sources": [
+        {
+          "url": "https://www.placesforpeople.co.uk/elim",
+          "title": "Elim transfer of engagements to Living+ on 1 October 2026"
+        },
+        {
+          "url": "https://www.placesforpeople.co.uk/news/all-news/elim-housing-now-fully-integrated-into-places-for-people",
+          "title": "Elim Housing now fully integrated, 1 October 2026"
+        },
+        {
+          "url": "https://www.placesforpeople.co.uk/investors-business/our-business/our-markets/specialist-landlord-services",
+          "title": "Specialist landlord services, property criteria and contact routes"
+        },
+        {
+          "url": "https://www.placesforpeople.co.uk/about-us/who-we-are/our-companies/places-for-people-living-plus/",
+          "title": "Living+ legal and RSH identity"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/regulatory-judgement-places-for-people-group-limited/places-for-people-group-limited-l4236-regulatory-judgement-26-march-2025",
+          "title": "Places for People Group RSH judgement: 28 January 2026"
+        },
+        {
+          "url": "https://www.placesforpeople.co.uk/media/uv4l5wmp/places-for-people-livingplus-25-26-stat-accs.pdf",
+          "title": "Living+ financial statements for year ended 31 March 2026"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "City Of Bristol",
+        "Cheltenham"
+      ],
+      "summary_terms": "Specialist purchase / adaptation route; no investor-retained lease offer verified.",
+      "summary_risk": "Elim merged into Living+; group G1/V2 does not guarantee the lease."
+    },
+    {
+      "name": "1625 Independent People",
+      "legal_entity": "1625 Independent People Limited; registered society 23964R / Companies House IP23964R; exempt charity. Companies House identifies registered society status, not an ordinary limited company.",
+      "region": "Bristol and South West; verified Bristol and South Gloucestershire offices/services",
+      "type": "Youth homelessness / care-leaver supported housing and support charity",
+      "route_status": "No route verified",
+      "property_criteria": [
+        "Official services include supported housing for young people who are homeless, leaving care or at risk; generally ages 16-25.",
+        "No public investor/landlord property-intake specification, lease criteria, unit-count appetite or 5-30-unit block acceptance verified.",
+        "Move-on help accessing private landlords is tenant support, not evidence of 1625 taking a headlease."
+      ],
+      "terms": [
+        "No landlord lease term, rent, guarantee, void cover, repairing split or management fee verified.",
+        "Published private-rental deposit/rent-in-advance assistance should not be represented as a provider lease covenant."
+      ],
+      "coverage_evidence": "Official About Us page confirms supported housing in Bristol and South West. Contact page identifies Bristol head office, St Georges House, South Gloucestershire office, Woodleaze House and Charles England House.",
+      "covenant_evidence": {
+        "date": "2026-10-19",
+        "scope": "Legal status and public reporting availability only; no completed financial covenant assessment",
+        "evidence": "Registered-society/exempt-charity identity verified from official site and Companies House. No current audited financial position, unrestricted reserves, liquidity, lease obligations or parent guarantee extracted. Impact reports are not financial guarantees; seek FCA mutuals filings and latest signed accounts."
+      },
+      "regulator_evidence": {
+        "date": "2026-09-17",
+        "scope": "RSH register/judgment search and society identity",
+        "evidence": "No 1625 Independent People entry found in inspected September 2026 RSH list, and no individual current RSH judgement located. FCA society registration 23964R is not an RSH grade. Do not describe as a graded registered provider without additional evidence."
+      },
+      "contact_url": "https://www.1625ip.co.uk/contact-us/",
+      "next_step": "Low-priority feasibility enquiry only if later authorised: ask partnerships/housing team whether it currently leases or manages privately owned Bristol/South Gloucestershire schemes, intended age group/commissioning route, exact counterparty and property requirements. Do not buy on assumed intake.",
+      "risks": [
+        "Youth safeguarding, staffing and referral/commissioner requirements may determine suitability.",
+        "Provider housing stock, council partnerships and move-on assistance do not prove third-party landlord intake.",
+        "No published lease economics or financial covenant review completed."
+      ],
+      "sources": [
+        {
+          "url": "https://www.1625ip.co.uk/about-us/",
+          "title": "1625 Independent People: About Us and charitable status"
+        },
+        {
+          "url": "https://www.1625ip.co.uk/contact-us/",
+          "title": "1625 Independent People: official offices and contact details"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/IP23964R",
+          "title": "Companies House: 1625 Independent People Limited, registered society"
+        },
+        {
+          "url": "https://www.1625ip.co.uk/if-youre-a-young-person/young-persons-handbook/accommodation-paying-charges-moving-on/moving-on-from-accomodation/",
+          "title": "Move-on accommodation assistance, not landlord intake"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/registered-providers-of-social-housing/list-of-registered-providers-24-july-2026-accessible-version",
+          "title": "RSH list of registered providers, 17 September 2026"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "City Of Bristol"
+      ],
+      "summary_terms": "No public landlord intake or lease economics verified.",
+      "summary_risk": "Youth support and owned/managed stock do not prove lease appetite."
+    },
+    {
+      "name": "Second Step",
+      "legal_entity": "Second Step Limited; exempt charity / registered society 25597R",
+      "region": "Bristol, B&NES, South Gloucestershire, North Somerset, Somerset; wider mental-health services in Swindon and Wiltshire",
+      "type": "Mental-health and homelessness support charity; possible commissioned support partner, not verified investor headlessee",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": [
+        "Housing First Bristol supports people with multiple disadvantage and long-term street homelessness; intensive wraparound support.",
+        "Official Housing First page names partnerships with Bristol City Council and housing providers LiveWest, Brighter Places, Sovereign, Curo and Abri.",
+        "No published open landlord leasing/property intake offer, 5-30-unit appetite, rent schedule or block specification verified.",
+        "Support-provider partnership does not establish that a concentrated block meets Housing First principles or commissioner requirements."
+      ],
+      "terms": [
+        "No investor lease length, guaranteed rent, void cover, repair obligation or headlease verified.",
+        "Housing First is now a protected part of the Higher Needs Floating Support Service; this is support-service evidence, not a new accommodation procurement commitment."
+      ],
+      "coverage_evidence": "Official homeless services page explicitly names Bristol, B&NES, North Somerset, South Gloucestershire and Somerset. Current Housing First page confirms Bristol operation and named housing-provider partnerships.",
+      "covenant_evidence": {
+        "date": "2026-03-31",
+        "scope": "Latest annual financial report availability identified; not a completed balance sheet / lessee assessment",
+        "evidence": "Official accounts page links signed annual accounts for year ending 31 March 2026. No 2026 income, reserves, audit opinion or rental covenant conclusions extracted. Older 2025 accounts also exist, but should not be presented as the latest. No parent or government lease guarantee verified."
+      },
+      "regulator_evidence": {
+        "date": "2026-09-17",
+        "scope": "Exempt charity/society status; no current RSH entry/judgment located",
+        "evidence": "Official site identifies society 25597R. No Second Step entry found in inspected September 2026 RSH register and no current RSH G/V/C judgement located. Do not confuse with unrelated US Second Step Housing or treat FCA registration as an RSH rating."
+      },
+      "contact_url": "https://www.second-step.co.uk/our-services/homeless-services/housing-first/",
+      "next_step": "For a later authorised feasibility discussion, use reception@second-step.co.uk / 0117 909 6630 to reach homelessness/housing partnerships. Ask whether a commissioner-backed 5-30-unit scheme needs a support partner, who would hold tenancies/headlease, and whether any current accommodation procurement exists.",
+      "risks": [
+        "Service geography is not evidence of property intake.",
+        "Support contracts and tenancy support do not automatically create rental liability to investors.",
+        "Need commissioned funding, referral criteria, housing-provider counterpart and safeguarding/operating model before investment."
+      ],
+      "sources": [
+        {
+          "url": "https://www.second-step.co.uk/about-us/",
+          "title": "About Second Step and exempt charity identity"
+        },
+        {
+          "url": "https://www.second-step.co.uk/our-services/homeless-services/",
+          "title": "Second Step homeless services and geography"
+        },
+        {
+          "url": "https://www.second-step.co.uk/our-services/homeless-services/housing-first/",
+          "title": "Housing First Bristol, current model and housing partners"
+        },
+        {
+          "url": "https://www.second-step.co.uk/about-us/impact-accounts-reports/",
+          "title": "Accounts/reporting page identifying latest 2025-26 signed accounts"
+        },
+        {
+          "url": "https://www.second-step.co.uk/wp-content/uploads/2026/09/Second-Step-Annual-Accounts-2025-26-Signed.pdf",
+          "title": "Second Step signed accounts, year ending 31 March 2026 (identified; not financially analysed)"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/registered-providers-of-social-housing/list-of-registered-providers-24-july-2026-accessible-version",
+          "title": "RSH registered providers list, 17 September 2026"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "City Of Bristol"
+      ],
+      "summary_terms": "Support partnership relevant; no standard headlease offer verified.",
+      "summary_risk": "Do not assume the support provider will be your rent-paying tenant."
+    },
+    {
+      "name": "P3 Charity / P3 Housing",
+      "legal_entity": "People Potential Possibilities (P3 Charity), charity 703163, company 02495423; housing subsidiary P3 Housing Limited, Community Benefit Society 9262. Confirm which entity signs a proposed landlord contract. Former P3 Housing company 09668602 converted in April 2024 and is not the current society identity.",
+      "region": "Gloucestershire, with an evidenced Gloucester accommodation-based support service; broader national housing operations.",
+      "type": "Charity group with registered social housing provider subsidiary",
+      "route_status": "Published landlord route",
+      "property_criteria": {
+        "published": "Rental properties for social housing; P3 Housing describes self-contained flats for single people, larger accommodation for families, and accommodation with 24-hour support.",
+        "portfolio_fit": "Potential route for individual properties within a 5–30-unit portfolio. No published minimum/maximum portfolio size or confirmation of current Gloucestershire intake.",
+        "not_published": [
+          "Specific postcodes accepting new properties",
+          "Required bedroom mix, block size or HMO configuration",
+          "EPC threshold or refurbishment specification",
+          "Whether a whole 5–30-unit block is accepted"
+        ]
+      },
+      "terms": {
+        "published": "Official Become a P3 Charity Landlord page advertises 6 to 12-month contracts during which P3 becomes the tenant, handles tenancy management and resident selection/support, and takes responsibility for repairs, deposits and redecoration before handback.",
+        "rent": "The page explicitly advertises guaranteed rental income. This is a provider marketing statement, not independently verified security or an unconditional guarantee. No rent level, indexation formula, long-lease offer or guarantor published.",
+        "unverified": [
+          "Void/default exclusions",
+          "Structural and capital repair allocation",
+          "Break clauses and renewal",
+          "Insurance and damage caps",
+          "Whether P3 Housing or the parent charity is lessee"
+        ]
+      },
+      "coverage_evidence": {
+        "date": "Undated live service page, checked 2026-10-19",
+        "scope": "Gloucester ABS at 70 Worcester Street, Kingsholm, Gloucester GL1 3AS offers 8 temporary rooms with shared facilities and 24/7 on-site staff for Gloucestershire adults aged 18+ experiencing or at risk of homelessness. This proves service delivery, not that new private properties are currently required."
+      },
+      "covenant_evidence": {
+        "date": "FY ended 2025-03-31; auditor report dated 2025-09-23",
+        "scope": "P3 Housing Limited accounts, not a guarantee by the whole group. Accounts identify P3 Charity as managing agent under a formal agreement and state continued trading relies on parent People Potential Possibilities support, including not requiring immediate repayment of intercompany balances for at least 12 months from approval.",
+        "limitations": "No lease-specific guarantee inspected; latest 2025/26 audited accounts not verified. Parent support in accounts is not a contractual guarantee to an investor."
+      },
+      "regulator_evidence": {
+        "date": "Checked 2026-10-19",
+        "scope": "P3 official current housing page identifies P3 Housing as a Community Benefit Society and Registered Social Landlord, linking to the RSH register. No current entity-specific RSH G/V/C judgement located in this research; do not assign a rating or interpret absence as approval.",
+        "judgement_url": null
+      },
+      "contact_url": "https://p3charity.org/support-us/landlords",
+      "next_step": "Use published landlord route (p3housing@p3charity.org) to ask whether Gloucestershire intake is open, whether 5–30-unit portfolios qualify, and request contracting-entity details, full draft lease and current financial statements before underwriting. No enquiry sent.",
+      "risks": [
+        "Published 6–12-month duration is a mismatch for investors seeking long contracted income.",
+        "National landlord invitation does not verify local portfolio demand.",
+        "Marketing language about risk-free letting is not a substitute for lease and covenant due diligence.",
+        "Confirm permitted use, planning, licensing, insurance and commissioning/support arrangements for each asset."
+      ],
+      "sources": [
+        {
+          "url": "https://p3charity.org/support-us/landlords",
+          "title": "Become a P3 Charity Landlord | Property Partners"
+        },
+        {
+          "url": "https://p3charity.org/p3-housing",
+          "title": "P3 Housing | Registered Social Housing Provider"
+        },
+        {
+          "url": "https://p3charity.org/services/gloucestershire-accommodation-based-support",
+          "title": "P3 Gloucester Accommodation Based Support Service"
+        },
+        {
+          "url": "https://p3charity.org/wp-content/uploads/2025/10/P3H_Accounts_24_25.pdf",
+          "title": "P3 Housing Limited accounts for year ended 31 March 2025"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/09668602",
+          "title": "P3 Housing Limited former company: converted / closed"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Cheltenham"
+      ],
+      "summary_terms": "6–12-month landlord contracts; provider advertises guaranteed income.",
+      "summary_risk": "Too short for a long-income strategy; local intake not confirmed."
+    },
+    {
+      "name": "CCP (Caring for Communities and People)",
+      "legal_entity": "Caring for Communities and People, charitable company 03002869, charity 1043143. CCP is its working name; Caring for Communities and People Ltd, Cheltenham Community Projects Limited, County Community Projects and The Ratcliffe Trust are recorded previous names. Do not duplicate CCP under these aliases.",
+      "region": "Cheltenham-based; Gloucestershire including Cheltenham, Gloucester, Stroud, Tewkesbury, Forest of Dean and Cotswolds; wider South West and West Midlands.",
+      "type": "Supported-accommodation and homelessness charity; RSH registered-provider status not verified",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": {
+        "published": "FY2024 audited trustees report says accommodation managed ranges from houses/flats suitable for 1–3 people through larger sites accommodating 20+ people in individual and shared self-contained homes; accommodation is CCP-owned, leased or operated under a management agreement.",
+        "portfolio_fit": "Historical operating model is directly relevant to an investor-owned supported-accommodation portfolio, but not an invitation to submit 5–30 units and not evidence of current intake.",
+        "not_published": [
+          "Current property acquisition/lease brief",
+          "Minimum/maximum units",
+          "EPC and fit-out requirements",
+          "Accepted locations and current commissioned need"
+        ]
+      },
+      "terms": {
+        "published": "Evidence of leases and management agreements in historic accounts, but no standard private-landlord lease, term, rent or management fee verified.",
+        "rent": "No guaranteed rent, indexation, FRI obligation or void cover verified. All commercial terms require an individual proposal."
+      },
+      "coverage_evidence": {
+        "date": "Live service pages checked 2026-10-19; operating-model evidence FY ended 2024-03-31",
+        "scope": "Official Gloucestershire vulnerable-adults page names all six Gloucestershire districts and shared houses/self-contained flats. Page contains inconsistent age wording (18+ in introduction, 18–25 elsewhere); confirm intended cohort. Head office is 340 High Street, Cheltenham GL50 3JF."
+      },
+      "covenant_evidence": {
+        "date": "FY ended 2026-03-31; accounts/TAR received 2026-08-10",
+        "scope": "Current Charity Commission full record reports income £12,981,517, expenditure £12,428,309, own-use assets £6.73m, other assets £2.82m and liabilities £7.02m. £6,203,830 income is from 28 government contracts. These are charity-level reported financial figures, not a rental guarantee or lease-specific credit opinion.",
+        "limitations": "Headline register figures do not establish unrestricted liquidity, covenant headroom, contract renewal security or capacity for a new 5–30-unit commitment. Obtain full current accounts and management information."
+      },
+      "regulator_evidence": {
+        "date": "Checked 2026-10-19",
+        "scope": "Charity Commission registration 1043143 and company identity verified. No RSH registration or current RSH G/V/C judgement verified for CCP in this research. Do not present charity status or reported housing activity as RSH approval.",
+        "judgement_url": null
+      },
+      "contact_url": "https://www.ccp.org.uk/",
+      "next_step": "Ask CCP housing/partnership leadership, via main published contact 0300 365 8999 or ccphelpdesk@ccp.org.uk, whether new investor-owned leased or managed properties are sought in the target district; request cohort, commissioner, specification, legal counterparty and draft terms. No outreach made.",
+      "risks": [
+        "Historical leasing/management evidence does not prove current landlord intake.",
+        "Support contract funding and property lease obligations may have different durations.",
+        "Do not confuse dormant historic CCP Homes subsidiary with the operating charity or assume it provides an RP covenant.",
+        "Official vulnerable-adults service age criteria need clarification."
+      ],
+      "sources": [
+        {
+          "url": "https://www.ccp.org.uk/",
+          "title": "CCP official website and published contact details"
+        },
+        {
+          "url": "https://www.ccp.org.uk/housing-related-support/",
+          "title": "CCP Housing Related Support"
+        },
+        {
+          "url": "https://www.ccp.org.uk/housing-related-support/homeless-adults/gloucestershire-2",
+          "title": "Gloucestershire Supported Accommodation for Vulnerable Adults"
+        },
+        {
+          "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/1043143/full-print",
+          "title": "Charity Commission full record: Caring for Communities and People, including 2025/26 financials"
+        },
+        {
+          "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_state=maximized&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_cacheability=cacheLevelPage&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A15923965&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Ffull-print&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=1043143",
+          "title": "CCP audited accounts FY2024: owned, leased and management-agreement accommodation"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Cheltenham"
+      ],
+      "summary_terms": "Historic leases / management agreements evidenced; no standard current terms.",
+      "summary_risk": "Positive headline charity figures are not unrestricted liquidity."
+    },
+    {
+      "name": "Rooftop Housing Group",
+      "legal_entity": "Rooftop Housing Group Limited, Registered Society 29661R, RSH L4404 (non-charitable group parent); core charitable housing provider Rooftop Housing Association Limited, Registered Society 27786R, RSH LH4050. Confirm actual contracting subsidiary rather than treating group parent as automatic guarantor.",
+      "region": "South Worcestershire and North Gloucestershire; evidenced partnerships with Tewkesbury Borough and Gloucester City councils.",
+      "type": "Registered housing-provider group with supported, temporary and housing-with-care operations",
+      "route_status": "Partnership enquiry only",
+      "property_criteria": {
+        "published": "Group accounts describe temporary housing through supported schemes, older-people schemes managed in partnership with ExtraCare Charitable Trust, keyworker housing and market-rent housing.",
+        "portfolio_fit": "Local operating and partnership relevance, but no published private-owner intake programme or criteria for a 5–30-unit portfolio verified.",
+        "not_published": [
+          "External landlord property specification",
+          "Portfolio size and location intake",
+          "Planning/EPC standards for incoming privately owned buildings"
+        ]
+      },
+      "terms": {
+        "published": "No commercial offer to lease or manage investor-owned portfolios verified.",
+        "rent": "No investor rent guarantee, lease length, indexation or repairs/void allocation published in evidence reviewed. Existing partnership or leased-stock arrangements must not be read as an open landlord route."
+      },
+      "coverage_evidence": {
+        "date": "FY ended 2026-03-31 accounts; live contact page checked 2026-10-19",
+        "scope": "FY2025/26 report names close council partnerships with Wychavon, Malvern Hills, Tewkesbury and Gloucester City. Contact page verifies St Oswald’s Village, Gavel Way, Gloucester GL1 2UF, and housing-with-care contact. This is operational coverage, not private-landlord intake."
+      },
+      "covenant_evidence": {
+        "date": "RSH judgement 2025-11-12 (stability check); FY2025/26 accounts auditor report 2026-08-05",
+        "scope": "RSH says Rooftop meets covenant requirements and has sufficient liquidity for strategy, but financial resilience declines owing to existing-stock expenditure and sales-target risk. FY2025/26 accounts report Rooftop Housing Association surplus before tax £4.5m, versus £3.5m in 2024/25 and £5.7m budget.",
+        "limitations": "Group/regulatory assurance and subsidiary surplus are not guarantees to a new private landlord. Need proposed lessee balance sheet, cashflow and any explicit parent support."
+      },
+      "regulator_evidence": {
+        "date": "2025-11-12 current publication found on RSH entity landing page",
+        "scope": "Rooftop Housing Group Limited L4404: G1/V2 following November 2025 stability check; C2 carried forward from September 2024 inspection. C2 concerns repairs timeliness and complaints handling. Stability check did not reassess consumer delivery.",
+        "judgement_url": "https://www.gov.uk/government/publications/regulatory-judgement-rooftop-housing-group-limited/rooftop-housing-group-limited-l4404-regulatory-judgement-25-september-2024"
+      },
+      "contact_url": "https://www.rooftopgroup.org/contact-us",
+      "next_step": "Use enquiries@rooftopgroup.org or 01386 420800 to request business-development/supported-housing lead and ask specifically whether Rooftop will lease in or manage investor-owned 5–30 units in Gloucestershire. Confirm exact counterparty before sending an asset pack. No enquiry sent.",
+      "risks": [
+        "No open landlord leasing/management route verified.",
+        "Geographic presence and existing housing-with-care partnerships do not establish willingness to take private stock.",
+        "V2 indicates material financial risks; C2 identifies consumer improvements required.",
+        "Avoid assuming a guarantee from Rooftop Housing Group for Rooftop Housing Association obligations."
+      ],
+      "sources": [
+        {
+          "url": "https://www.rooftopgroup.org/contact-us",
+          "title": "Rooftop contact details and St Oswald’s Village Gloucester"
+        },
+        {
+          "url": "https://www.rooftopgroup.org/about/reports-and-policies/reports",
+          "title": "Rooftop corporate and financial reports"
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/639b039c17e478957393c040/6a8d7c601bd3eb3282cf2321_Annual%20Financial%20Statement%202025-2026_P_RHG.pdf",
+          "title": "Rooftop Housing Group annual report and financial statements 2025/26"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/regulatory-judgement-rooftop-housing-group-limited",
+          "title": "RSH current Rooftop judgement landing page"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/regulatory-judgement-rooftop-housing-group-limited/rooftop-housing-group-limited-l4404-regulatory-judgement-25-september-2024",
+          "title": "Rooftop Housing Group L4404 regulatory judgement, 12 November 2025"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Cheltenham"
+      ],
+      "summary_terms": "No private-owner lease offer verified; partnership enquiry only.",
+      "summary_risk": "G1/V2 and C2; postcode-specific intake remains unverified."
+    },
+    {
+      "name": "Bromford (part of Bromford Flagship LiveWest)",
+      "legal_entity": "Bromford Housing Association Limited and Merlin Housing Society Limited are operating registered providers within Bromford Flagship LiveWest Limited (group parent RSH L4449). Group also includes Bromford Home Ownership Limited, Flagship Housing Limited and LiveWest Homes Limited. Actual proposed lessee and any guarantor remain unverified.",
+      "region": "Strong Gloucestershire presence: Tewkesbury, Cotswold and South Gloucestershire; wider West of England and West Midlands.",
+      "type": "Registered housing-provider group; supported and specialist housing operator",
+      "route_status": "No route verified",
+      "property_criteria": {
+        "published": "August 2026 retirement/supported-housing policy describes short-term accommodation for homelessness risk, young parents and mental-health/learning support needs; extra-care and specialist housing are also within service model.",
+        "portfolio_fit": "No published criteria for leasing in investor-owned 5–30-unit portfolios. Generic partnership language is not evidence of this route.",
+        "important_directionality": "Policy defines agency-managed properties as Bromford-owned homes managed by third parties, and leased properties as homes leased TO external support providers. These are outbound arrangements, not an offer to lease from private investors."
+      },
+      "terms": {
+        "published": "No private-owner intake lease or management terms verified.",
+        "rent": "No investor guaranteed rent, lease length, indexation, FRI or void protection verified."
+      },
+      "coverage_evidence": {
+        "date": "Live official about page checked 2026-10-19; policy version 1.1 dated 2026-08-06",
+        "scope": "Bromford says over half its customers live in South Gloucestershire, Tewkesbury, Cotswold and Lichfield and it is main social housing provider in those areas. It provides new supported/specialist housing in concentrated-stock areas, usually with partner organisations. This establishes regional relevance, not private-owner intake."
+      },
+      "covenant_evidence": {
+        "date": "2026-02-25",
+        "scope": "RSH interim G1/V1 judgement for combined Bromford Flagship LiveWest following LiveWest joining 29 January 2026 and parent rename 2 February 2026. RSH found capacity to deal with a wide range of adverse scenarios based on prior grades, stability checks and further financial information.",
+        "limitations": "Interim group-level assessment, not an audited covenant assessment of a proposed property lessee. No parent guarantee to a private landlord verified."
+      },
+      "regulator_evidence": {
+        "date": "2026-02-25 current judgement found on RSH parent landing page",
+        "scope": "Bromford Flagship LiveWest Limited L4449: interim G1 and V1. No interim consumer grade awarded. Do not carry LiveWest’s previous C1 across as a grade for the merged parent.",
+        "judgement_url": "https://www.gov.uk/government/publications/bromford-flagship-livewest-limited/bromford-flagship-livewest-limited-l4449-interim-regulatory-judgement-25-february-2026"
+      },
+      "contact_url": "https://www.bromford.co.uk/get-in-touch/",
+      "next_step": "Lower priority than P3/CCP. Ask main contact centre 0330 1234 034 for supported-housing/property partnership team and first establish whether Bromford takes externally owned homes at all; do not assume its outbound leasing model is an intake programme. No enquiry sent.",
+      "risks": [
+        "No investor landlord intake verified.",
+        "Leased-properties policy could easily be misread: Bromford is supplying its properties to support organisations.",
+        "Commissioned services and RP ownership/management roles require separate identification.",
+        "Group merger creates counterparty/brand ambiguity; specify actual legal entity."
+      ],
+      "sources": [
+        {
+          "url": "https://www.bromford.co.uk/about-us/",
+          "title": "Bromford official about page and regional coverage"
+        },
+        {
+          "url": "https://www.bromford.co.uk/media/0dmp3vw1/bfl-retirement-living-and-supported-housing-policy-aug26-bf-v11.pdf",
+          "title": "Retirement Living and Supported Housing Policy, version 1.1, 6 August 2026"
+        },
+        {
+          "url": "https://www.bromford.co.uk/get-in-touch/",
+          "title": "Bromford contact channels"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/bromford-flagship-livewest-limited",
+          "title": "RSH current Bromford Flagship LiveWest judgement landing page"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/bromford-flagship-livewest-limited/bromford-flagship-livewest-limited-l4449-interim-regulatory-judgement-25-february-2026",
+          "title": "Bromford Flagship LiveWest L4449 interim judgement, 25 February 2026"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Cheltenham"
+      ],
+      "summary_terms": "No private-owner intake verified; published leasing is leasing OUT.",
+      "summary_risk": "Parent group grade is not an investor lease covenant."
+    },
+    {
+      "name": "GreenSquareAccord (GSA)",
+      "legal_entity": "GreenSquareAccord Limited, exempt charitable Registered Society 27052R, RSH LH3902; registered address 2nd Floor, 10 Brindleyplace, Birmingham B1 2JB.",
+      "region": "Gloucestershire, Oxfordshire, Wiltshire and West Midlands; official historic ESG report identifies Gloucester and Stroud within operational localities.",
+      "type": "Registered housing provider with care and supported-living services",
+      "route_status": "No route verified",
+      "property_criteria": {
+        "published": "Official site provides residential care, supported living, extra care, community support and care at home; partnerships page describes Matrix development consortium and Homes for the South West.",
+        "portfolio_fit": "No published route or criteria for investor-owned 5–30-unit supported/temporary accommodation portfolios verified. Consortium membership is not landlord intake.",
+        "not_published": [
+          "Private-owner property brief",
+          "Target unit sizes or locations",
+          "New external leasing appetite",
+          "Property fit-out/EPC requirements"
+        ]
+      },
+      "terms": {
+        "published": "No commercial landlord lease or management offer verified.",
+        "rent": "No guaranteed investor rent, lease term, indexation or repairs/void allocation verified. Website leaseholder guidance concerns leases GSA grants as landlord, not a private-owner property intake route."
+      },
+      "coverage_evidence": {
+        "date": "RSH judgement 2026-10-07; official ESG report 2023 for more granular historic locations",
+        "scope": "RSH confirms GSA operates in 36 local authority areas across West Midlands, Oxfordshire, Gloucestershire and Wiltshire and owns/manages about 25,500 social homes. Official 2023 ESG locality report names Gloucester and Stroud. Stock/coverage evidence does not verify new private landlord intake."
+      },
+      "covenant_evidence": {
+        "date": "2026-10-07, RSH investigation; financial deterioration includes FY ended 2026-03-31",
+        "scope": "RSH states GSA has weak financial performance, losses, weak interest cover and poor forecasting. Although lender covenants had not been breached, compliance depends on substantial disposals, cost reductions and transformation programmes. Limited capacity to absorb a reasonable range of adverse scenarios.",
+        "limitations": "This is adverse group/provider viability evidence, not a lease guarantee. Do not use old G1/G2 or V2 grades as current underwriting evidence."
+      },
+      "regulator_evidence": {
+        "date": "2026-10-07",
+        "scope": "Current RSH judgement for GreenSquareAccord Limited LH3902: G3/V3 downgraded, both non-compliant. C2 retained from October 2025 because consumer standards were not reassessed. Serious concerns: financial governance, risk management, information quality and controls; sustainable improvement not evidenced.",
+        "judgement_url": "https://www.gov.uk/government/publications/greensquareaccord-limited/greensquareaccord-limited-lh3902-regulatory-judgement-7-october-2026"
+      },
+      "contact_url": "https://greensquareaccord.co.uk/contact",
+      "next_step": "Do not treat as a strong lease covenant merely because it is a large RP. If still considering a partnership, first establish current external-property intake appetite and obtain latest recovery-plan, liquidity and covenant evidence plus exact contracting entity; independent credit/legal review before any heads of terms. No outreach made.",
+      "risks": [
+        "G3/V3 serious regulatory and financial concerns as of 7 October 2026.",
+        "Current covenant compliance relies on disposals and savings; it is not evidence of durable rental-payment security.",
+        "No private investor landlord intake verified.",
+        "General care/support capability and development partnerships do not establish management of investor-owned portfolios."
+      ],
+      "sources": [
+        {
+          "url": "https://greensquareaccord.co.uk/",
+          "title": "GreenSquareAccord official services and legal identity"
+        },
+        {
+          "url": "https://greensquareaccord.co.uk/about/who-we-are/projects-and-partnerships",
+          "title": "GSA projects and partnerships: development consortia, not investor intake"
+        },
+        {
+          "url": "https://greensquareaccord.co.uk/contact",
+          "title": "GSA contact and legal entity details"
+        },
+        {
+          "url": "https://gsa-website.files.svdcdn.com/production/documents/Publications/greensquareaccord-esg-report-2023.pdf?dm=1740673440",
+          "title": "GSA ESG report 2023: Gloucester/Stroud historic locality evidence"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/greensquareaccord-limited/greensquareaccord-limited-lh3902-regulatory-judgement-7-october-2026",
+          "title": "GreenSquareAccord LH3902 regulatory judgement, 7 October 2026"
+        },
+        {
+          "url": "https://www.gov.uk/government/news/social-housing-landlord-downgraded-by-rsh",
+          "title": "RSH downgrade announcement, 7 October 2026"
+        }
+      ],
+      "checked_date": "2026-10-19",
+      "cities": [
+        "Cheltenham"
+      ],
+      "summary_terms": "No private-owner landlord route verified.",
+      "summary_risk": "RSH downgraded G3/V3 on 7 October 2026; C2 unchanged."
+    }
+  ]
+}
