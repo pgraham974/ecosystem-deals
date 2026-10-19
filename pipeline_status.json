@@ -224,6 +224,12 @@
       "n": 14,
       "note": "4 published landlord routes; 7 enquiry-only; 3 no route verified. No confirmed 5–30-unit acceptance.",
       "refreshed": "2026-10-19"
+    },
+    {
+      "name": "Inputs-only underwriting engine",
+      "n": 1,
+      "note": "Clean adaptation of supplied model; single annual VAT-inclusive OPEX; monthly XIRR; formula XLSX export. Desktop Excel recalculation not verified (permission denied).",
+      "refreshed": "2026-10-19"
     }
   ]
 }
