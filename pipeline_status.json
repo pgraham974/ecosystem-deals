@@ -192,8 +192,8 @@
     },
     {
       "name": "Current property sale-status sample",
-      "gives": "27 checked listing records; 22 advertised, 13 with 5–30 existing residential units; holiday-use suitability unverified excluded from preferred band",
-      "period": "Source checks20Oct2026 about08:36–09:44UTC; record-specific checked times retained",
+      "gives": "31 checked lots;25advertised records;23auction lots;18multi-home auction sites;11in5–30homes/site band. No landlord-level unit totals used.",
+      "period": "Record-specific official lot checks20Oct2026; site descriptions not independent surveys or legal-boundary certificates",
       "refreshed": "2026-10-20",
       "cadence_days": 2,
       "routine": "Manual check required; UI green expires after 48h / auction cutoff on reload",
@@ -283,6 +283,12 @@
       "name": "Audited local sold-price cohorts",
       "n": 9177,
       "note": "9177 eligible standard resales;7212 strict pre-sale EPC size matches. Reprocessed20Oct, upstream PPD capture endsAug2026, no upstream refresh. 11tests passed.",
+      "refreshed": "2026-10-20"
+    },
+    {
+      "name": "Site-based auction Sales",
+      "n": 18,
+      "note": "2+existinghomes offered at one site, auction-only default;4newlots. Selected flats, unresolved multi-address packages, rooms, holiday and proposed homes separately labelled.",
       "refreshed": "2026-10-20"
     }
   ]

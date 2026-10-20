@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-20",
-  "coverage_note": "27 source-checked listings, not an exhaustive market scan. Fourteen auction catalogue routes are recorded, including ten additional sources; secondary/HMO/holiday and sold records are separately labelled. Exact unit counts and permanent-use suitability still need property diligence.",
+  "coverage_note": "31 checked lot records. Auction/site descriptions refreshed20October2026; record-level timestamps retained. Multi-home sites and selected-flat groups are separated from unresolved/scattered packages, single homes, holiday use, bedrooms and development land. Not a real-time feed or exhaustive catalogue.",
   "properties": [
     {
       "address": "Apartment 407, 6 Oldham Road, Manchester, Greater Manchester, M4 5DB",
@@ -38,7 +38,12 @@
       "asking_price_gbp": 55000,
       "source_id": "allsop",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 1 existing residential unit, outside the preferred 5–30-unit band."
+      "scope_note": "Secondary size: 1 existing residential unit, outside the preferred 5–30-unit band.",
+      "site_scope": "single_home",
+      "site_homes": 1,
+      "site_count": 1,
+      "site_evidence": "Earlier official lot offered one flat only, not the building or landlord holdings.",
+      "whole_site_or_part": null
     },
     {
       "address": "20 Lansdown Place, Cheltenham, Gloucestershire, GL50 2HX",
@@ -51,15 +56,15 @@
       "seller_type": "By Order of Receivers; type not specified",
       "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
       "status": "Sold prior",
-      "status_evidence": "Official lot page prominently says Sold Prior in the price/result heading and on its image banner. This explicit result overrides the future October auction date.",
-      "checked_at": "2026-10-20T08:36:03.626Z",
+      "status_evidence": "Official lot 278 heading and image say Sold Prior; no current guide displayed.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
-          "title": "Lot 278 - Cheltenham: 20 Lansdown Place - Sold Prior"
+          "title": "Allsop official lot listing: 20 Lansdown Place, Cheltenham, Gloucestershire, GL50 2HX"
         }
       ],
-      "notes": "Freehold Grade II* listed building. Six flats let and one vacant; current rent £98,580 pa. Prior supplied guide TBA is no longer displayed, replaced by Sold Prior. Website also contains inconsistent September/November date text; none overrides explicit Sold Prior.",
+      "notes": "Six flats let, one vacant. Scheduled Auction Date now says Thursday 22nd October, but Additional Information still says Wednesday 16th September 2026, while banner says 21–22 October 2026. Input also recorded inconsistent November wording historically. Explicit Sold Prior overrides all scheduled dates; no operative future offer inferred. Earlier capture: Freehold Grade II* listed building. Six flats let and one vacant; current rent £98,580 pa. Prior supplied guide TBA is no longer displayed, replaced by Sold Prior. Website also contains inconsistent September/November date text; none overrides explicit Sold Prior.",
       "contact": {
         "name": "Simon Hepworth, Allsop",
         "email": "simon.hepworth@allsop.co.uk",
@@ -75,7 +80,19 @@
       ],
       "asking_price_gbp": null,
       "source_id": "allsop",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 7,
+      "site_count": 1,
+      "site_evidence": "Single freehold Grade II* mid-terrace building internally arranged as seven self-contained flats: five two-bedroom and two one-bedroom.",
+      "whole_site_or_part": "Whole described building; closed/withdrawn record retained, not a current opportunity.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered.",
+      "units_label": "7 existing homes offered at one site",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole described building; closed/withdrawn record retained, not a current opportunity."
     },
     {
       "address": "Land at Waterside Gardens, east side of Waters Meeting Road, Bolton, Greater Manchester BL1 8WD",
@@ -112,7 +129,12 @@
       ],
       "asking_price_gbp": 90000,
       "source_id": "auction-house-north-west",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "development",
+      "site_homes": 0,
+      "site_count": 1,
+      "site_evidence": "Earlier listing is development land with permission for12apartments, not12existinghomes.",
+      "whole_site_or_part": null
     },
     {
       "address": "41–43 Moorland Road, Didsbury, Manchester",
@@ -151,7 +173,14 @@
       "legacy_urls": [],
       "asking_price_gbp": 1400000,
       "source_id": "philip-james",
-      "source_kind": "agent"
+      "source_kind": "agent",
+      "site_scope": "single_site",
+      "site_homes": 5,
+      "site_count": 1,
+      "site_evidence": "Earlier official agent description identified two interlocking semi-detached houses at 41–43 Moorland Road converted into five flats. Count relates to this marketed adjoining property, not the owner’s other holdings.",
+      "whole_site_or_part": "Converted adjoining pair marketed together; title boundaries not reviewed",
+      "site_checked_at": "2026-10-20T08:36:03.626Z",
+      "site_boundary_verified": false
     },
     {
       "address": "81 Mauldeth Road and 115 Egerton Road, Ladybarn, Manchester",
@@ -190,7 +219,14 @@
       "legacy_urls": [],
       "asking_price_gbp": 1650000,
       "source_id": "philip-james",
-      "source_kind": "agent"
+      "source_kind": "agent",
+      "site_scope": "unknown",
+      "site_homes": null,
+      "site_count": null,
+      "site_evidence": "Two named properties at different street addresses. Six flats plus a separate shared property are marketed as one package; a single contiguous physical site has not been established. Seven package properties are not seven homes at one verified site.",
+      "whole_site_or_part": "Package: six flats at 81 Mauldeth Road and one seven-bedroom HMO at 115 Egerton Road",
+      "scope_note": "Multiple-address package; not a verified single multi-home site.",
+      "price_input_note": " Site configuration is unresolved: no single-site home count is copied; verify what the package price covers before underwriting."
     },
     {
       "address": "Flat A-C, 1, 4, 6,  9 - 20, 30 Montpelier Road, Brighton BN1 2LQ",
@@ -203,15 +239,15 @@
       "seller_type": "fixed charge receivers",
       "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018",
       "status": "Advertised for sale",
-      "status_evidence": "Official Savills page displays 24 November 2026, guide price and an explicit current invitation to submit bids by 12 noon Thursday 5 November via auction contract. No completed-sale or withdrawn status displayed. Wording that property will be deemed sold prior to auction is conditional on future successful offer, not a sale result.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Official live page displays Lot 502, guide £1,600,000, auction Tuesday 24 November 2026 09:00 and invitation for offers by 12 noon Thursday 5 November. No sold or withdrawn result. The phrase deemed sold prior to auction is conditional on a future successful offer, not a completed result.",
+      "checked_at": "2026-10-20T13:10:05.106Z",
       "sources": [
         {
           "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018",
-          "title": "Savills Auctions official lot listing: Flat A-C, 1, 4, 6,  9 - 20, 30 Montpelier Road, Brighton BN1 2LQ"
+          "title": "Savills Property Auctions | Flat A-C, 1, 4, 6, 9 - 20, 30 Montpelier Road, Brighton BN1 2LQ"
         }
       ],
-      "notes": "Brighton; 18 existing self-contained flats: 17 studios and one 1-bedroom. Leaseholds:125 years from29 September2009. One unit vacant. Headline rent £187,074 pa conflicts with accommodation rent £187,068 pa. Not all flats internally inspected; some accommodation/tenancy information unavailable or from prior valuation. Corrected from20 October to displayed24 November auction, but active bid deadline5 November2026 at12:00 is the operative earlier milestone. Joint agent Jamie Weiner, Vandermolen Real Estate,0750 0530298,jw@vandermolenre.co.uk.",
+      "notes": "Qualifies as one-site existing-home group under the requested rule. Operative earlier offer deadline is 5 November 2026 at noon; best-and-final offers may follow and vendor may accept outside the process. URL retains 20–21 October event slug, but displayed event is 24 November. Offer deadline gives day/month without year; 2026 follows the current displayed event and Thursday calendar alignment. Flats held on individual 125-year leases from 29 September 2009. Not all flats internally inspected; some information unavailable or from previous valuation. Headline rent £187,074 conflicts with accommodation £187,068. Numeric asking_price_gbp is the advertised guide, not a fixed asking price. Legal title, permitted use and lease restrictions not verified; no login or legal pack access. Earlier capture: Brighton; 18 existing self-contained flats: 17 studios and one 1-bedroom. Leaseholds:125 years from29 September2009. One unit vacant. Headline rent £187,074 pa conflicts with accommodation rent £187,068 pa. Not all flats internally inspected; some accommodation/tenancy information unavailable or from prior valuation. Corrected from20 October to displayed24 November auction, but active bid deadline5 November2026 at12:00 is the operative earlier milestone. Joint agent Jamie Weiner, Vandermolen Real Estate,0750 0530298,jw@vandermolenre.co.uk.",
       "contact": {
         "name": "Jeremy Lamb MRICS",
         "email": "jeremy.lamb@savills.com",
@@ -225,11 +261,22 @@
       "legacy_urls": [
         "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018"
       ],
-      "asking_price_gbp": 1600000,
-      "offer_deadline": "5 November 2026, 12:00 (earlier than displayed auction)",
-      "units_label": "18 existing flats (17 studios + 1 one-bedroom)",
+      "asking_price_gbp": null,
+      "offer_deadline": "2026-11-05T12:00:00+00:00",
+      "units_label": "18 existing homes offered at one site",
       "source_id": "savills",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 18,
+      "site_count": 1,
+      "site_evidence": "Official address and expanded tenancy schedule identify Flat A, B, C, 1, 4, 6 and 9–20 all at 30 Montpelier Road. Key features expressly say 17 studio flats and 1 one-bedroom flat; headline expressly calls the 18 flats self-contained. This supports 18 offered existing homes at one building, not a scattered landlord portfolio. Total homes in the wider building is not stated.",
+      "whole_site_or_part": "Selected 18 leasehold flats within 30 Montpelier Road, not a sale of the freehold or proven whole building. Nonconsecutive flat numbering; total block homes unknown.",
+      "site_checked_at": "2026-10-20T13:10:05.106Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 1600000,
+      "price_input_gbp": 1600000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Selected 18 leasehold flats within 30 Montpelier Road, not a sale of the freehold or proven whole building. Nonconsecutive flat numbering; total block homes unknown."
     },
     {
       "address": "11 & 11A Fulham Broadway, London SW6 1AA",
@@ -242,15 +289,15 @@
       "seller_type": "fixed charge receivers",
       "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016",
       "status": "Advertised for sale",
-      "status_evidence": "Official Savills page displays 24 November 2026, guide price and an explicit current invitation to submit bids by 12 noon Thursday 5 November via auction contract. No completed-sale or withdrawn status displayed. Wording that property will be deemed sold prior to auction is conditional on future successful offer, not a sale result.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Official live page displays Lot 503, guide £1,650,000, auction Tuesday 24 November 2026 09:00 and invitation for offers by 12 noon Thursday 5 November. No sold or withdrawn result. Conditional future sold-prior wording is not a sale result.",
+      "checked_at": "2026-10-20T13:10:05.106Z",
       "sources": [
         {
           "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016",
-          "title": "Savills Auctions official lot listing: 11 & 11A Fulham Broadway, London SW6 1AA"
+          "title": "Savills Property Auctions | 11 & 11A Fulham Broadway, London SW6 1AA"
         }
       ],
-      "notes": "Fulham,London; mixed-use,7 existing studios plus1 ground-floor commercial unit, not8 residential homes. One studio vacant. Headline rent £145,488 pa conflicts with tenure/accommodation rent £145,448 pa; commercial lease £57,500 pa from5 October2018 for15 years. Not all units internally inspected. Corrected from20 October to displayed24 November auction, but active bid deadline5 November2026 at12:00 is earlier operative milestone. Joint agent Jamie Weiner, Vandermolen Real Estate,0750 0530298,jw@vandermolenre.co.uk.",
+      "notes": "Qualifies as one-site 7-home group. Operative earlier offer deadline 5 November 2026 noon; best-and-finals may follow and vendor may accept offers outside process. URL October event slug conflicts with displayed 24 November event; displayed event retained. Deadline year inferred from current event and Thursday calendar alignment. One studio vacant. Not all units internally inspected and some data from previous valuation. Headline rent £145,488 conflicts with tenancy text £145,448. Commercial unit is not an eighth home. Numeric price is guide, not fixed asking. Legal/title/permitted-use restrictions unverified; no login or legal pack access. Earlier capture: Fulham,London; mixed-use,7 existing studios plus1 ground-floor commercial unit, not8 residential homes. One studio vacant. Headline rent £145,488 pa conflicts with tenure/accommodation rent £145,448 pa; commercial lease £57,500 pa from5 October2018 for15 years. Not all units internally inspected. Corrected from20 October to displayed24 November auction, but active bid deadline5 November2026 at12:00 is earlier operative milestone. Joint agent Jamie Weiner, Vandermolen Real Estate,0750 0530298,jw@vandermolenre.co.uk.",
       "contact": {
         "name": "Jeremy Lamb MRICS",
         "email": "jeremy.lamb@savills.com",
@@ -264,11 +311,22 @@
       "legacy_urls": [
         "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016"
       ],
-      "asking_price_gbp": 1650000,
-      "offer_deadline": "5 November 2026, 12:00 (earlier than displayed auction)",
-      "units_label": "7 residential studios + 1 commercial unit",
+      "asking_price_gbp": null,
+      "offer_deadline": "2026-11-05T12:00:00+00:00",
+      "units_label": "7 existing homes offered at one site",
       "source_id": "savills",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 7,
+      "site_count": 1,
+      "site_evidence": "Official description calls this a freehold mixed-use property at 11 & 11A Fulham Broadway: one ground-floor commercial unit with 7 studio flats on the upper floors. Seven existing homes at the same building; retail unit excluded from homes.",
+      "whole_site_or_part": "Whole advertised freehold mixed-use property: 7 upper-floor studios plus ground-floor commercial unit, not a selected-flat portfolio.",
+      "site_checked_at": "2026-10-20T13:10:05.106Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 1650000,
+      "price_input_gbp": 1650000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole advertised freehold mixed-use property: 7 upper-floor studios plus ground-floor commercial unit, not a selected-flat portfolio."
     },
     {
       "address": "395 Harrow Road, Maida Hill, London, W9 3NF",
@@ -281,15 +339,15 @@
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154",
       "status": "Advertised for sale",
-      "status_evidence": "Official Allsop lot67 displays £1.2M+ guide, Register to Bid and states this lot will be offered Wednesday21 October; no Sold or Withdrawn banner.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Lot 67 displays Guide Price £1.2M+, Register to Bid, and 21st & 22nd October 2026 catalogue. No closed result displayed.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154",
           "title": "Allsop official lot listing: 395 Harrow Road, Maida Hill, London, W9 3NF"
         }
       ],
-      "notes": "London,Maida Hill; mixed-use:9 residential units plus retail and office, not11 residential homes. Total rent reserved £121,800 pa equivalent, not verified cash collection. Receivers have limited occupational information; vacant possession obligation expressly excluded and current/original tenancy documents may not be held. Sold subject to ASTs and commercial agreements; review legal pack.",
+      "notes": "Existing residential units, not 11 homes. Self-containment and layouts are not independently established: Allsop has not internally inspected. Schedule says borrower informed receivers residential apartments held on seven-year lease from 1 January 2025. Occupation information may be historical; vacant-possession obligation excluded; sellers lack current/original tenancy documents. Rent £121,800 pa reserved, not verified collection. Exact Auction Date text says Wednesday 21st October. Earlier capture: London,Maida Hill; mixed-use:9 residential units plus retail and office, not11 residential homes. Total rent reserved £121,800 pa equivalent, not verified cash collection. Receivers have limited occupational information; vacant possession obligation expressly excluded and current/original tenancy documents may not be held. Sold subject to ASTs and commercial agreements; review legal pack.",
       "contact": {
         "name": "Harry Barlow",
         "email": "harry.barlow@allsop.co.uk",
@@ -303,10 +361,21 @@
       "legacy_urls": [
         "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154"
       ],
-      "asking_price_gbp": 1200000,
-      "units_label": "9 residential units + retail and office",
+      "asking_price_gbp": null,
+      "units_label": "9 existing homes offered at one site",
       "source_id": "allsop",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 9,
+      "site_count": 1,
+      "site_evidence": "Freehold mixed-use mid-terrace building at 395 Harrow Road comprising nine residential units, retail unit and office. Schedule groups nine residential apartments on first to fourth floors.",
+      "whole_site_or_part": "Whole freehold mixed-use building as described, including nine residential units and two commercial units.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 1200000,
+      "price_input_gbp": 1200000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole freehold mixed-use building as described, including nine residential units and two commercial units."
     },
     {
       "address": "17-18 St. Marys Place, Southampton, Hampshire, SO14 3HY",
@@ -319,15 +388,15 @@
       "seller_type": "administrators",
       "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137",
       "status": "Advertised for sale",
-      "status_evidence": "Official Allsop lot154 displays £2.5M+ guide and Register to Bid within Residential21st &22nd Oct2026 Live Stream catalogue; no Sold or Withdrawn banner. Lot page inspected did not specify its individual day.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Lot 154 advertises £2.5M+ Guide Price and Register to Bid in 21st & 22nd October 2026 residential catalogue; no closed result displayed.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137",
           "title": "Allsop official lot listing: 17-18 St. Marys Place, Southampton, Hampshire, SO14 3HY"
         }
       ],
-      "notes": "Southampton; purpose-built student investment,25 existing self-contained studios.22 subject to Assured Periodic Tenancies;3 vacant but reserved. Correct current reserved rent is £249,000 pa equivalent plus future reserved-flat income, not prior £283,200. Seller reports2024 annualised rent circa£341,000; historical/potential income is not current income.8-week completion available. Individual auction day not verified: official catalogue21–22 October2026; source input22 October not relied upon as current verification.",
+      "notes": "Existing studios, not HMO bedrooms or proposed units. Marketed specifically as student investment. Any legally binding student-only/planning occupancy restriction or permission for general housing use is unknown without legal/planning diligence. 22 assured periodic tenancies; three vacant but reserved. Current rent heading £249,000 pa plus future reserved-flat income; schedule total £283,200 pa includes reserved flats. Historical 2024 annualised £341,000 is not current rent. Auction event 21–22 October 2026; individual day not stated on inspected lot description, so auction_date null. Eight-week completion available. Earlier capture: Southampton; purpose-built student investment,25 existing self-contained studios.22 subject to Assured Periodic Tenancies;3 vacant but reserved. Correct current reserved rent is £249,000 pa equivalent plus future reserved-flat income, not prior £283,200. Seller reports2024 annualised rent circa£341,000; historical/potential income is not current income.8-week completion available. Individual auction day not verified: official catalogue21–22 October2026; source input22 October not relied upon as current verification.",
       "contact": {
         "name": "Richard Adamson",
         "email": "richard.adamson@allsop.co.uk",
@@ -341,10 +410,24 @@
       "legacy_urls": [
         "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137"
       ],
-      "asking_price_gbp": 2500000,
-      "units_label": "25 existing self-contained student studios",
+      "asking_price_gbp": null,
+      "units_label": "25 existing homes offered at one site",
       "source_id": "allsop",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 25,
+      "site_count": 1,
+      "site_evidence": "Purpose-built block comprising twenty-five self-contained studio flats; recently completed development with communal lounge and reception.",
+      "whole_site_or_part": "Whole freehold student investment block comprising all 25 described studios.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 2500000,
+      "price_input_gbp": 2500000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole freehold student investment block comprising all 25 described studios.",
+      "auction_window": "21–22 October 2026; individual day unconfirmed",
+      "auction_window_start": "2026-10-21",
+      "auction_window_end": "2026-10-22"
     },
     {
       "address": "8 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU",
@@ -352,20 +435,20 @@
       "city": "Other",
       "units": 5,
       "guide": "£220,000+",
-      "auction_date": null,
+      "auction_date": "2026-10-22",
       "auctioneer": "Allsop",
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113",
       "status": "Advertised for sale",
-      "status_evidence": "Official Allsop lot254 displays £220,000+ guide and Register to Bid in21st &22nd Oct2026 Live Stream catalogue; no Sold or Withdrawn banner. Exact day conflicts: description says Thursday22nd November.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Official lot 254 displays £220,000+ Guide Price and Register to Bid; no sold or withdrawn result displayed.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113",
           "title": "Allsop official lot listing: 8 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU"
         }
       ],
-      "notes": "Plymouth;5 existing self-contained one-bedroom flats. No current rent or confirmed vacant-possession statement in inspected description; do not assume vacant or income-producing. Date conflict retained: official catalogue21–22 October2026 but lot Auction Date text says Thursday22nd November (22 November2026 is Sunday), apparently a month typo but not silently corrected. Previous list22 October; confirm precise day with auctioneer. Garden and garage included.",
+      "notes": "Existing one-bedroom flats. Occupancy, actual rent and vacant possession not established by inspected description. Source-date audit: supplied property_status.json recorded body text Thursday 22nd November conflicting with 21–22 October event. Fresh official page now explicitly says Thursday 22nd October, consistent with event. Prior contradictory November wording retained here rather than silently discarded. Addendum button shows Updated: 20/10/2026; contents not obtained. Earlier capture: Plymouth;5 existing self-contained one-bedroom flats. No current rent or confirmed vacant-possession statement in inspected description; do not assume vacant or income-producing. Date conflict retained: official catalogue21–22 October2026 but lot Auction Date text says Thursday22nd November (22 November2026 is Sunday), apparently a month typo but not silently corrected. Previous list22 October; confirm precise day with auctioneer. Garden and garage included.",
       "contact": {
         "name": "Gabriella Brunton",
         "email": "gabriella.brunton@allsop.co.uk",
@@ -379,10 +462,21 @@
       "legacy_urls": [
         "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113"
       ],
-      "asking_price_gbp": 220000,
-      "units_label": "5 existing one-bedroom flats",
+      "asking_price_gbp": null,
+      "units_label": "5 existing homes offered at one site",
       "source_id": "allsop",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 5,
+      "site_count": 1,
+      "site_evidence": "One freehold mid-terrace building internally arranged as five self-contained flats; each has reception room/kitchen, bedroom and bathroom/shower room. Rear garden and garage.",
+      "whole_site_or_part": "Whole individual freehold building with five flats, rear garden and garage. No joint sale of 8 and 9 is advertised.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 220000,
+      "price_input_gbp": 220000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole individual freehold building with five flats, rear garden and garage. No joint sale of 8 and 9 is advertised."
     },
     {
       "address": "9 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU",
@@ -390,20 +484,20 @@
       "city": "Other",
       "units": 5,
       "guide": "£200,000+",
-      "auction_date": null,
+      "auction_date": "2026-10-22",
       "auctioneer": "Allsop",
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114",
       "status": "Advertised for sale",
-      "status_evidence": "Official Allsop lot255 displays £200,000+ guide and Register to Bid in21st &22nd Oct2026 Live Stream catalogue; no Sold or Withdrawn banner. Exact day conflicts: description says Thursday22nd November.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Official lot 255 displays £200,000+ Guide Price and Register to Bid; no sold or withdrawn result displayed.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114",
           "title": "Allsop official lot listing: 9 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU"
         }
       ],
-      "notes": "Plymouth;5 existing self-contained one-bedroom flats. No current rent or confirmed vacant-possession statement in inspected description; do not assume vacant or income-producing. Date conflict retained: official catalogue21–22 October2026 but lot Auction Date text says Thursday22nd November (22 November2026 is Sunday), apparently a month typo but not silently corrected. Previous list22 October; confirm precise day with auctioneer. Garden and garage included.",
+      "notes": "Existing one-bedroom flats. Occupancy, actual rent and vacant possession not established by inspected description. Source-date audit: supplied property_status.json recorded body text Thursday 22nd November conflicting with 21–22 October event. Fresh official page now explicitly says Thursday 22nd October, consistent with event. Prior contradictory November wording retained here rather than silently discarded. Addendum button shows Updated: 20/10/2026; contents not obtained. Earlier capture: Plymouth;5 existing self-contained one-bedroom flats. No current rent or confirmed vacant-possession statement in inspected description; do not assume vacant or income-producing. Date conflict retained: official catalogue21–22 October2026 but lot Auction Date text says Thursday22nd November (22 November2026 is Sunday), apparently a month typo but not silently corrected. Previous list22 October; confirm precise day with auctioneer. Garden and garage included.",
       "contact": {
         "name": "Gabriella Brunton",
         "email": "gabriella.brunton@allsop.co.uk",
@@ -417,10 +511,21 @@
       "legacy_urls": [
         "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114"
       ],
-      "asking_price_gbp": 200000,
-      "units_label": "5 existing one-bedroom flats",
+      "asking_price_gbp": null,
+      "units_label": "5 existing homes offered at one site",
       "source_id": "allsop",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 5,
+      "site_count": 1,
+      "site_evidence": "One freehold mid-terrace building internally arranged as five self-contained flats; each has reception room/kitchen, bedroom and bathroom/shower room. Rear garden and garage.",
+      "whole_site_or_part": "Whole individual freehold building with five flats, rear garden and garage. No joint sale of 8 and 9 is advertised.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 200000,
+      "price_input_gbp": 200000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole individual freehold building with five flats, rear garden and garage. No joint sale of 8 and 9 is advertised."
     },
     {
       "address": "Flat 1- 4 The Waterhouse, Front Street, Houghton Le Spring, Tyne & Wear, DH5 9JQ",
@@ -433,15 +538,15 @@
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258",
       "status": "Advertised for sale",
-      "status_evidence": "Official Allsop lot226 displays £130,000+ guide, Register to Bid and explicit Thursday22 October date; no Sold or Withdrawn banner.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Lot 226 displays £130,000+ Guide Price, Register to Bid and no closed-result heading.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258",
           "title": "Allsop official lot listing: Flat 1- 4 The Waterhouse, Front Street, Houghton Le Spring, Tyne & Wear, DH5 9JQ"
         }
       ],
-      "notes": "Houghton Le Spring;4 existing self-contained flats:three2-bedroom and one3-bedroom. Explicitly VACANT, no current rental income claimed. Total GIA circa201sqm per EPC; off-street parking.",
+      "notes": "Existing flats, explicitly Vacant. Auction Date says Thursday 22nd October, event 21–22 October 2026. Four homes is below preferred 5–30 band but meets multi-home single-site definition. Earlier capture: Houghton Le Spring;4 existing self-contained flats:three2-bedroom and one3-bedroom. Explicitly VACANT, no current rental income claimed. Total GIA circa201sqm per EPC; off-street parking.",
       "contact": {
         "name": "Harry Barlow",
         "email": "harry.barlow@allsop.co.uk",
@@ -455,10 +560,21 @@
       "legacy_urls": [
         "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258"
       ],
-      "asking_price_gbp": 130000,
+      "asking_price_gbp": null,
       "source_id": "allsop",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole freehold four-flat block, Flats 1–4 The Waterhouse.",
+      "site_scope": "single_site",
+      "site_homes": 4,
+      "site_count": 1,
+      "site_evidence": "Freehold block internally arranged as four self-contained flats: three two-bedroom and one three-bedroom. Total GIA approximately 201 sq m, off-street parking.",
+      "whole_site_or_part": "Whole freehold four-flat block, Flats 1–4 The Waterhouse.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 130000,
+      "price_input_gbp": 130000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "units_label": "4 existing homes offered at one site"
     },
     {
       "address": "11 Lindum Terrace, Doncaster Road, Rotherham, South Yorkshire S65 1NJ",
@@ -471,19 +587,19 @@
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
       "status": "Advertised for sale",
-      "status_evidence": "Legacy official SDL page links to successor BTG listing. Successor official page states lot due to be auctioned29/10/2026, £184,000+ guide, Register to Bid and Submit an offer. No completed-sale or Withdrawn status. The descriptive phrase sold on behalf of Receivers describes sale terms, not a sale result.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Current successor BTG Eddisons page explicitly says lot 321 is due to be auctioned on 29/10/2026, displays guide £184,000+, Register to Bid and Submit an offer. No sold or withdrawn result. Sold on behalf of Receivers is descriptive wording, not a sale result.",
+      "checked_at": "2026-10-20T13:10:05.106Z",
       "sources": [
         {
-          "url": "https://www.sdlauctions.co.uk/property/52241/block-of-apartments-for-auction-rotherham/",
-          "title": "SDL Property Auctions (BTG Eddisons) official lot listing: 11 Lindum Terrace, Doncaster Road, Rotherham, South Yorkshire S65 1NJ"
+          "url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
+          "title": "11 Lindum Terrace, Doncaster Road, Rotherham, South Yorkshire S65 1NJ | BTG Eddisons Property Auctions"
         },
         {
-          "url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
-          "title": "BTG Eddisons official lot321:11 Lindum Terrace,Rotherham"
+          "url": "https://www.sdlauctions.co.uk/property/52241/block-of-apartments-for-auction-rotherham/",
+          "title": "Block of Apartments in Rotherham | 11 Lindum Terrace - SDL Property Auctions (legacy date 28 October 2026)"
         }
       ],
-      "notes": "Rotherham;4 existing one-bedroom flats. Corrected current auction date29 October from legacy28 October. Possible£33,600 pa rent is belief only:auctioneer has not seen tenancy agreements or internally inspected; subject to whatever tenancies may or may not exist. Occupancy directs buyer to legal pack. Do not treat rent as verified or assume vacant possession.",
+      "notes": "Qualifies under requested 2–4-home allowance. Source-date conflict freshly verified: legacy SDL page says Wednesday 28 October 2026 11:00; it links onward to successor BTG whose current date is 29 October 2026. Retain successor date, time unknown. No fixed earlier offer deadline found. Auctioneer has not inspected internally or seen tenancy agreements; rent and occupation are beliefs only, sold subject to whatever tenancies may or may not be in place. Tenancy, title and permitted-use restrictions require legal pack; not accessed. Numeric price is guide, not fixed asking. Earlier capture: Rotherham;4 existing one-bedroom flats. Corrected current auction date29 October from legacy28 October. Possible£33,600 pa rent is belief only:auctioneer has not seen tenancy agreements or internally inspected; subject to whatever tenancies may or may not exist. Occupancy directs buyer to legal pack. Do not treat rent as verified or assume vacant possession.",
       "contact": {
         "name": "BTG Eddisons Property Auctions",
         "email": "enquiries@btgeddisonspropertyauctions.com",
@@ -497,10 +613,22 @@
       "legacy_urls": [
         "https://www.sdlauctions.co.uk/property/52241/block-of-apartments-for-auction-rotherham/"
       ],
-      "asking_price_gbp": 184000,
+      "asking_price_gbp": null,
       "source_id": "btg-eddisons",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole advertised freehold terraced villa arranged as four flats, rather than selected flats within a larger advertised block.",
+      "site_scope": "single_site",
+      "site_homes": 4,
+      "site_count": 1,
+      "site_evidence": "Official description: A substantial terraced villa arranged as 4x one bedroomed flats; key features Block of 4 Apartments and 4x One Bedroom Flats. One villa at 11 Lindum Terrace, parking to rear, rather than four scattered addresses.",
+      "whole_site_or_part": "Whole advertised freehold terraced villa arranged as four flats, rather than selected flats within a larger advertised block.",
+      "offer_deadline": null,
+      "site_checked_at": "2026-10-20T13:10:05.106Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 184000,
+      "price_input_gbp": 184000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "units_label": "4 existing homes offered at one site"
     },
     {
       "address": "82 Sumner Road, Croydon, Greater London, CR0 3LJ",
@@ -513,15 +641,15 @@
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226",
       "status": "Withdrawn",
-      "status_evidence": "Official Allsop lot59 displays Withdrawn in status heading and image banner. Overrides residual Wednesday21 October date and Register to Bid button.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status_evidence": "Official lot 59 heading and image say Withdrawn; Register to Bid still appears but does not override explicit withdrawn result.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226",
           "title": "Allsop official lot listing: 82 Sumner Road, Croydon, Greater London, CR0 3LJ"
         }
       ],
-      "notes": "Croydon;4 existing flats:two2-bedroom and two1-bedroom. One tenancy reserving£9,000 pa equivalent;three unoccupied. Current withdrawn page no longer displays guide, so previous£500,000+ is not represented as a current guide. Exclude from live-sale highlights.",
+      "notes": "One assured periodic tenancy reserving £9,000 pa; three flats unoccupied. Scheduled date Wednesday 21st October in October catalogue, not an operative offer while Withdrawn. No current guide; do not reuse historical £500,000+. Earlier capture: Croydon;4 existing flats:two2-bedroom and two1-bedroom. One tenancy reserving£9,000 pa equivalent;three unoccupied. Current withdrawn page no longer displays guide, so previous£500,000+ is not represented as a current guide. Exclude from live-sale highlights.",
       "contact": {
         "name": "Gabriella Brunton",
         "email": "gabriella.brunton@allsop.co.uk",
@@ -538,7 +666,18 @@
       "asking_price_gbp": null,
       "source_id": "allsop",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole described building; closed/withdrawn record retained, not a current opportunity.",
+      "site_scope": "single_site",
+      "site_homes": 4,
+      "site_count": 1,
+      "site_evidence": "One freehold mid-terrace building internally arranged as four self-contained flats: two two-bedroom and two one-bedroom.",
+      "whole_site_or_part": "Whole described building; closed/withdrawn record retained, not a current opportunity.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered.",
+      "units_label": "4 existing homes offered at one site"
     },
     {
       "address": "51 St. Andrews Road South, Lytham St. Annes, Lancashire, FY8 1PZ",
@@ -546,20 +685,20 @@
       "city": "Other",
       "units": 4,
       "guide": null,
-      "auction_date": null,
+      "auction_date": "2026-10-22",
       "auctioneer": "Allsop",
       "seller_type": "receivers (fixed charge/LPA not specified)",
       "url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200",
-      "status": "Sold",
-      "status_evidence": "Official Allsop lot280 clearly displays Sold Prior in status heading and image banner. Overrides residual21–22 October catalogue and contradictory Thursday22nd November text.",
-      "checked_at": "2026-10-20T08:36:10.114Z",
+      "status": "Sold prior",
+      "status_evidence": "Official lot 280 heading and image say Sold Prior; no current guide displayed.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
       "sources": [
         {
           "url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200",
           "title": "Allsop official lot listing: 51 St. Andrews Road South, Lytham St. Annes, Lancashire, FY8 1PZ"
         }
       ],
-      "notes": "Lytham St Annes;4 existing flats:three1-bedroom and one2-bedroom, each subject to Assured Periodic Tenancy. Current gross rent reserved£14,775.48 pa equivalent. Leasehold980 years from1 May1888. No current guide displayed. Exact scheduled date internally contradictory; irrelevant to completed Sold Prior status. Exclude from live-sale highlights.",
+      "notes": "Fresh official status is Sold Prior, more precise than input Sold. All four flats let; lease 980 years from 1 May 1888. Scheduled body now says Thursday 22nd October; input recorded earlier internal date contradictions. Scheduled date is not an operative future offer because Sold Prior. No current guide. Earlier capture: Lytham St Annes;4 existing flats:three1-bedroom and one2-bedroom, each subject to Assured Periodic Tenancy. Current gross rent reserved£14,775.48 pa equivalent. Leasehold980 years from1 May1888. No current guide displayed. Exact scheduled date internally contradictory; irrelevant to completed Sold Prior status. Exclude from live-sale highlights.",
       "contact": {
         "name": "Simon Hepworth",
         "email": "simon.hepworth@allsop.co.uk",
@@ -576,7 +715,18 @@
       "asking_price_gbp": null,
       "source_id": "allsop",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole described building; closed/withdrawn record retained, not a current opportunity.",
+      "site_scope": "single_site",
+      "site_homes": 4,
+      "site_count": 1,
+      "site_evidence": "One leasehold mid-terrace building internally arranged as four self-contained flats: three one-bedroom and one two-bedroom.",
+      "whole_site_or_part": "Whole described building; closed/withdrawn record retained, not a current opportunity.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered.",
+      "units_label": "4 existing homes offered at one site"
     },
     {
       "address": "Flat 1 and Flat 3 Everards Court, and Flat 1 Everards Place, 7 John Street, Bristol",
@@ -586,25 +736,25 @@
       "units_n": 3,
       "existing_units": 3,
       "guide": "£475,000 +++",
-      "asking_price_gbp": 475000,
+      "asking_price_gbp": null,
       "auction_date": "2026-10-21",
       "auctioneer": "Hollis Morgan",
       "seller_type": "Not disclosed on inspected official lot page",
       "url": "https://www.hollismorgan.co.uk/property-details/34912703/bristol-city/bristol/x-apartments-everards-court?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
       "status": "Advertised for sale",
-      "status_evidence": "Official current catalogue includes this lot; inspected official individual page explicitly says FOR SALE BY ONLINE AUCTION, gives 2026-10-21 and guide £475,000 +++, and supplies Register to Bid and Pre Auction Offer links. No sold or withdrawn contradiction displayed.",
-      "checked_at": "2026-10-20T09:41:25.881Z",
+      "status_evidence": "Official lot 35 page explicitly says FOR SALE BY ONLINE AUCTION Wednesday 21 October 2026, 12:00 noon; guide £475,000 +++; Register to Bid and Pre Auction Offer available. No sold or withdrawn result displayed.",
+      "checked_at": "2026-10-20T13:10:05.106Z",
       "sources": [
         {
           "url": "https://www.hollismorgan.co.uk/property-details/34912703/bristol-city/bristol/x-apartments-everards-court?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
-          "title": "3 x Apartments @ Everards Court, 7 John Street, City Centre, BS1 2HT"
+          "title": "3 x Apartments @ Everards Court, 7 John Street, City Centre, BS1 2HT | Hollis Morgan"
         },
         {
           "url": "https://www.hollismorgan.co.uk/search-auction/?bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
           "title": "Hollis Morgan current auction properties"
         }
       ],
-      "notes": "Secondary 3-unit portfolio, not the preferred 5–30 band. Three existing ground-floor leasehold apartments: one 2-bedroom and two 1-bedroom flats, sold subject to existing tenancies. Public bidding registration deadline was 16 October; current advertised status does not establish ability to register late. No distress evidence supplied by auction listing.",
+      "notes": "Three existing self-contained homes offered overall, but combined one-site 3-home qualification is UNKNOWN. At least the two Court flats form one same-block subgroup; Place linkage and overall physical site count remain unknown. Do not label a scattered portfolio either without evidence. Registration deadline Friday 16 October 2026 16:00 has passed at check time; advertised status does not establish late bidding eligibility. No dated earlier offer deadline found. Sold subject to tenancies. Leases commence 25 November 2019, expire 24 November 2318; service/ground-rent charges stated. Legal boundaries, restrictions and physical linkage would need title/site plan, unavailable without legal-pack registration which was not used. Numeric price is guide. Earlier capture: Secondary 3-unit portfolio, not the preferred 5–30 band. Three existing ground-floor leasehold apartments: one 2-bedroom and two 1-bedroom flats, sold subject to existing tenancies. Public bidding registration deadline was 16 October; current advertised status does not establish ability to register late. No distress evidence supplied by auction listing.",
       "contact": {
         "name": "Hollis Morgan Auctions & Land",
         "email": "post@hollismorgan.co.uk",
@@ -614,7 +764,18 @@
       },
       "source_id": "hollis-morgan",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 3 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Multiple homes may be marketed, but one physical site is not established; excluded from the default site-only search.",
+      "site_scope": "unknown",
+      "site_homes": null,
+      "site_count": null,
+      "site_evidence": "Exact official address list: Flat 1 Everards Court, 7 John Street, BS1 2HT (EC1); Flat 3 Everards Court at the same address (EC3); Flat 1 Everards Place at the same street address (EP1). The lot comprises 3 ground-floor leasehold modern apartments: EC1 two bedrooms 614 sq ft; EC3 one bedroom 489 sq ft; EP1 one bedroom 486 sq ft. Two homes are explicitly within Everards Court, but public text does not establish whether Everards Place shares a physically contiguous site. Shared 7 John Street address and similar names alone are not treated as proof. Floorplan tab was checked but no linking site plan was exposed in the snapshot/visible viewport.",
+      "whole_site_or_part": "Selected flats only: EC1 and EC3 in Everards Court plus EP1 in Everards Place; not either whole block or a whole development sale.",
+      "offer_deadline": null,
+      "site_checked_at": "2026-10-20T13:10:05.106Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 475000,
+      "price_input_gbp": 475000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred. Site configuration is unresolved: no single-site home count is copied; verify what the package price covers before underwriting."
     },
     {
       "address": "Former Bank Premises + 3 Flats, 11 Huntspill Road, Highbridge, Somerset",
@@ -624,25 +785,25 @@
       "units_n": 3,
       "existing_units": 3,
       "guide": "£300,000 +++",
-      "asking_price_gbp": 300000,
+      "asking_price_gbp": null,
       "auction_date": "2026-11-18",
       "auctioneer": "Hollis Morgan",
       "seller_type": "Not disclosed on inspected official lot page",
       "url": "https://www.hollismorgan.co.uk/property-details/34984357/somerset/somerset/11?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
       "status": "Advertised for sale",
-      "status_evidence": "Official current catalogue includes this lot; inspected official individual page explicitly says FOR SALE BY ONLINE AUCTION, gives 2026-11-18 and guide £300,000 +++, and supplies Register to Bid and Pre Auction Offer links. No sold or withdrawn contradiction displayed.",
-      "checked_at": "2026-10-20T09:41:25.881Z",
+      "status_evidence": "Official page says FOR SALE BY ONLINE AUCTION Wednesday 18 November 2026 at 12:00 noon, guide £300,000 +++, lot number TBC, with Register to Bid and Pre Auction Offer links. No sold or withdrawn result displayed.",
+      "checked_at": "2026-10-20T13:10:05.106Z",
       "sources": [
         {
           "url": "https://www.hollismorgan.co.uk/property-details/34984357/somerset/somerset/11?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
-          "title": "3 x FLATS + DEVELOPMENT | HIGHBRIDGE TA9"
+          "title": "3 x FLATS + DEVELOPMENT | HIGHBRIDGE TA9 | Hollis Morgan"
         },
         {
           "url": "https://www.hollismorgan.co.uk/search-auction/?bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
           "title": "Hollis Morgan current auction properties"
         }
       ],
-      "notes": "Secondary West of England 3-unit investment. Three existing first-floor self-contained 1-bedroom flats; vacant former bank ground floor is commercial, not homes. Indicative proposal for four further flats has no planning sought and is excluded from existing_units and units_n. Flat 2 tenant has given notice and will not be relet. No distress evidence supplied.",
+      "notes": "Qualifies as 3 existing homes at one site. Four proposed ground-floor flats are indicative only: official page says no planning of this nature previously sought. They do not increase home count to 7. Registration deadline 13 November 2026 16:00; no fixed pre-auction offer deadline found. Flat 2 tenant served notice and will not be relet. Future development conditional on consents. Existing tenancy/title/use restrictions require legal pack; not accessed. Numeric price is guide. Earlier capture: Secondary West of England 3-unit investment. Three existing first-floor self-contained 1-bedroom flats; vacant former bank ground floor is commercial, not homes. Indicative proposal for four further flats has no planning sought and is excluded from existing_units and units_n. Flat 2 tenant has given notice and will not be relet. No distress evidence supplied. Mixed-use commercial element included: review SDLT mode, VAT and legal pack before underwriting.",
       "contact": {
         "name": "Hollis Morgan Auctions & Land",
         "email": "post@hollismorgan.co.uk",
@@ -652,7 +813,19 @@
       },
       "source_id": "hollis-morgan",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 3 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole advertised freehold former-bank site/property with three existing first-floor flats, vacant ground-floor commercial premises, garden and garage; not selected flats only.",
+      "site_scope": "single_site",
+      "site_homes": 3,
+      "site_count": 1,
+      "site_evidence": "Official THE PROPERTY describes one freehold former bank premises (3619 sq ft) on a 0.25-acre plot, first floor arranged as 3 large self-contained one-bedroom flats, vacant ground-floor commercial premises, rear garden and garage. Three existing homes at this single property; proposed ground-floor scheme is excluded.",
+      "whole_site_or_part": "Whole advertised freehold former-bank site/property with three existing first-floor flats, vacant ground-floor commercial premises, garden and garage; not selected flats only.",
+      "offer_deadline": null,
+      "site_checked_at": "2026-10-20T13:10:05.106Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 300000,
+      "price_input_gbp": 300000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "units_label": "3 existing homes offered at one site"
     },
     {
       "address": "54 Crombey Street, Swindon, Wiltshire",
@@ -662,25 +835,25 @@
       "units_n": 4,
       "existing_units": 4,
       "guide": "£200,000 +++",
-      "asking_price_gbp": 200000,
+      "asking_price_gbp": null,
       "auction_date": "2026-11-18",
       "auctioneer": "Hollis Morgan",
       "seller_type": "Not disclosed on inspected official lot page",
       "url": "https://www.hollismorgan.co.uk/property-details/34987048/wiltshire/swindon/crombey-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
       "status": "Advertised for sale",
-      "status_evidence": "Official current catalogue includes this lot; inspected official individual page explicitly says FOR SALE BY ONLINE AUCTION, gives 2026-11-18 and guide £200,000 +++, and supplies Register to Bid and Pre Auction Offer links. No sold or withdrawn contradiction displayed.",
-      "checked_at": "2026-10-20T09:41:25.881Z",
+      "status_evidence": "Official page says FOR SALE BY ONLINE AUCTION Wednesday 18 November; detailed auction section specifies 18 November 2026 at 12:00 noon, guide £200,000 +++, lot number TBC, with Register to Bid and Pre Auction Offer links. No sold or withdrawn result.",
+      "checked_at": "2026-10-20T13:10:05.106Z",
       "sources": [
         {
           "url": "https://www.hollismorgan.co.uk/property-details/34987048/wiltshire/swindon/crombey-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
-          "title": "4 x STUDIO FLATS | £36K PA | SWINDON"
+          "title": "4 x STUDIO FLATS | £36K PA | SWINDON | Hollis Morgan"
         },
         {
           "url": "https://www.hollismorgan.co.uk/search-auction/?bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
           "title": "Hollis Morgan current auction properties"
         }
       ],
-      "notes": "Secondary regional 4-unit candidate. Four existing self-contained studio flats, leasehold (residue of 999 years); freehold purchase option advertised at £350, subject to legal pack. One studio vacant, another tenant has served notice. Potential income is not treated as current income. No distress evidence supplied.",
+      "notes": "Qualifies under requested 2–4-home allowance. Registration deadline 13 November 2026 16:00; no fixed earlier pre-auction-offer deadline found. Residue of 999-year lease; freehold option £350 must be checked against legal pack. Studio 2 vacant and not being relet; Studio 4 tenant served notice. £36,600 is potential fully-let income, not verified current income. Page heading calls area Gorse Hill; full auction address identifies Swindon SN1 5QN. Legal permitted-use and lease restrictions unverified; no legal pack/login. Numeric price is guide. Earlier capture: Secondary regional 4-unit candidate. Four existing self-contained studio flats, leasehold (residue of 999 years); freehold purchase option advertised at £350, subject to legal pack. One studio vacant, another tenant has served notice. Potential income is not treated as current income. No distress evidence supplied.",
       "contact": {
         "name": "Hollis Morgan Auctions & Land",
         "email": "post@hollismorgan.co.uk",
@@ -690,12 +863,24 @@
       },
       "source_id": "hollis-morgan",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole advertised leasehold end-of-terrace property comprising all four studios; freehold is a separate optional purchase at £350, subject to legal pack, not included as a proven freehold sale.",
+      "site_scope": "single_site",
+      "site_homes": 4,
+      "site_count": 1,
+      "site_evidence": "Official THE PROPERTY describes one leasehold end-of-terrace period property, 1236 sq ft over two floors, comprising 4 self-contained studio flats with two parking spaces to rear. Four homes in the same existing property, not HMO rooms or proposed units.",
+      "whole_site_or_part": "Whole advertised leasehold end-of-terrace property comprising all four studios; freehold is a separate optional purchase at £350, subject to legal pack, not included as a proven freehold sale.",
+      "offer_deadline": null,
+      "site_checked_at": "2026-10-20T13:10:05.106Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 200000,
+      "price_input_gbp": 200000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "units_label": "4 existing homes offered at one site"
     },
     {
       "seller_type": "Unknown",
       "status": "Advertised for sale",
-      "checked_at": "2026-10-20T09:43:41.148Z",
+      "checked_at": "2026-10-20T13:11:57.510Z",
       "address": "20a–20d Glegside Road and 47a–47e Simonswood Lane, Northwood, Kirkby, Liverpool",
       "postcode": "L33 5XT / L33 5XB",
       "city": "Other",
@@ -704,11 +889,11 @@
       "units_n": 9,
       "existing_units": 9,
       "guide": "£765,000",
-      "asking_price_gbp": 765000,
+      "asking_price_gbp": null,
       "auction_date": "2026-10-21",
       "auctioneer": "Edward Mellor Auctions",
       "url": "https://edwardmellor.co.uk/property-for-sale/10171111/",
-      "status_evidence": "Official 21–22 October catalogue lot 36 marked AVAILABLE at £765,000; current lot page offers entire nine-house development for auction with viewing and bidding links. No sold/withdrawn contradiction observed.",
+      "status_evidence": "Fresh official snapshot: Lot 36 Detached House For Auction, £765,000 Starting Bid; appearing 21 October; description says auction 21–22 October 2026 unless sold prior. No sold/withdrawn notice displayed.",
       "sources": [
         {
           "url": "https://edwardmellor.co.uk/property-for-sale/10171111/",
@@ -719,7 +904,7 @@
           "title": "Edward Mellor 21–22 October 2026 catalogue"
         }
       ],
-      "notes": "Non-GM fallback 1 of 2. Freehold; eight occupied, 20d vacant. Passing gross rent reported £76,554.48 pa; stated fully occupied schedule £89,754.48 pa is potential, not passing. Outstanding planning and building-control matters expressly disclosed. Header postcode L33 5XE differs from detailed property schedule L33 5XT and L33 5XB. Auction runs 21–22 October; date field is opening day, not asserted lot closing time. No duplicate in existing property_status feed.",
+      "notes": "9 portfolio homes verified, NOT counted as one 9-home site. Conservatively unknown site scope pending contiguous-site evidence. Header L33 5XE conflicts with detailed schedule postcodes. Outstanding planning/building-control matters disclosed. Earlier capture: Non-GM fallback 1 of 2. Freehold; eight occupied, 20d vacant. Passing gross rent reported £76,554.48 pa; stated fully occupied schedule £89,754.48 pa is potential, not passing. Outstanding planning and building-control matters expressly disclosed. Header postcode L33 5XE differs from detailed property schedule L33 5XT and L33 5XB. Auction runs 21–22 October; date field is opening day, not asserted lot closing time. No duplicate in existing property_status feed.",
       "contact": {
         "name": "Edward Mellor Auction Department",
         "email": "auction@edwardmellor.co.uk",
@@ -728,12 +913,23 @@
         "source_url": "https://edwardmellor.co.uk/auctions/21oct2026/"
       },
       "source_id": "edward-mellor",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "unknown",
+      "site_homes": null,
+      "site_count": null,
+      "site_evidence": "Nine individual houses listed: 20a–20d Glegside Road and 47a–47e Simonswood Lane. Auctioneer calls this an entire modern residential development comprising nine houses and a substantial residential holding in one location. However no site/boundary plan has been verified establishing contiguous land or a single physical compound across the two roads.",
+      "whole_site_or_part": "Whole advertised property",
+      "site_checked_at": "2026-10-20T13:11:57.510Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 765000,
+      "price_input_gbp": 765000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred. Site configuration is unresolved: no single-site home count is copied; verify what the package price covers before underwriting.",
+      "scope_note": "Multiple homes may be marketed, but one physical site is not established; excluded from the default site-only search."
     },
     {
       "seller_type": "Unknown",
       "status": "Advertised for sale",
-      "checked_at": "2026-10-20T09:43:41.148Z",
+      "checked_at": "2026-10-20T13:11:57.510Z",
       "address": "18 Palatine Road, Blackpool, Lancashire",
       "postcode": "FY1 4BT",
       "city": "Other",
@@ -742,11 +938,11 @@
       "units_n": 8,
       "existing_units": 8,
       "guide": "£165,000 plus fees",
-      "asking_price_gbp": 165000,
+      "asking_price_gbp": null,
       "auction_date": "2026-11-11",
       "auctioneer": "Auction House North West",
       "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153682",
-      "status_evidence": "Official current 11 November catalogue includes property with guide £165,000; individual page explicitly For Sale By Auction, offers legal pack and viewing arrangements, with no sold or withdrawn result observed.",
+      "status_evidence": "Fresh official snapshot explicitly For Sale By Auction | 12:00, 11 November 2026; £165,000 plus fees; no sold/withdrawn result displayed.",
       "sources": [
         {
           "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153682",
@@ -757,7 +953,7 @@
           "title": "Auction House North West 11 November 2026 current catalogue"
         }
       ],
-      "notes": "Non-GM fallback 2 of 2. Freehold title LA874908. Existing holiday-use apartments: four one-bedroom apartments, three studios and one split-level family suite. Conversion to TA or other permanent residential use must not be assumed; verify planning, licensing and standards. Administration charge 2.75% including VAT, minimum £3,600; other costs in legal pack. No duplicate in existing feed.",
+      "notes": "Permanent residential/TA use not demonstrated. Holiday count 8, qualifying permanent-home count 0. Whole freehold title LA874908. Earlier capture: Non-GM fallback 2 of 2. Freehold title LA874908. Existing holiday-use apartments: four one-bedroom apartments, three studios and one split-level family suite. Conversion to TA or other permanent residential use must not be assumed; verify planning, licensing and standards. Administration charge 2.75% including VAT, minimum £3,600; other costs in legal pack. No duplicate in existing feed.",
       "contact": {
         "name": "Auction House North West Residential Team",
         "email": "northwest@auctionhouse.co.uk",
@@ -768,12 +964,22 @@
       "source_id": "auction-house-north-west",
       "source_kind": "auction",
       "residential_use_demonstrated": false,
-      "scope_note": "Holiday-use apartments. Permanent residential/TA use is Not demonstrated; excluded from the default 5–30 residential-unit filter."
+      "scope_note": "8 holiday apartments in one building; no verified permanent residential-home count.",
+      "site_scope": "holiday",
+      "site_homes": 0,
+      "site_count": 1,
+      "site_evidence": "One substantial freehold building operating as eight self-contained holiday apartments: four one-bedroom apartments, three studios and one split-level family suite. Eight holiday units, not eight verified permanent homes.",
+      "whole_site_or_part": "Whole advertised property",
+      "site_checked_at": "2026-10-20T13:11:57.510Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered."
     },
     {
       "seller_type": "Unknown",
       "status": "Advertised for sale",
-      "checked_at": "2026-10-20T09:43:41.148Z",
+      "checked_at": "2026-10-20T13:11:57.510Z",
       "address": "320/320A Slade Lane, Burnage, Manchester",
       "postcode": "M19 2BY",
       "city": "Manchester",
@@ -782,11 +988,11 @@
       "units_n": 1,
       "existing_units": 1,
       "guide": "£360,000",
-      "asking_price_gbp": 360000,
+      "asking_price_gbp": null,
       "auction_date": "2026-10-21",
       "auctioneer": "Edward Mellor Auctions",
       "url": "https://edwardmellor.co.uk/property-for-sale/10169748/",
-      "status_evidence": "Official October catalogue lot 41 AVAILABLE at £360,000. Current official lot page For Auction with opening bid £360,000; embedded bidding panel says bidding not yet open, opens 21 October, ends 22 October 2026 13:45. No sold/withdrawn result observed.",
+      "status_evidence": "Fresh official snapshot: Lot 41, 6-bed Terraced House For Auction, £360,000 Starting Bid, auction 21–22 October 2026 unless sold prior. No sold/withdrawn notice.",
       "sources": [
         {
           "url": "https://edwardmellor.co.uk/property-for-sale/10169748/",
@@ -797,7 +1003,7 @@
           "title": "Edward Mellor 21–22 October 2026 catalogue"
         }
       ],
-      "notes": "SCOPE EXCEPTION: not a 3–30-unit self-contained block; retained only as existing Manchester accommodation alternative, do not count six bedrooms as six units. Freehold. Listing reports five-year FRI lease to unnamed care company and £46,320 pa rent; operator covenant, lease start/breaks and regulatory compliance unverified. Opening-day auction_date; lot closing date is 22 October. No duplicate in feed.",
+      "notes": "One existing care property, zero demonstrated self-contained homes. Five-year FRI lease to unnamed care company. Do not count bedroom income or operator lease as home count. Earlier capture: SCOPE EXCEPTION: not a 3–30-unit self-contained block; retained only as existing Manchester accommodation alternative, do not count six bedrooms as six units. Freehold. Listing reports five-year FRI lease to unnamed care company and £46,320 pa rent; operator covenant, lease start/breaks and regulatory compliance unverified. Opening-day auction_date; lot closing date is 22 October. No duplicate in feed.",
       "contact": {
         "name": "Edward Mellor Auction Department",
         "email": "auction@edwardmellor.co.uk",
@@ -807,11 +1013,21 @@
       },
       "source_id": "edward-mellor",
       "source_kind": "auction",
-      "scope_note": "One care property with shared facilities, not six flats. Current named lessee/covenant not demonstrated."
+      "scope_note": "One shared/care property, not multiple self-contained homes.",
+      "site_scope": "non_selfcontained",
+      "site_homes": 0,
+      "site_count": 1,
+      "site_evidence": "Official description: one kitchen, two downstairs living areas and six en-suite bedrooms within a care investment property. Six bedrooms are not six homes.",
+      "whole_site_or_part": "Whole advertised property",
+      "site_checked_at": "2026-10-20T13:11:57.510Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 360000,
+      "price_input_gbp": 360000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred."
     },
     {
       "seller_type": "Unknown",
-      "status": "Advertised for sale",
+      "status": "Status unverified",
       "checked_at": "2026-10-20T09:43:41.148Z",
       "address": "69 Lower Bents Lane, Bredbury, Stockport",
       "postcode": "SK6 2NL",
@@ -820,12 +1036,12 @@
       "units": "1 existing HMO property with 10 letting rooms and 10 bathrooms; not 10 self-contained flats",
       "units_n": 1,
       "existing_units": 1,
-      "guide": "£600,000",
-      "asking_price_gbp": 600000,
+      "guide": null,
+      "asking_price_gbp": null,
       "auction_date": "2026-10-21",
       "auctioneer": "Edward Mellor Auctions",
       "url": "https://edwardmellor.co.uk/property-for-sale/10171330/",
-      "status_evidence": "Official 21–22 October catalogue lot 6 AVAILABLE at £600,000; individual page explicitly For Auction at starting bid £600,000 with viewing link and current auction description. No sold/withdrawn result observed.",
+      "status_evidence": "Fresh browser attempts returned blank page then navigation timeout; webfetch aborted. Official-domain websearch returned For Auction and 21–22 October 2026 unless sold prior, but £730,000/TBC differs from saved £600,000/lot 6. Current definitive guide and lot number unresolved.",
       "sources": [
         {
           "url": "https://edwardmellor.co.uk/property-for-sale/10171330/",
@@ -836,7 +1052,7 @@
           "title": "Edward Mellor 21–22 October 2026 catalogue"
         }
       ],
-      "notes": "SCOPE EXCEPTION: one HMO, not a qualifying self-contained-unit block. Greater Manchester but outside Manchester City. Freehold; current gross rent reported £91,500 pa (£7,625 pcm). HMO licence and compliance require independent verification. Auction 21–22 October; date is opening day. No duplicate in feed.",
+      "notes": "No ten-home site. One HMO property, no demonstrated self-contained homes. Prior official snapshot reported £600,000; search retrieval £730,000 may be stale. Do not use either guide as definitive current value. Search result source QBvzCUKm7QsrzNgtfmpDq. Earlier capture: SCOPE EXCEPTION: one HMO, not a qualifying self-contained-unit block. Greater Manchester but outside Manchester City. Freehold; current gross rent reported £91,500 pa (£7,625 pcm). HMO licence and compliance require independent verification. Auction 21–22 October; date is opening day. No duplicate in feed.",
       "contact": {
         "name": "Edward Mellor Auction Department",
         "email": "auction@edwardmellor.co.uk",
@@ -846,7 +1062,18 @@
       },
       "source_id": "edward-mellor",
       "source_kind": "auction",
-      "scope_note": "One HMO with ten rooms, not ten self-contained homes. Licence and proposed institutional use require verification."
+      "scope_note": "One shared/care property, not multiple self-contained homes.",
+      "site_scope": "non_selfcontained",
+      "site_homes": 0,
+      "site_count": 1,
+      "site_evidence": "Official-domain search retrieval of full description states TEN BEDROOM HMO, ten bedrooms and ten bathrooms, income spread across ten letting rooms within a single property. Not ten self-contained homes.",
+      "whole_site_or_part": "Whole advertised property",
+      "site_checked_at": "2026-10-20T13:11:57.510Z",
+      "site_boundary_verified": false,
+      "last_attempt_at": "2026-10-20T13:11:57.510Z",
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered."
     },
     {
       "address": "17 St. Mary's Square, Gloucester, Gloucestershire, GL1 2QT",
@@ -881,36 +1108,42 @@
       },
       "source_id": "paul-fosh",
       "source_kind": "auction",
-      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band."
+      "scope_note": "Secondary size: 4 existing residential units, outside the preferred 5–30-unit band.",
+      "site_scope": "unknown",
+      "site_homes": null,
+      "site_count": null,
+      "site_evidence": "Physical site configuration has not been verified at listing level.",
+      "whole_site_or_part": null,
+      "price_input_note": " Site configuration is unresolved: no single-site home count is copied; verify what the package price covers before underwriting."
     },
     {
-      "address": "Wrotham Court, Wrotham Road, Gravesend, Kent",
+      "address": "Wrotham Court, Wrotham Road, Gravesend, Kent, DA11 0QF",
       "postcode": "DA11 0QF",
       "city": "Other",
       "location_label": "Gravesend, Kent (outside target)",
       "units": "23 existing self-contained flats",
       "units_n": 23,
       "existing_units": 23,
-      "guide": "£3,875,000 - £3,975,000",
+      "guide": "£3,875,000 - £3,975,000 + fees",
       "asking_price_gbp": null,
       "auction_date": "2026-11-05",
       "auctioneer": "Clive Emson Auctioneers",
       "seller_type": "Not disclosed",
       "url": "https://www.cliveemson.co.uk/properties/269/40/",
       "status": "Advertised for sale",
-      "status_evidence": "Checked 2026-10-20T09:40:41.288Z: included in official Current Land and Property Auctions catalogue for 5 November 2026 with current guide £3,875,000 - £3,975,000 plus fees. Live lot page offers Legal Docs, Bid Status and dated viewing appointments on 23/27/30 October (lot 40: 22/26/29 October and 2 November). No sold/withdrawn/postponed marker on current catalogue or lot page. Status is based on active marketing and lot information, not the future auction date alone.",
-      "checked_at": "2026-10-20T09:40:41.288Z",
+      "status_evidence": "Live official Lot 40 particulars show auction ending 5 November 2026, guide £3,875,000 - £3,975,000 plus fees, and viewing appointments 22/26/29 October and 2 November. No sold, withdrawn or postponed marker displayed. Status means active marketing, not a guaranteed unsold outcome.",
+      "checked_at": "2026-10-20T13:08:23.242Z",
       "sources": [
         {
           "url": "https://www.cliveemson.co.uk/properties/269/40/",
-          "title": "Clive Emson November 2026 lot 40 official particulars"
+          "title": "Clive Emson Lot 40, Auction 269: Outstanding Investment - Substantial Modern Purpose-Built Development of 23 Flats in Two Blocks"
         },
         {
           "url": "https://www.cliveemson.co.uk/properties/",
           "title": "Current Land and Property Auctions, 5 November 2026"
         }
       ],
-      "notes": "Purpose-built existing development in two blocks: 19 two-bedroom, three one-bedroom and one three-bedroom apartments. Five vacant flats. Not a distress claim.",
+      "notes": "Residential Investment / Freehold with Part Vacant Possession. All except Flats 2, 14, 18, 21 and 22 let under Assured Periodic Tenancies; those five are vacant. Existing apartments, not 44 bedrooms or proposed homes. No holiday/student-only restriction stated in public particulars; title/planning restrictions not verified. Exact boundaries require sale plan. Public particulars warn internal layouts may vary from development floor plans. Earlier capture: Purpose-built existing development in two blocks: 19 two-bedroom, three one-bedroom and one three-bedroom apartments. Five vacant flats. Not a distress claim.",
       "contact": {
         "name": "John Stockey / Chris Milne",
         "email": "auctions@cliveemson.co.uk",
@@ -920,36 +1153,47 @@
       },
       "source_id": "clive-emson",
       "source_kind": "auction",
-      "price_input_note": "Guide is a range; no single purchase price has been copied. Enter a proposed price, or price 0 calculates a target-yield bid."
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered.",
+      "site_scope": "single_site",
+      "site_homes": 23,
+      "site_count": 1,
+      "site_evidence": "Official particulars: \"a substantial and impressive modern development comprising a total of 23 apartments in two blocks\"; \"on-site car parking at the rear of Block A and undercroft parking beneath Block B at the rear\". The 23 comprise 19 two-bedroom, three one-bedroom and one three-bedroom apartments. This identifies two blocks within one development, not separate sites inferred from a postcode.",
+      "whole_site_or_part": "Whole marketed freehold development: 23 apartments in two blocks; not described as a subset of a larger block.",
+      "site_checked_at": "2026-10-20T13:08:23.242Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "units_label": "23 existing homes offered at one site",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole marketed freehold development: 23 apartments in two blocks; not described as a subset of a larger block."
     },
     {
-      "address": "144A High Street, Newport, Isle of Wight",
+      "address": "144A High Street, Newport, Isle of Wight, PO30 1TY",
       "postcode": "PO30 1TY",
       "city": "Other",
       "location_label": "Newport, Isle of Wight (outside target)",
       "units": "5 existing self-contained flats",
       "units_n": 5,
       "existing_units": 5,
-      "guide": "£320,000 - £350,000",
+      "guide": "£320,000 - £350,000 + fees",
       "asking_price_gbp": null,
       "auction_date": "2026-11-05",
       "auctioneer": "Clive Emson Auctioneers",
       "seller_type": "Not disclosed",
       "url": "https://www.cliveemson.co.uk/properties/269/46/",
       "status": "Advertised for sale",
-      "status_evidence": "Checked 2026-10-20T09:40:41.288Z: included in official Current Land and Property Auctions catalogue for 5 November 2026 with current guide £320,000 - £350,000 plus fees. Live lot page offers Legal Docs, Bid Status and dated viewing appointments on 23/27/30 October (lot 40: 22/26/29 October and 2 November). No sold/withdrawn/postponed marker on current catalogue or lot page. Status is based on active marketing and lot information, not the future auction date alone.",
-      "checked_at": "2026-10-20T09:40:41.288Z",
+      "status_evidence": "Live official Lot 46 particulars show auction ending 5 November 2026, guide £320,000 - £350,000 plus fees, and viewing appointments 23/27/30 October. No sold, withdrawn or postponed marker displayed. Status means active marketing, not a guaranteed unsold outcome.",
+      "checked_at": "2026-10-20T13:08:23.242Z",
       "sources": [
         {
           "url": "https://www.cliveemson.co.uk/properties/269/46/",
-          "title": "Clive Emson November 2026 lot 46 official particulars"
+          "title": "Clive Emson Lot 46, Auction 269: Freehold Town Centre Block of Four Two-Bedroom Flats and a One-Bedroom Flat"
         },
         {
           "url": "https://www.cliveemson.co.uk/properties/",
           "title": "Current Land and Property Auctions, 5 November 2026"
         }
       ],
-      "notes": "Existing freehold block: four two-bedroom flats and one one-bedroom flat; all vacant, upgrading/refurbishment required.",
+      "notes": "Vacant Residential; all five currently vacant and need upgrading/refurbishment. Marketed for an income-producing letting portfolio. No holiday/student-only restriction stated in public particulars; title/planning restrictions not verified. Exact sale boundaries require legal sale plan. Earlier capture: Existing freehold block: four two-bedroom flats and one one-bedroom flat; all vacant, upgrading/refurbishment required.",
       "contact": {
         "name": "Rob Marchant / Jack Pullen",
         "email": "auctions@cliveemson.co.uk",
@@ -959,36 +1203,47 @@
       },
       "source_id": "clive-emson",
       "source_kind": "auction",
-      "price_input_note": "Guide is a range; no single purchase price has been copied. Enter a proposed price, or price 0 calculates a target-yield bid."
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered.",
+      "site_scope": "single_site",
+      "site_homes": 5,
+      "site_count": 1,
+      "site_evidence": "Official particulars explicitly call this a \"freehold block of five flats\" with four two-bedroom flats and a smaller one-bedroom unit. Flat 1 and Flat 5 on ground floor, Flats 2 and 3 first floor, Flat 4 second floor; each has kitchen/living room and shower room with WC. Enclosed garden to rear. One physical block, five existing self-contained homes.",
+      "whole_site_or_part": "Whole freehold five-flat block, vacant possession; no indication of only five flats within a larger block.",
+      "site_checked_at": "2026-10-20T13:08:23.242Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "units_label": "5 existing homes offered at one site",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole freehold five-flat block, vacant possession; no indication of only five flats within a larger block."
     },
     {
-      "address": "16-30 Bidborough Ridge, Bidborough, Tunbridge Wells, Kent",
+      "address": "16-30 Bidborough Ridge, Bidborough, Tunbridge Wells, Kent, TN3 0XD",
       "postcode": "TN3 0XD",
       "city": "Other",
       "location_label": "Bidborough, Tunbridge Wells, Kent (outside target)",
       "units": "8 existing self-contained flats",
       "units_n": 8,
       "existing_units": 8,
-      "guide": "£1,080,000 - £1,100,000",
+      "guide": "£1,080,000 - £1,100,000 + fees",
       "asking_price_gbp": null,
       "auction_date": "2026-11-05",
       "auctioneer": "Clive Emson Auctioneers",
       "seller_type": "Not disclosed",
       "url": "https://www.cliveemson.co.uk/properties/269/136/",
       "status": "Advertised for sale",
-      "status_evidence": "Checked 2026-10-20T09:40:41.288Z: included in official Current Land and Property Auctions catalogue for 5 November 2026 with current guide £1,080,000 - £1,100,000 plus fees. Live lot page offers Legal Docs, Bid Status and dated viewing appointments on 23/27/30 October (lot 40: 22/26/29 October and 2 November). No sold/withdrawn/postponed marker on current catalogue or lot page. Status is based on active marketing and lot information, not the future auction date alone.",
-      "checked_at": "2026-10-20T09:40:41.288Z",
+      "status_evidence": "Live official Lot 136 particulars show auction ending 5 November 2026, guide £1,080,000 - £1,100,000 plus fees, and viewing appointments 23/27/30 October and 3 November. No sold, withdrawn or postponed marker displayed. Status means active marketing, not a guaranteed unsold outcome.",
+      "checked_at": "2026-10-20T13:08:23.242Z",
       "sources": [
         {
           "url": "https://www.cliveemson.co.uk/properties/269/136/",
-          "title": "Clive Emson November 2026 lot 136 official particulars"
+          "title": "Clive Emson Lot 136, Auction 269: Block of Flats for Improvement on 0.51 Acre Plot and Potential for Development"
         },
         {
           "url": "https://www.cliveemson.co.uk/properties/",
           "title": "Current Land and Property Auctions, 5 November 2026"
         }
       ],
-      "notes": "Eight existing self-contained purpose-built flats, vacant and needing refurbishment. 0.51 acre plot; additional development/redevelopment is only potential subject to consent and is not counted as existing units.",
+      "notes": "Vacant Residential. Refurbishment needed. Further development or complete redevelopment is potential only, subject to consents, and excluded from the eight existing homes. Existing eight-home block is not classified development-only. No holiday/student-only restriction stated in public particulars; title/planning restrictions not verified. Exact boundaries require legal sale plan. Earlier capture: Eight existing self-contained purpose-built flats, vacant and needing refurbishment. 0.51 acre plot; additional development/redevelopment is only potential subject to consent and is not counted as existing units.",
       "contact": {
         "name": "John Stockey / Chris Milne",
         "email": "auctions@cliveemson.co.uk",
@@ -998,36 +1253,47 @@
       },
       "source_id": "clive-emson",
       "source_kind": "auction",
-      "price_input_note": "Guide is a range; no single purchase price has been copied. Enter a proposed price, or price 0 calculates a target-yield bid."
+      "price_input_note": "No single auction price copied. Enter a proposed bid; price 0 solves for the target entry yield once rent and OPEX margin are entered.",
+      "site_scope": "single_site",
+      "site_homes": 8,
+      "site_count": 1,
+      "site_evidence": "Official particulars explicitly describe \"a detached block comprising eight self-contained purpose-built flats, occupying a site extending to just over half an acre\"; site measurements approximately 0.2 hectares (0.51 acres). Ground floor Flats 16,20,24,28; first floor Flats 18,22,26,30, each with kitchen and bathroom. Eight is the entire existing detached block on one stated plot, not eight scattered holdings or eight within a larger block.",
+      "whole_site_or_part": "Whole detached eight-flat freehold block and marketed 0.51-acre site, with vacant possession.",
+      "site_checked_at": "2026-10-20T13:08:23.242Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": null,
+      "price_input_gbp": 0,
+      "units_label": "8 existing homes offered at one site",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole detached eight-flat freehold block and marketed 0.51-acre site, with vacant possession."
     },
     {
-      "address": "Carpenters Court, 4A Lewes Road, Bromley",
+      "address": "Carpenters Court, 4A Lewes Road, Bromley, BR1 2RN",
       "postcode": "BR1 2RN",
       "city": "Other",
       "location_label": "Bromley, Greater London (outside target)",
       "units": "14 existing self-contained flats",
       "units_n": 14,
       "existing_units": 14,
-      "guide": "£2,700,000+",
-      "asking_price_gbp": 2700000,
+      "guide": "£2,700,000+ + fees",
+      "asking_price_gbp": null,
       "auction_date": "2026-11-05",
       "auctioneer": "Clive Emson Auctioneers",
       "seller_type": "Not disclosed",
       "url": "https://www.cliveemson.co.uk/properties/269/155/",
       "status": "Advertised for sale",
-      "status_evidence": "Checked 2026-10-20T09:40:41.288Z: included in official Current Land and Property Auctions catalogue for 5 November 2026 with current guide £2,700,000+ plus fees. Live lot page offers Legal Docs, Bid Status and external viewing only. No sold/withdrawn/postponed marker on current catalogue or lot page. Status is based on active marketing and lot information, not the future auction date alone.",
-      "checked_at": "2026-10-20T09:40:41.288Z",
+      "status_evidence": "Live official Lot 155 particulars show auction ending 5 November 2026 and guide £2,700,000+ plus fees, legal-document access and external-only viewing. No sold, withdrawn or postponed marker displayed. Status means active marketing, not a guaranteed unsold outcome.",
+      "checked_at": "2026-10-20T13:08:23.242Z",
       "sources": [
         {
           "url": "https://www.cliveemson.co.uk/properties/269/155/",
-          "title": "Clive Emson November 2026 lot 155 official particulars"
+          "title": "Clive Emson Lot 155, Auction 269: Substantial Gated Freehold Residential Investment Comprising 14 Flats"
         },
         {
           "url": "https://www.cliveemson.co.uk/properties/",
           "title": "Current Land and Property Auctions, 5 November 2026"
         }
       ],
-      "notes": "Existing gated unbroken freehold development, all 14 self-contained flats let; mix of one and two bedrooms. EPC C for each flat. Proposed rent increase is not treated as current income.",
+      "notes": "Residential Investment. All 14 let under individually described Assured Periodic Tenancies, current total rent £201,180 pa. Proposed 2027 rent £216,060 is not current income. No holiday/student-only restriction stated in public particulars; title/planning restrictions not verified. £2,700,000 is an auction guide, not a fixed asking price, so asking_price_gbp is null (corrects source dataset treatment). Exact boundaries require legal sale plan. Earlier capture: Existing gated unbroken freehold development, all 14 self-contained flats let; mix of one and two bedrooms. EPC C for each flat. Proposed rent increase is not treated as current income.",
       "contact": {
         "name": "Russell Hawkes / Chris Milne",
         "email": "auctions@cliveemson.co.uk",
@@ -1036,7 +1302,197 @@
         "source_url": "https://www.cliveemson.co.uk/properties/269/155/"
       },
       "source_id": "clive-emson",
-      "source_kind": "auction"
+      "source_kind": "auction",
+      "site_scope": "single_site",
+      "site_homes": 14,
+      "site_count": 1,
+      "site_evidence": "Official particulars explicitly offer \"14 self-contained flats within a gated development\" and \"an entire income-producing unbroken development\". Seven flats each on ground and first floor; Flats 1-14 individually enumerated. Development approached via a gated entrance from Lewes Road with communal external areas. One physical development, not 14 dispersed homes.",
+      "whole_site_or_part": "Entire unbroken freehold gated development of 14 flats, subject to existing tenancies; not merely 14 flats of a larger block.",
+      "site_checked_at": "2026-10-20T13:08:23.242Z",
+      "site_boundary_verified": false,
+      "guide_price_gbp": 2700000,
+      "price_input_gbp": 2700000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "units_label": "14 existing homes offered at one site",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Entire unbroken freehold gated development of 14 flats, subject to existing tenancies; not merely 14 flats of a larger block."
+    },
+    {
+      "key": "site-0-r261118-070",
+      "city": "Other",
+      "postcode": "HX1 1TD",
+      "source_kind": "auction",
+      "source_id": "allsop",
+      "auctioneer": "Allsop",
+      "existing_units": 11,
+      "units_n": 11,
+      "units": "11 offered flats within a 12-flat block, excluding Flat 10",
+      "units_label": "11 offered flats within a 12-flat block, excluding Flat 10",
+      "seller_type": "Receivers",
+      "residential_use_demonstrated": true,
+      "contact": {
+        "url": "https://www.allsop.co.uk/lot-overview/investmentvacant-eleven-leasehold-selfcontained-one-bedroom-flats-in-halifax/r261118-070"
+      },
+      "address": "Flats 1-12 (excluding Flat 10), Arcade Royale Apartments, 28 Commercial Street, Halifax, West Yorkshire, HX1 1TD",
+      "url": "https://www.allsop.co.uk/lot-overview/investmentvacant-eleven-leasehold-selfcontained-one-bedroom-flats-in-halifax/r261118-070",
+      "guide": "£300,000+",
+      "auction_date": null,
+      "site_scope": "single_site",
+      "site_homes": 11,
+      "site_count": 1,
+      "site_evidence": "Eleven leasehold self-contained one-bedroom flats situated within upper parts of one building providing twelve flats total. Address expressly excludes Flat 10. Offered-home count is 11; the wider block total is 12, and Flat 10 is excluded.",
+      "whole_site_or_part": "Selected flats only: 11 of 12 dwellings, excluding Flat 10; not entire block/freehold.",
+      "status": "Advertised for sale",
+      "status_evidence": "November 2026 listing displays £300,000+ Guide Price and Register to Bid; also appears in accepted Current/Future Auctions filtered catalogue (294 results). No closed result displayed.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "notes": "Existing flats. Eight assured periodic tenancies, one company let, two vacant. Each lease 125 years from 3 April 2001, about 100 years remaining. November event 18th & 19th November 2026; individual day not stated, so auction_date null. Current gross rent reserved £49,128 pa with two vacant. EPC grades D/E/F/G. Receivers sale.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/investmentvacant-eleven-leasehold-selfcontained-one-bedroom-flats-in-halifax/r261118-070",
+          "title": "Allsop official lot listing: Flats 1-12 (excluding Flat 10), Arcade Royale Apartments, 28 Commercial Street, Halifax, West Yorkshire, HX1 1TD"
+        }
+      ],
+      "guide_price_gbp": 300000,
+      "asking_price_gbp": null,
+      "price_input_gbp": 300000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Selected flats only: 11 of 12 dwellings, excluding Flat 10; not entire block/freehold.",
+      "total_homes_at_site": 12,
+      "auction_window": "18–19 November 2026; individual day unconfirmed",
+      "auction_window_start": "2026-11-18",
+      "auction_window_end": "2026-11-19"
+    },
+    {
+      "key": "site-1-c261111-016",
+      "city": "Other",
+      "postcode": "EC1Y 8JL",
+      "source_kind": "auction",
+      "source_id": "allsop",
+      "auctioneer": "Allsop",
+      "existing_units": 3,
+      "units_n": 3,
+      "units": "3 existing homes offered",
+      "units_label": "3 existing homes offered at one site",
+      "seller_type": "Not disclosed",
+      "residential_use_demonstrated": true,
+      "contact": {
+        "url": "https://www.allsop.co.uk/lot-overview/freehold-shop-and-residential-investment-in-london/c261111-016"
+      },
+      "address": "131-133 Whitecross Street, Islington, London, EC1Y 8JL",
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-shop-and-residential-investment-in-london/c261111-016",
+      "guide": "£1.7M+",
+      "auction_date": "2026-11-11",
+      "site_scope": "single_site",
+      "site_homes": 3,
+      "site_count": 1,
+      "site_evidence": "Single freehold building comprising ground-floor shop and three self-contained flats above with entrance fronting Whitecross Street.",
+      "whole_site_or_part": "Whole mixed-use freehold building, shop and all three described flats.",
+      "status": "Advertised for sale",
+      "status_evidence": "Listing displays £1.7M+ Guide Price and Register to Bid; accepted Current/Future Auctions catalogue includes it. No closed result displayed.",
+      "site_checked_at": "2026-10-20T13:10:38.202Z",
+      "site_boundary_verified": false,
+      "notes": "Existing flats, not proposed homes. Three flats let on single five-year lease expiring 2030; shop lease expires 2033. Vendor reports 2025 flats/roof refurbishment. Commercial auction event explicitly 11 November 2026 Online Only. VAT applicable. Three homes below preferred 5–30 band, meets multi-home single-site definition. Mixed-use commercial element included: review SDLT mode, VAT and legal pack before underwriting.",
+      "checked_at": "2026-10-20T13:10:38.202Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/freehold-shop-and-residential-investment-in-london/c261111-016",
+          "title": "Allsop official lot listing: 131-133 Whitecross Street, Islington, London, EC1Y 8JL"
+        }
+      ],
+      "guide_price_gbp": 1700000,
+      "asking_price_gbp": null,
+      "price_input_gbp": 1700000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole mixed-use freehold building, shop and all three described flats."
+    },
+    {
+      "key": "site-2-bath-road-4",
+      "city": "City Of Bristol",
+      "postcode": "BS4 3EU",
+      "source_kind": "auction",
+      "source_id": "hollis-morgan",
+      "auctioneer": "Hollis Morgan",
+      "existing_units": 2,
+      "units_n": 2,
+      "units": "2 self-contained flats (one 3-bedroom, one 4-bedroom); not 7 homes",
+      "units_label": "2 existing homes offered at one site",
+      "seller_type": "Not disclosed",
+      "residential_use_demonstrated": true,
+      "contact": {
+        "url": "https://www.hollismorgan.co.uk/property-details/34771437/bristol-city/bristol/bath-road-4?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502"
+      },
+      "address": "379 Bath Road, Arnos Vale, Bristol",
+      "url": "https://www.hollismorgan.co.uk/property-details/34771437/bristol-city/bristol/bath-road-4?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "guide": "£400,000 +++",
+      "auction_date": "2026-10-21",
+      "site_scope": "single_site",
+      "site_homes": 2,
+      "site_count": 1,
+      "site_evidence": "Official THE PROPERTY: Freehold block of 2 x HMO licensed self contained flats, converted 2023. Self-contained 3-bedroom ground-floor flat and self-contained 4-bedroom maisonette on upper floors of same building.",
+      "whole_site_or_part": "Whole freehold block comprising two homes",
+      "status": "Advertised for sale",
+      "status_evidence": "Fresh official lot snapshot: Lot 38, Auction Guide Price £400,000 +++, FOR SALE BY ONLINE AUCTION WEDNESDAY 21ST OCTOBER 2026; current catalogue includes it without sold/withdrawn banner.",
+      "site_checked_at": "2026-10-20T13:11:57.510Z",
+      "site_boundary_verified": false,
+      "notes": "NEW relative to property_status.json. Count is 2 self-contained homes, not 7 bedrooms. Both homes are operated as HMOs, sold subject to existing tenancies/part vacant. £57,840 and £62,808 potential-income text conflicts, do not underwrite income from headline.",
+      "checked_at": "2026-10-20T13:11:57.510Z",
+      "sources": [
+        {
+          "url": "https://www.hollismorgan.co.uk/property-details/34771437/bristol-city/bristol/bath-road-4?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+          "title": "Lot 38: 379 Bath Road, freehold block of two self-contained flats"
+        }
+      ],
+      "guide_price_gbp": 400000,
+      "asking_price_gbp": null,
+      "price_input_gbp": 400000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole freehold block comprising two homes"
+    },
+    {
+      "key": "site-3-new-king-street-1",
+      "city": "Other",
+      "postcode": "BA1 2BN",
+      "source_kind": "auction",
+      "source_id": "hollis-morgan",
+      "auctioneer": "Hollis Morgan",
+      "existing_units": 2,
+      "units_n": 2,
+      "units": "2 existing homes offered",
+      "units_label": "2 existing homes offered at one site",
+      "seller_type": "Not disclosed",
+      "residential_use_demonstrated": true,
+      "contact": {
+        "url": "https://www.hollismorgan.co.uk/property-details/34893143/bath-and-north-east-somerset/bath/new-king-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502"
+      },
+      "address": "36a New King Street, Bath",
+      "url": "https://www.hollismorgan.co.uk/property-details/34893143/bath-and-north-east-somerset/bath/new-king-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "guide": "£425,000 +++",
+      "auction_date": "2026-10-21",
+      "site_scope": "single_site",
+      "site_homes": 2,
+      "site_count": 1,
+      "site_evidence": "Official THE PROPERTY: one freehold mixed-use corner building with ground-floor commercial and basement, a self-contained first-floor flat and a self-contained 2/3-bedroom maisonette on top floors. Both existing residential units confirmed separately in THE OPPORTUNITY.",
+      "whole_site_or_part": "Whole mixed-use freehold building including both existing homes and commercial element",
+      "status": "Advertised for sale",
+      "status_evidence": "Fresh official lot snapshot: Lot 3, Auction Guide Price £425,000 +++, FOR SALE BY ONLINE AUCTION WEDNESDAY 21ST OCTOBER 2026; no sold/withdrawn result. Current catalogue includes lot.",
+      "site_checked_at": "2026-10-20T13:11:57.510Z",
+      "site_boundary_verified": false,
+      "notes": "NEW relative to property_status.json. Exactly 2 existing homes, not 5 bedrooms or possible additional flat. All vacant. Ground-floor Class E use and proposed conversions excluded from home count. National/near-Bristol fallback. Mixed-use commercial element included: review SDLT mode, VAT and legal pack before underwriting.",
+      "checked_at": "2026-10-20T13:11:57.510Z",
+      "sources": [
+        {
+          "url": "https://www.hollismorgan.co.uk/property-details/34893143/bath-and-north-east-somerset/bath/new-king-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+          "title": "Lot 3: 36a New King Street, mixed-use freehold with two self-contained homes"
+        }
+      ],
+      "location_label": "Bath (outside target)",
+      "guide_price_gbp": 425000,
+      "asking_price_gbp": null,
+      "price_input_gbp": 425000,
+      "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
+      "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole mixed-use freehold building including both existing homes and commercial element"
     }
-  ]
+  ],
+  "site_definition": "Home count = existing dwellings actually offered together at one marketed physical block, property or contiguous development, based on listing evidence. It is not landlord ownership, room/bed counts, proposed homes, or total homes elsewhere in a larger block. Marketing descriptions are not an independent survey or legal-boundary certificate."
 }

@@ -17,7 +17,7 @@
       ],
       "refresh_method": "Use official Residential Auctions route and current catalogue; open per-lot pages and inspect guide, addendum, sold/withdrawn and exact date. Do not infer from search snippets.",
       "access_status": "Official individual lot and published residential-auction link verified in browser. Catalogue ribbon on lot did not navigate reliably; use the service route.",
-      "last_checked": "2026-10-20T10:09:46.585Z",
+      "last_checked": "2026-10-20",
       "notes": "Known Manchester/Bristol location links are /auctions/property-for-auction-in-manchester/ and /auctions/property-for-auction-in-bristol/. HTML-only webfetch was empty; browser snapshot works. Legal pack not inspected.",
       "source_kind": "auction",
       "connection_mode": "Official catalogue review; no live API feed",
@@ -25,7 +25,8 @@
       "added_this_update": false,
       "sample_records": 9,
       "sample_advertised": 6,
-      "sample_5_30": 4
+      "sample_5_30": 4,
+      "latest_lot_checked_at": "2026-10-20T13:10:38.202Z"
     },
     {
       "id": "savills",
@@ -39,7 +40,7 @@
       ],
       "refresh_method": "Follow Auction calendar / upcoming and past auctions. Inspect each live lot and operative earlier offer deadline, current guide and sold/withdrawn state.",
       "access_status": "Official lot, current catalogue/return links and navigation verified in browser.",
-      "last_checked": "2026-10-20T10:09:46.585Z",
+      "last_checked": "2026-10-20",
       "notes": "Current Brighton inspected page returns to https://auctions.savills.co.uk/auctions/24-november-2026-246 . Earlier 5 November bid deadline remains operative for Brighton/Fulham even with displayed24November auction. No offers sent.",
       "source_kind": "auction",
       "connection_mode": "Official catalogue review; no live API feed",
@@ -47,7 +48,8 @@
       "added_this_update": false,
       "sample_records": 2,
       "sample_advertised": 2,
-      "sample_5_30": 2
+      "sample_5_30": 2,
+      "latest_lot_checked_at": "2026-10-20T13:10:05.106Z"
     },
     {
       "id": "btg-eddisons",
@@ -64,7 +66,7 @@
       ],
       "refresh_method": "Follow actual catalogue link from latest official lot or current auction menu; individual lot date/status controls. Do not treat buyer fee as sale price; verify tenancy evidence.",
       "access_status": "Official Rotherham lot and its Back to Results/current catalogue link inspected.",
-      "last_checked": "2026-10-20T10:09:46.585Z",
+      "last_checked": "2026-10-20",
       "notes": "Eddisons/SDL/Pugh branding consolidated where evidenced; do not count brand aliases as separate live API feeds. Separate results URL not verified in this pass.",
       "source_kind": "auction",
       "connection_mode": "Official catalogue review; no live API feed",
@@ -72,7 +74,8 @@
       "added_this_update": false,
       "sample_records": 1,
       "sample_advertised": 1,
-      "sample_5_30": 0
+      "sample_5_30": 0,
+      "latest_lot_checked_at": "2026-10-20T13:10:05.106Z"
     },
     {
       "name": "Hollis Morgan",
@@ -90,7 +93,7 @@
       ],
       "refresh_method": "Open /auctions/ and follow View All Current Lots (do not use obsolete /search-auction without trailing slash and query). Read entire mixed current catalogue, then individual pages. Check annual Auction Results page after each auction; retain past lots only with explicit current STILL AVAILABLE/OFFERS INVITED evidence. Recheck just before and after 21 October and 18 November 2026.",
       "access_status": "Public browser accessible; listing and lot pages inspected without login. Legal packs require separate registration, not inspected.",
-      "last_checked": "2026-10-20T09:41:25.881Z",
+      "last_checked": "2026-10-20",
       "notes": "Current catalogue reports 76 properties and includes future lots, sold-prior, withdrawn and still-available stock. No verified 5–30 existing-home acquisition found in inspected catalogue; 3 secondary 3–4-unit lots retained. Bedrooms, HMO rooms, proposed dwellings and ground-rent interests are not counted as acquired homes. Bedminster William Street 15 leases is a freehold/ground-rent interest, not 15 vacant/tenanted homes for this mandate. Explicit after-auction availability found at https://www.hollismorgan.co.uk/property-details/34264610/bristol-city/bristol/32-2?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502 (Old Police Station): excluded because former offices, residential development subject to consents, no current residential unit count. No dedicated unsold-only section located; still-available inventory is mixed into current search.",
       "id": "hollis-morgan",
       "source_kind": "auction",
@@ -99,7 +102,8 @@
       "added_this_update": true,
       "sample_records": 3,
       "sample_advertised": 3,
-      "sample_5_30": 0
+      "sample_5_30": 0,
+      "latest_lot_checked_at": "2026-10-20T13:11:57.510Z"
     },
     {
       "name": "Maggs & Allen",
@@ -139,7 +143,7 @@
       ],
       "refresh_method": "Weekly: follow next-auction link from homepage/calendar; read complete catalogue and individual lots including EIG bidding panels. Check latest completed catalogue for AVAILABLE, Sold Prior, Sold Post Auction, WITHDRAWN and POSTPONED. Current catalogue 21–22 October 2026; last completed 30 September–1 October 2026.",
       "access_status": "Accessible in browser; official catalogue, individual lots, prior catalogue and contact inspected.",
-      "last_checked": "2026-10-20T09:43:41.148Z",
+      "last_checked": "2026-10-20",
       "notes": "No strict 3–30 self-contained-unit Greater Manchester block verified in this pass. 69 Lower Bents Lane is a 10-room HMO, not 10 flats. 320/320A Slade Lane is six care bedrooms with shared facilities, not six flats. 47 Bridgeman Place is only 2 flats plus commercial, not 4 units. 74 Hodge Road explicitly NO LONGER AVAILABLE and bidding panel Withdrawn despite prior catalogue AVAILABLE; excluded. No seller distress inferred.",
       "id": "edward-mellor",
       "source_kind": "auction",
@@ -148,7 +152,8 @@
       "added_this_update": true,
       "sample_records": 3,
       "sample_advertised": 3,
-      "sample_5_30": 1
+      "sample_5_30": 1,
+      "latest_lot_checked_at": "2026-10-20T13:11:57.510Z"
     },
     {
       "name": "Auction House North West",
@@ -166,7 +171,7 @@
       ],
       "refresh_method": "Weekly: open https://www.auctionhouse.co.uk/northwest/auction/future-auction-dates and follow actual View Lots link. Current inspected catalogue 11 November 2026, 64 lots. Also inspect https://www.auctionhouse.co.uk/unsold (70 lots on this check) and recent-results page; open each candidate to check current offer and contradiction.",
       "access_status": "Accessible in browser; future dates, current catalogue, lot page, results and unsold list inspected. Contact and homepage inspected via webfetch.",
-      "last_checked": "2026-10-20T09:43:41.148Z",
+      "last_checked": "2026-10-20",
       "notes": "No strict 3–30 existing residential-unit Greater Manchester block verified. Unsold lists single dwellings separately, including several Dougill Street houses; these are not assumed to be one portfolio. Two non-GM opportunities retained across both sources. Palatine Road consists of holiday apartments, so permanent residential planning/use suitability unverified.",
       "id": "auction-house-north-west",
       "source_kind": "auction",
@@ -175,7 +180,8 @@
       "added_this_update": false,
       "sample_records": 2,
       "sample_advertised": 1,
-      "sample_5_30": 0
+      "sample_5_30": 0,
+      "latest_lot_checked_at": "2026-10-20T13:11:57.510Z"
     },
     {
       "name": "Auction House South West (official regional team serving Gloucestershire stock)",
@@ -272,7 +278,7 @@
       ],
       "refresh_method": "Browser: Current Auction keyword search flats and Enter; inspect each lot particulars. Unsold Lots Still Available provides explicit AVAILABLE AT prices, grouped by auction month; recheck individual lots against current catalogue before importing.",
       "access_status": "Public current catalogue, unsold catalogue and lot pages accessible; legal documentation requires sign-in.",
-      "last_checked": "2026-10-20T09:40:41.288Z",
+      "last_checked": "2026-10-20",
       "notes": "Current catalogue 5 November 2026; download connection https://www.cliveemson.co.uk/properties/downloads/ . Explicit unsold route: https://www.cliveemson.co.uk/properties/unsold-lots-still-available/ . Unsold flats keyword search returned two-flat investment and commercial centre with lapsed planning for 12 flats, neither qualifies as 5–30 existing residential units. Four qualifying current leads are outside target. Public contact auctions@cliveemson.co.uk; 0345 8500333. No outreach.",
       "id": "clive-emson",
       "source_kind": "auction",
@@ -281,7 +287,8 @@
       "added_this_update": true,
       "sample_records": 4,
       "sample_advertised": 4,
-      "sample_5_30": 4
+      "sample_5_30": 4,
+      "latest_lot_checked_at": "2026-10-20T13:08:23.242Z"
     },
     {
       "name": "Bond Wolfe Auctions",
@@ -371,5 +378,6 @@
       "name": "Stroud Auction Rooms / Harper Field",
       "reason": "Antiques/collectables service, not verified as a property auction source."
     }
-  ]
+  ],
+  "site_count_note": "Qualifying stock uses listing-level existing homes at one physical site, not landlord holdings. Unresolved packages/rooms/holiday/proposed homes are separate."
 }
