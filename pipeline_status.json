@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19",
+  "generated": "2026-10-20",
   "sources": [
     {
       "name": "Land Registry company ownership (CCOD)",
@@ -180,6 +180,24 @@
       "cadence_days": 31,
       "routine": "Manual review; no new routine created",
       "url": "https://www.gov.uk/government/organisations/regulator-of-social-housing"
+    },
+    {
+      "name": "Framework outreach contacts",
+      "gives": "99 contact entries across 40 routes: procurement vs property supply vs routing; public names, phones/emails, dated sources and limitations",
+      "period": "Official sources checked 20 Oct 2026; historical notice contacts retain source dates; only explicit status corrections applied",
+      "refreshed": "2026-10-20",
+      "cadence_days": 31,
+      "routine": "Manual; no new outreach/routine",
+      "url": "https://www.find-tender.service.gov.uk/"
+    },
+    {
+      "name": "Current property sale-status sample",
+      "gives": "15 official listings checked; 11 advertised, 8 live 5–30 existing-unit properties, 2 target-city leads; 3 sold/withdrawn; 1 past-result unknown",
+      "period": "Checked 20 Oct 2026 about 08:36 UTC; not an exhaustive or real-time feed",
+      "refreshed": "2026-10-20",
+      "cadence_days": 2,
+      "routine": "Manual check required; UI green expires after 48h / auction cutoff on reload",
+      "url": ""
     }
   ],
   "build": [
@@ -230,6 +248,12 @@
       "n": 1,
       "note": "Clean adaptation of supplied model; single annual VAT-inclusive OPEX; monthly XIRR; formula XLSX export. Desktop Excel recalculation not verified (permission denied).",
       "refreshed": "2026-10-19"
+    },
+    {
+      "name": "Property status and framework contacts",
+      "n": 15,
+      "note": "Find > For sale now; source-backed property status and Underwrite links. Framework detail contact blocks and directory added.",
+      "refreshed": "2026-10-20"
     }
   ]
 }

@@ -1,0 +1,547 @@
+{
+  "updated": "2026-10-20",
+  "coverage_note": "15 source-checked listings, not an exhaustive market scan. Two new Manchester multi-unit listings added. Bristol/Cheltenham qualifying live blocks were not verified in this pass.",
+  "properties": [
+    {
+      "address": "Apartment 407, 6 Oldham Road, Manchester, Greater Manchester, M4 5DB",
+      "postcode": "M4 5DB",
+      "city": "Manchester",
+      "units": "1 existing self-contained two-bedroom flat",
+      "guide": "£55,000+",
+      "auction_date": "2026-10-22",
+      "auctioneer": "Allsop",
+      "seller_type": "Receivers, as stated on official lot page; type not specified",
+      "url": "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115",
+      "status": "Advertised for sale",
+      "status_evidence": "Official page advertises lot 258 at Guide Price £55,000+, links Residential - 21st & 22nd Oct 2026 - Live Stream, and provides Register to Bid. No sold/withdrawn result displayed.",
+      "checked_at": "2026-10-20T08:36:03.626Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115",
+          "title": "Lot 258 - Manchester: Apartment 407, 6 Oldham Road"
+        }
+      ],
+      "notes": "Single flat, not a 5–30-unit portfolio. Leasehold, approximately 131 years unexpired. Date conflict: event banner says 21–22 October 2026 while Auction Date body incorrectly says Thursday 22nd November. Retain 22 October from supplied record and October event banner, but exact date needs auctioneer confirmation. Advertised status is not assurance of remaining unsold.",
+      "contact": {
+        "name": "Gabriella Brunton, Allsop",
+        "email": "gabriella.brunton@allsop.co.uk",
+        "phone": "0207 344 2668",
+        "url": "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115",
+        "source_url": "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115"
+      },
+      "units_n": 1,
+      "existing_units": 1,
+      "location_label": "Manchester",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115"
+      ],
+      "asking_price_gbp": 55000
+    },
+    {
+      "address": "20 Lansdown Place, Cheltenham, Gloucestershire, GL50 2HX",
+      "postcode": "GL50 2HX",
+      "city": "Cheltenham",
+      "units": "7 existing self-contained flats: five two-bedroom and two one-bedroom",
+      "guide": null,
+      "auction_date": "2026-10-22",
+      "auctioneer": "Allsop",
+      "seller_type": "By Order of Receivers; type not specified",
+      "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
+      "status": "Sold prior",
+      "status_evidence": "Official lot page prominently says Sold Prior in the price/result heading and on its image banner. This explicit result overrides the future October auction date.",
+      "checked_at": "2026-10-20T08:36:03.626Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
+          "title": "Lot 278 - Cheltenham: 20 Lansdown Place - Sold Prior"
+        }
+      ],
+      "notes": "Freehold Grade II* listed building. Six flats let and one vacant; current rent £98,580 pa. Prior supplied guide TBA is no longer displayed, replaced by Sold Prior. Website also contains inconsistent September/November date text; none overrides explicit Sold Prior.",
+      "contact": {
+        "name": "Simon Hepworth, Allsop",
+        "email": "simon.hepworth@allsop.co.uk",
+        "phone": "0207 344 2679",
+        "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
+        "source_url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177"
+      },
+      "units_n": 7,
+      "existing_units": 7,
+      "location_label": "Cheltenham",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177"
+      ],
+      "asking_price_gbp": null
+    },
+    {
+      "address": "Land at Waterside Gardens, east side of Waters Meeting Road, Bolton, Greater Manchester BL1 8WD",
+      "postcode": "BL1 8WD",
+      "city": "Bolton",
+      "units": "Land consented for 12 apartments (8 two-bedroom and 4 one-bedroom); no existing homes counted",
+      "guide": "£90,000",
+      "auction_date": "2026-10-14",
+      "auctioneer": "Auction House North West",
+      "seller_type": "Joint LPA Receivers",
+      "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153321",
+      "status": "Past auction, result unverified",
+      "status_evidence": "Official page still says For Sale By Auction, 12:00, 14 October 2026, lot 74. Embedded official bidding widget says No Bids and Ended on 14th Oct 2026 13:42. No explicit sold/withdrawn result or verified post-auction availability shown.",
+      "checked_at": "2026-10-20T08:36:03.626Z",
+      "sources": [
+        {
+          "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153321",
+          "title": "Auction House North West Lot 74 - Land at Waterside Gardens, Bolton"
+        }
+      ],
+      "notes": "Development land, 0.24 acres, not an existing residential block. Site described as last phase for a three-storey block of 12 flats under partially completed 2007 permission for 44 apartments (ref 78572/07). No Bids does not establish current availability or an eventual private-treaty outcome.",
+      "contact": {
+        "name": "Auction House North West residential team",
+        "email": "northwest@auctionhouse.co.uk",
+        "phone": "01772 772450",
+        "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153321",
+        "source_url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153321"
+      },
+      "units_n": 0,
+      "existing_units": 0,
+      "location_label": "Bolton",
+      "legacy_urls": [
+        "https://www.auctionhouse.co.uk/northwest/auction/lot/153321"
+      ],
+      "asking_price_gbp": 90000
+    },
+    {
+      "address": "41–43 Moorland Road, Didsbury, Manchester",
+      "postcode": "M20 6BB",
+      "city": "Manchester",
+      "units": "5 existing self-contained apartments",
+      "guide": "Offers over £1,400,000",
+      "auction_date": null,
+      "auctioneer": "Philip James Kennedy (selling agent; not an auction listing)",
+      "seller_type": "Not disclosed",
+      "url": "https://www.philipjames.co.uk/property-for-sale/didsbury/an-ideal-investment-opportunity-in-prime-didsbury-village-location/",
+      "status": "Advertised for sale",
+      "status_evidence": "Official agent detail page explicitly says For Sale, Offers Over £1,400,000, REF DIS260247, Five Self-Contained Apartments, and offers Arrange a Viewing. Official property-search page also lists it For Sale with Show Sold/SSTC unchecked.",
+      "checked_at": "2026-10-20T08:36:03.626Z",
+      "sources": [
+        {
+          "url": "https://www.philipjames.co.uk/property-for-sale/didsbury/an-ideal-investment-opportunity-in-prime-didsbury-village-location/",
+          "title": "An Ideal Investment Opportunity In Prime Didsbury Village Location - Philip James"
+        },
+        {
+          "url": "https://www.philipjames.co.uk/property-search/",
+          "title": "Properties Archive - Philip James"
+        }
+      ],
+      "notes": "Two interlocking semi-detached houses already converted into five flats, not five consented new homes. Freehold. Agent lists flats 1–2 at number 41 and flats 1–3 at number 43; let at £5,760 pcm (£69,120 pa). Unconverted cellars offer additional potential subject to planning and are not counted as homes. Older official PDF quotes £1.6m; current detail page and search show £1.4m offers over. Advertised status is not assurance of remaining unsold.",
+      "contact": {
+        "name": "Philip James Didsbury sales team",
+        "email": "didsbury@philipjames.co.uk",
+        "phone": "0161 448 1234",
+        "url": "https://www.philipjames.co.uk/property-for-sale/didsbury/an-ideal-investment-opportunity-in-prime-didsbury-village-location/",
+        "source_url": "https://www.philipjames.co.uk/property-for-sale/didsbury/an-ideal-investment-opportunity-in-prime-didsbury-village-location/"
+      },
+      "units_n": 5,
+      "existing_units": 5,
+      "location_label": "Manchester",
+      "legacy_urls": [],
+      "asking_price_gbp": 1400000
+    },
+    {
+      "address": "81 Mauldeth Road and 115 Egerton Road, Ladybarn, Manchester",
+      "postcode": "M14 6SP",
+      "city": "Manchester",
+      "units": "6 existing self-contained apartments plus 1 seven-bedroom HMO; not 13 self-contained homes",
+      "guide": "£1,650,000",
+      "auction_date": null,
+      "auctioneer": "Philip James Kennedy (selling agent; not an auction listing)",
+      "seller_type": "Not disclosed",
+      "url": "https://www.philipjames.co.uk/property-for-sale/ladybarn/an-excellent-opportunity-to-acquire-a-residential-investment-in-fallowfield/",
+      "status": "Advertised for sale",
+      "status_evidence": "Official agent detail page explicitly says For Sale, Guide Price £1,650,000, REF DIS260487, Six Self-Contained Apartments and Seven Bedroom HMO, with Arrange a Viewing. Official property-search page lists it For Sale with Show Sold/SSTC unchecked.",
+      "checked_at": "2026-10-20T08:36:03.626Z",
+      "sources": [
+        {
+          "url": "https://www.philipjames.co.uk/property-for-sale/ladybarn/an-excellent-opportunity-to-acquire-a-residential-investment-in-fallowfield/",
+          "title": "An Excellent Opportunity To Acquire A Residential Investment In Fallowfield - Philip James"
+        },
+        {
+          "url": "https://www.philipjames.co.uk/property-search/",
+          "title": "Properties Archive - Philip James"
+        }
+      ],
+      "notes": "Existing residential mix, not commercial mixed-use: six flats at 81 Mauldeth Road and one seven-bedroom HMO at 115 Egerton Road. Agent states combined income £104,820 pa, approximately 4,714 sq ft. Flat-bedroom descriptions conflict within page: detailed schedule has three 2-bedroom and three 1-bedroom flats, later summary says six 1-bedroom flats. Flat count remains six; bedroom mix needs confirmation. Unconverted basement potential excluded from units. Advertised status is not assurance of remaining unsold.",
+      "contact": {
+        "name": "Philip James Didsbury sales team",
+        "email": "didsbury@philipjames.co.uk",
+        "phone": "0161 448 1234",
+        "url": "https://www.philipjames.co.uk/property-for-sale/ladybarn/an-excellent-opportunity-to-acquire-a-residential-investment-in-fallowfield/",
+        "source_url": "https://www.philipjames.co.uk/property-for-sale/ladybarn/an-excellent-opportunity-to-acquire-a-residential-investment-in-fallowfield/"
+      },
+      "units_n": 7,
+      "existing_units": 7,
+      "location_label": "Manchester",
+      "legacy_urls": [],
+      "asking_price_gbp": 1650000
+    },
+    {
+      "address": "Flat A-C, 1, 4, 6,  9 - 20, 30 Montpelier Road, Brighton BN1 2LQ",
+      "postcode": "BN1 2LQ",
+      "city": "Other",
+      "units": 18,
+      "guide": "£1,600,000",
+      "auction_date": "2026-11-24",
+      "auctioneer": "Savills Auctions",
+      "seller_type": "fixed charge receivers",
+      "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Savills page displays 24 November 2026, guide price and an explicit current invitation to submit bids by 12 noon Thursday 5 November via auction contract. No completed-sale or withdrawn status displayed. Wording that property will be deemed sold prior to auction is conditional on future successful offer, not a sale result.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018",
+          "title": "Savills Auctions official lot listing: Flat A-C, 1, 4, 6,  9 - 20, 30 Montpelier Road, Brighton BN1 2LQ"
+        }
+      ],
+      "notes": "Brighton; 18 existing self-contained flats: 17 studios and one 1-bedroom. Leaseholds:125 years from29 September2009. One unit vacant. Headline rent £187,074 pa conflicts with accommodation rent £187,068 pa. Not all flats internally inspected; some accommodation/tenancy information unavailable or from prior valuation. Corrected from20 October to displayed24 November auction, but active bid deadline5 November2026 at12:00 is the operative earlier milestone. Joint agent Jamie Weiner, Vandermolen Real Estate,0750 0530298,jw@vandermolenre.co.uk.",
+      "contact": {
+        "name": "Jeremy Lamb MRICS",
+        "email": "jeremy.lamb@savills.com",
+        "phone": "+44 (0)20 7824 9089",
+        "url": "mailto:jeremy.lamb@savills.com",
+        "source_url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018"
+      },
+      "units_n": 18,
+      "existing_units": 18,
+      "location_label": "30 Montpelier Road, Brighton BN1 2LQ",
+      "legacy_urls": [
+        "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018"
+      ],
+      "asking_price_gbp": 1600000,
+      "offer_deadline": "5 November 2026, 12:00 (earlier than displayed auction)",
+      "units_label": "18 existing flats (17 studios + 1 one-bedroom)"
+    },
+    {
+      "address": "11 & 11A Fulham Broadway, London SW6 1AA",
+      "postcode": "SW6 1AA",
+      "city": "Other",
+      "units": 7,
+      "guide": "£1,650,000",
+      "auction_date": "2026-11-24",
+      "auctioneer": "Savills Auctions",
+      "seller_type": "fixed charge receivers",
+      "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Savills page displays 24 November 2026, guide price and an explicit current invitation to submit bids by 12 noon Thursday 5 November via auction contract. No completed-sale or withdrawn status displayed. Wording that property will be deemed sold prior to auction is conditional on future successful offer, not a sale result.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016",
+          "title": "Savills Auctions official lot listing: 11 & 11A Fulham Broadway, London SW6 1AA"
+        }
+      ],
+      "notes": "Fulham,London; mixed-use,7 existing studios plus1 ground-floor commercial unit, not8 residential homes. One studio vacant. Headline rent £145,488 pa conflicts with tenure/accommodation rent £145,448 pa; commercial lease £57,500 pa from5 October2018 for15 years. Not all units internally inspected. Corrected from20 October to displayed24 November auction, but active bid deadline5 November2026 at12:00 is earlier operative milestone. Joint agent Jamie Weiner, Vandermolen Real Estate,0750 0530298,jw@vandermolenre.co.uk.",
+      "contact": {
+        "name": "Jeremy Lamb MRICS",
+        "email": "jeremy.lamb@savills.com",
+        "phone": "+44 (0)20 7824 9089",
+        "url": "mailto:jeremy.lamb@savills.com",
+        "source_url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016"
+      },
+      "units_n": 7,
+      "existing_units": 7,
+      "location_label": "11 & 11A Fulham Broadway, London SW6 1AA",
+      "legacy_urls": [
+        "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016"
+      ],
+      "asking_price_gbp": 1650000,
+      "offer_deadline": "5 November 2026, 12:00 (earlier than displayed auction)",
+      "units_label": "7 residential studios + 1 commercial unit"
+    },
+    {
+      "address": "395 Harrow Road, Maida Hill, London, W9 3NF",
+      "postcode": "W9 3NF",
+      "city": "Other",
+      "units": 9,
+      "guide": "£1.2M+",
+      "auction_date": "2026-10-21",
+      "auctioneer": "Allsop",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Allsop lot67 displays £1.2M+ guide, Register to Bid and states this lot will be offered Wednesday21 October; no Sold or Withdrawn banner.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154",
+          "title": "Allsop official lot listing: 395 Harrow Road, Maida Hill, London, W9 3NF"
+        }
+      ],
+      "notes": "London,Maida Hill; mixed-use:9 residential units plus retail and office, not11 residential homes. Total rent reserved £121,800 pa equivalent, not verified cash collection. Receivers have limited occupational information; vacant possession obligation expressly excluded and current/original tenancy documents may not be held. Sold subject to ASTs and commercial agreements; review legal pack.",
+      "contact": {
+        "name": "Harry Barlow",
+        "email": "harry.barlow@allsop.co.uk",
+        "phone": "0207 543 6864",
+        "url": "mailto:harry.barlow@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154"
+      },
+      "units_n": 9,
+      "existing_units": 9,
+      "location_label": "London, W9 3NF",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154"
+      ],
+      "asking_price_gbp": 1200000,
+      "units_label": "9 residential units + retail and office"
+    },
+    {
+      "address": "17-18 St. Marys Place, Southampton, Hampshire, SO14 3HY",
+      "postcode": "SO14 3HY",
+      "city": "Other",
+      "units": 25,
+      "guide": "£2.5M+",
+      "auction_date": null,
+      "auctioneer": "Allsop",
+      "seller_type": "administrators",
+      "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Allsop lot154 displays £2.5M+ guide and Register to Bid within Residential21st &22nd Oct2026 Live Stream catalogue; no Sold or Withdrawn banner. Lot page inspected did not specify its individual day.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137",
+          "title": "Allsop official lot listing: 17-18 St. Marys Place, Southampton, Hampshire, SO14 3HY"
+        }
+      ],
+      "notes": "Southampton; purpose-built student investment,25 existing self-contained studios.22 subject to Assured Periodic Tenancies;3 vacant but reserved. Correct current reserved rent is £249,000 pa equivalent plus future reserved-flat income, not prior £283,200. Seller reports2024 annualised rent circa£341,000; historical/potential income is not current income.8-week completion available. Individual auction day not verified: official catalogue21–22 October2026; source input22 October not relied upon as current verification.",
+      "contact": {
+        "name": "Richard Adamson",
+        "email": "richard.adamson@allsop.co.uk",
+        "phone": "0207 344 2614",
+        "url": "mailto:richard.adamson@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137"
+      },
+      "units_n": 25,
+      "existing_units": 25,
+      "location_label": "Hampshire, SO14 3HY",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137"
+      ],
+      "asking_price_gbp": 2500000,
+      "units_label": "25 existing self-contained student studios"
+    },
+    {
+      "address": "8 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU",
+      "postcode": "PL1 5QU",
+      "city": "Other",
+      "units": 5,
+      "guide": "£220,000+",
+      "auction_date": null,
+      "auctioneer": "Allsop",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Allsop lot254 displays £220,000+ guide and Register to Bid in21st &22nd Oct2026 Live Stream catalogue; no Sold or Withdrawn banner. Exact day conflicts: description says Thursday22nd November.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113",
+          "title": "Allsop official lot listing: 8 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU"
+        }
+      ],
+      "notes": "Plymouth;5 existing self-contained one-bedroom flats. No current rent or confirmed vacant-possession statement in inspected description; do not assume vacant or income-producing. Date conflict retained: official catalogue21–22 October2026 but lot Auction Date text says Thursday22nd November (22 November2026 is Sunday), apparently a month typo but not silently corrected. Previous list22 October; confirm precise day with auctioneer. Garden and garage included.",
+      "contact": {
+        "name": "Gabriella Brunton",
+        "email": "gabriella.brunton@allsop.co.uk",
+        "phone": "0207 344 2668",
+        "url": "mailto:gabriella.brunton@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113"
+      },
+      "units_n": 5,
+      "existing_units": 5,
+      "location_label": "Devon, PL1 5QU",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113"
+      ],
+      "asking_price_gbp": 220000,
+      "units_label": "5 existing one-bedroom flats"
+    },
+    {
+      "address": "9 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU",
+      "postcode": "PL1 5QU",
+      "city": "Other",
+      "units": 5,
+      "guide": "£200,000+",
+      "auction_date": null,
+      "auctioneer": "Allsop",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Allsop lot255 displays £200,000+ guide and Register to Bid in21st &22nd Oct2026 Live Stream catalogue; no Sold or Withdrawn banner. Exact day conflicts: description says Thursday22nd November.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114",
+          "title": "Allsop official lot listing: 9 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU"
+        }
+      ],
+      "notes": "Plymouth;5 existing self-contained one-bedroom flats. No current rent or confirmed vacant-possession statement in inspected description; do not assume vacant or income-producing. Date conflict retained: official catalogue21–22 October2026 but lot Auction Date text says Thursday22nd November (22 November2026 is Sunday), apparently a month typo but not silently corrected. Previous list22 October; confirm precise day with auctioneer. Garden and garage included.",
+      "contact": {
+        "name": "Gabriella Brunton",
+        "email": "gabriella.brunton@allsop.co.uk",
+        "phone": "0207 344 2668",
+        "url": "mailto:gabriella.brunton@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114"
+      },
+      "units_n": 5,
+      "existing_units": 5,
+      "location_label": "Devon, PL1 5QU",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114"
+      ],
+      "asking_price_gbp": 200000,
+      "units_label": "5 existing one-bedroom flats"
+    },
+    {
+      "address": "Flat 1- 4 The Waterhouse, Front Street, Houghton Le Spring, Tyne & Wear, DH5 9JQ",
+      "postcode": "DH5 9JQ",
+      "city": "Other",
+      "units": 4,
+      "guide": "£130,000+",
+      "auction_date": "2026-10-22",
+      "auctioneer": "Allsop",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Allsop lot226 displays £130,000+ guide, Register to Bid and explicit Thursday22 October date; no Sold or Withdrawn banner.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258",
+          "title": "Allsop official lot listing: Flat 1- 4 The Waterhouse, Front Street, Houghton Le Spring, Tyne & Wear, DH5 9JQ"
+        }
+      ],
+      "notes": "Houghton Le Spring;4 existing self-contained flats:three2-bedroom and one3-bedroom. Explicitly VACANT, no current rental income claimed. Total GIA circa201sqm per EPC; off-street parking.",
+      "contact": {
+        "name": "Harry Barlow",
+        "email": "harry.barlow@allsop.co.uk",
+        "phone": "0207 543 6864",
+        "url": "mailto:harry.barlow@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258"
+      },
+      "units_n": 4,
+      "existing_units": 4,
+      "location_label": "Tyne & Wear, DH5 9JQ",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258"
+      ],
+      "asking_price_gbp": 130000
+    },
+    {
+      "address": "11 Lindum Terrace, Doncaster Road, Rotherham, South Yorkshire S65 1NJ",
+      "postcode": "S65 1NJ",
+      "city": "Other",
+      "units": 4,
+      "guide": "£184,000+",
+      "auction_date": "2026-10-29",
+      "auctioneer": "BTG Eddisons Property Auctions (formerly SDL)",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
+      "status": "Advertised for sale",
+      "status_evidence": "Legacy official SDL page links to successor BTG listing. Successor official page states lot due to be auctioned29/10/2026, £184,000+ guide, Register to Bid and Submit an offer. No completed-sale or Withdrawn status. The descriptive phrase sold on behalf of Receivers describes sale terms, not a sale result.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.sdlauctions.co.uk/property/52241/block-of-apartments-for-auction-rotherham/",
+          "title": "SDL Property Auctions (BTG Eddisons) official lot listing: 11 Lindum Terrace, Doncaster Road, Rotherham, South Yorkshire S65 1NJ"
+        },
+        {
+          "url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
+          "title": "BTG Eddisons official lot321:11 Lindum Terrace,Rotherham"
+        }
+      ],
+      "notes": "Rotherham;4 existing one-bedroom flats. Corrected current auction date29 October from legacy28 October. Possible£33,600 pa rent is belief only:auctioneer has not seen tenancy agreements or internally inspected; subject to whatever tenancies may or may not exist. Occupancy directs buyer to legal pack. Do not treat rent as verified or assume vacant possession.",
+      "contact": {
+        "name": "BTG Eddisons Property Auctions",
+        "email": "enquiries@btgeddisonspropertyauctions.com",
+        "phone": "0345 646 2288",
+        "url": "mailto:enquiries@btgeddisonspropertyauctions.com",
+        "source_url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham"
+      },
+      "units_n": 4,
+      "existing_units": 4,
+      "location_label": "Rotherham, South Yorkshire S65 1NJ",
+      "legacy_urls": [
+        "https://www.sdlauctions.co.uk/property/52241/block-of-apartments-for-auction-rotherham/"
+      ],
+      "asking_price_gbp": 184000
+    },
+    {
+      "address": "82 Sumner Road, Croydon, Greater London, CR0 3LJ",
+      "postcode": "CR0 3LJ",
+      "city": "Other",
+      "units": 4,
+      "guide": null,
+      "auction_date": "2026-10-21",
+      "auctioneer": "Allsop",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226",
+      "status": "Withdrawn",
+      "status_evidence": "Official Allsop lot59 displays Withdrawn in status heading and image banner. Overrides residual Wednesday21 October date and Register to Bid button.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226",
+          "title": "Allsop official lot listing: 82 Sumner Road, Croydon, Greater London, CR0 3LJ"
+        }
+      ],
+      "notes": "Croydon;4 existing flats:two2-bedroom and two1-bedroom. One tenancy reserving£9,000 pa equivalent;three unoccupied. Current withdrawn page no longer displays guide, so previous£500,000+ is not represented as a current guide. Exclude from live-sale highlights.",
+      "contact": {
+        "name": "Gabriella Brunton",
+        "email": "gabriella.brunton@allsop.co.uk",
+        "phone": "0207 344 2668",
+        "url": "mailto:gabriella.brunton@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226"
+      },
+      "units_n": 4,
+      "existing_units": 4,
+      "location_label": "Greater London, CR0 3LJ",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226"
+      ],
+      "asking_price_gbp": null
+    },
+    {
+      "address": "51 St. Andrews Road South, Lytham St. Annes, Lancashire, FY8 1PZ",
+      "postcode": "FY8 1PZ",
+      "city": "Other",
+      "units": 4,
+      "guide": null,
+      "auction_date": null,
+      "auctioneer": "Allsop",
+      "seller_type": "receivers (fixed charge/LPA not specified)",
+      "url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200",
+      "status": "Sold",
+      "status_evidence": "Official Allsop lot280 clearly displays Sold Prior in status heading and image banner. Overrides residual21–22 October catalogue and contradictory Thursday22nd November text.",
+      "checked_at": "2026-10-20T08:36:10.114Z",
+      "sources": [
+        {
+          "url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200",
+          "title": "Allsop official lot listing: 51 St. Andrews Road South, Lytham St. Annes, Lancashire, FY8 1PZ"
+        }
+      ],
+      "notes": "Lytham St Annes;4 existing flats:three1-bedroom and one2-bedroom, each subject to Assured Periodic Tenancy. Current gross rent reserved£14,775.48 pa equivalent. Leasehold980 years from1 May1888. No current guide displayed. Exact scheduled date internally contradictory; irrelevant to completed Sold Prior status. Exclude from live-sale highlights.",
+      "contact": {
+        "name": "Simon Hepworth",
+        "email": "simon.hepworth@allsop.co.uk",
+        "phone": "0207 344 2679",
+        "url": "mailto:simon.hepworth@allsop.co.uk",
+        "source_url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200"
+      },
+      "units_n": 4,
+      "existing_units": 4,
+      "location_label": "Lancashire, FY8 1PZ",
+      "legacy_urls": [
+        "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200"
+      ],
+      "asking_price_gbp": null
+    }
+  ]
+}
