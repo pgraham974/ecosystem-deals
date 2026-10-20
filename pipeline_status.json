@@ -74,13 +74,13 @@
       "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics"
     },
     {
-      "name": "LHA rates (VOA)",
-      "gives": "Council rent cap by size",
-      "period": "2026/27",
-      "refreshed": "2026-09-30",
+      "name": "LHA monthly rates (DWP)",
+      "gives": "Official monthly UC LHA by BRMA and shared / 1-4 bedroom category; benchmark only",
+      "period": "April 2026-March 2027",
+      "refreshed": "2026-10-20",
       "cadence_days": 365,
-      "routine": "Monthly run (April)",
-      "url": "https://lha-direct.voa.gov.uk/"
+      "routine": "Annual release; check monthly for corrections",
+      "url": "https://www.gov.uk/government/publications/universal-credit-local-housing-allowance-rates-2026-to-2027"
     },
     {
       "name": "Temporary accommodation (MHCLG / Scottish Gov)",

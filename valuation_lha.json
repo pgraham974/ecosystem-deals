@@ -1,51 +1,2141 @@
 {
-  "period": "2026-04-01 to 2027-03-31",
-  "verified_against_official_table": "2026-10-20",
-  "source_url": "https://www.gov.uk/government/publications/local-housing-allowance-lha-rates-applicable-from-april-2026-to-march-2027",
-  "table_url": "https://assets.publishing.service.gov.uk/media/697b8034f8f4a746d9572f47/2026-27_LHA_TABLES.xlsx",
-  "table": "Table 4",
-  "unit": "GBP per week",
-  "caveat": "Select BRMA only after checking the full property postcode on LHA Direct. LHA bedroom entitlement is not inferred from EPC habitable rooms; LHA is not a provider rent offer. Annual scenarios use weekly x52, not UC monthly entitlement.",
+  "period": "2026/27",
+  "valid_from": "2026-04-01",
+  "valid_to": "2027-03-31",
+  "unit": "GBP per calendar month",
+  "annualisation": "monthly rate x 12",
+  "publisher": "Department for Work and Pensions",
+  "source_url": "https://www.gov.uk/government/publications/universal-credit-local-housing-allowance-rates-2026-to-2027",
+  "source_updated": "2026-04-08",
+  "retrieved": "2026-10-20",
+  "provenance": "Official DWP monthly Universal Credit Local Housing Allowance CSVs for England, Scotland and Wales. Select the BRMA using the full property postcode; not a provider rent offer, guaranteed rent or a guarantee of claimant entitlement.",
+  "sources": [
+    {
+      "country": "England",
+      "url": "https://assets.publishing.service.gov.uk/media/69d654a2e1430e837a86f64a/england-rates-2026-to-2027.csv"
+    },
+    {
+      "country": "Scotland",
+      "url": "https://assets.publishing.service.gov.uk/media/69d657392ea7bc150a394ae5/scotland-rates-2026-to-2027.csv"
+    },
+    {
+      "country": "Wales",
+      "url": "https://assets.publishing.service.gov.uk/media/69d6574a28142a9bd207ba09/wales-rates-2026-to-2027.csv"
+    }
+  ],
   "rates": [
     {
+      "name": "Ashford",
+      "country": "England",
+      "monthly": {
+        "1": 750,
+        "2": 850,
+        "3": 1097.8,
+        "4": 1440,
+        "shared": 393.24
+      }
+    },
+    {
+      "name": "Aylesbury",
+      "country": "England",
+      "monthly": {
+        "1": 800,
+        "2": 995,
+        "3": 1330,
+        "4": 1650,
+        "shared": 442.67
+      }
+    },
+    {
+      "name": "Barnsley",
+      "country": "England",
+      "monthly": {
+        "1": 415,
+        "2": 450,
+        "3": 550,
+        "4": 775,
+        "shared": 316.33
+      }
+    },
+    {
+      "name": "Barrow-in-Furness",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 500,
+        "3": 635,
+        "4": 807.5,
+        "shared": 395.42
+      }
+    },
+    {
+      "name": "Basingstoke",
+      "country": "England",
+      "monthly": {
+        "1": 780,
+        "2": 950,
+        "3": 1150,
+        "4": 1400,
+        "shared": 406.33
+      }
+    },
+    {
+      "name": "Bath",
+      "country": "England",
+      "monthly": {
+        "1": 815,
+        "2": 980,
+        "3": 1200,
+        "4": 1945,
+        "shared": 540
+      }
+    },
+    {
+      "name": "Bedford",
+      "country": "England",
+      "monthly": {
+        "1": 650,
+        "2": 825,
+        "3": 1000,
+        "4": 1300,
+        "shared": 450
+      }
+    },
+    {
+      "name": "Birmingham",
+      "country": "England",
+      "monthly": {
+        "1": 695,
+        "2": 750,
+        "3": 825,
+        "4": 1100,
+        "shared": 341.58
+      }
+    },
+    {
+      "name": "Black Country",
+      "country": "England",
+      "monthly": {
+        "1": 495,
+        "2": 625,
+        "3": 750,
+        "4": 925,
+        "shared": 320
+      }
+    },
+    {
+      "name": "Blackwater Valley",
+      "country": "England",
+      "monthly": {
+        "1": 800,
+        "2": 1000,
+        "3": 1295,
+        "4": 1700,
+        "shared": 477.98
+      }
+    },
+    {
+      "name": "Bolton and Bury",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 575,
+        "3": 700,
+        "4": 950,
+        "shared": 341.51
+      }
+    },
+    {
+      "name": "Bournemouth",
+      "country": "England",
+      "monthly": {
+        "1": 695,
+        "2": 875,
+        "3": 1150,
+        "4": 1550,
+        "shared": 426.33
+      }
+    },
+    {
+      "name": "Bradford and South Dales",
+      "country": "England",
+      "monthly": {
+        "1": 450,
+        "2": 525,
+        "3": 635,
+        "4": 750,
+        "shared": 326.33
+      }
+    },
+    {
+      "name": "Brighton and Hove",
+      "country": "England",
+      "monthly": {
+        "1": 920,
+        "2": 1200,
+        "3": 1450,
+        "4": 2000,
+        "shared": 586.61
+      }
+    },
+    {
       "name": "Bristol",
-      "weekly": {
-        "shared": 117.68,
-        "1": 207.12,
-        "2": 252,
-        "3": 299.18,
-        "4": 425.75
+      "country": "England",
+      "monthly": {
+        "1": 900,
+        "2": 1095,
+        "3": 1300,
+        "4": 1850,
+        "shared": 511.33
+      }
+    },
+    {
+      "name": "Bury St Edmunds",
+      "country": "England",
+      "monthly": {
+        "1": 630,
+        "2": 775,
+        "3": 955,
+        "4": 1300,
+        "shared": 451.33
+      }
+    },
+    {
+      "name": "Cambridge",
+      "country": "England",
+      "monthly": {
+        "1": 900,
+        "2": 950,
+        "3": 1125,
+        "4": 1450,
+        "shared": 526.33
+      }
+    },
+    {
+      "name": "Canterbury",
+      "country": "England",
+      "monthly": {
+        "1": 675,
+        "2": 895,
+        "3": 1100,
+        "4": 1315,
+        "shared": 425
       }
     },
     {
       "name": "Central Greater Manchester",
-      "weekly": {
-        "shared": 94.72,
-        "1": 178.36,
-        "2": 201.37,
-        "3": 218.63,
-        "4": 310.68
+      "country": "England",
+      "monthly": {
+        "1": 775,
+        "2": 875,
+        "3": 950,
+        "4": 1350,
+        "shared": 411.58
+      }
+    },
+    {
+      "name": "Central Lancs",
+      "country": "England",
+      "monthly": {
+        "1": 450,
+        "2": 575,
+        "3": 650,
+        "4": 925,
+        "shared": 304.17
+      }
+    },
+    {
+      "name": "Central London",
+      "country": "England",
+      "monthly": {
+        "1": 1439.97,
+        "2": 1793.98,
+        "3": 2160.02,
+        "4": 3060,
+        "shared": 829.83
+      }
+    },
+    {
+      "name": "Central Norfolk and Norwich",
+      "country": "England",
+      "monthly": {
+        "1": 590,
+        "2": 695,
+        "3": 800,
+        "4": 1150,
+        "shared": 393.5
+      }
+    },
+    {
+      "name": "Chelmsford",
+      "country": "England",
+      "monthly": {
+        "1": 795,
+        "2": 950,
+        "3": 1200,
+        "4": 1450,
+        "shared": 426.33
       }
     },
     {
       "name": "Cheltenham",
-      "weekly": {
-        "shared": 100.45,
-        "1": 143.84,
-        "2": 184.11,
-        "3": 230.14,
-        "4": 338.3
+      "country": "England",
+      "monthly": {
+        "1": 625,
+        "2": 800,
+        "3": 1000,
+        "4": 1470,
+        "shared": 436.5
+      }
+    },
+    {
+      "name": "Cherwell Valley",
+      "country": "England",
+      "monthly": {
+        "1": 775,
+        "2": 950,
+        "3": 1185,
+        "4": 1450,
+        "shared": 466.5
+      }
+    },
+    {
+      "name": "Chesterfield",
+      "country": "England",
+      "monthly": {
+        "1": 450,
+        "2": 525,
+        "3": 600,
+        "4": 850,
+        "shared": 351.33
+      }
+    },
+    {
+      "name": "Chichester",
+      "country": "England",
+      "monthly": {
+        "1": 788,
+        "2": 950,
+        "3": 1225,
+        "4": 1600,
+        "shared": 450
+      }
+    },
+    {
+      "name": "Chilterns",
+      "country": "England",
+      "monthly": {
+        "1": 850,
+        "2": 1100,
+        "3": 1450,
+        "4": 2000,
+        "shared": 525
+      }
+    },
+    {
+      "name": "Colchester",
+      "country": "England",
+      "monthly": {
+        "1": 625,
+        "2": 795,
+        "3": 975,
+        "4": 1250,
+        "shared": 401.33
+      }
+    },
+    {
+      "name": "Coventry",
+      "country": "England",
+      "monthly": {
+        "1": 575,
+        "2": 675,
+        "3": 775,
+        "4": 1000,
+        "shared": 432.35
+      }
+    },
+    {
+      "name": "Crawley and Reigate",
+      "country": "England",
+      "monthly": {
+        "1": 860,
+        "2": 1100,
+        "3": 1365,
+        "4": 1750,
+        "shared": 476.33
+      }
+    },
+    {
+      "name": "Darlington",
+      "country": "England",
+      "monthly": {
+        "1": 360,
+        "2": 450,
+        "3": 530,
+        "4": 695,
+        "shared": 288.96
+      }
+    },
+    {
+      "name": "Derby",
+      "country": "England",
+      "monthly": {
+        "1": 450,
+        "2": 595,
+        "3": 700,
+        "4": 935,
+        "shared": 359.83
+      }
+    },
+    {
+      "name": "Doncaster",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 500,
+        "3": 550,
+        "4": 725,
+        "shared": 304.17
+      }
+    },
+    {
+      "name": "Dover-Shepway",
+      "country": "England",
+      "monthly": {
+        "1": 510,
+        "2": 695,
+        "3": 865,
+        "4": 1200,
+        "shared": 431.5
+      }
+    },
+    {
+      "name": "Durham",
+      "country": "England",
+      "monthly": {
+        "1": 393.25,
+        "2": 400,
+        "3": 475,
+        "4": 659.87,
+        "shared": 393.25
+      }
+    },
+    {
+      "name": "East Cheshire",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 725,
+        "3": 995,
+        "4": 1750,
+        "shared": 421.5
+      }
+    },
+    {
+      "name": "East Lancs",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 475,
+        "3": 595,
+        "4": 795,
+        "shared": 291.5
+      }
+    },
+    {
+      "name": "East Thames Valley",
+      "country": "England",
+      "monthly": {
+        "1": 900,
+        "2": 1200,
+        "3": 1450,
+        "4": 1900,
+        "shared": 591.5
+      }
+    },
+    {
+      "name": "Eastbourne",
+      "country": "England",
+      "monthly": {
+        "1": 720,
+        "2": 900,
+        "3": 1083,
+        "4": 1400,
+        "shared": 422.5
+      }
+    },
+    {
+      "name": "Eastern Staffordshire",
+      "country": "England",
+      "monthly": {
+        "1": 495,
+        "2": 600,
+        "3": 725,
+        "4": 985.8,
+        "shared": 321.33
+      }
+    },
+    {
+      "name": "Exeter",
+      "country": "England",
+      "monthly": {
+        "1": 630,
+        "2": 795,
+        "3": 950,
+        "4": 1300,
+        "shared": 537
+      }
+    },
+    {
+      "name": "Fylde Coast",
+      "country": "England",
+      "monthly": {
+        "1": 400,
+        "2": 542,
+        "3": 625,
+        "4": 742.5,
+        "shared": 350.88
+      }
+    },
+    {
+      "name": "Gloucester",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 725,
+        "3": 850,
+        "4": 1200,
+        "shared": 406.33
+      }
+    },
+    {
+      "name": "Grantham and Newark",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 575,
+        "3": 655,
+        "4": 875.01,
+        "shared": 376.33
+      }
+    },
+    {
+      "name": "Greater Liverpool",
+      "country": "England",
+      "monthly": {
+        "1": 500,
+        "2": 595,
+        "3": 650,
+        "4": 875,
+        "shared": 344.36
+      }
+    },
+    {
+      "name": "Grimsby",
+      "country": "England",
+      "monthly": {
+        "1": 395,
+        "2": 480,
+        "3": 521.43,
+        "4": 720,
+        "shared": 317.2
+      }
+    },
+    {
+      "name": "Guildford",
+      "country": "England",
+      "monthly": {
+        "1": 950,
+        "2": 1225,
+        "3": 1480,
+        "4": 1978,
+        "shared": 515
+      }
+    },
+    {
+      "name": "Halifax",
+      "country": "England",
+      "monthly": {
+        "1": 440,
+        "2": 525,
+        "3": 625,
+        "4": 750,
+        "shared": 356.31
+      }
+    },
+    {
+      "name": "Harlow and Stortford",
+      "country": "England",
+      "monthly": {
+        "1": 810,
+        "2": 1025,
+        "3": 1210,
+        "4": 1375,
+        "shared": 451.33
+      }
+    },
+    {
+      "name": "Harrogate",
+      "country": "England",
+      "monthly": {
+        "1": 595,
+        "2": 735.86,
+        "3": 875,
+        "4": 1275,
+        "shared": 421.33
+      }
+    },
+    {
+      "name": "Herefordshire",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 600,
+        "3": 750,
+        "4": 975,
+        "shared": 351.5
+      }
+    },
+    {
+      "name": "High Weald",
+      "country": "England",
+      "monthly": {
+        "1": 800,
+        "2": 1075,
+        "3": 1323,
+        "4": 1825,
+        "shared": 459.83
+      }
+    },
+    {
+      "name": "Hull and East Riding",
+      "country": "England",
+      "monthly": {
+        "1": 380,
+        "2": 475,
+        "3": 550,
+        "4": 700,
+        "shared": 335.83
+      }
+    },
+    {
+      "name": "Huntingdon",
+      "country": "England",
+      "monthly": {
+        "1": 650,
+        "2": 795,
+        "3": 950,
+        "4": 1250,
+        "shared": 460
+      }
+    },
+    {
+      "name": "Inner East London",
+      "country": "England",
+      "monthly": {
+        "1": 1439.97,
+        "2": 1750,
+        "3": 2160.02,
+        "4": 3000,
+        "shared": 699.5
+      }
+    },
+    {
+      "name": "Inner North London",
+      "country": "England",
+      "monthly": {
+        "1": 1439.97,
+        "2": 1793.98,
+        "3": 2160.02,
+        "4": 3060,
+        "shared": 708.27
+      }
+    },
+    {
+      "name": "Inner South East London",
+      "country": "England",
+      "monthly": {
+        "1": 1295.5,
+        "2": 1550,
+        "3": 1950,
+        "4": 2625,
+        "shared": 650
+      }
+    },
+    {
+      "name": "Inner South West London",
+      "country": "England",
+      "monthly": {
+        "1": 1420,
+        "2": 1700,
+        "3": 2160.02,
+        "4": 2900,
+        "shared": 685
+      }
+    },
+    {
+      "name": "Inner West London",
+      "country": "England",
+      "monthly": {
+        "1": 1350,
+        "2": 1625,
+        "3": 2050,
+        "4": 2550,
+        "shared": 760
+      }
+    },
+    {
+      "name": "Ipswich",
+      "country": "England",
+      "monthly": {
+        "1": 595,
+        "2": 717,
+        "3": 800,
+        "4": 1100,
+        "shared": 366.5
+      }
+    },
+    {
+      "name": "Isle of Wight",
+      "country": "England",
+      "monthly": {
+        "1": 515,
+        "2": 650,
+        "3": 815,
+        "4": 995,
+        "shared": 343.27
+      }
+    },
+    {
+      "name": "Kendal",
+      "country": "England",
+      "monthly": {
+        "1": 575,
+        "2": 650,
+        "3": 775,
+        "4": 995,
+        "shared": 325.89
+      }
+    },
+    {
+      "name": "Kernow West",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 695,
+        "3": 815,
+        "4": 1100,
+        "shared": 392.5
+      }
+    },
+    {
+      "name": "Kings Lynn",
+      "country": "England",
+      "monthly": {
+        "1": 548.23,
+        "2": 650,
+        "3": 775,
+        "4": 1050,
+        "shared": 399.83
+      }
+    },
+    {
+      "name": "Kirklees",
+      "country": "England",
+      "monthly": {
+        "1": 450,
+        "2": 525,
+        "3": 650,
+        "4": 825,
+        "shared": 316.33
+      }
+    },
+    {
+      "name": "Lancaster",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 575,
+        "3": 650,
+        "4": 725,
+        "shared": 394.33
+      }
+    },
+    {
+      "name": "Leeds",
+      "country": "England",
+      "monthly": {
+        "1": 675,
+        "2": 775,
+        "3": 850,
+        "4": 1200,
+        "shared": 347.62
+      }
+    },
+    {
+      "name": "Leicester",
+      "country": "England",
+      "monthly": {
+        "1": 540,
+        "2": 650,
+        "3": 775,
+        "4": 1050,
+        "shared": 395.42
+      }
+    },
+    {
+      "name": "Lincoln",
+      "country": "England",
+      "monthly": {
+        "1": 495,
+        "2": 600,
+        "3": 675,
+        "4": 925,
+        "shared": 354.14
+      }
+    },
+    {
+      "name": "Lincolnshire Fens",
+      "country": "England",
+      "monthly": {
+        "1": 500,
+        "2": 625,
+        "3": 735,
+        "4": 865.03,
+        "shared": 368.33
+      }
+    },
+    {
+      "name": "Lowestoft and Great Yarmouth",
+      "country": "England",
+      "monthly": {
+        "1": 441.07,
+        "2": 575,
+        "3": 630,
+        "4": 825,
+        "shared": 376.33
+      }
+    },
+    {
+      "name": "Luton",
+      "country": "England",
+      "monthly": {
+        "1": 700,
+        "2": 875,
+        "3": 1100,
+        "4": 1350,
+        "shared": 436.17
+      }
+    },
+    {
+      "name": "Maidstone",
+      "country": "England",
+      "monthly": {
+        "1": 750,
+        "2": 905,
+        "3": 1200,
+        "4": 1550,
+        "shared": 444.83
+      }
+    },
+    {
+      "name": "Medway and Swale",
+      "country": "England",
+      "monthly": {
+        "1": 675,
+        "2": 850,
+        "3": 940,
+        "4": 1300,
+        "shared": 410
+      }
+    },
+    {
+      "name": "Mendip",
+      "country": "England",
+      "monthly": {
+        "1": 600,
+        "2": 775,
+        "3": 975,
+        "4": 1350,
+        "shared": 405
+      }
+    },
+    {
+      "name": "Mid and East Devon",
+      "country": "England",
+      "monthly": {
+        "1": 530,
+        "2": 685,
+        "3": 825,
+        "4": 1100,
+        "shared": 404.11
+      }
+    },
+    {
+      "name": "Mid and West Dorset",
+      "country": "England",
+      "monthly": {
+        "1": 595,
+        "2": 750,
+        "3": 900,
+        "4": 1250,
+        "shared": 426.33
+      }
+    },
+    {
+      "name": "Mid Staffs",
+      "country": "England",
+      "monthly": {
+        "1": 500,
+        "2": 625,
+        "3": 740,
+        "4": 995,
+        "shared": 352.4
+      }
+    },
+    {
+      "name": "Milton Keynes",
+      "country": "England",
+      "monthly": {
+        "1": 775,
+        "2": 925,
+        "3": 1195,
+        "4": 1495,
+        "shared": 501.33
+      }
+    },
+    {
+      "name": "Newbury",
+      "country": "England",
+      "monthly": {
+        "1": 750,
+        "2": 895,
+        "3": 1200,
+        "4": 1605,
+        "shared": 451.33
+      }
+    },
+    {
+      "name": "North Cheshire",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 590,
+        "3": 695,
+        "4": 1000,
+        "shared": 341.5
+      }
+    },
+    {
+      "name": "North Cornwall and Devon Borders",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 609,
+        "3": 725,
+        "4": 950,
+        "shared": 368.33
+      }
+    },
+    {
+      "name": "North Cumbria",
+      "country": "England",
+      "monthly": {
+        "1": 395,
+        "2": 475,
+        "3": 590,
+        "4": 740,
+        "shared": 319.83
+      }
+    },
+    {
+      "name": "North Devon",
+      "country": "England",
+      "monthly": {
+        "1": 485,
+        "2": 645,
+        "3": 775,
+        "4": 995,
+        "shared": 425
+      }
+    },
+    {
+      "name": "North Nottingham",
+      "country": "England",
+      "monthly": {
+        "1": 445,
+        "2": 550,
+        "3": 585,
+        "4": 810,
+        "shared": 338.93
+      }
+    },
+    {
+      "name": "North West Kent",
+      "country": "England",
+      "monthly": {
+        "1": 750,
+        "2": 995,
+        "3": 1200,
+        "4": 1450,
+        "shared": 451.33
+      }
+    },
+    {
+      "name": "North West London",
+      "country": "England",
+      "monthly": {
+        "1": 1100,
+        "2": 1350,
+        "3": 1680,
+        "4": 2100,
+        "shared": 621.33
+      }
+    },
+    {
+      "name": "Northampton",
+      "country": "England",
+      "monthly": {
+        "1": 645,
+        "2": 750,
+        "3": 900,
+        "4": 1160,
+        "shared": 410.62
+      }
+    },
+    {
+      "name": "Northants Central",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 695,
+        "3": 795,
+        "4": 995,
+        "shared": 375.86
+      }
+    },
+    {
+      "name": "Northumberland",
+      "country": "England",
+      "monthly": {
+        "1": 375,
+        "2": 425,
+        "3": 530,
+        "4": 760,
+        "shared": 356.33
+      }
+    },
+    {
+      "name": "Nottingham",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 650,
+        "3": 750,
+        "4": 970,
+        "shared": 380
+      }
+    },
+    {
+      "name": "Oldham and Rochdale",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 577.5,
+        "3": 695,
+        "4": 950,
+        "shared": 344.83
+      }
+    },
+    {
+      "name": "Outer East London",
+      "country": "England",
+      "monthly": {
+        "1": 1200,
+        "2": 1400,
+        "3": 1675,
+        "4": 1950,
+        "shared": 561.33
+      }
+    },
+    {
+      "name": "Outer North East London",
+      "country": "England",
+      "monthly": {
+        "1": 1000,
+        "2": 1250,
+        "3": 1500,
+        "4": 1800,
+        "shared": 549.83
+      }
+    },
+    {
+      "name": "Outer North London",
+      "country": "England",
+      "monthly": {
+        "1": 1150,
+        "2": 1400,
+        "3": 1695,
+        "4": 2200,
+        "shared": 595
+      }
+    },
+    {
+      "name": "Outer South East London",
+      "country": "England",
+      "monthly": {
+        "1": 1050,
+        "2": 1300,
+        "3": 1550,
+        "4": 1800,
+        "shared": 600
+      }
+    },
+    {
+      "name": "Outer South London",
+      "country": "England",
+      "monthly": {
+        "1": 950,
+        "2": 1200,
+        "3": 1500,
+        "4": 1950,
+        "shared": 569.33
+      }
+    },
+    {
+      "name": "Outer South West London",
+      "country": "England",
+      "monthly": {
+        "1": 1200,
+        "2": 1495,
+        "3": 1800,
+        "4": 2550,
+        "shared": 591.5
+      }
+    },
+    {
+      "name": "Outer West London",
+      "country": "England",
+      "monthly": {
+        "1": 1000,
+        "2": 1300,
+        "3": 1475,
+        "4": 1800,
+        "shared": 576.33
+      }
+    },
+    {
+      "name": "Oxford",
+      "country": "England",
+      "monthly": {
+        "1": 900,
+        "2": 1125,
+        "3": 1325,
+        "4": 1750,
+        "shared": 550
+      }
+    },
+    {
+      "name": "Peaks and Dales",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 595,
+        "3": 695,
+        "4": 900,
+        "shared": 347.62
+      }
+    },
+    {
+      "name": "Peterborough",
+      "country": "England",
+      "monthly": {
+        "1": 575,
+        "2": 700,
+        "3": 810,
+        "4": 1050,
+        "shared": 344.83
+      }
+    },
+    {
+      "name": "Plymouth",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 675,
+        "3": 800,
+        "4": 975,
+        "shared": 400
+      }
+    },
+    {
+      "name": "Portsmouth",
+      "country": "England",
+      "monthly": {
+        "1": 695,
+        "2": 845,
+        "3": 1000,
+        "4": 1300,
+        "shared": 422.83
+      }
+    },
+    {
+      "name": "Reading",
+      "country": "England",
+      "monthly": {
+        "1": 850,
+        "2": 1095,
+        "3": 1300,
+        "4": 1654,
+        "shared": 391.5
+      }
+    },
+    {
+      "name": "Richmond and Hambleton",
+      "country": "England",
+      "monthly": {
+        "1": 450,
+        "2": 550,
+        "3": 650,
+        "4": 830,
+        "shared": 417.67
+      }
+    },
+    {
+      "name": "Rotherham",
+      "country": "England",
+      "monthly": {
+        "1": 430,
+        "2": 500,
+        "3": 550,
+        "4": 817.5,
+        "shared": 351.33
+      }
+    },
+    {
+      "name": "Rugby and East",
+      "country": "England",
+      "monthly": {
+        "1": 595,
+        "2": 725,
+        "3": 850,
+        "4": 1200,
+        "shared": 425
+      }
+    },
+    {
+      "name": "Salisbury",
+      "country": "England",
+      "monthly": {
+        "1": 650,
+        "2": 780,
+        "3": 915,
+        "4": 1250,
+        "shared": 426.33
+      }
+    },
+    {
+      "name": "Scarborough",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 550,
+        "3": 650,
+        "4": 725,
+        "shared": 309.83
+      }
+    },
+    {
+      "name": "Scunthorpe",
+      "country": "England",
+      "monthly": {
+        "1": 410,
+        "2": 495,
+        "3": 575,
+        "4": 725,
+        "shared": 310.68
+      }
+    },
+    {
+      "name": "Sheffield",
+      "country": "England",
+      "monthly": {
+        "1": 575,
+        "2": 620,
+        "3": 680,
+        "4": 950,
+        "shared": 350
+      }
+    },
+    {
+      "name": "Shropshire",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 595,
+        "3": 725,
+        "4": 975,
+        "shared": 369.35
+      }
+    },
+    {
+      "name": "Solihull",
+      "country": "England",
+      "monthly": {
+        "1": 700,
+        "2": 825,
+        "3": 1000,
+        "4": 1375,
+        "shared": 412.5
+      }
+    },
+    {
+      "name": "South Cheshire",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 575,
+        "3": 680,
+        "4": 995,
+        "shared": 325
+      }
+    },
+    {
+      "name": "South Devon",
+      "country": "England",
+      "monthly": {
+        "1": 505,
+        "2": 675,
+        "3": 840,
+        "4": 1100,
+        "shared": 367.17
+      }
+    },
+    {
+      "name": "South East Herts",
+      "country": "England",
+      "monthly": {
+        "1": 835,
+        "2": 1050,
+        "3": 1370,
+        "4": 1700,
+        "shared": 475
+      }
+    },
+    {
+      "name": "South West Essex",
+      "country": "England",
+      "monthly": {
+        "1": 775,
+        "2": 950,
+        "3": 1200,
+        "4": 1500,
+        "shared": 476.33
+      }
+    },
+    {
+      "name": "South West Herts",
+      "country": "England",
+      "monthly": {
+        "1": 950,
+        "2": 1250,
+        "3": 1500,
+        "4": 2000,
+        "shared": 501.33
+      }
+    },
+    {
+      "name": "Southampton",
+      "country": "England",
+      "monthly": {
+        "1": 700,
+        "2": 875,
+        "3": 1075,
+        "4": 1450,
+        "shared": 425
+      }
+    },
+    {
+      "name": "Southend",
+      "country": "England",
+      "monthly": {
+        "1": 680,
+        "2": 875,
+        "3": 1100,
+        "4": 1350,
+        "shared": 406.33
       }
     },
     {
       "name": "Southern Greater Manchester",
-      "weekly": {
-        "shared": 94.72,
-        "1": 143.84,
-        "2": 172.6,
-        "3": 207.12,
-        "4": 322.19
+      "country": "England",
+      "monthly": {
+        "1": 625,
+        "2": 750,
+        "3": 900,
+        "4": 1400,
+        "shared": 411.58
+      }
+    },
+    {
+      "name": "Southport",
+      "country": "England",
+      "monthly": {
+        "1": 475,
+        "2": 600,
+        "3": 775,
+        "4": 925,
+        "shared": 369.35
+      }
+    },
+    {
+      "name": "St Helens",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 525,
+        "3": 625,
+        "4": 800,
+        "shared": 324.75
+      }
+    },
+    {
+      "name": "Staffordshire North",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 480,
+        "3": 595,
+        "4": 800,
+        "shared": 301.33
+      }
+    },
+    {
+      "name": "Stevenage and North Herts",
+      "country": "England",
+      "monthly": {
+        "1": 775,
+        "2": 975,
+        "3": 1250,
+        "4": 1600,
+        "shared": 436.17
+      }
+    },
+    {
+      "name": "Sunderland",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 475,
+        "3": 550,
+        "4": 700,
+        "shared": 321.33
+      }
+    },
+    {
+      "name": "Sussex East",
+      "country": "England",
+      "monthly": {
+        "1": 595,
+        "2": 750,
+        "3": 950,
+        "4": 1150,
+        "shared": 361
+      }
+    },
+    {
+      "name": "Swindon",
+      "country": "England",
+      "monthly": {
+        "1": 675,
+        "2": 785,
+        "3": 950,
+        "4": 1300,
+        "shared": 451.33
+      }
+    },
+    {
+      "name": "Tameside and Glossop",
+      "country": "England",
+      "monthly": {
+        "1": 525,
+        "2": 600,
+        "3": 750,
+        "4": 1150,
+        "shared": 321.08
+      }
+    },
+    {
+      "name": "Taunton and West Somerset",
+      "country": "England",
+      "monthly": {
+        "1": 575,
+        "2": 725,
+        "3": 850,
+        "4": 1000,
+        "shared": 404.11
+      }
+    },
+    {
+      "name": "Teesside",
+      "country": "England",
+      "monthly": {
+        "1": 410,
+        "2": 475,
+        "3": 550,
+        "4": 750,
+        "shared": 288.96
+      }
+    },
+    {
+      "name": "Thanet",
+      "country": "England",
+      "monthly": {
+        "1": 577.84,
+        "2": 750,
+        "3": 900,
+        "4": 1150,
+        "shared": 380
+      }
+    },
+    {
+      "name": "Tyneside",
+      "country": "England",
+      "monthly": {
+        "1": 490,
+        "2": 550,
+        "3": 650,
+        "4": 925,
+        "shared": 381.33
+      }
+    },
+    {
+      "name": "Wakefield",
+      "country": "England",
+      "monthly": {
+        "1": 500,
+        "2": 595,
+        "3": 725,
+        "4": 885,
+        "shared": 326.98
+      }
+    },
+    {
+      "name": "Walton",
+      "country": "England",
+      "monthly": {
+        "1": 950,
+        "2": 1212,
+        "3": 1450,
+        "4": 1975,
+        "shared": 620
+      }
+    },
+    {
+      "name": "Warwickshire South",
+      "country": "England",
+      "monthly": {
+        "1": 700,
+        "2": 850,
+        "3": 1045,
+        "4": 1350,
+        "shared": 412.5
+      }
+    },
+    {
+      "name": "West Cheshire",
+      "country": "England",
+      "monthly": {
+        "1": 550,
+        "2": 675,
+        "3": 795,
+        "4": 1224,
+        "shared": 375.86
+      }
+    },
+    {
+      "name": "West Cumbria",
+      "country": "England",
+      "monthly": {
+        "1": 385,
+        "2": 475,
+        "3": 550,
+        "4": 700,
+        "shared": 319.83
+      }
+    },
+    {
+      "name": "West Pennine",
+      "country": "England",
+      "monthly": {
+        "1": 400,
+        "2": 450,
+        "3": 505,
+        "4": 762.5,
+        "shared": 310.68
+      }
+    },
+    {
+      "name": "West Wiltshire",
+      "country": "England",
+      "monthly": {
+        "1": 595,
+        "2": 725,
+        "3": 900,
+        "4": 1200,
+        "shared": 450
+      }
+    },
+    {
+      "name": "Weston-S-Mare",
+      "country": "England",
+      "monthly": {
+        "1": 580,
+        "2": 750,
+        "3": 925,
+        "4": 1250,
+        "shared": 451.33
+      }
+    },
+    {
+      "name": "Wigan",
+      "country": "England",
+      "monthly": {
+        "1": 400,
+        "2": 500,
+        "3": 595,
+        "4": 775,
+        "shared": 339.83
+      }
+    },
+    {
+      "name": "Winchester",
+      "country": "England",
+      "monthly": {
+        "1": 825,
+        "2": 1050,
+        "3": 1275,
+        "4": 1700,
+        "shared": 525
+      }
+    },
+    {
+      "name": "Wirral",
+      "country": "England",
+      "monthly": {
+        "1": 425,
+        "2": 525,
+        "3": 650,
+        "4": 825,
+        "shared": 318.71
+      }
+    },
+    {
+      "name": "Wolds and Coast",
+      "country": "England",
+      "monthly": {
+        "1": 400,
+        "2": 495,
+        "3": 600,
+        "4": 675,
+        "shared": 344.36
+      }
+    },
+    {
+      "name": "Worcester North",
+      "country": "England",
+      "monthly": {
+        "1": 515,
+        "2": 650,
+        "3": 750,
+        "4": 995,
+        "shared": 329.83
+      }
+    },
+    {
+      "name": "Worcester South",
+      "country": "England",
+      "monthly": {
+        "1": 569,
+        "2": 700,
+        "3": 825,
+        "4": 1150,
+        "shared": 382.58
+      }
+    },
+    {
+      "name": "Worthing",
+      "country": "England",
+      "monthly": {
+        "1": 760,
+        "2": 950,
+        "3": 1180,
+        "4": 1465,
+        "shared": 445
+      }
+    },
+    {
+      "name": "Yeovil",
+      "country": "England",
+      "monthly": {
+        "1": 525,
+        "2": 695,
+        "3": 850,
+        "4": 1250,
+        "shared": 435
+      }
+    },
+    {
+      "name": "York",
+      "country": "England",
+      "monthly": {
+        "1": 675,
+        "2": 775,
+        "3": 825,
+        "4": 1200,
+        "shared": 417.67
+      }
+    },
+    {
+      "name": "Aberdeen and Shire",
+      "country": "Scotland",
+      "monthly": {
+        "1": 475,
+        "2": 650,
+        "3": 860,
+        "4": 1250,
+        "shared": 325
+      }
+    },
+    {
+      "name": "Argyll and Bute",
+      "country": "Scotland",
+      "monthly": {
+        "1": 450,
+        "2": 600,
+        "3": 695,
+        "4": 1200,
+        "shared": 350
+      }
+    },
+    {
+      "name": "Ayrshires",
+      "country": "Scotland",
+      "monthly": {
+        "1": 375,
+        "2": 475,
+        "3": 564.88,
+        "4": 800,
+        "shared": 375
+      }
+    },
+    {
+      "name": "Dumfries and Galloway",
+      "country": "Scotland",
+      "monthly": {
+        "1": 380,
+        "2": 450,
+        "3": 500,
+        "4": 690,
+        "shared": 335
+      }
+    },
+    {
+      "name": "Dundee and Angus",
+      "country": "Scotland",
+      "monthly": {
+        "1": 400,
+        "2": 615,
+        "3": 795,
+        "4": 1100,
+        "shared": 375
+      }
+    },
+    {
+      "name": "East Dunbartonshire",
+      "country": "Scotland",
+      "monthly": {
+        "1": 550,
+        "2": 750,
+        "3": 1000,
+        "4": 1400,
+        "shared": 425
+      }
+    },
+    {
+      "name": "Fife",
+      "country": "Scotland",
+      "monthly": {
+        "1": 450,
+        "2": 590,
+        "3": 715,
+        "4": 1250,
+        "shared": 375
+      }
+    },
+    {
+      "name": "Forth Valley",
+      "country": "Scotland",
+      "monthly": {
+        "1": 460,
+        "2": 650,
+        "3": 800,
+        "4": 1300,
+        "shared": 415
+      }
+    },
+    {
+      "name": "Greater Glasgow",
+      "country": "Scotland",
+      "monthly": {
+        "1": 695,
+        "2": 850,
+        "3": 970,
+        "4": 1800,
+        "shared": 450
+      }
+    },
+    {
+      "name": "Highland and Islands",
+      "country": "Scotland",
+      "monthly": {
+        "1": 475,
+        "2": 595,
+        "3": 695,
+        "4": 850,
+        "shared": 380
+      }
+    },
+    {
+      "name": "Lothian",
+      "country": "Scotland",
+      "monthly": {
+        "1": 750,
+        "2": 970,
+        "3": 1375,
+        "4": 2180,
+        "shared": 475
+      }
+    },
+    {
+      "name": "North Lanarkshire",
+      "country": "Scotland",
+      "monthly": {
+        "1": 440,
+        "2": 550,
+        "3": 675,
+        "4": 895,
+        "shared": 375
+      }
+    },
+    {
+      "name": "Perth and Kinross",
+      "country": "Scotland",
+      "monthly": {
+        "1": 425,
+        "2": 560,
+        "3": 750,
+        "4": 1250,
+        "shared": 359.17
+      }
+    },
+    {
+      "name": "Renfrewshire/ Inverclyde",
+      "country": "Scotland",
+      "monthly": {
+        "1": 400,
+        "2": 525,
+        "3": 600,
+        "4": 1100,
+        "shared": 360
+      }
+    },
+    {
+      "name": "Scottish Borders",
+      "country": "Scotland",
+      "monthly": {
+        "1": 375,
+        "2": 500,
+        "3": 615,
+        "4": 985,
+        "shared": 325
+      }
+    },
+    {
+      "name": "South Lanarkshire",
+      "country": "Scotland",
+      "monthly": {
+        "1": 450,
+        "2": 575,
+        "3": 715.84,
+        "4": 1107,
+        "shared": 375
+      }
+    },
+    {
+      "name": "West Dunbartonshire",
+      "country": "Scotland",
+      "monthly": {
+        "1": 475,
+        "2": 595,
+        "3": 675,
+        "4": 950,
+        "shared": 350
+      }
+    },
+    {
+      "name": "West Lothian",
+      "country": "Scotland",
+      "monthly": {
+        "1": 500,
+        "2": 625,
+        "3": 750,
+        "4": 1112.5,
+        "shared": 410
+      }
+    },
+    {
+      "name": "Blaenau Gwent",
+      "country": "Wales",
+      "monthly": {
+        "1": 325.89,
+        "2": 430,
+        "3": 490,
+        "4": 650,
+        "shared": 300
+      }
+    },
+    {
+      "name": "Brecon and Radnor",
+      "country": "Wales",
+      "monthly": {
+        "1": 340,
+        "2": 440,
+        "3": 550,
+        "4": 650,
+        "shared": 332.41
+      }
+    },
+    {
+      "name": "Bridgend",
+      "country": "Wales",
+      "monthly": {
+        "1": 400,
+        "2": 525,
+        "3": 575,
+        "4": 775,
+        "shared": 300
+      }
+    },
+    {
+      "name": "Caerphilly",
+      "country": "Wales",
+      "monthly": {
+        "1": 350,
+        "2": 495,
+        "3": 550,
+        "4": 750,
+        "shared": 337.41
+      }
+    },
+    {
+      "name": "Cardiff",
+      "country": "Wales",
+      "monthly": {
+        "1": 650,
+        "2": 825,
+        "3": 925,
+        "4": 1300,
+        "shared": 366.1
+      }
+    },
+    {
+      "name": "Carmarthenshire",
+      "country": "Wales",
+      "monthly": {
+        "1": 400,
+        "2": 488.84,
+        "3": 535,
+        "4": 650,
+        "shared": 336.76
+      }
+    },
+    {
+      "name": "Ceredigion",
+      "country": "Wales",
+      "monthly": {
+        "1": 420,
+        "2": 500,
+        "3": 550,
+        "4": 650,
+        "shared": 304.17
+      }
+    },
+    {
+      "name": "Flintshire",
+      "country": "Wales",
+      "monthly": {
+        "1": 450,
+        "2": 595,
+        "3": 695,
+        "4": 925,
+        "shared": 380.21
+      }
+    },
+    {
+      "name": "Merthyr Cynon",
+      "country": "Wales",
+      "monthly": {
+        "1": 434.52,
+        "2": 500,
+        "3": 550,
+        "4": 725,
+        "shared": 300
+      }
+    },
+    {
+      "name": "Monmouthshire",
+      "country": "Wales",
+      "monthly": {
+        "1": 533.16,
+        "2": 700,
+        "3": 795,
+        "4": 1100,
+        "shared": 337.41
+      }
+    },
+    {
+      "name": "Neath Port Talbot",
+      "country": "Wales",
+      "monthly": {
+        "1": 411.67,
+        "2": 450,
+        "3": 500,
+        "4": 575,
+        "shared": 375
+      }
+    },
+    {
+      "name": "Newport",
+      "country": "Wales",
+      "monthly": {
+        "1": 440,
+        "2": 600,
+        "3": 650,
+        "4": 880,
+        "shared": 337.41
+      }
+    },
+    {
+      "name": "North Clwyd",
+      "country": "Wales",
+      "monthly": {
+        "1": 395,
+        "2": 550,
+        "3": 650,
+        "4": 855,
+        "shared": 342.41
+      }
+    },
+    {
+      "name": "North Powys",
+      "country": "Wales",
+      "monthly": {
+        "1": 325,
+        "2": 400,
+        "3": 550,
+        "4": 675,
+        "shared": 293.3
+      }
+    },
+    {
+      "name": "North West Wales",
+      "country": "Wales",
+      "monthly": {
+        "1": 391.07,
+        "2": 550,
+        "3": 625,
+        "4": 750,
+        "shared": 342.41
+      }
+    },
+    {
+      "name": "Pembrokeshire",
+      "country": "Wales",
+      "monthly": {
+        "1": 360,
+        "2": 460,
+        "3": 575,
+        "4": 700,
+        "shared": 297.41
+      }
+    },
+    {
+      "name": "South Gwynedd",
+      "country": "Wales",
+      "monthly": {
+        "1": 350,
+        "2": 434.52,
+        "3": 543.15,
+        "4": 675,
+        "shared": 342.41
+      }
+    },
+    {
+      "name": "Swansea",
+      "country": "Wales",
+      "monthly": {
+        "1": 525,
+        "2": 550,
+        "3": 600,
+        "4": 820,
+        "shared": 375
+      }
+    },
+    {
+      "name": "Taff Rhondda",
+      "country": "Wales",
+      "monthly": {
+        "1": 375,
+        "2": 450,
+        "3": 495,
+        "4": 650,
+        "shared": 300
+      }
+    },
+    {
+      "name": "Torfaen",
+      "country": "Wales",
+      "monthly": {
+        "1": 500,
+        "2": 564.88,
+        "3": 650,
+        "4": 750,
+        "shared": 300
+      }
+    },
+    {
+      "name": "Vale of Glamorgan",
+      "country": "Wales",
+      "monthly": {
+        "1": 525.77,
+        "2": 666,
+        "3": 725,
+        "4": 1025,
+        "shared": 300
+      }
+    },
+    {
+      "name": "Wrexham",
+      "country": "Wales",
+      "monthly": {
+        "1": 475,
+        "2": 525,
+        "3": 600,
+        "4": 750,
+        "shared": 391.31
       }
     }
-  ]
+  ],
+  "verified_against_official_table": "2026-10-20"
 }

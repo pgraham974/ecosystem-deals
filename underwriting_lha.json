@@ -1,1222 +1,1756 @@
 {
   "period": "2026/27",
-  "provenance": "Monthly BRMA (LHA) Rates sheet in user-supplied Underwriting Model - Inputs Only.xlsx. Reference values supplied, not independently refreshed for this feature. Confirm BRMA and current rates before relying.",
+  "valid_from": "2026-04-01",
+  "valid_to": "2027-03-31",
+  "unit": "GBP per calendar month",
+  "annualisation": "monthly rate x 12",
+  "publisher": "Department for Work and Pensions",
+  "source_url": "https://www.gov.uk/government/publications/universal-credit-local-housing-allowance-rates-2026-to-2027",
+  "source_updated": "2026-04-08",
+  "retrieved": "2026-10-20",
+  "provenance": "Official DWP monthly Universal Credit Local Housing Allowance CSVs for England, Scotland and Wales. Select the BRMA using the full property postcode; not a provider rent offer, guaranteed rent or a guarantee of claimant entitlement.",
+  "sources": [
+    {
+      "country": "England",
+      "url": "https://assets.publishing.service.gov.uk/media/69d654a2e1430e837a86f64a/england-rates-2026-to-2027.csv"
+    },
+    {
+      "country": "Scotland",
+      "url": "https://assets.publishing.service.gov.uk/media/69d657392ea7bc150a394ae5/scotland-rates-2026-to-2027.csv"
+    },
+    {
+      "country": "Wales",
+      "url": "https://assets.publishing.service.gov.uk/media/69d6574a28142a9bd207ba09/wales-rates-2026-to-2027.csv"
+    }
+  ],
   "rates": [
     {
-      "name": "Ashford",
-      "SAR": 393.24,
       "1": 750,
       "2": 850,
       "3": 1097.8,
-      "4": 1440
+      "4": 1440,
+      "name": "Ashford",
+      "country": "England",
+      "SAR": 393.24
     },
     {
-      "name": "Aylesbury",
-      "SAR": 442.67,
       "1": 800,
       "2": 995,
       "3": 1330,
-      "4": 1650
+      "4": 1650,
+      "name": "Aylesbury",
+      "country": "England",
+      "SAR": 442.67
     },
     {
-      "name": "Barnsley",
-      "SAR": 316.33,
       "1": 415,
       "2": 450,
       "3": 550,
-      "4": 775
+      "4": 775,
+      "name": "Barnsley",
+      "country": "England",
+      "SAR": 316.33
     },
     {
-      "name": "Barrow-in-Furness",
-      "SAR": 395.42,
       "1": 475,
       "2": 500,
       "3": 635,
-      "4": 807.5
+      "4": 807.5,
+      "name": "Barrow-in-Furness",
+      "country": "England",
+      "SAR": 395.42
     },
     {
-      "name": "Basingstoke",
-      "SAR": 406.33,
       "1": 780,
       "2": 950,
       "3": 1150,
-      "4": 1400
+      "4": 1400,
+      "name": "Basingstoke",
+      "country": "England",
+      "SAR": 406.33
     },
     {
-      "name": "Bath",
-      "SAR": 540,
       "1": 815,
       "2": 980,
       "3": 1200,
-      "4": 1945
+      "4": 1945,
+      "name": "Bath",
+      "country": "England",
+      "SAR": 540
     },
     {
-      "name": "Bedford",
-      "SAR": 450,
       "1": 650,
       "2": 825,
       "3": 1000,
-      "4": 1300
+      "4": 1300,
+      "name": "Bedford",
+      "country": "England",
+      "SAR": 450
     },
     {
-      "name": "Birmingham",
-      "SAR": 341.58,
       "1": 695,
       "2": 750,
       "3": 825,
-      "4": 1100
+      "4": 1100,
+      "name": "Birmingham",
+      "country": "England",
+      "SAR": 341.58
     },
     {
-      "name": "Black Country",
-      "SAR": 320,
       "1": 495,
       "2": 625,
       "3": 750,
-      "4": 925
+      "4": 925,
+      "name": "Black Country",
+      "country": "England",
+      "SAR": 320
     },
     {
-      "name": "Blackwater Valley",
-      "SAR": 477.98,
       "1": 800,
       "2": 1000,
       "3": 1295,
-      "4": 1700
+      "4": 1700,
+      "name": "Blackwater Valley",
+      "country": "England",
+      "SAR": 477.98
     },
     {
-      "name": "Bolton and Bury",
-      "SAR": 341.51,
       "1": 475,
       "2": 575,
       "3": 700,
-      "4": 950
+      "4": 950,
+      "name": "Bolton and Bury",
+      "country": "England",
+      "SAR": 341.51
     },
     {
-      "name": "Bournemouth",
-      "SAR": 426.33,
       "1": 695,
       "2": 875,
       "3": 1150,
-      "4": 1550
+      "4": 1550,
+      "name": "Bournemouth",
+      "country": "England",
+      "SAR": 426.33
     },
     {
-      "name": "Bradford and South Dales",
-      "SAR": 326.33,
       "1": 450,
       "2": 525,
       "3": 635,
-      "4": 750
+      "4": 750,
+      "name": "Bradford and South Dales",
+      "country": "England",
+      "SAR": 326.33
     },
     {
-      "name": "Brighton and Hove",
-      "SAR": 586.61,
       "1": 920,
       "2": 1200,
       "3": 1450,
-      "4": 2000
+      "4": 2000,
+      "name": "Brighton and Hove",
+      "country": "England",
+      "SAR": 586.61
     },
     {
-      "name": "Bristol",
-      "SAR": 511.33,
       "1": 900,
       "2": 1095,
       "3": 1300,
-      "4": 1850
+      "4": 1850,
+      "name": "Bristol",
+      "country": "England",
+      "SAR": 511.33
     },
     {
-      "name": "Bury St Edmunds",
-      "SAR": 451.33,
       "1": 630,
       "2": 775,
       "3": 955,
-      "4": 1300
+      "4": 1300,
+      "name": "Bury St Edmunds",
+      "country": "England",
+      "SAR": 451.33
     },
     {
-      "name": "Cambridge",
-      "SAR": 526.33,
       "1": 900,
       "2": 950,
       "3": 1125,
-      "4": 1450
+      "4": 1450,
+      "name": "Cambridge",
+      "country": "England",
+      "SAR": 526.33
     },
     {
-      "name": "Canterbury",
-      "SAR": 425,
       "1": 675,
       "2": 895,
       "3": 1100,
-      "4": 1315
+      "4": 1315,
+      "name": "Canterbury",
+      "country": "England",
+      "SAR": 425
     },
     {
-      "name": "Central Greater Manchester",
-      "SAR": 411.58,
       "1": 775,
       "2": 875,
       "3": 950,
-      "4": 1350
+      "4": 1350,
+      "name": "Central Greater Manchester",
+      "country": "England",
+      "SAR": 411.58
     },
     {
-      "name": "Central Lancs",
-      "SAR": 304.17,
       "1": 450,
       "2": 575,
       "3": 650,
-      "4": 925
+      "4": 925,
+      "name": "Central Lancs",
+      "country": "England",
+      "SAR": 304.17
     },
     {
-      "name": "Central London",
-      "SAR": 829.83,
       "1": 1439.97,
       "2": 1793.98,
       "3": 2160.02,
-      "4": 3060
+      "4": 3060,
+      "name": "Central London",
+      "country": "England",
+      "SAR": 829.83
     },
     {
-      "name": "Central Norfolk and Norwich",
-      "SAR": 393.5,
       "1": 590,
       "2": 695,
       "3": 800,
-      "4": 1150
+      "4": 1150,
+      "name": "Central Norfolk and Norwich",
+      "country": "England",
+      "SAR": 393.5
     },
     {
-      "name": "Chelmsford",
-      "SAR": 426.33,
       "1": 795,
       "2": 950,
       "3": 1200,
-      "4": 1450
+      "4": 1450,
+      "name": "Chelmsford",
+      "country": "England",
+      "SAR": 426.33
     },
     {
-      "name": "Cheltenham",
-      "SAR": 436.5,
       "1": 625,
       "2": 800,
       "3": 1000,
-      "4": 1470
+      "4": 1470,
+      "name": "Cheltenham",
+      "country": "England",
+      "SAR": 436.5
     },
     {
-      "name": "Cherwell Valley",
-      "SAR": 466.5,
       "1": 775,
       "2": 950,
       "3": 1185,
-      "4": 1450
+      "4": 1450,
+      "name": "Cherwell Valley",
+      "country": "England",
+      "SAR": 466.5
     },
     {
-      "name": "Chesterfield",
-      "SAR": 351.33,
       "1": 450,
       "2": 525,
       "3": 600,
-      "4": 850
+      "4": 850,
+      "name": "Chesterfield",
+      "country": "England",
+      "SAR": 351.33
     },
     {
-      "name": "Chichester",
-      "SAR": 450,
       "1": 788,
       "2": 950,
       "3": 1225,
-      "4": 1600
+      "4": 1600,
+      "name": "Chichester",
+      "country": "England",
+      "SAR": 450
     },
     {
-      "name": "Chilterns",
-      "SAR": 525,
       "1": 850,
       "2": 1100,
       "3": 1450,
-      "4": 2000
+      "4": 2000,
+      "name": "Chilterns",
+      "country": "England",
+      "SAR": 525
     },
     {
-      "name": "Colchester",
-      "SAR": 401.33,
       "1": 625,
       "2": 795,
       "3": 975,
-      "4": 1250
+      "4": 1250,
+      "name": "Colchester",
+      "country": "England",
+      "SAR": 401.33
     },
     {
-      "name": "Coventry",
-      "SAR": 432.35,
       "1": 575,
       "2": 675,
       "3": 775,
-      "4": 1000
+      "4": 1000,
+      "name": "Coventry",
+      "country": "England",
+      "SAR": 432.35
     },
     {
-      "name": "Crawley and Reigate",
-      "SAR": 476.33,
       "1": 860,
       "2": 1100,
       "3": 1365,
-      "4": 1750
+      "4": 1750,
+      "name": "Crawley and Reigate",
+      "country": "England",
+      "SAR": 476.33
     },
     {
-      "name": "Darlington",
-      "SAR": 288.96,
       "1": 360,
       "2": 450,
       "3": 530,
-      "4": 695
+      "4": 695,
+      "name": "Darlington",
+      "country": "England",
+      "SAR": 288.96
     },
     {
-      "name": "Derby",
-      "SAR": 359.83,
       "1": 450,
       "2": 595,
       "3": 700,
-      "4": 935
+      "4": 935,
+      "name": "Derby",
+      "country": "England",
+      "SAR": 359.83
     },
     {
-      "name": "Doncaster",
-      "SAR": 304.17,
       "1": 425,
       "2": 500,
       "3": 550,
-      "4": 725
+      "4": 725,
+      "name": "Doncaster",
+      "country": "England",
+      "SAR": 304.17
     },
     {
-      "name": "Dover-Shepway",
-      "SAR": 431.5,
       "1": 510,
       "2": 695,
       "3": 865,
-      "4": 1200
+      "4": 1200,
+      "name": "Dover-Shepway",
+      "country": "England",
+      "SAR": 431.5
     },
     {
-      "name": "Durham",
-      "SAR": 393.25,
       "1": 393.25,
       "2": 400,
       "3": 475,
-      "4": 659.87
+      "4": 659.87,
+      "name": "Durham",
+      "country": "England",
+      "SAR": 393.25
     },
     {
-      "name": "East Cheshire",
-      "SAR": 421.5,
       "1": 550,
       "2": 725,
       "3": 995,
-      "4": 1750
+      "4": 1750,
+      "name": "East Cheshire",
+      "country": "England",
+      "SAR": 421.5
     },
     {
-      "name": "East Lancs",
-      "SAR": 291.5,
       "1": 425,
       "2": 475,
       "3": 595,
-      "4": 795
+      "4": 795,
+      "name": "East Lancs",
+      "country": "England",
+      "SAR": 291.5
     },
     {
-      "name": "East Thames Valley",
-      "SAR": 591.5,
       "1": 900,
       "2": 1200,
       "3": 1450,
-      "4": 1900
+      "4": 1900,
+      "name": "East Thames Valley",
+      "country": "England",
+      "SAR": 591.5
     },
     {
-      "name": "Eastbourne",
-      "SAR": 422.5,
       "1": 720,
       "2": 900,
       "3": 1083,
-      "4": 1400
+      "4": 1400,
+      "name": "Eastbourne",
+      "country": "England",
+      "SAR": 422.5
     },
     {
-      "name": "Eastern Staffordshire",
-      "SAR": 321.33,
       "1": 495,
       "2": 600,
       "3": 725,
-      "4": 985.8
+      "4": 985.8,
+      "name": "Eastern Staffordshire",
+      "country": "England",
+      "SAR": 321.33
     },
     {
-      "name": "Exeter",
-      "SAR": 537,
       "1": 630,
       "2": 795,
       "3": 950,
-      "4": 1300
+      "4": 1300,
+      "name": "Exeter",
+      "country": "England",
+      "SAR": 537
     },
     {
-      "name": "Fylde Coast",
-      "SAR": 350.88,
       "1": 400,
       "2": 542,
       "3": 625,
-      "4": 742.5
+      "4": 742.5,
+      "name": "Fylde Coast",
+      "country": "England",
+      "SAR": 350.88
     },
     {
-      "name": "Gloucester",
-      "SAR": 406.33,
       "1": 550,
       "2": 725,
       "3": 850,
-      "4": 1200
+      "4": 1200,
+      "name": "Gloucester",
+      "country": "England",
+      "SAR": 406.33
     },
     {
-      "name": "Grantham and Newark",
-      "SAR": 376.33,
       "1": 425,
       "2": 575,
       "3": 655,
-      "4": 875.01
+      "4": 875.01,
+      "name": "Grantham and Newark",
+      "country": "England",
+      "SAR": 376.33
     },
     {
-      "name": "Greater Liverpool",
-      "SAR": 344.36,
       "1": 500,
       "2": 595,
       "3": 650,
-      "4": 875
+      "4": 875,
+      "name": "Greater Liverpool",
+      "country": "England",
+      "SAR": 344.36
     },
     {
-      "name": "Grimsby",
-      "SAR": 317.2,
       "1": 395,
       "2": 480,
       "3": 521.43,
-      "4": 720
+      "4": 720,
+      "name": "Grimsby",
+      "country": "England",
+      "SAR": 317.2
     },
     {
-      "name": "Guildford",
-      "SAR": 515,
       "1": 950,
       "2": 1225,
       "3": 1480,
-      "4": 1978
+      "4": 1978,
+      "name": "Guildford",
+      "country": "England",
+      "SAR": 515
     },
     {
-      "name": "Halifax",
-      "SAR": 356.31,
       "1": 440,
       "2": 525,
       "3": 625,
-      "4": 750
+      "4": 750,
+      "name": "Halifax",
+      "country": "England",
+      "SAR": 356.31
     },
     {
-      "name": "Harlow and Stortford",
-      "SAR": 451.33,
       "1": 810,
       "2": 1025,
       "3": 1210,
-      "4": 1375
+      "4": 1375,
+      "name": "Harlow and Stortford",
+      "country": "England",
+      "SAR": 451.33
     },
     {
-      "name": "Harrogate",
-      "SAR": 421.33,
       "1": 595,
       "2": 735.86,
       "3": 875,
-      "4": 1275
+      "4": 1275,
+      "name": "Harrogate",
+      "country": "England",
+      "SAR": 421.33
     },
     {
-      "name": "Herefordshire",
-      "SAR": 351.5,
       "1": 475,
       "2": 600,
       "3": 750,
-      "4": 975
+      "4": 975,
+      "name": "Herefordshire",
+      "country": "England",
+      "SAR": 351.5
     },
     {
-      "name": "High Weald",
-      "SAR": 459.83,
       "1": 800,
       "2": 1075,
       "3": 1323,
-      "4": 1825
+      "4": 1825,
+      "name": "High Weald",
+      "country": "England",
+      "SAR": 459.83
     },
     {
-      "name": "Hull and East Riding",
-      "SAR": 335.83,
       "1": 380,
       "2": 475,
       "3": 550,
-      "4": 700
+      "4": 700,
+      "name": "Hull and East Riding",
+      "country": "England",
+      "SAR": 335.83
     },
     {
-      "name": "Huntingdon",
-      "SAR": 460,
       "1": 650,
       "2": 795,
       "3": 950,
-      "4": 1250
+      "4": 1250,
+      "name": "Huntingdon",
+      "country": "England",
+      "SAR": 460
     },
     {
-      "name": "Inner East London",
-      "SAR": 699.5,
       "1": 1439.97,
       "2": 1750,
       "3": 2160.02,
-      "4": 3000
+      "4": 3000,
+      "name": "Inner East London",
+      "country": "England",
+      "SAR": 699.5
     },
     {
-      "name": "Inner North London",
-      "SAR": 708.27,
       "1": 1439.97,
       "2": 1793.98,
       "3": 2160.02,
-      "4": 3060
+      "4": 3060,
+      "name": "Inner North London",
+      "country": "England",
+      "SAR": 708.27
     },
     {
-      "name": "Inner South East London",
-      "SAR": 650,
       "1": 1295.5,
       "2": 1550,
       "3": 1950,
-      "4": 2625
+      "4": 2625,
+      "name": "Inner South East London",
+      "country": "England",
+      "SAR": 650
     },
     {
-      "name": "Inner South West London",
-      "SAR": 685,
       "1": 1420,
       "2": 1700,
       "3": 2160.02,
-      "4": 2900
+      "4": 2900,
+      "name": "Inner South West London",
+      "country": "England",
+      "SAR": 685
     },
     {
-      "name": "Inner West London",
-      "SAR": 760,
       "1": 1350,
       "2": 1625,
       "3": 2050,
-      "4": 2550
+      "4": 2550,
+      "name": "Inner West London",
+      "country": "England",
+      "SAR": 760
     },
     {
-      "name": "Ipswich",
-      "SAR": 366.5,
       "1": 595,
       "2": 717,
       "3": 800,
-      "4": 1100
+      "4": 1100,
+      "name": "Ipswich",
+      "country": "England",
+      "SAR": 366.5
     },
     {
-      "name": "Isle of Wight",
-      "SAR": 343.27,
       "1": 515,
       "2": 650,
       "3": 815,
-      "4": 995
+      "4": 995,
+      "name": "Isle of Wight",
+      "country": "England",
+      "SAR": 343.27
     },
     {
-      "name": "Kendal",
-      "SAR": 325.89,
       "1": 575,
       "2": 650,
       "3": 775,
-      "4": 995
+      "4": 995,
+      "name": "Kendal",
+      "country": "England",
+      "SAR": 325.89
     },
     {
-      "name": "Kernow West",
-      "SAR": 392.5,
       "1": 550,
       "2": 695,
       "3": 815,
-      "4": 1100
+      "4": 1100,
+      "name": "Kernow West",
+      "country": "England",
+      "SAR": 392.5
     },
     {
-      "name": "Kings Lynn",
-      "SAR": 399.83,
       "1": 548.23,
       "2": 650,
       "3": 775,
-      "4": 1050
+      "4": 1050,
+      "name": "Kings Lynn",
+      "country": "England",
+      "SAR": 399.83
     },
     {
-      "name": "Kirklees",
-      "SAR": 316.33,
       "1": 450,
       "2": 525,
       "3": 650,
-      "4": 825
+      "4": 825,
+      "name": "Kirklees",
+      "country": "England",
+      "SAR": 316.33
     },
     {
-      "name": "Lancaster",
-      "SAR": 394.33,
       "1": 475,
       "2": 575,
       "3": 650,
-      "4": 725
+      "4": 725,
+      "name": "Lancaster",
+      "country": "England",
+      "SAR": 394.33
     },
     {
-      "name": "Leeds",
-      "SAR": 347.62,
       "1": 675,
       "2": 775,
       "3": 850,
-      "4": 1200
+      "4": 1200,
+      "name": "Leeds",
+      "country": "England",
+      "SAR": 347.62
     },
     {
-      "name": "Leicester",
-      "SAR": 395.42,
       "1": 540,
       "2": 650,
       "3": 775,
-      "4": 1050
+      "4": 1050,
+      "name": "Leicester",
+      "country": "England",
+      "SAR": 395.42
     },
     {
-      "name": "Lincoln",
-      "SAR": 354.14,
       "1": 495,
       "2": 600,
       "3": 675,
-      "4": 925
+      "4": 925,
+      "name": "Lincoln",
+      "country": "England",
+      "SAR": 354.14
     },
     {
-      "name": "Lincolnshire Fens",
-      "SAR": 368.33,
       "1": 500,
       "2": 625,
       "3": 735,
-      "4": 865.03
+      "4": 865.03,
+      "name": "Lincolnshire Fens",
+      "country": "England",
+      "SAR": 368.33
     },
     {
-      "name": "Lowestoft and Great Yarmouth",
-      "SAR": 376.33,
       "1": 441.07,
       "2": 575,
       "3": 630,
-      "4": 825
+      "4": 825,
+      "name": "Lowestoft and Great Yarmouth",
+      "country": "England",
+      "SAR": 376.33
     },
     {
-      "name": "Luton",
-      "SAR": 436.17,
       "1": 700,
       "2": 875,
       "3": 1100,
-      "4": 1350
+      "4": 1350,
+      "name": "Luton",
+      "country": "England",
+      "SAR": 436.17
     },
     {
-      "name": "Maidstone",
-      "SAR": 444.83,
       "1": 750,
       "2": 905,
       "3": 1200,
-      "4": 1550
+      "4": 1550,
+      "name": "Maidstone",
+      "country": "England",
+      "SAR": 444.83
     },
     {
-      "name": "Medway and Swale",
-      "SAR": 410,
       "1": 675,
       "2": 850,
       "3": 940,
-      "4": 1300
+      "4": 1300,
+      "name": "Medway and Swale",
+      "country": "England",
+      "SAR": 410
     },
     {
-      "name": "Mendip",
-      "SAR": 405,
       "1": 600,
       "2": 775,
       "3": 975,
-      "4": 1350
+      "4": 1350,
+      "name": "Mendip",
+      "country": "England",
+      "SAR": 405
     },
     {
-      "name": "Mid and East Devon",
-      "SAR": 404.11,
       "1": 530,
       "2": 685,
       "3": 825,
-      "4": 1100
+      "4": 1100,
+      "name": "Mid and East Devon",
+      "country": "England",
+      "SAR": 404.11
     },
     {
-      "name": "Mid and West Dorset",
-      "SAR": 426.33,
       "1": 595,
       "2": 750,
       "3": 900,
-      "4": 1250
+      "4": 1250,
+      "name": "Mid and West Dorset",
+      "country": "England",
+      "SAR": 426.33
     },
     {
-      "name": "Mid Staffs",
-      "SAR": 352.4,
       "1": 500,
       "2": 625,
       "3": 740,
-      "4": 995
+      "4": 995,
+      "name": "Mid Staffs",
+      "country": "England",
+      "SAR": 352.4
     },
     {
-      "name": "Milton Keynes",
-      "SAR": 501.33,
       "1": 775,
       "2": 925,
       "3": 1195,
-      "4": 1495
+      "4": 1495,
+      "name": "Milton Keynes",
+      "country": "England",
+      "SAR": 501.33
     },
     {
-      "name": "Newbury",
-      "SAR": 451.33,
       "1": 750,
       "2": 895,
       "3": 1200,
-      "4": 1605
+      "4": 1605,
+      "name": "Newbury",
+      "country": "England",
+      "SAR": 451.33
     },
     {
-      "name": "North Cheshire",
-      "SAR": 341.5,
       "1": 475,
       "2": 590,
       "3": 695,
-      "4": 1000
+      "4": 1000,
+      "name": "North Cheshire",
+      "country": "England",
+      "SAR": 341.5
     },
     {
-      "name": "North Cornwall and Devon Borders",
-      "SAR": 368.33,
       "1": 475,
       "2": 609,
       "3": 725,
-      "4": 950
+      "4": 950,
+      "name": "North Cornwall and Devon Borders",
+      "country": "England",
+      "SAR": 368.33
     },
     {
-      "name": "North Cumbria",
-      "SAR": 319.83,
       "1": 395,
       "2": 475,
       "3": 590,
-      "4": 740
+      "4": 740,
+      "name": "North Cumbria",
+      "country": "England",
+      "SAR": 319.83
     },
     {
-      "name": "North Devon",
-      "SAR": 425,
       "1": 485,
       "2": 645,
       "3": 775,
-      "4": 995
+      "4": 995,
+      "name": "North Devon",
+      "country": "England",
+      "SAR": 425
     },
     {
-      "name": "North Nottingham",
-      "SAR": 338.93,
       "1": 445,
       "2": 550,
       "3": 585,
-      "4": 810
+      "4": 810,
+      "name": "North Nottingham",
+      "country": "England",
+      "SAR": 338.93
     },
     {
-      "name": "North West Kent",
-      "SAR": 451.33,
       "1": 750,
       "2": 995,
       "3": 1200,
-      "4": 1450
+      "4": 1450,
+      "name": "North West Kent",
+      "country": "England",
+      "SAR": 451.33
     },
     {
-      "name": "North West London",
-      "SAR": 621.33,
       "1": 1100,
       "2": 1350,
       "3": 1680,
-      "4": 2100
+      "4": 2100,
+      "name": "North West London",
+      "country": "England",
+      "SAR": 621.33
     },
     {
-      "name": "Northampton",
-      "SAR": 410.62,
       "1": 645,
       "2": 750,
       "3": 900,
-      "4": 1160
+      "4": 1160,
+      "name": "Northampton",
+      "country": "England",
+      "SAR": 410.62
     },
     {
-      "name": "Northants Central",
-      "SAR": 375.86,
       "1": 550,
       "2": 695,
       "3": 795,
-      "4": 995
+      "4": 995,
+      "name": "Northants Central",
+      "country": "England",
+      "SAR": 375.86
     },
     {
-      "name": "Northumberland",
-      "SAR": 356.33,
       "1": 375,
       "2": 425,
       "3": 530,
-      "4": 760
+      "4": 760,
+      "name": "Northumberland",
+      "country": "England",
+      "SAR": 356.33
     },
     {
-      "name": "Nottingham",
-      "SAR": 380,
       "1": 550,
       "2": 650,
       "3": 750,
-      "4": 970
+      "4": 970,
+      "name": "Nottingham",
+      "country": "England",
+      "SAR": 380
     },
     {
-      "name": "Oldham and Rochdale",
-      "SAR": 344.83,
       "1": 475,
       "2": 577.5,
       "3": 695,
-      "4": 950
+      "4": 950,
+      "name": "Oldham and Rochdale",
+      "country": "England",
+      "SAR": 344.83
     },
     {
-      "name": "Outer East London",
-      "SAR": 561.33,
       "1": 1200,
       "2": 1400,
       "3": 1675,
-      "4": 1950
+      "4": 1950,
+      "name": "Outer East London",
+      "country": "England",
+      "SAR": 561.33
     },
     {
-      "name": "Outer North East London",
-      "SAR": 549.83,
       "1": 1000,
       "2": 1250,
       "3": 1500,
-      "4": 1800
+      "4": 1800,
+      "name": "Outer North East London",
+      "country": "England",
+      "SAR": 549.83
     },
     {
-      "name": "Outer North London",
-      "SAR": 595,
       "1": 1150,
       "2": 1400,
       "3": 1695,
-      "4": 2200
+      "4": 2200,
+      "name": "Outer North London",
+      "country": "England",
+      "SAR": 595
     },
     {
-      "name": "Outer South East London",
-      "SAR": 600,
       "1": 1050,
       "2": 1300,
       "3": 1550,
-      "4": 1800
+      "4": 1800,
+      "name": "Outer South East London",
+      "country": "England",
+      "SAR": 600
     },
     {
-      "name": "Outer South London",
-      "SAR": 569.33,
       "1": 950,
       "2": 1200,
       "3": 1500,
-      "4": 1950
+      "4": 1950,
+      "name": "Outer South London",
+      "country": "England",
+      "SAR": 569.33
     },
     {
-      "name": "Outer South West London",
-      "SAR": 591.5,
       "1": 1200,
       "2": 1495,
       "3": 1800,
-      "4": 2550
+      "4": 2550,
+      "name": "Outer South West London",
+      "country": "England",
+      "SAR": 591.5
     },
     {
-      "name": "Outer West London",
-      "SAR": 576.33,
       "1": 1000,
       "2": 1300,
       "3": 1475,
-      "4": 1800
+      "4": 1800,
+      "name": "Outer West London",
+      "country": "England",
+      "SAR": 576.33
     },
     {
-      "name": "Oxford",
-      "SAR": 550,
       "1": 900,
       "2": 1125,
       "3": 1325,
-      "4": 1750
+      "4": 1750,
+      "name": "Oxford",
+      "country": "England",
+      "SAR": 550
     },
     {
-      "name": "Peaks and Dales",
-      "SAR": 347.62,
       "1": 475,
       "2": 595,
       "3": 695,
-      "4": 900
+      "4": 900,
+      "name": "Peaks and Dales",
+      "country": "England",
+      "SAR": 347.62
     },
     {
-      "name": "Peterborough",
-      "SAR": 344.83,
       "1": 575,
       "2": 700,
       "3": 810,
-      "4": 1050
+      "4": 1050,
+      "name": "Peterborough",
+      "country": "England",
+      "SAR": 344.83
     },
     {
-      "name": "Plymouth",
-      "SAR": 400,
       "1": 550,
       "2": 675,
       "3": 800,
-      "4": 975
+      "4": 975,
+      "name": "Plymouth",
+      "country": "England",
+      "SAR": 400
     },
     {
-      "name": "Portsmouth",
-      "SAR": 422.83,
       "1": 695,
       "2": 845,
       "3": 1000,
-      "4": 1300
+      "4": 1300,
+      "name": "Portsmouth",
+      "country": "England",
+      "SAR": 422.83
     },
     {
-      "name": "Reading",
-      "SAR": 391.5,
       "1": 850,
       "2": 1095,
       "3": 1300,
-      "4": 1654
+      "4": 1654,
+      "name": "Reading",
+      "country": "England",
+      "SAR": 391.5
     },
     {
-      "name": "Richmond and Hambleton",
-      "SAR": 417.67,
       "1": 450,
       "2": 550,
       "3": 650,
-      "4": 830
+      "4": 830,
+      "name": "Richmond and Hambleton",
+      "country": "England",
+      "SAR": 417.67
     },
     {
-      "name": "Rotherham",
-      "SAR": 351.33,
       "1": 430,
       "2": 500,
       "3": 550,
-      "4": 817.5
+      "4": 817.5,
+      "name": "Rotherham",
+      "country": "England",
+      "SAR": 351.33
     },
     {
-      "name": "Rugby and East",
-      "SAR": 425,
       "1": 595,
       "2": 725,
       "3": 850,
-      "4": 1200
+      "4": 1200,
+      "name": "Rugby and East",
+      "country": "England",
+      "SAR": 425
     },
     {
-      "name": "Salisbury",
-      "SAR": 426.33,
       "1": 650,
       "2": 780,
       "3": 915,
-      "4": 1250
+      "4": 1250,
+      "name": "Salisbury",
+      "country": "England",
+      "SAR": 426.33
     },
     {
-      "name": "Scarborough",
-      "SAR": 309.83,
       "1": 425,
       "2": 550,
       "3": 650,
-      "4": 725
+      "4": 725,
+      "name": "Scarborough",
+      "country": "England",
+      "SAR": 309.83
     },
     {
-      "name": "Scunthorpe",
-      "SAR": 310.68,
       "1": 410,
       "2": 495,
       "3": 575,
-      "4": 725
+      "4": 725,
+      "name": "Scunthorpe",
+      "country": "England",
+      "SAR": 310.68
     },
     {
-      "name": "Sheffield",
-      "SAR": 350,
       "1": 575,
       "2": 620,
       "3": 680,
-      "4": 950
+      "4": 950,
+      "name": "Sheffield",
+      "country": "England",
+      "SAR": 350
     },
     {
-      "name": "Shropshire",
-      "SAR": 369.35,
       "1": 475,
       "2": 595,
       "3": 725,
-      "4": 975
+      "4": 975,
+      "name": "Shropshire",
+      "country": "England",
+      "SAR": 369.35
     },
     {
-      "name": "Solihull",
-      "SAR": 412.5,
       "1": 700,
       "2": 825,
       "3": 1000,
-      "4": 1375
+      "4": 1375,
+      "name": "Solihull",
+      "country": "England",
+      "SAR": 412.5
     },
     {
-      "name": "South Cheshire",
-      "SAR": 325,
       "1": 475,
       "2": 575,
       "3": 680,
-      "4": 995
+      "4": 995,
+      "name": "South Cheshire",
+      "country": "England",
+      "SAR": 325
     },
     {
-      "name": "South Devon",
-      "SAR": 367.17,
       "1": 505,
       "2": 675,
       "3": 840,
-      "4": 1100
+      "4": 1100,
+      "name": "South Devon",
+      "country": "England",
+      "SAR": 367.17
     },
     {
-      "name": "South East Herts",
-      "SAR": 475,
       "1": 835,
       "2": 1050,
       "3": 1370,
-      "4": 1700
+      "4": 1700,
+      "name": "South East Herts",
+      "country": "England",
+      "SAR": 475
     },
     {
-      "name": "South West Essex",
-      "SAR": 476.33,
       "1": 775,
       "2": 950,
       "3": 1200,
-      "4": 1500
+      "4": 1500,
+      "name": "South West Essex",
+      "country": "England",
+      "SAR": 476.33
     },
     {
-      "name": "South West Herts",
-      "SAR": 501.33,
       "1": 950,
       "2": 1250,
       "3": 1500,
-      "4": 2000
+      "4": 2000,
+      "name": "South West Herts",
+      "country": "England",
+      "SAR": 501.33
     },
     {
-      "name": "Southampton",
-      "SAR": 425,
       "1": 700,
       "2": 875,
       "3": 1075,
-      "4": 1450
+      "4": 1450,
+      "name": "Southampton",
+      "country": "England",
+      "SAR": 425
     },
     {
-      "name": "Southend",
-      "SAR": 406.33,
       "1": 680,
       "2": 875,
       "3": 1100,
-      "4": 1350
+      "4": 1350,
+      "name": "Southend",
+      "country": "England",
+      "SAR": 406.33
     },
     {
-      "name": "Southern Greater Manchester",
-      "SAR": 411.58,
       "1": 625,
       "2": 750,
       "3": 900,
-      "4": 1400
+      "4": 1400,
+      "name": "Southern Greater Manchester",
+      "country": "England",
+      "SAR": 411.58
     },
     {
-      "name": "Southport",
-      "SAR": 369.35,
       "1": 475,
       "2": 600,
       "3": 775,
-      "4": 925
+      "4": 925,
+      "name": "Southport",
+      "country": "England",
+      "SAR": 369.35
     },
     {
-      "name": "St Helens",
-      "SAR": 324.75,
       "1": 425,
       "2": 525,
       "3": 625,
-      "4": 800
+      "4": 800,
+      "name": "St Helens",
+      "country": "England",
+      "SAR": 324.75
     },
     {
-      "name": "Staffordshire North",
-      "SAR": 301.33,
       "1": 425,
       "2": 480,
       "3": 595,
-      "4": 800
+      "4": 800,
+      "name": "Staffordshire North",
+      "country": "England",
+      "SAR": 301.33
     },
     {
-      "name": "Stevenage and North Herts",
-      "SAR": 436.17,
       "1": 775,
       "2": 975,
       "3": 1250,
-      "4": 1600
+      "4": 1600,
+      "name": "Stevenage and North Herts",
+      "country": "England",
+      "SAR": 436.17
     },
     {
-      "name": "Sunderland",
-      "SAR": 321.33,
       "1": 425,
       "2": 475,
       "3": 550,
-      "4": 700
+      "4": 700,
+      "name": "Sunderland",
+      "country": "England",
+      "SAR": 321.33
     },
     {
-      "name": "Sussex East",
-      "SAR": 361,
       "1": 595,
       "2": 750,
       "3": 950,
-      "4": 1150
+      "4": 1150,
+      "name": "Sussex East",
+      "country": "England",
+      "SAR": 361
     },
     {
-      "name": "Swindon",
-      "SAR": 451.33,
       "1": 675,
       "2": 785,
       "3": 950,
-      "4": 1300
+      "4": 1300,
+      "name": "Swindon",
+      "country": "England",
+      "SAR": 451.33
     },
     {
-      "name": "Tameside and Glossop",
-      "SAR": 321.08,
       "1": 525,
       "2": 600,
       "3": 750,
-      "4": 1150
+      "4": 1150,
+      "name": "Tameside and Glossop",
+      "country": "England",
+      "SAR": 321.08
     },
     {
-      "name": "Taunton and West Somerset",
-      "SAR": 404.11,
       "1": 575,
       "2": 725,
       "3": 850,
-      "4": 1000
+      "4": 1000,
+      "name": "Taunton and West Somerset",
+      "country": "England",
+      "SAR": 404.11
     },
     {
-      "name": "Teesside",
-      "SAR": 288.96,
       "1": 410,
       "2": 475,
       "3": 550,
-      "4": 750
+      "4": 750,
+      "name": "Teesside",
+      "country": "England",
+      "SAR": 288.96
     },
     {
-      "name": "Thanet",
-      "SAR": 380,
       "1": 577.84,
       "2": 750,
       "3": 900,
-      "4": 1150
+      "4": 1150,
+      "name": "Thanet",
+      "country": "England",
+      "SAR": 380
     },
     {
-      "name": "Tyneside",
-      "SAR": 381.33,
       "1": 490,
       "2": 550,
       "3": 650,
-      "4": 925
+      "4": 925,
+      "name": "Tyneside",
+      "country": "England",
+      "SAR": 381.33
     },
     {
-      "name": "Wakefield",
-      "SAR": 326.98,
       "1": 500,
       "2": 595,
       "3": 725,
-      "4": 885
+      "4": 885,
+      "name": "Wakefield",
+      "country": "England",
+      "SAR": 326.98
     },
     {
-      "name": "Walton",
-      "SAR": 620,
       "1": 950,
       "2": 1212,
       "3": 1450,
-      "4": 1975
+      "4": 1975,
+      "name": "Walton",
+      "country": "England",
+      "SAR": 620
     },
     {
-      "name": "Warwickshire South",
-      "SAR": 412.5,
       "1": 700,
       "2": 850,
       "3": 1045,
-      "4": 1350
+      "4": 1350,
+      "name": "Warwickshire South",
+      "country": "England",
+      "SAR": 412.5
     },
     {
-      "name": "West Cheshire",
-      "SAR": 375.86,
       "1": 550,
       "2": 675,
       "3": 795,
-      "4": 1224
+      "4": 1224,
+      "name": "West Cheshire",
+      "country": "England",
+      "SAR": 375.86
     },
     {
-      "name": "West Cumbria",
-      "SAR": 319.83,
       "1": 385,
       "2": 475,
       "3": 550,
-      "4": 700
+      "4": 700,
+      "name": "West Cumbria",
+      "country": "England",
+      "SAR": 319.83
     },
     {
-      "name": "West Pennine",
-      "SAR": 310.68,
       "1": 400,
       "2": 450,
       "3": 505,
-      "4": 762.5
+      "4": 762.5,
+      "name": "West Pennine",
+      "country": "England",
+      "SAR": 310.68
     },
     {
-      "name": "West Wiltshire",
-      "SAR": 450,
       "1": 595,
       "2": 725,
       "3": 900,
-      "4": 1200
+      "4": 1200,
+      "name": "West Wiltshire",
+      "country": "England",
+      "SAR": 450
     },
     {
-      "name": "Weston-S-Mare",
-      "SAR": 451.33,
       "1": 580,
       "2": 750,
       "3": 925,
-      "4": 1250
+      "4": 1250,
+      "name": "Weston-S-Mare",
+      "country": "England",
+      "SAR": 451.33
     },
     {
-      "name": "Wigan",
-      "SAR": 339.83,
       "1": 400,
       "2": 500,
       "3": 595,
-      "4": 775
+      "4": 775,
+      "name": "Wigan",
+      "country": "England",
+      "SAR": 339.83
     },
     {
-      "name": "Winchester",
-      "SAR": 525,
       "1": 825,
       "2": 1050,
       "3": 1275,
-      "4": 1700
+      "4": 1700,
+      "name": "Winchester",
+      "country": "England",
+      "SAR": 525
     },
     {
-      "name": "Wirral",
-      "SAR": 318.71,
       "1": 425,
       "2": 525,
       "3": 650,
-      "4": 825
+      "4": 825,
+      "name": "Wirral",
+      "country": "England",
+      "SAR": 318.71
     },
     {
-      "name": "Wolds and Coast",
-      "SAR": 344.36,
       "1": 400,
       "2": 495,
       "3": 600,
-      "4": 675
+      "4": 675,
+      "name": "Wolds and Coast",
+      "country": "England",
+      "SAR": 344.36
     },
     {
-      "name": "Worcester North",
-      "SAR": 329.83,
       "1": 515,
       "2": 650,
       "3": 750,
-      "4": 995
+      "4": 995,
+      "name": "Worcester North",
+      "country": "England",
+      "SAR": 329.83
     },
     {
-      "name": "Worcester South",
-      "SAR": 382.58,
       "1": 569,
       "2": 700,
       "3": 825,
-      "4": 1150
+      "4": 1150,
+      "name": "Worcester South",
+      "country": "England",
+      "SAR": 382.58
     },
     {
-      "name": "Worthing",
-      "SAR": 445,
       "1": 760,
       "2": 950,
       "3": 1180,
-      "4": 1465
+      "4": 1465,
+      "name": "Worthing",
+      "country": "England",
+      "SAR": 445
     },
     {
-      "name": "Yeovil",
-      "SAR": 435,
       "1": 525,
       "2": 695,
       "3": 850,
-      "4": 1250
+      "4": 1250,
+      "name": "Yeovil",
+      "country": "England",
+      "SAR": 435
     },
     {
-      "name": "York",
-      "SAR": 417.67,
       "1": 675,
       "2": 775,
       "3": 825,
-      "4": 1200
+      "4": 1200,
+      "name": "York",
+      "country": "England",
+      "SAR": 417.67
+    },
+    {
+      "1": 475,
+      "2": 650,
+      "3": 860,
+      "4": 1250,
+      "name": "Aberdeen and Shire",
+      "country": "Scotland",
+      "SAR": 325
+    },
+    {
+      "1": 450,
+      "2": 600,
+      "3": 695,
+      "4": 1200,
+      "name": "Argyll and Bute",
+      "country": "Scotland",
+      "SAR": 350
+    },
+    {
+      "1": 375,
+      "2": 475,
+      "3": 564.88,
+      "4": 800,
+      "name": "Ayrshires",
+      "country": "Scotland",
+      "SAR": 375
+    },
+    {
+      "1": 380,
+      "2": 450,
+      "3": 500,
+      "4": 690,
+      "name": "Dumfries and Galloway",
+      "country": "Scotland",
+      "SAR": 335
+    },
+    {
+      "1": 400,
+      "2": 615,
+      "3": 795,
+      "4": 1100,
+      "name": "Dundee and Angus",
+      "country": "Scotland",
+      "SAR": 375
+    },
+    {
+      "1": 550,
+      "2": 750,
+      "3": 1000,
+      "4": 1400,
+      "name": "East Dunbartonshire",
+      "country": "Scotland",
+      "SAR": 425
+    },
+    {
+      "1": 450,
+      "2": 590,
+      "3": 715,
+      "4": 1250,
+      "name": "Fife",
+      "country": "Scotland",
+      "SAR": 375
+    },
+    {
+      "1": 460,
+      "2": 650,
+      "3": 800,
+      "4": 1300,
+      "name": "Forth Valley",
+      "country": "Scotland",
+      "SAR": 415
+    },
+    {
+      "1": 695,
+      "2": 850,
+      "3": 970,
+      "4": 1800,
+      "name": "Greater Glasgow",
+      "country": "Scotland",
+      "SAR": 450
+    },
+    {
+      "1": 475,
+      "2": 595,
+      "3": 695,
+      "4": 850,
+      "name": "Highland and Islands",
+      "country": "Scotland",
+      "SAR": 380
+    },
+    {
+      "1": 750,
+      "2": 970,
+      "3": 1375,
+      "4": 2180,
+      "name": "Lothian",
+      "country": "Scotland",
+      "SAR": 475
+    },
+    {
+      "1": 440,
+      "2": 550,
+      "3": 675,
+      "4": 895,
+      "name": "North Lanarkshire",
+      "country": "Scotland",
+      "SAR": 375
+    },
+    {
+      "1": 425,
+      "2": 560,
+      "3": 750,
+      "4": 1250,
+      "name": "Perth and Kinross",
+      "country": "Scotland",
+      "SAR": 359.17
+    },
+    {
+      "1": 400,
+      "2": 525,
+      "3": 600,
+      "4": 1100,
+      "name": "Renfrewshire/ Inverclyde",
+      "country": "Scotland",
+      "SAR": 360
+    },
+    {
+      "1": 375,
+      "2": 500,
+      "3": 615,
+      "4": 985,
+      "name": "Scottish Borders",
+      "country": "Scotland",
+      "SAR": 325
+    },
+    {
+      "1": 450,
+      "2": 575,
+      "3": 715.84,
+      "4": 1107,
+      "name": "South Lanarkshire",
+      "country": "Scotland",
+      "SAR": 375
+    },
+    {
+      "1": 475,
+      "2": 595,
+      "3": 675,
+      "4": 950,
+      "name": "West Dunbartonshire",
+      "country": "Scotland",
+      "SAR": 350
+    },
+    {
+      "1": 500,
+      "2": 625,
+      "3": 750,
+      "4": 1112.5,
+      "name": "West Lothian",
+      "country": "Scotland",
+      "SAR": 410
+    },
+    {
+      "1": 325.89,
+      "2": 430,
+      "3": 490,
+      "4": 650,
+      "name": "Blaenau Gwent",
+      "country": "Wales",
+      "SAR": 300
+    },
+    {
+      "1": 340,
+      "2": 440,
+      "3": 550,
+      "4": 650,
+      "name": "Brecon and Radnor",
+      "country": "Wales",
+      "SAR": 332.41
+    },
+    {
+      "1": 400,
+      "2": 525,
+      "3": 575,
+      "4": 775,
+      "name": "Bridgend",
+      "country": "Wales",
+      "SAR": 300
+    },
+    {
+      "1": 350,
+      "2": 495,
+      "3": 550,
+      "4": 750,
+      "name": "Caerphilly",
+      "country": "Wales",
+      "SAR": 337.41
+    },
+    {
+      "1": 650,
+      "2": 825,
+      "3": 925,
+      "4": 1300,
+      "name": "Cardiff",
+      "country": "Wales",
+      "SAR": 366.1
+    },
+    {
+      "1": 400,
+      "2": 488.84,
+      "3": 535,
+      "4": 650,
+      "name": "Carmarthenshire",
+      "country": "Wales",
+      "SAR": 336.76
+    },
+    {
+      "1": 420,
+      "2": 500,
+      "3": 550,
+      "4": 650,
+      "name": "Ceredigion",
+      "country": "Wales",
+      "SAR": 304.17
+    },
+    {
+      "1": 450,
+      "2": 595,
+      "3": 695,
+      "4": 925,
+      "name": "Flintshire",
+      "country": "Wales",
+      "SAR": 380.21
+    },
+    {
+      "1": 434.52,
+      "2": 500,
+      "3": 550,
+      "4": 725,
+      "name": "Merthyr Cynon",
+      "country": "Wales",
+      "SAR": 300
+    },
+    {
+      "1": 533.16,
+      "2": 700,
+      "3": 795,
+      "4": 1100,
+      "name": "Monmouthshire",
+      "country": "Wales",
+      "SAR": 337.41
+    },
+    {
+      "1": 411.67,
+      "2": 450,
+      "3": 500,
+      "4": 575,
+      "name": "Neath Port Talbot",
+      "country": "Wales",
+      "SAR": 375
+    },
+    {
+      "1": 440,
+      "2": 600,
+      "3": 650,
+      "4": 880,
+      "name": "Newport",
+      "country": "Wales",
+      "SAR": 337.41
+    },
+    {
+      "1": 395,
+      "2": 550,
+      "3": 650,
+      "4": 855,
+      "name": "North Clwyd",
+      "country": "Wales",
+      "SAR": 342.41
+    },
+    {
+      "1": 325,
+      "2": 400,
+      "3": 550,
+      "4": 675,
+      "name": "North Powys",
+      "country": "Wales",
+      "SAR": 293.3
+    },
+    {
+      "1": 391.07,
+      "2": 550,
+      "3": 625,
+      "4": 750,
+      "name": "North West Wales",
+      "country": "Wales",
+      "SAR": 342.41
+    },
+    {
+      "1": 360,
+      "2": 460,
+      "3": 575,
+      "4": 700,
+      "name": "Pembrokeshire",
+      "country": "Wales",
+      "SAR": 297.41
+    },
+    {
+      "1": 350,
+      "2": 434.52,
+      "3": 543.15,
+      "4": 675,
+      "name": "South Gwynedd",
+      "country": "Wales",
+      "SAR": 342.41
+    },
+    {
+      "1": 525,
+      "2": 550,
+      "3": 600,
+      "4": 820,
+      "name": "Swansea",
+      "country": "Wales",
+      "SAR": 375
+    },
+    {
+      "1": 375,
+      "2": 450,
+      "3": 495,
+      "4": 650,
+      "name": "Taff Rhondda",
+      "country": "Wales",
+      "SAR": 300
+    },
+    {
+      "1": 500,
+      "2": 564.88,
+      "3": 650,
+      "4": 750,
+      "name": "Torfaen",
+      "country": "Wales",
+      "SAR": 300
+    },
+    {
+      "1": 525.77,
+      "2": 666,
+      "3": 725,
+      "4": 1025,
+      "name": "Vale of Glamorgan",
+      "country": "Wales",
+      "SAR": 300
+    },
+    {
+      "1": 475,
+      "2": 525,
+      "3": 600,
+      "4": 750,
+      "name": "Wrexham",
+      "country": "Wales",
+      "SAR": 391.31
     }
   ]
 }
