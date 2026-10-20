@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-20",
-  "coverage_note": "31 checked lot records. Auction/site descriptions refreshed20October2026; record-level timestamps retained. Multi-home sites and selected-flat groups are separated from unresolved/scattered packages, single homes, holiday use, bedrooms and development land. Not a real-time feed or exhaustive catalogue.",
+  "coverage_note": "36 checked property records, including five Cheltenham agent leads added20October2026. Record-level source dates retained. Four new official agent adverts; one security-blocked availability lead. Serviced/short-stay units are separate from demonstrated ordinary residential sites. Not an exhaustive or real-time feed.",
   "properties": [
     {
       "address": "Apartment 407, 6 Oldham Road, Manchester, Greater Manchester, M4 5DB",
@@ -1492,6 +1492,213 @@
       "price_input_gbp": 425000,
       "price_input_note": "Single auction guide copied as an editable price assumption, not a fixed asking price, reserve or agreed purchase price. Buyer fees/VAT/legal-pack charges are not inferred.",
       "scope_note": "Site-level listing evidence, not landlord ownership totals. Whole mixed-use freehold building including both existing homes and commercial element"
+    },
+    {
+      "address": "53 London Road, Cheltenham, GL52 6HF",
+      "postcode": "GL52 6HF",
+      "city": "Cheltenham",
+      "location_label": "Cheltenham",
+      "units": "5 self-contained flats: three 2-bed and two 1-bed",
+      "units_n": 5,
+      "existing_units": 5,
+      "units_label": "5 existing flats offered at one site",
+      "guide": "£850,000",
+      "asking_price_gbp": 850000,
+      "price_input_gbp": 850000,
+      "price_input_note": "Advertised asking/guide assumption only, not an agreed price. Verify current quote and any sale fees.",
+      "auction_date": null,
+      "auctioneer": "Jackson-Stops",
+      "seller_type": "Seller type not disclosed; no distress inferred",
+      "url": "https://www.jackson-stops.co.uk/properties/22151803/sales/cheltenham",
+      "status": "Availability unverified",
+      "status_evidence": "Official indexed listing and rendered agent brochure describe five flats and guide £850,000. Live website security verification prevented confirming an Available flag.",
+      "checked_at": "2026-10-20T22:27:38.408Z",
+      "source_id": "jackson_stops",
+      "source_kind": "agent",
+      "notes": "Grade II listed. Seller-reported £65,640 annual rent is not an institutional lease offer. Planning/listed-building consents not independently checked. Agent availability confirmation required.",
+      "sources": [
+        {
+          "url": "https://www.jackson-stops.co.uk/properties/22151803/sales/cheltenham",
+          "title": "Jackson-Stops official listing"
+        },
+        {
+          "url": "https://assets.reapit.net/jck/live/pdf.php?p=CHL260066&t=S",
+          "title": "Agent brochure / particulars"
+        }
+      ],
+      "site_scope": "single_site",
+      "site_homes": 5,
+      "site_count": 1,
+      "site_evidence": "Official indexed listing and rendered agent brochure describe five flats and guide £850,000. Live website security verification prevented confirming an Available flag.",
+      "site_checked_at": "2026-10-20T22:27:38.408Z",
+      "site_boundary_verified": false,
+      "residential_use_demonstrated": true,
+      "whole_site_or_part": "Whole marketed building; legal title/flat configuration not independently checked",
+      "scope_note": "Exact multi-flat lead, but current availability not confirmed."
+    },
+    {
+      "address": "47 Clarence Square, Cheltenham, GL50 4JR",
+      "postcode": "GL50 4JR",
+      "city": "Cheltenham",
+      "location_label": "Cheltenham",
+      "units": "5 self-contained apartments",
+      "units_n": 5,
+      "existing_units": 5,
+      "units_label": "5 existing flats offered at one site",
+      "guide": "£1,250,000",
+      "asking_price_gbp": 1250000,
+      "price_input_gbp": 1250000,
+      "price_input_note": "Advertised asking/guide assumption only, not an agreed price. Verify current quote and any sale fees.",
+      "auction_date": null,
+      "auctioneer": "HMT Sales & Lettings",
+      "seller_type": "Seller type not disclosed; no distress inferred",
+      "url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/",
+      "status": "Advertised for sale",
+      "status_evidence": "Current official HMT sales page offers the building at £1,250,000 and explicitly states five self-contained apartments. Agent brochure identifies Flats 1-5.",
+      "checked_at": "2026-10-20T22:27:38.408Z",
+      "source_id": "hmt",
+      "source_kind": "agent",
+      "notes": "Modernisation required per brochure. Bedroom total conflicts between headline and flat descriptions; do not infer bed mix. Passing rent/occupancy not verified. Ordinary apartment configuration advertised; legal use/title boundaries require diligence.",
+      "sources": [
+        {
+          "url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/",
+          "title": "HMT Sales & Lettings official listing"
+        },
+        {
+          "url": "https://allagentsnew-assets.s3.eu-west-2.amazonaws.com/brochures/propsense_173813585_27_cce9ebc558df765419766b317e134ba6.pdf",
+          "title": "Agent brochure / particulars"
+        }
+      ],
+      "site_scope": "single_site",
+      "site_homes": 5,
+      "site_count": 1,
+      "site_evidence": "Current official HMT sales page offers the building at £1,250,000 and explicitly states five self-contained apartments. Agent brochure identifies Flats 1-5.",
+      "site_checked_at": "2026-10-20T22:27:38.408Z",
+      "site_boundary_verified": false,
+      "residential_use_demonstrated": true,
+      "whole_site_or_part": "Whole marketed building; legal title/flat configuration not independently checked",
+      "scope_note": "Agent-advertised self-contained flats. No verified distress or provider lease."
+    },
+    {
+      "address": "The Tivoli Collection, 37 Hatherley Street, Cheltenham, GL50",
+      "postcode": "",
+      "city": "Cheltenham",
+      "location_label": "Cheltenham",
+      "units": "5 short-stay apartments plus detached 2-bed cottage on a separate title: 6 units offered",
+      "units_n": 6,
+      "existing_units": 6,
+      "units_label": "5 short-stay apartments plus detached 2-bed cottage on a separate title: 6 units offered",
+      "guide": "£1,500,000",
+      "asking_price_gbp": 1500000,
+      "price_input_gbp": 1500000,
+      "price_input_note": "Advertised asking/guide assumption only, not an agreed price. Verify current quote and any sale fees.",
+      "auction_date": null,
+      "auctioneer": "CGT Sales",
+      "seller_type": "Seller type not disclosed; no distress inferred",
+      "url": "https://www.cgtsales.co.uk/property-details/10711367/-/cheltenham/hatherley-street",
+      "status": "Advertised for sale",
+      "status_evidence": "Official CGT page browser-marked For Sale describes five apartments and one cottage in the garden; operated as short stays. Number37 appears in agent gallery labels.",
+      "checked_at": "2026-10-20T22:27:38.408Z",
+      "source_id": "cgt_sales",
+      "source_kind": "agent",
+      "notes": "Short-stay operation: permanent residential or TA use is not verified. Agent £80,000-£100,000 annual income is not net income or guaranteed provider rent. Secured Sale non-refundable fee applies; amount not established. Full postcode not verified. No unit count prefill until intended use/site is confirmed.",
+      "sources": [
+        {
+          "url": "https://www.cgtsales.co.uk/property-details/10711367/-/cheltenham/hatherley-street",
+          "title": "CGT Sales official listing"
+        }
+      ],
+      "site_scope": "holiday",
+      "site_homes": 6,
+      "site_count": 1,
+      "site_evidence": "Official CGT page browser-marked For Sale describes five apartments and one cottage in the garden; operated as short stays. Number37 appears in agent gallery labels.",
+      "site_checked_at": "2026-10-20T22:27:38.408Z",
+      "site_boundary_verified": false,
+      "residential_use_demonstrated": false,
+      "whole_site_or_part": "Serviced/short-stay units; intended permanent residential use unverified",
+      "scope_note": "Serviced / short-stay stock. Not included as confirmed ordinary residential homes or default multi-home sites."
+    },
+    {
+      "address": "43 Portland Street, Cheltenham, GL52 2NX",
+      "postcode": "GL52 2NX",
+      "city": "Cheltenham",
+      "location_label": "Cheltenham",
+      "units": "6 serviced apartments: five 1-bed and one studio",
+      "units_n": 6,
+      "existing_units": 6,
+      "units_label": "6 serviced apartments: five 1-bed and one studio",
+      "guide": "£1,750,000",
+      "asking_price_gbp": 1750000,
+      "price_input_gbp": 1750000,
+      "price_input_note": "Advertised asking/guide assumption only, not an agreed price. Verify current quote and any sale fees.",
+      "auction_date": null,
+      "auctioneer": "Savills Residential",
+      "seller_type": "Seller type not disclosed; no distress inferred",
+      "url": "https://search.savills.com/property-detail/gbhmrscls220410",
+      "status": "Advertised for sale",
+      "status_evidence": "Current official Savills property-for-sale page explicitly describes six serviced apartments, each with kitchen and bathroom/shower room.",
+      "checked_at": "2026-10-20T22:27:38.408Z",
+      "source_id": "savills_residential",
+      "source_kind": "agent",
+      "notes": "Grade II listed and EPC exempt per agent. Serviced operation: ordinary residential/TA planning use not established. Actual income withheld publicly; obtain rent roll and costs. No assumed institutional rent or permanent-home suitability.",
+      "sources": [
+        {
+          "url": "https://search.savills.com/property-detail/gbhmrscls220410",
+          "title": "Savills Residential official listing"
+        }
+      ],
+      "site_scope": "holiday",
+      "site_homes": 6,
+      "site_count": 1,
+      "site_evidence": "Current official Savills property-for-sale page explicitly describes six serviced apartments, each with kitchen and bathroom/shower room.",
+      "site_checked_at": "2026-10-20T22:27:38.408Z",
+      "site_boundary_verified": false,
+      "residential_use_demonstrated": false,
+      "whole_site_or_part": "Serviced/short-stay units; intended permanent residential use unverified",
+      "scope_note": "Serviced / short-stay stock. Not included as confirmed ordinary residential homes or default multi-home sites."
+    },
+    {
+      "address": "103 London Road, Cheltenham, GL52 6HL",
+      "postcode": "GL52 6HL",
+      "city": "Cheltenham",
+      "location_label": "Cheltenham",
+      "units": "4 self-contained flats: one 2-bed, one studio and two 1-beds",
+      "units_n": 4,
+      "existing_units": 4,
+      "units_label": "4 existing flats offered at one site",
+      "guide": "£800,000",
+      "asking_price_gbp": 800000,
+      "price_input_gbp": 800000,
+      "price_input_note": "Advertised asking/guide assumption only, not an agreed price. Verify current quote and any sale fees.",
+      "auction_date": null,
+      "auctioneer": "Sure Property Group",
+      "seller_type": "Seller type not disclosed; no distress inferred",
+      "url": "https://surecheltenham.co.uk/property/19413373/",
+      "status": "Advertised for sale",
+      "status_evidence": "Official Sure sales page marked For Sale describes four self-contained flats with individual rents; agent brochure supplies number103.",
+      "checked_at": "2026-10-20T22:27:38.408Z",
+      "source_id": "sure_cheltenham",
+      "source_kind": "agent",
+      "notes": "Grade II listed. Advertised £48,540 pa includes a studio new tenancy starting; verify execution and actual passing rent. Agent flat-breakup values are not independent OMV. Four homes, not headline five bedrooms.",
+      "sources": [
+        {
+          "url": "https://surecheltenham.co.uk/property/19413373/",
+          "title": "Sure Property Group official listing"
+        },
+        {
+          "url": "https://www.vebra.com/details/property/34564446",
+          "title": "Agent brochure / particulars"
+        }
+      ],
+      "site_scope": "single_site",
+      "site_homes": 4,
+      "site_count": 1,
+      "site_evidence": "Official Sure sales page marked For Sale describes four self-contained flats with individual rents; agent brochure supplies number103.",
+      "site_checked_at": "2026-10-20T22:27:38.408Z",
+      "site_boundary_verified": false,
+      "residential_use_demonstrated": true,
+      "whole_site_or_part": "Whole marketed building; legal title/flat configuration not independently checked",
+      "scope_note": "Agent-advertised self-contained flats. No verified distress or provider lease."
     }
   ],
   "site_definition": "Home count = existing dwellings actually offered together at one marketed physical block, property or contiguous development, based on listing evidence. It is not landlord ownership, room/bed counts, proposed homes, or total homes elsewhere in a larger block. Marketing descriptions are not an independent survey or legal-boundary certificate."

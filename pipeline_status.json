@@ -216,6 +216,15 @@
       "cadence_days": 365,
       "routine": "Annual rate verification; check postcode before use",
       "url": "https://www.gov.uk/government/publications/local-housing-allowance-lha-rates-applicable-from-april-2026-to-march-2027"
+    },
+    {
+      "name": "Cheltenham multi-unit agent stock",
+      "gives": "Five sourced building leads; four official adverts, one availability unverified; serviced use separated",
+      "period": "Official listings checked20October2026",
+      "refreshed": "2026-10-20",
+      "cadence_days": 7,
+      "routine": "Existing Monday agent / auction review",
+      "url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/"
     }
   ],
   "build": [

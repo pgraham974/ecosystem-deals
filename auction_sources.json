@@ -363,6 +363,111 @@
       "sample_records": 0,
       "sample_advertised": 0,
       "sample_5_30": 0
+    },
+    {
+      "id": "jackson_stops",
+      "name": "Jackson-Stops",
+      "homepage": "https://www.jackson-stops.co.uk/",
+      "catalogue_url": "https://www.jackson-stops.co.uk/properties/22151803/sales/cheltenham",
+      "results_url": null,
+      "contact_url": "https://www.jackson-stops.co.uk/properties/22151803/sales/cheltenham",
+      "regions": [
+        "Cheltenham"
+      ],
+      "refresh_method": "Recheck known official listing, then use agent own search for blocks of flats, investment buildings and multi-unit properties in Cheltenham. Verify offered homes, physical site, asking price and sold/STC/withdrawn status. Separate serviced/short-stay uses and intended planning use; do not count bedrooms as homes.",
+      "access_status": "Security verification blocked live flag; brochure and indexed listing only. No current availability assumed.",
+      "last_checked": "2026-10-20",
+      "notes": "Grade II listed. Seller-reported £65,640 annual rent is not an institutional lease offer. Planning/listed-building consents not independently checked. Agent availability confirmation required.",
+      "source_kind": "agent",
+      "connection_mode": "Scheduled official agent listing review; no live API feed",
+      "watch": "Existing Monday07:00Europe/London watch; no new schedule",
+      "added_this_update": true,
+      "sample_records": 1,
+      "sample_advertised": 0
+    },
+    {
+      "id": "hmt",
+      "name": "HMT Sales & Lettings",
+      "homepage": "https://hmt.co.uk/",
+      "catalogue_url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/",
+      "results_url": null,
+      "contact_url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/",
+      "regions": [
+        "Cheltenham"
+      ],
+      "refresh_method": "Recheck known official listing, then use agent own search for blocks of flats, investment buildings and multi-unit properties in Cheltenham. Verify offered homes, physical site, asking price and sold/STC/withdrawn status. Separate serviced/short-stay uses and intended planning use; do not count bedrooms as homes.",
+      "access_status": "Official property-for-sale listing inspected on20October2026; last-checked evidence only.",
+      "last_checked": "2026-10-20",
+      "notes": "Modernisation required per brochure. Bedroom total conflicts between headline and flat descriptions; do not infer bed mix. Passing rent/occupancy not verified. Ordinary apartment configuration advertised; legal use/title boundaries require diligence.",
+      "source_kind": "agent",
+      "connection_mode": "Scheduled official agent listing review; no live API feed",
+      "watch": "Existing Monday07:00Europe/London watch; no new schedule",
+      "added_this_update": true,
+      "sample_records": 1,
+      "sample_advertised": 1
+    },
+    {
+      "id": "cgt_sales",
+      "name": "CGT Sales",
+      "homepage": "https://www.cgtsales.co.uk/",
+      "catalogue_url": "https://www.cgtsales.co.uk/property-details/10711367/-/cheltenham/hatherley-street",
+      "results_url": null,
+      "contact_url": "https://www.cgtsales.co.uk/property-details/10711367/-/cheltenham/hatherley-street",
+      "regions": [
+        "Cheltenham"
+      ],
+      "refresh_method": "Recheck known official listing, then use agent own search for blocks of flats, investment buildings and multi-unit properties in Cheltenham. Verify offered homes, physical site, asking price and sold/STC/withdrawn status. Separate serviced/short-stay uses and intended planning use; do not count bedrooms as homes.",
+      "access_status": "Official property-for-sale listing inspected on20October2026; last-checked evidence only.",
+      "last_checked": "2026-10-20",
+      "notes": "Serviced/short-stay use. Permanent residential or TA use not established.",
+      "source_kind": "agent",
+      "connection_mode": "Scheduled official agent listing review; no live API feed",
+      "watch": "Existing Monday07:00Europe/London watch; no new schedule",
+      "added_this_update": true,
+      "sample_records": 1,
+      "sample_advertised": 1
+    },
+    {
+      "id": "savills_residential",
+      "name": "Savills Residential",
+      "homepage": "https://search.savills.com/",
+      "catalogue_url": "https://search.savills.com/property-detail/gbhmrscls220410",
+      "results_url": null,
+      "contact_url": "https://search.savills.com/property-detail/gbhmrscls220410",
+      "regions": [
+        "Cheltenham"
+      ],
+      "refresh_method": "Recheck known official listing, then use agent own search for blocks of flats, investment buildings and multi-unit properties in Cheltenham. Verify offered homes, physical site, asking price and sold/STC/withdrawn status. Separate serviced/short-stay uses and intended planning use; do not count bedrooms as homes.",
+      "access_status": "Official property-for-sale listing inspected on20October2026; last-checked evidence only.",
+      "last_checked": "2026-10-20",
+      "notes": "Serviced/short-stay use. Permanent residential or TA use not established.",
+      "source_kind": "agent",
+      "connection_mode": "Scheduled official agent listing review; no live API feed",
+      "watch": "Existing Monday07:00Europe/London watch; no new schedule",
+      "added_this_update": true,
+      "sample_records": 1,
+      "sample_advertised": 1
+    },
+    {
+      "id": "sure_cheltenham",
+      "name": "Sure Property Group",
+      "homepage": "https://surecheltenham.co.uk/",
+      "catalogue_url": "https://surecheltenham.co.uk/property/19413373/",
+      "results_url": null,
+      "contact_url": "https://surecheltenham.co.uk/property/19413373/",
+      "regions": [
+        "Cheltenham"
+      ],
+      "refresh_method": "Recheck known official listing, then use agent own search for blocks of flats, investment buildings and multi-unit properties in Cheltenham. Verify offered homes, physical site, asking price and sold/STC/withdrawn status. Separate serviced/short-stay uses and intended planning use; do not count bedrooms as homes.",
+      "access_status": "Official property-for-sale listing inspected on20October2026; last-checked evidence only.",
+      "last_checked": "2026-10-20",
+      "notes": "Grade II listed. Advertised £48,540 pa includes a studio new tenancy starting; verify execution and actual passing rent. Agent flat-breakup values are not independent OMV. Four homes, not headline five bedrooms.",
+      "source_kind": "agent",
+      "connection_mode": "Scheduled official agent listing review; no live API feed",
+      "watch": "Existing Monday07:00Europe/London watch; no new schedule",
+      "added_this_update": true,
+      "sample_records": 1,
+      "sample_advertised": 1
     }
   ],
   "not_connected": [
