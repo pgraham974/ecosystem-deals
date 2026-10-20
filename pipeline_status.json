@@ -192,11 +192,20 @@
     },
     {
       "name": "Current property sale-status sample",
-      "gives": "15 official listings checked; 11 advertised, 8 live 5–30 existing-unit properties, 2 target-city leads; 3 sold/withdrawn; 1 past-result unknown",
-      "period": "Checked 20 Oct 2026 about 08:36 UTC; not an exhaustive or real-time feed",
+      "gives": "27 checked listing records; 22 advertised, 13 with 5–30 existing residential units; holiday-use suitability unverified excluded from preferred band",
+      "period": "Source checks20Oct2026 about08:36–09:44UTC; record-specific checked times retained",
       "refreshed": "2026-10-20",
       "cadence_days": 2,
       "routine": "Manual check required; UI green expires after 48h / auction cutoff on reload",
+      "url": ""
+    },
+    {
+      "name": "Expanded auction catalogue connections",
+      "gives": "14 auction catalogue sources, including10additional; source filter, catalogues/results and weekly review workflow",
+      "period": "Official catalogues/results checked20Oct2026; sample counts not whole-market inventory",
+      "refreshed": "2026-10-20",
+      "cadence_days": 7,
+      "routine": "Existing Monday07:00Europe/London watch fAX64lTExF2NFmrE expanded; not continuousAPI",
       "url": ""
     }
   ],
@@ -253,6 +262,12 @@
       "name": "Property status and framework contacts",
       "n": 15,
       "note": "Find > For sale now; source-backed property status and Underwrite links. Framework detail contact blocks and directory added.",
+      "refreshed": "2026-10-20"
+    },
+    {
+      "name": "Auction source registry",
+      "n": 14,
+      "note": "10new source connections; 12new checked records (11advertised+1closed); 5new preferred-band opportunities outside target cities; smaller/HMO/holiday separately scoped",
       "refreshed": "2026-10-20"
     }
   ]
