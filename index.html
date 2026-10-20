@@ -230,7 +230,7 @@ function renderBest(){if(!OW||!D.ownerAreas)return;const tgt=new Set(D.subareas.
  const rows=[];for(const o of OW){const L=o.A&&o.A.level;if(L!=='d'&&L!=='s')continue;const ds=inv[o.owner_key];if(!ds||!ds.length)continue;const ys=ds.map(lhaY).filter(Boolean);const y=ys.length?ys.reduce((a,b)=>a+b,0)/ys.length:null;const soc=ds.map(d=>LO&&LO.districts[d]&&LO.districts[d].social_pct).filter(v=>v!=null);
   const lvl=L==='d'?40:25+Math.min(10,5*Math.max(0,o.A.S.length-1));const yp=y?Math.max(0,Math.min(30,(y-0.04)*1000)):0;const sz=(o.titles>=5&&o.titles<=30)?10:3;const ep=o.epc_matches>0?10:0;
   rows.push({kind:'Landlord',name:o.name,o,level:L,why:L==='d'?o.A.ongoing.map(p=>p.name+(p.start?' since '+fmtD(p.start.date):'')).join(' + '):[...new Set(o.A.S.map(s=>s.t.replace(/ \d+ months old/,' 15+ months old')))].join(' + '),areas:ds.join(', '),units:o.titles,y,soc:soc.length?soc.reduce((a,b)=>a+b,0)/soc.length:null,subc:o.epc_matches||0,score:Math.round(lvl+yp+sz+ep)})}
- const RA={'Manchester':'b2','Cheltenham':'b2','City Of Bristol':'b2'};for(const l of LOTS){if(sellerOf(l).k!=='c'||!sfShortlistAllowed(l))continue;const d=(l.postcode||'').toUpperCase().split(' ')[0];const inTgt=tgt.has(d);if(!inTgt&&!((parseInt(l.units)||0)>=3))continue;const sa=D.subareas.find(s=>s.district===d);const c=sa&&councilFor(sa.city==='Edinburgh'?'City of Edinburgh':sa.city.replace('City Of ',''));const units=parseInt(l.units)||null;const g=parseFloat(String(l.guide||'').replace(/[^0-9.]/g,''))||null;const per=g&&units?g/units:null;const ly=per&&c&&c.lha?c.lha.b2*52/per:null;
+ const RA={'Manchester':'b2','Cheltenham':'b2','City Of Bristol':'b2'};for(const l of LOTS){if(sellerOf(l).k!=='c'||!sfShortlistAllowed(l))continue;const d=(l.postcode||'').toUpperCase().split(' ')[0];const inTgt=tgt.has(d);if(!inTgt&&!((parseInt(l.units)||0)>=3))continue;const sa=D.subareas.find(s=>s.district===d);const c=sa&&councilFor(sa.city==='Edinburgh'?'City of Edinburgh':sa.city.replace('City Of ',''));const units=parseInt(l.units)||null;const g=parseFloat(String(l.guide||'').replace(/[^0-9.]/g,''))||null;const per=g&&units?g/units:null;const ly=null;
   rows.push({kind:'Lot',name:l.address,l,level:'lot',why:'Sold by '+sellerOf(l).label+', '+(l.auctioneer||'')+' '+(l.auction_date||'')+(l.guide?', guide '+l.guide:''),areas:d+(inTgt?'':' (outside target cities)'),units,y:ly,soc:LO&&LO.districts[d]?LO.districts[d].social_pct:null,subc:null,score:Math.round((inTgt?45:25)+(ly?Math.max(0,Math.min(25,(ly-0.04)*800)):(units>=3?12:0))+((units>=5&&units<=30)?25:units>=3?15:0)+(/receiver|administrator|liquidator|mortgagee/i.test(l.seller_type||'')?5:0))})}
  rows.sort((a,b)=>b.score-a.score);const top=rows.slice(0,40);
  $('#tbest').innerHTML='<thead><tr><th>#</th><th class="l">Landlord / lot</th><th class="l">What makes it distressed</th><th class="l">Where (target areas)</th><th>Units / titles</th><th>LHA yield on local 2-bed price</th><th>Council/social homes in area</th><th>Sub-C rentals owned</th><th class="l">Who would take it (exit)</th><th>Score</th></tr></thead><tbody>'+top.map((r,i)=>'<tr data-i="'+i+'"><td>'+(i+1)+'</td><td class="l"><b>'+esc(r.name)+'</b> '+(r.kind==='Lot'?sfLotBadge(r.l)+' ':'')+(r.kind==='Lot'?uwLink(uwLotSeed(r.l),'Underwrite'):'')+(r.kind==='Lot'?'<span class="lvl" style="background:#6a1b9a">Lot</span>':r.level==='d'?'<span class="lvl d">Distressed</span>':'<span class="lvl s">Strained</span>')+'</td><td class="l"><div class="why">'+esc(r.why)+'</div></td><td class="l"><div class="why">'+esc(r.areas)+'</div></td><td>'+(r.units||'-')+'</td><td>'+pct(r.y)+'</td><td>'+(r.soc!=null?r.soc.toFixed(0)+'%':'-')+'</td><td>'+(r.subc==null?'-':r.subc)+'</td><td class="l">'+(r.kind==='Lot'?'<div class="muted">'+(/GL5/.test(r.areas)?'Cheltenham BC / Glos supported framework; Mears':/^M\d/.test(r.areas)?'Serco AASC NW; MCC TA leasing; Mears':/^BS/.test(r.areas)?'Bristol CC TA; Clearsprings; Mears':/^(DH|SR|TS|DL|NE)/.test(r.areas)?'Mears (AASC NE); council TA':'see Partners')+'</div>':partnerCell(r.o,r.areas.split(', ')))+'</td><td><b>'+r.score+'</b></td></tr>').join('')+'</tbody>';
@@ -1108,5 +1108,194 @@ function auNames(all){const names=new Map((AUCTION_SOURCES&&AUCTION_SOURCES.sour
 function auFilterHTML(all){return '<label>Auctioneer / agent <select id="sf_source"><option value="">All sources</option>'+auNames(all).map(([id,name])=>'<option value="'+esc(id)+'"'+(SALE_FILTER.source===id?' selected':'')+'>'+esc(name)+'</option>').join('')+'</select></label><label><input id="sf_auction_only" type="checkbox"'+(SALE_FILTER.auctionOnly?' checked':'')+'> Auctions only</label>'}
 function auCoverageHTML(all){const S=AUCTION_SOURCES;if(!S||!S.sources)return '<div class="card"><h3>Auction source coverage</h3><p>Source registry could not load. Property evidence below remains separate; no auction API is assumed.</p></div>';return '<div class="card" style="border-left:4px solid #3d698e"><h3>'+S.sources.length+' auction sources covered</h3><p>Added '+S.sources.filter(s=>s.added_this_update).length+' more catalogue sources. Use the auctioneer filter below, or open the official catalogue to see stock outside this checked sample.</p><p class="foot">'+esc(S.connection_note)+' Existing Monday 07:00 London watch reviews these sources; listing status remains a last-checked snapshot and green labels expire after 48 hours. Weekly review is not continuous monitoring.</p><details><summary style="cursor:pointer;font-weight:600">Show catalogue connections, results and coverage</summary><div class="scroll" style="max-height:560px"><table><thead><tr><th class="l">Auctioneer</th><th class="l">Catalogue / results</th><th>Live advertised sample</th><th>5–30 residential units</th><th class="l">Connection / refresh evidence</th></tr></thead><tbody>'+S.sources.map(s=>{const p=all.filter(p=>p.source_id===s.id),live=p.filter(sfIsLive),fit=live.filter(sfFits);return '<tr><td class="l"><b>'+esc(s.name)+'</b><div class="foot">'+esc((s.regions||[]).join(', '))+'</div></td><td class="l">'+(s.catalogue_url?'<a href="'+sfURL(s.catalogue_url)+'" target="_blank" rel="noopener">Official catalogue</a>':'Catalogue route not verified')+(s.results_url?'<br><a href="'+sfURL(s.results_url)+'" target="_blank" rel="noopener">Results / past auctions</a>':'')+(s.contact_url?'<br><a href="'+sfURL(s.contact_url)+'" target="_blank" rel="noopener">Business contact route</a>':'')+'</td><td>'+live.length+'</td><td>'+fit.length+'</td><td class="l"><div class="why"><b>'+esc(s.connection_mode||'Catalogue review')+'</b><br>'+esc(s.access_status||'')+'<br>Checked '+esc(s.last_checked||'not recorded')+'<details><summary>Refresh method & limits</summary><p>'+esc(s.refresh_method||'Open the official source and inspect each lot.')+'</p><p>'+esc(s.notes||'No qualifying stock is implied by coverage alone.')+'</p></details></div></td></tr>'}).join('')+'</tbody></table></div><p class="foot">Numbers refer to this source-checked sample, not each auctioneer’s full inventory. Zero means no verified qualifying lot imported, not that none exists. “Results” can contain sold, unsold and withdrawn lots; an old unsold result is not proof of current availability. A property being auctioned does not itself prove distress.</p><p class="foot"><b>Not claimed connected:</b> '+(S.not_connected||[]).map(s=>esc(s.name)+': '+esc(s.reason)).join(' · ')+'</p></details><p class="foot">Guide prices can exclude buyer/reservation fees, VAT and legal-pack charges. Record these separately in deal assumptions. Holiday-use apartments, one HMO with many rooms and consented development are not silently counted as permanent self-contained homes.</p></div>'}
 
+
+
+
+/* MARKET_ACCURACY_START */
+/* Map accuracy guard. Inject after the authoritative inline modules, before init().
+ * No audited valuation schema is assumed here. Raw PPD facts and auction evidence remain.
+ * Audited valuations must be added explicitly by a later, schema-aware integration.
+ */
+(function () {
+ 'use strict';
+ const oldLoad = mLoadCity, oldStats = secStats, oldPanel = mPanel;
+ const oldStart = mapStart, oldRender = mRender, oldRecolor = mRecolor;
+ const blocked = new Set(['deal','bestop','gy','ly','rent_psm','lha_psm']);
+ const valuationKeys = ['ppsqm','ppsqm_n','flat_ppsqm','house_ppsqm','flat2','flat2_n','median_price','gy','ly','rent_psm','lha_psm'];
+ const caveat = 'Legacy sale-to-EPC links have not been validated. Floor areas, room counts, bedroom proxies, £/sqm valuations and aggregate-derived yields are withheld. EPC habitable rooms are not bedrooms. Sale records cover Oct 2025 to Aug 2026, not a rolling 12 months. Category B sales are excluded by default; that category alone does not prove distress, a company buyer or a repossession.';
+ function sanitize(data) {
+  if (!data) return data;
+  const coords = new Map((data.pcs || []).map(p => [String(p[0]).toUpperCase().trim(), [p[1],p[2]]]));
+  const points = Array.from(coords.values());
+  const centre = points.length ? [points.reduce((a,p)=>a+p[0],0)/points.length,points.reduce((a,p)=>a+p[1],0)/points.length] : null;
+  for (const s of Object.values(data.sectors || {})) {
+   for (const k of Object.keys(s)) if (valuationKeys.includes(k) || /^(?:flat|house)[123](?:_|$)/.test(k)) s[k] = null;
+   s.sizes = {};
+  }
+  for (const c of data.comps || []) {
+   c.fa = null; c.ps = null; c.r = null; c.u = null; c.x = 0;
+   // x/u originally meant an EPC-derived UPRN position, not a verified sale match.
+   const postcodePoint=coords.get(String(c.pc || '').toUpperCase().trim());
+   c.ll = postcodePoint || centre;
+   c.location_accuracy = postcodePoint ? 'postcode' : 'city-centroid-only';
+  }
+  data.accuracy_note = caveat;
+  return data;
+ }
+ mLoadCity = async function(city) { return sanitize(await oldLoad(city)); };
+ secStats = function(sec) {
+  sanitize(MP.data[MP.city]);
+  const out = oldStats(sec);
+  for (const k of valuationKeys) out[k] = null;
+  for (const b of ['b1','b2','b3']) {
+   const r = out.rent[b] || (out.rent[b] = {});
+   r.sqm = null; r.n = 0; r.rent_psm = null; r.lha_psm = null; r.lha_m = null;
+  }
+  return out;
+ };
+ function benchmark() {
+  const r = mRent(MP.city);
+  const geo = typeof CITY_RA !== 'undefined' ? CITY_RA[MP.city] : CITYLBL(MP.city);
+  const month = r && r.month ? r.month : 'period not supplied';
+  const rows = ['b1','b2','b3'].map(b => '<tr><td class="l">'+BEDS[b]+'</td><td>'+(r && r[b] ? '£'+fmt(r[b]) : '-')+'</td><td>'+'-'+'</td></tr>').join('');
+  return '<div class="map-accuracy-bench"><h4>Monthly rent benchmarks, not asset offers</h4><p class="foot"><b>ONS geography:</b> '+esc(geo || CITYLBL(MP.city))+(MP.city === 'Edinburgh' ? ' BRMA' : ' local authority')+'; '+esc(month)+'. England includes new and existing tenancies; Lothian is mainly advertised new lets. Bedroom categories are ONS categories, not inferred from EPC rooms.</p><table class="mt"><thead><tr><th class="l">Bedrooms</th><th>ONS £/month</th><th>LHA £/month</th></tr></thead><tbody>'+rows+'</tbody></table><p class="foot">ONS source: '+esc(typeof RENT !== 'undefined' && RENT && RENT.source || 'ONS PIPR, loaded source')+'. LHA is withheld here: council or city averages are not a property rate. Check the exact postcode and bedroom entitlement with <a href="https://lha-direct.voa.gov.uk/" target="_blank" rel="noopener">official LHA Direct</a>, or use the Local OMV / LHA explicit scenario view. Confirm rate period and benefit rules. ONS rent is not a confirmed property rent or a guaranteed-rent lease offer. No rent-per-sqm or yield is inferred.</p></div>';
+ }
+ mCityPanel = function() {
+  const d = sanitize(MP.data[MP.city]);
+  return '<p class="foot map-accuracy-note">'+esc(caveat)+'</p><dl class="kv"><dt>Standard (A) sales, Oct 2025-Aug 2026</dt><dd>'+fmt((d.comps||[]).filter(c=>c.c==='A').length)+'</dd><dt>Other (B) sales, excluded by default</dt><dd>'+fmt((d.comps||[]).filter(c=>c.c==='B').length)+'</dd><dt>Lender / receiver auction records</dt><dd>'+(d.lots||[]).filter(x=>sellerOf(x).k==='c').length+'</dd></dl>'+benchmark();
+ };
+ mCompPop = function(c) {
+  const fl = ((MP.data[MP.city] || {}).flags || {})[c.pc] || {};
+  return '<b>'+esc(c.a)+'</b>, '+esc(c.pc)+' <span class="foot">'+(c.location_accuracy==='city-centroid-only'?'(postcode position unavailable; approximate city-centroid marker only)':'(postcode location, not a verified property position)')+'</span>'+
+   ((fl.a4||fl.fz||fl.ca)?'<br>'+(fl.a4?'<span class="tag a">HMO Article 4</span>':'')+(fl.fz?'<span class="tag p">flood zone '+esc(fl.fz)+'</span>':'')+(fl.ca?'<span class="tag">conservation area</span>':''):'')+
+   '<br>'+fd(c.d)+' · <b>£'+fmt(c.p)+'</b><br>'+esc(PTYPE[c.t]||c.t)+(c.e==='L'?' leasehold':c.e==='F'?' freehold':' tenure not supplied')+(c.n==='Y'?', new build':'')+
+   '<br><span class="foot">Size, rooms, EPC linkage and £/sqm withheld pending validation. Planning flags are postcode-level screening only.</span>'+
+   (c.c==='B'?'<br><span class="tag a">Other sale (B), not proof of distress</span>':'')+
+   '<br><a href="http://landregistry.data.gov.uk/data/ppi/transaction/'+esc(c.id)+'/current" target="_blank" rel="noopener">Land Registry record</a> · <a href="https://find-energy-certificate.service.gov.uk/find-a-certificate/search-by-postcode?postcode='+encodeURIComponent(c.pc)+'" target="_blank" rel="noopener">EPC postcode search (not a matched certificate)</a>';
+ };
+ function controls() {
+  const sel = $('#map_metric');
+  if (sel) {
+   for (const op of Array.from(sel.options)) {
+    if (blocked.has(op.value)) op.remove();
+    else if (['ppsqm','flat_ppsqm','house_ppsqm'].includes(op.value)) op.textContent = METRICS[op.value][0]+' (withheld pending audit)';
+    else if (op.value === 'sales') op.textContent = 'Standard sales, Oct 2025-Aug 2026';
+   }
+   if (blocked.has(MP.metric) || !METRICS[MP.metric]) MP.metric = 'sales';
+   sel.value = MP.metric;
+  }
+ }
+ MP.metric = 'sales';
+ METRICS.sales[0] = 'Standard sales, Oct 2025-Aug 2026';
+ for (const k of ['ppsqm','flat_ppsqm','house_ppsqm']) METRICS[k][0] = METRICS[k][0].replace(/,? ?12m/g,'')+' - legacy values withheld';
+ mRecolor = function() { controls(); return oldRecolor(); };
+ mRecolorDeal = function() { MP.metric='sales'; return mRecolor(); };
+ mRecolorOps = function() { MP.metric='sales'; return mRecolor(); };
+ dsCompute = async function(city) { const d=await mLoadCity(city); return Object.fromEntries(Object.keys(d.sectors||{}).map(s=>[s,null])); };
+ // Do not call opCompute, presMapBlock or the legacy covenant/recommendation scorer here.
+ mOpsBlock = function(sec) {
+  const el=$('#mp_ops'); if(!el)return;
+  el.innerHTML='<h4>Partners and asset underwriting</h4><p class="foot">No automatic manager recommendation, covenant approval or deal score is made from these area data. Check provider evidence, accounts and a written asset-specific rent offer separately.</p><button class="btn sec" id="mp_partner_evidence">Open partner evidence</button><button class="btn" id="dl_here">Underwrite a specific asset</button>';
+  $('#mp_partner_evidence').onclick=()=>viewMode('operators');
+  $('#dl_here').onclick=()=>uwOpen({city:MP.city,pc:sec,prefill_note:'Map area only. No property price, floor area, bedroom mix, EPC linkage, rent or counterparty approval has been verified.'});
+ };
+ dealMapBlock = function() {}; // Retired: the score combines contaminated valuations and inferred covenant strength.
+ mPanel = function(sec) {
+  sanitize(MP.data[MP.city]); oldPanel(sec);
+  const side=$('#map_side'); if(!side)return;
+  side.insertAdjacentHTML('afterbegin','<p class="foot map-accuracy-note"><b>Accuracy:</b> '+esc(caveat)+'</p>');
+  for (const dd of Array.from(side.querySelectorAll('dd[data-s]'))) {
+   if (['ppsqm','flat2','gy','ly'].includes(dd.dataset.s)) { if(dd.previousElementSibling)dd.previousElementSibling.remove(); dd.remove(); }
+   else if (dd.dataset.s==='sales') {
+    dd.previousElementSibling.textContent='Sales, Oct 2025-Aug 2026';
+    dd.onclick=ev=>popShow(ev,'<div class="sp-h">HM Land Registry Price Paid</div><p>Category A = standard price-paid entries; category B = additional price-paid entries. Category alone does not prove buyer identity, distress, repossession or a discounted sale. Other sales are excluded from the table by default.</p>');
+   }
+  }
+  for (const p of Array.from(side.querySelectorAll('p.foot'))) if(p.textContent.startsWith('Sector-level:'))p.textContent='Sector evidence: recorded transactions, auction results, deprivation, tenure, postcode constraints and ownership/distress screening. Property position, legal asset, dwelling count and current status still need verification.';
+  const h=Array.from(side.querySelectorAll('h4')).find(x=>x.textContent==='Rent per sqm');
+  if(h){const table=h.nextElementSibling,note=table&&table.nextElementSibling;if(table)table.remove();if(note)note.remove();h.outerHTML=benchmark();}
+  const rf=$('#mp_r');if(rf)rf.remove(); // EPC rooms cannot be used as bedroom filters.
+  const b=$('#mp_b');if(b){b.checked=false;b.defaultChecked=false;}
+  function stripSizeColumns(){const table=$('#mp_comps');if(!table)return;for(const row of table.rows)for(const idx of [5,3])if(row.cells[idx])row.cells[idx].remove();}
+  for(const id of ['#mp_t','#mp_b']){const el=$(id);if(el){const change=el.onchange;el.onchange=function(){if(change)change.call(this);stripSizeColumns();};}}
+  // The original closure reads #mp_r. Keep a hidden blank selector solely for compatibility.
+  if(rf){rf.value='';rf.hidden=true;side.appendChild(rf);}
+  if(b&&b.onchange)b.onchange();else stripSizeColumns();
+  const rent=$('#mp_rent'),sqm=$('#mp_sqm'),calc=$('#mp_calc');
+  if(sqm){sqm.value='';sqm.placeholder='verified sqm';}
+  if(rent)rent.placeholder='verified rent £/month';
+  const calcUser=()=>{if(!calc)return;const r=rent?+rent.value:0,a=sqm?+sqm.value:0;calc.textContent=r>0&&a>0?'User-entered only: £'+fmt(r*12/a)+'/sqm/year. No yield or valuation inferred.':'';};
+  if(rent)rent.oninput=calcUser;if(sqm)sqm.oninput=calcUser;if(calc)calc.textContent='';
+ };
+ mRender = async function() {
+  controls();const city=MP.city;await oldRender();
+  if(MP.city===city&&!MP.sel){const side=$('#map_side');if(side)side.innerHTML='<h3>'+esc(CITYLBL(city))+'</h3><p class="foot">Click a postcode sector for recorded sales, auction evidence, constraints and last-reported distress facts. Pins are screening locations, not a verified sale-to-EPC match.</p>'+mCityPanel();}
+ };
+ let defaultsSet=false;
+ mapStart = function() {
+  controls();
+  if(!defaultsSet){const b=$('#ml_b');if(b){b.checked=false;b.defaultChecked=false;}defaultsSet=true;}
+  const b=$('#ml_b');if(b&&b.parentElement){for(const node of Array.from(b.parentElement.childNodes))if(node.nodeType===3&&node.textContent.trim())node.textContent=' other sales (B, not distress proof)';}
+  return oldStart();
+ };
+ controls();
+ const other=$('#ml_b');if(other){other.checked=false;other.defaultChecked=false;}
+ globalThis.ED_MAP_ACCURACY={sanitize,benchmark,note:caveat,version:'2026-10-20'};
+})();
+
+/* Audited local sold-price evidence and explicit, unmatched LHA scenarios. */
+const VA={city:'Manchester',level:'districts',area:'',type:'F',size:'',data:null,lha:null,brma:'',beds:'2'};
+const VA_TYPES={F:'Flats / maisonettes',T:'Terraced houses',S:'Semi-detached houses',D:'Detached houses'};
+const VA_SIZES={'':'All floor areas (no size match required)',under_50:'Under 50 sqm', '50_to_74':'50–74 sqm','75_to_99':'75–99 sqm','100_to_149':'100–149 sqm','150_plus':'150+ sqm'};
+function vaMoney(v){return v==null?'Not enough evidence':'£'+fmt(v)}
+function vaPct(v){return v==null?'Not available':Number(v).toFixed(1)+'%'}
+function vaGroups(){const l=VA.data&&VA.data.locations&&VA.data.locations[VA.city];return !l?{}:VA.level==='cities'?{[VA.city]:l.city}:l[VA.level]||{}}
+function vaGroup(){return vaGroups()[VA.area]||null}
+async function valuationStart(){
+ const host=$('#valuation_view');if(!host)return;
+ if(!VA.data){host.innerHTML='<div class="card">Loading audited local evidence...</div>';try{const r=await Promise.all(['lha_omv.json','valuation_lha.json'].map(f=>fetch(f+'?v='+Date.now()).then(x=>{if(!x.ok)throw Error(f+' unavailable');return x.json()})));VA.data=r[0];VA.lha=r[1];}catch(e){host.innerHTML='<div class="card">Evidence unavailable. No valuation assumed. '+esc(e.message)+'</div>';return}}
+ const gs=vaGroups(),keys=Object.keys(gs).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));if(!keys.includes(VA.area))VA.area=keys[0]||'';
+ const opts=(o,v)=>Object.entries(o).map(([k,n])=>'<option value="'+esc(k)+'"'+(k===v?' selected':'')+'>'+esc(n)+'</option>').join('');
+ host.innerHTML='<section class="card"><h2>Local OMV / LHA: comparable evidence first</h2><p class="lead">Compare like-for-like recorded sales, not an area average mixing flats with mansions. These are historical sold-price benchmarks, not a surveyor’s valuation or today’s asking prices.</p><div class="ctl" style="flex-wrap:wrap"><label>Local authority <select id="va_city">'+opts(Object.fromEntries(Object.keys(VA.data.locations||{}).map(x=>[x,CITYLBL(x)])),VA.city)+'</select></label><label>Geography <select id="va_level">'+opts({sectors:'Postcode sector',districts:'Postcode district',cities:'Whole council (explicit broader view)'},VA.level)+'</select></label><label>Area <select id="va_area">'+opts(Object.fromEntries(keys.map(k=>[k,k])),VA.area)+'</select></label><label>Property type <select id="va_type">'+opts(VA_TYPES,VA.type)+'</select></label><label>Floor-area cohort <select id="va_size">'+opts(VA_SIZES,VA.size)+'</select></label></div><div id="va_evidence"></div></section><section class="card"><h2>LHA scenario, not a promised rent</h2><p class="foot">Choose the full property postcode on <a href="https://lha-direct.voa.gov.uk/" target="_blank" rel="noopener">official LHA Direct</a> to establish the BRMA. Then select that BRMA here. No council-average rate or bedroom inference is used. Bedroom entitlement depends on the household; EPC habitable rooms are not bedrooms.</p><div class="ctl" style="flex-wrap:wrap"><label>BRMA <select id="va_brma"><option value="">Select after checking full postcode</option>'+(VA.lha.rates||[]).map(x=>'<option'+(x.name===VA.brma?' selected':'')+'>'+esc(x.name)+'</option>').join('')+'</select></label><label>Entitlement scenario <select id="va_beds">'+opts({shared:'Shared accommodation','1':'1 bedroom','2':'2 bedrooms','3':'3 bedrooms','4':'4 bedrooms'},VA.beds)+'</select></label><label>Asset-specific OMV, optional £ <input id="va_asset" type="number" min="1" placeholder="Verified valuation, not guide"></label></div><div id="va_scenario"></div><p class="foot">Official 2026/27 Table 4 rates checked against the <a href="'+esc(VA.lha.source_url)+'" target="_blank" rel="noopener">VOA publication</a> on '+esc(VA.lha.verified_against_official_table)+'. Weekly × 52 is an annualised screening scenario, not Universal Credit monthly entitlement. Gross figures exclude voids, costs, benefit limits, lease terms and tax. Institutional-tenant rent requires a written offer.</p></section><section class="card"><h3>What this audit does and does not establish</h3><ul><li>Uses standard category-A existing-home sales, separates flats, terraced, semi-detached and detached houses. Size cohorts use strict address/type matches and pre-sale EPCs.</li><li>Median, middle 50% price range, sample counts and raw-versus-filtered sensitivity are shown. Statistical extremes are flagged using a disclosed rule, not silently deleted because they are expensive.</li><li>At least 5 retained sales are required for a displayed benchmark; 5–9 remains a thin sample. No neighbouring-sector or city fallback is silently substituted.</li><li>Local-authority source geography stays explicit even where a postcode district crosses a boundary. A postcode sector is not a street or legal property boundary.</li><li>Sold data have registration lags and do not establish condition, lease length, bedroom count, refurbishment costs or today’s OMV. Source build date is not an upstream refresh.</li><li>Ownership, distress, partner financials, frameworks and listings remain separately dated evidence. This valuation audit does not certify every dashboard field or replace asset diligence.</li></ul><p><a href="lha_omv.json" target="_blank" rel="noopener">Inspect calculated dataset and full methodology</a> · <a href="valuation_audit.json" target="_blank" rel="noopener">Inspect audit totals / exclusions</a> · <a href="https://pgraham974.github.io/ecosystem-partners/" target="_blank" rel="noopener">Separate partner site</a></p></section>';
+ for(const [id,k] of [['city','city'],['level','level'],['area','area'],['type','type'],['size','size']])$('#va_'+id).onchange=e=>{VA[k]=e.target.value;valuationStart()};
+ $('#va_brma').onchange=e=>{VA.brma=e.target.value;vaScenario()};$('#va_beds').onchange=e=>{VA.beds=e.target.value;vaScenario()};$('#va_asset').oninput=vaScenario;vaEvidence();vaScenario();
+}
+function vaSelected(){const g=vaGroup();const t=g&&g.by_type&&g.by_type[VA.type];return VA.size?t&&t.size_bands&&t.size_bands[VA.size]:t}
+function vaEvidence(){const g=vaGroup(),s=vaSelected(),el=$('#va_evidence');if(!g||!s){el.innerHTML='<p>No evidence for this exact geography/type/cohort. No fallback valuation substituted.</p>';return}
+ const low=s.n<10,period=s.period||g.period||{};const periodText=typeof period==='string'?period:Object.values(period).join(' to ');
+ el.innerHTML='<p><b>'+esc(VA.area)+' · '+esc(CITYLBL(VA.city))+' · '+esc(VA_TYPES[VA.type])+(VA.size?' · '+esc(VA_SIZES[VA.size]):' · all floor areas')+'</b></p><div class="scroll"><table><thead><tr><th>Retained sales</th><th>Median sold benchmark</th><th>Middle 50% of prices</th><th>Before outlier filtering</th><th>Median change</th></tr></thead><tbody><tr><td>'+fmt(s.n||0)+' / '+fmt(s.n_raw||0)+'</td><td><b>'+vaMoney(s.omv)+'</b>'+(low?'<div class="foot">Thin sample: do not treat as firm OMV</div>':'')+'</td><td>'+(s.omv!=null?vaMoney(s.p25)+' – '+vaMoney(s.p75):'Withheld: fewer than 5')+'</td><td>'+vaMoney(s.raw_median)+'</td><td>'+vaPct(s.median_change_pct)+'</td></tr></tbody></table></div><p class="foot">Observed transactions: '+esc(periodText||'See dataset period')+'. Outliers flagged: '+fmt(s.outlier_n||0)+'. Rule: '+esc(s.outlier_method==='tukey_1.5_iqr'?'Outside Q1 minus 1.5×IQR or Q3 plus 1.5×IQR (applied separately to this cohort)':s.outlier_method==='none_n_below_20'?'No filtering: fewer than 20 sales':s.outlier_method||'See dataset methodology')+'. Middle 50% is the observed price spread, not a valuation confidence interval.</p><p class="foot">'+(VA.size?'Size-filtered evidence uses only strict, pre-sale EPC matches. EPC-covered sales can differ from the full market.':'All-size evidence deliberately includes eligible sales without an EPC match, avoiding EPC-selection bias. Select a floor-area cohort for the closest practical comparison.')+' Selected geography total: '+fmt(g.sales||0)+' eligible sales; '+fmt(g.sized_sales||0)+' usable size matches. No bedroom count is inferred.</p>';
+}
+function vaScenario(){const el=$('#va_scenario');if(!el)return;const rate=(VA.lha.rates||[]).find(x=>x.name===VA.brma),w=rate&&rate.weekly&&rate.weekly[VA.beds];if(!w){el.innerHTML='<p>Select a postcode-checked BRMA to calculate a scenario. No rate assumed.</p>';return}const s=vaSelected(),asset=+($('#va_asset').value||0),price=asset>0?asset:s&&s.omv,annual=w*52;let h='<p><b>£'+w.toFixed(2)+'/week</b> · £'+fmt(annual)+'/year annualised, '+esc(VA.brma)+', '+esc(VA.beds==='shared'?'shared accommodation':VA.beds+'-bed entitlement scenario')+'.</p>';if(price){h+='<p>Annual LHA scenario ÷ '+(asset>0?'user-entered asset OMV':'selected historical sold benchmark')+': <b>'+(100*annual/price).toFixed(2)+'%</b>.'+(asset>0?' User input is not independently verified.':' This is an <b>unmatched sensitivity</b>: the sold cohort has no confirmed bedroom mix or household entitlement.')+'</p>';if(asset<=0&&s.p25>0&&s.p75>0)h+='<p class="foot">Using the cohort’s middle-50% price spread: '+(100*annual/s.p75).toFixed(2)+'% to '+(100*annual/s.p25).toFixed(2)+'%. Not a prediction of achieved property yield.</p>'}else h+='<p>No sufficiently supported OMV denominator. Yield withheld.</p>';el.innerHTML=h;}
+function vaOpen(city,sec){VA.city=city;VA.level=sec?'sectors':'districts';VA.area=sec||'';viewMode('valuation');}
+
+/* Main-market routing and legacy-estimate guard. */
+(function(){
+ const PARTNER_URL='https://pgraham974.github.io/ecosystem-partners/';
+ const partnerModes=new Set(['partners','pscreen','rp','operators','frameworks','contracts']);
+ const oldView=viewMode,oldCity=cityCtx,oldAreas=renderAreas,oldSectorRows=sectorRows;
+ viewMode=function(mode){if(partnerModes.has(mode)){window.open(PARTNER_URL+(mode==='contracts'?'#frameworks':'#'+mode),'_blank','noopener');return}const v=$('#valuation_view');if(v)v.classList.toggle('hidden',mode!=='valuation');oldView(mode);if(mode==='valuation')valuationStart()};
+ const link=document.querySelector('#nav2 [data-g="partners"]');if(link){const a=document.createElement('a');a.className='mainb';a.href=PARTNER_URL;a.target='_blank';a.rel='noopener';a.style.textDecoration='none';a.textContent='Partner site ↗';link.replaceWith(a)}
+ NAVG.find[1].splice(1,0,['valuation','Local OMV / LHA']);
+ const vb=document.createElement('section');vb.id='valuation_view';vb.className='hidden';vb.style.margin='16px 24px';const app=$('#app');(app||document.body).appendChild(vb);
+ const note=document.createElement('aside');note.className='card';note.style.cssText='margin:12px 24px;border-left:4px solid #b26a00';note.innerHTML='<b>Accuracy review, 20 Oct 2026:</b> strict comparable matching, property-type/size cohorts, outlier sensitivity and actual source periods are in <button class="btn sec" id="accuracy_open">Local OMV / LHA</button>. Legacy inferred bedroom prices, council-average LHA yields and map deal scores are withdrawn. Other evidence remains dated screening, not a certification of every field.';const nav=document.querySelector('#nav2');nav.insertAdjacentElement('afterend',note);$('#accuracy_open').onclick=()=>viewMode('valuation');
+ cityCtx=function(k){const c=oldCity(k);return {...c,c_price:null,c_y:null,c_lha:null}};
+ renderAreas=function(){for(const x of D.subareas){x.flat2=null;x.flat2_n=0;x.ppsqm=null;x.gy=null;}return oldAreas()};
+ sectorRows=function(data){return oldSectorRows(data).map(r=>({...r,v2:null,v2n:0,ly2:null,socs:null,prs:null}))};
+ renderSectors=function(district){const b=$('#sectorbox');if(!b)return;b.innerHTML='<div class="card"><h3>Audited local sold benchmarks</h3><p>Old bedroom-inferred and council-average yield comparisons are withdrawn. Use the local-authority-aware type/size cohorts and explicit BRMA scenario.</p><button class="btn sec" id="va_from_sector">Open '+esc(district)+' evidence</button></div>';$('#va_from_sector').onclick=()=>{VA.city=cur.area&&cur.area.city||F.city||'Manchester';VA.level='districts';VA.area=district;viewMode('valuation')}};
+ const oldBest=renderBest;renderBest=function(){oldBest();const t=$('#tbest');if(!t)return;for(const row of t.rows){for(const i of [8,6,5])if(row.cells[i])row.cells[i].remove()}const n=$('#best_note');if(n)n.textContent='Screening priority only: reported distress/strain, portfolio size and EPC exposure. Unsupported LHA yield components and automatic partner recommendations are withdrawn. Titles are not verified dwelling counts; distress/property linkage and current sale status need diligence.'};
+ // Remove the lot-wide 2-bed entitlement shortcut from the shortlist input path.
+ const oldLot=sellerOf;
+ const oldMapPartner=mOpsBlock;mOpsBlock=function(sec){oldMapPartner(sec);const b=$('#mp_partner_evidence');if(b)b.onclick=()=>window.open(PARTNER_URL,'_blank','noopener');const host=$('#mp_ops');if(host){const b2=document.createElement('button');b2.className='btn sec';b2.textContent='Compare local sold evidence';b2.onclick=()=>vaOpen(MP.city,sec);host.prepend(b2)}};
+ // Dormant pre-inputs-only route model cannot be used to manufacture lease offers.
+ dlCompute=async function(){throw new Error('Legacy auto-valued deal model retired. Use inputs-only asset underwriting with verified assumptions.')};
+ accFit=function(){return {ta:null,da:null,parts:{}}};
+ const oldAccomRender=renderAccom;renderAccom=async function(){await oldAccomRender();const box=$('#accom_view');if(box&&!box.querySelector('.accuracy-accom'))box.insertAdjacentHTML('afterbegin','<p class="card accuracy-accom"><b>Screening only.</b> Area fit scores are withdrawn pending validated asset-level rents, sizes and planning evidence. Demand is published at its stated council geography; it is not a provider rent offer.</p>');if(box)box.querySelectorAll('table').forEach(t=>{const heads=Array.from(t.querySelectorAll('thead th'));const indices=heads.map((h,i)=>/TA fit|DA fit|best use|manager|LHA yield|3-bed homes/i.test(h.textContent)?i:-1).filter(i=>i>=0).sort((a,b)=>b-a);for(const r of t.rows)for(const i of indices)if(r.cells[i])r.cells[i].remove()});const how=$('#ac_how');if(how)how.onclick=e=>{e.preventDefault();popShow(e,'Legacy area-fit scores retired: incompatible property populations, room-to-bedroom assumptions and unverified council-wide rent proxies. Use Local OMV / LHA for explicit unmatched scenarios.')}};
+ const guardedStats=secStats;secStats=function(sec){const out=guardedStats(sec);const g=LO&&LO.locations&&LO.locations[MP.city]&&LO.locations[MP.city].sectors[sec];const p=g&&g.by_type&&g.by_type.F&&g.by_type.F.price_per_sqm;out.flat_ppsqm=p&&p.displayable&&p.n>=5?p.median:null;out.flat_ppsqm_n=p?p.n:0;return out};
+ METRICS.flat_ppsqm[0]='Audited flats £/sqm (strict EPC matches, 5+ sales)';
+ const oldRecolour=mRecolor;mRecolor=function(){oldRecolour();const op=$('#map_metric')&&Array.from($('#map_metric').options).find(o=>o.value==='flat_ppsqm');if(op)op.textContent=METRICS.flat_ppsqm[0]};
+ const guardedPanel=mPanel;mPanel=function(sec){guardedPanel(sec);const st=secStats(sec),side=$('#map_side');if(side)side.insertAdjacentHTML('afterbegin','<div class="card"><b>Audited flats benchmark:</b> '+(st.flat_ppsqm?'£'+fmt(st.flat_ppsqm)+'/sqm ('+st.flat_ppsqm_n+' retained strict size matches)':'withheld: fewer than 5 matched sales')+'<p class="foot">Not an asset valuation. Use the Local OMV / LHA view for type, size, raw/filtered sensitivity and exact evidence period.</p></div>')};
+})();
+
+/* MARKET_ACCURACY_END */
 init().then(async()=>{try{await sfLoad();renderBest()}catch(e){console.log(e)}try{navGo("find")}catch(e){console.log(e)}});try{navSync("assets")}catch(e){}
 </script></body></html>

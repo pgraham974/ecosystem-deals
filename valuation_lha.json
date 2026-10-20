@@ -1,0 +1,51 @@
+{
+  "period": "2026-04-01 to 2027-03-31",
+  "verified_against_official_table": "2026-10-20",
+  "source_url": "https://www.gov.uk/government/publications/local-housing-allowance-lha-rates-applicable-from-april-2026-to-march-2027",
+  "table_url": "https://assets.publishing.service.gov.uk/media/697b8034f8f4a746d9572f47/2026-27_LHA_TABLES.xlsx",
+  "table": "Table 4",
+  "unit": "GBP per week",
+  "caveat": "Select BRMA only after checking the full property postcode on LHA Direct. LHA bedroom entitlement is not inferred from EPC habitable rooms; LHA is not a provider rent offer. Annual scenarios use weekly x52, not UC monthly entitlement.",
+  "rates": [
+    {
+      "name": "Bristol",
+      "weekly": {
+        "shared": 117.68,
+        "1": 207.12,
+        "2": 252,
+        "3": 299.18,
+        "4": 425.75
+      }
+    },
+    {
+      "name": "Central Greater Manchester",
+      "weekly": {
+        "shared": 94.72,
+        "1": 178.36,
+        "2": 201.37,
+        "3": 218.63,
+        "4": 310.68
+      }
+    },
+    {
+      "name": "Cheltenham",
+      "weekly": {
+        "shared": 100.45,
+        "1": 143.84,
+        "2": 184.11,
+        "3": 230.14,
+        "4": 338.3
+      }
+    },
+    {
+      "name": "Southern Greater Manchester",
+      "weekly": {
+        "shared": 94.72,
+        "1": 143.84,
+        "2": 172.6,
+        "3": 207.12,
+        "4": 322.19
+      }
+    }
+  ]
+}

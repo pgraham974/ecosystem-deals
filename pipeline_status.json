@@ -207,6 +207,15 @@
       "cadence_days": 7,
       "routine": "Existing Monday07:00Europe/London watch fAX64lTExF2NFmrE expanded; not continuousAPI",
       "url": ""
+    },
+    {
+      "name": "Official target LHA BRMA rates",
+      "gives": "Four explicit target BRMA weekly rate tables, no council average or postcode inference",
+      "period": "Apr2026-Mar2027; VOA Table4",
+      "refreshed": "2026-10-20",
+      "cadence_days": 365,
+      "routine": "Annual rate verification; check postcode before use",
+      "url": "https://www.gov.uk/government/publications/local-housing-allowance-lha-rates-applicable-from-april-2026-to-march-2027"
     }
   ],
   "build": [
@@ -268,6 +277,12 @@
       "name": "Auction source registry",
       "n": 14,
       "note": "10new source connections; 12new checked records (11advertised+1closed); 5new preferred-band opportunities outside target cities; smaller/HMO/holiday separately scoped",
+      "refreshed": "2026-10-20"
+    },
+    {
+      "name": "Audited local sold-price cohorts",
+      "n": 9177,
+      "note": "9177 eligible standard resales;7212 strict pre-sale EPC size matches. Reprocessed20Oct, upstream PPD capture endsAug2026, no upstream refresh. 11tests passed.",
       "refreshed": "2026-10-20"
     }
   ]
