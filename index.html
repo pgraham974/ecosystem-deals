@@ -1129,6 +1129,7 @@ function auCoverageHTML(all){const S=AUCTION_SOURCES;if(!S||!S.sources)return '<
 
 
 
+
 /* MARKET_ACCURACY_START */
 /* Map accuracy guard. Inject after the authoritative inline modules, before init().
  * No audited valuation schema is assumed here. Raw PPD facts and auction evidence remain.
@@ -1318,7 +1319,7 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
 
 /* Distressed blocks: one clear map of sites where a distressed / strained landlord holds homes, plus forced-sale auction lots. 22 Oct 2026. */
 (function(){
- const DM={started:false,map:null,layer:null,sites:[],titles:null,pc:{},scope:'targets',min:2,show:{d:true,lot:true,sale:true,s:true,epc:false},q:'',markers:{}};
+ const DM={started:false,map:null,layer:null,sites:[],titles:null,pc:{},scope:'targets',min:1,big:5,bigOnly:false,show:{d:true,lot:true,sale:true,s:true,epc:false},q:'',markers:{}};
  window.DM=DM;
  const CITIES=['Manchester','Cheltenham','City Of Bristol'];
  const COL={d:'#c62828',lot:'#6a1b9a',sale:'#1565c0',s:'#e08a00',epc:'#2e7d32'};
@@ -1334,6 +1335,9 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
   '#dm_map{height:720px;border-radius:8px;border:1px solid var(--line)}#dm_side{max-height:720px;overflow:auto}'+
   '.dm-pin{border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font:700 12px/1 system-ui,sans-serif;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.5)}'+
   '.dm-pin.epc{background:#fff!important;color:#2e7d32;border:2px solid #2e7d32}'+
+  '.dm-pin.big{border-radius:7px;flex-direction:column;border:3px solid #111;box-shadow:0 0 0 5px color-mix(in srgb,var(--c) 35%,transparent),0 3px 10px rgba(0,0,0,.55);font-size:16px;line-height:1}.dm-pin.big small{font-size:9px;font-weight:600;opacity:.9;margin-top:1px}.dm-pin.big.epc{border-color:#2e7d32}'+
+  '.dm-pin.dot{font-size:9px;border-width:1.5px;opacity:.8;box-shadow:0 1px 2px rgba(0,0,0,.4)}'+
+  '.dm-sec{margin:10px 0 6px;font-weight:800;font-size:14px;display:flex;justify-content:space-between}.dm-row.big{border-width:2px 2px 2px 8px;border-style:solid;border-color:#111}.dm-sq{display:inline-block;width:12px;height:12px;border:2px solid #111;border-radius:3px;vertical-align:-1px;margin-right:4px}'+
   '.dm-kpis{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.dm-kpi{flex:1 1 170px;border-radius:8px;padding:10px 12px;color:#fff;cursor:pointer;user-select:none}.dm-kpi.off{opacity:.35}.dm-kpi b{font-size:22px;display:block}.dm-kpi span{font-size:12px}'+
   '.dm-kpi.epc{background:#fff;color:#2e7d32;border:2px solid #2e7d32}'+
   '.dm-row{border-left:5px solid #999;padding:7px 9px;margin:0 0 6px;background:#fff;border-radius:6px;cursor:pointer;box-shadow:0 0 0 1px var(--line)}.dm-row:hover{background:#f6f8fb}'+
@@ -1351,10 +1355,10 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
 
  function shell(){sec.innerHTML=
   '<div class="card" style="border-left:5px solid #c62828"><div class="ctl" style="margin:0;align-items:center;flex-wrap:wrap;gap:8px">'+
-  '<b style="font-size:18px">Distressed blocks</b><span class="foot">every site where a landlord in trouble owns homes, forced-sale lots, and blocks of flats for sale on Rightmove / Zoopla / auctions. Number on the pin = homes at that site. Every distressed and forced-sale site is shown; the homes filter thins out strained owners.</span></div>'+
+  '<b style="font-size:18px">Distressed blocks</b><span class="foot">every site where a landlord in trouble owns homes, forced-sale lots, and blocks of flats for sale on Rightmove / Zoopla / auctions. Number on the pin = homes at that site. Every site is shown: <b>big blocks are squares</b>, smaller sites are dots.</span></div>'+
   '<div class="ctl" style="margin:8px 0 0;flex-wrap:wrap;gap:8px">'+
   '<select id="dm_scope"><option value="targets">All 3 target cities</option><option value="Manchester">Manchester</option><option value="Cheltenham">Cheltenham</option><option value="City Of Bristol">Bristol</option></select>'+
-  '<select id="dm_min"><option value="1">Strained: all sites</option><option value="2" selected>Strained: 2+ homes per site</option><option value="5">Strained: 5+ homes per site</option><option value="10">Strained: 10+ homes per site</option></select>'+
+  '<select id="dm_big" title="How many homes at one site count as a big block"><option value="5" selected>Big block = 5+ homes</option><option value="10">Big block = 10+ homes</option><option value="20">Big block = 20+ homes</option></select><label style="display:inline-flex;gap:4px;align-items:center"><input type="checkbox" id="dm_bigonly"> big blocks only</label>'+
   '<input id="dm_q" placeholder="search owner, street, postcode" style="width:220px">'+
   '<button class="btn sec" id="dm_csv">Download list (CSV)</button><span id="dm_status" class="foot"></span></div>'+
   '<div class="dm-kpis" id="dm_kpis"></div>'+
@@ -1363,11 +1367,11 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
   '<p><b class="c" style="background:'+COL.lot+'"></b><b>Forced sale now</b>: an auction lot whose listing says it is sold by receivers, administrators, a liquidator or the lender. <i>Source: auctioneer lot page, checked date shown on each lot.</i></p>'+
   '<p><b class="c" style="background:'+COL.sale+'"></b><b>Block for sale</b>: a building or site with 2+ existing self-contained homes currently advertised on Rightmove, Zoopla or an auction catalogue (Allsop had none in these areas on 22 Oct). Number = homes in the sale. <i>Not distress evidence</i>: an ordinary agent sale unless the listing says receivers. HMO rooms, development sites and single flats in big new-build schemes are left out. <i>Source: portal / auction listing, checked 22 Oct 2026.</i></p><p><b class="c" style="background:'+COL.s+'"></b><b>Strained owner</b>: no insolvency yet, but a warning sign on the public record: a bridging loan 15+ months old, a loan from a private individual, a second-charge loan, overdue accounts, or an active strike-off notice. Likely seller within months. <i>Source: Companies House charges register and filings.</i></p>'+
   '<p><b class="c" style="background:#fff;border:2px solid '+COL.epc+'"></b><b>EPC pressure (off by default)</b>: blocks with 5+ privately rented flats rated D-G that must reach EPC C by Oct 2030. A capital call on the owner, <i>not</i> distress. <i>Source: EPC register.</i></p>'+
-  '<p class="foot">Ownership: HM Land Registry company-owned titles (CCOD), grouped by postcode, so a "site" is the homes one landlord owns at one postcode. Homes count = titles held there, or the whole building where the landlord holds its freehold. A filing can be historical: confirm the current position on Companies House before acting. Private (individual) landlords are not in the company file. Edinburgh has no ownership file, so it is not on this map. Every pop-up has a <b>Nimbus</b> link: it opens Nimbus in a new tab and copies the address so you can paste it into Nimbus search (Nimbus has no public deep link; your own Nimbus login is used).</p></details></div>'+
+  '<p><span class="dm-sq"></span><b>Square = big block</b> (5+ homes at one site by default; change with the threshold box). Number = homes the owner holds there, or homes in the sale. Small dots = 1-4 homes. The pop-up also shows the whole building size where we know it.</p><p class="foot">Ownership: HM Land Registry company-owned titles (CCOD), grouped by postcode, so a "site" is the homes one landlord owns at one postcode. Homes count = titles held there, or the whole building where the landlord holds its freehold. A filing can be historical: confirm the current position on Companies House before acting. Private (individual) landlords are not in the company file. Edinburgh has no ownership file, so it is not on this map. Every pop-up has a <b>Nimbus</b> link: it opens Nimbus in a new tab and copies the address so you can paste it into Nimbus search (Nimbus has no public deep link; your own Nimbus login is used).</p></details></div>'+
   '<div class="dm-grid" style="margin-top:12px"><div id="dm_map"></div><div id="dm_side" class="card" style="margin:0"><p class="foot">Loading distressed sites...</p></div></div>';
   const on=(id,ev,f)=>{const el=document.querySelector(id);if(el)el[ev]=f};
   on('#dm_scope','onchange',e=>{DM.scope=e.target.value;dmBuild().then(dmDraw)});
-  on('#dm_min','onchange',e=>{DM.min=+e.target.value;dmDraw()});
+  on('#dm_big','onchange',e=>{DM.big=+e.target.value;dmDraw()});on('#dm_bigonly','onchange',e=>{DM.bigOnly=e.target.checked;dmDraw()});
   on('#dm_q','oninput',e=>{DM.q=e.target.value.trim().toLowerCase();dmDraw(false)});
   on('#dm_csv','onclick',dmCsv)}
 
@@ -1434,21 +1438,24 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
   DM.sites=scoped;setStatus('')}
 
  // ---------- render ----------
- const passMin=s=>s.kind==='d'||s.kind==='lot'||s.kind==='sale'||s.n>=DM.min;
- function visible(){return DM.sites.filter(s=>DM.show[s.kind]&&passMin(s)&&(!DM.q||[s.addr,s.pcShow||s.pc,s.o&&s.o.name,s.why].join(' ').toLowerCase().includes(DM.q)))}
- function pinIcon(s){const sz=Math.round(Math.min(46,20+Math.sqrt(Math.max(1,s.n))*5));return L.divIcon({className:'',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2],popupAnchor:[0,-sz/2],html:'<div class="dm-pin '+(s.kind==='epc'?'epc':'')+'" style="width:'+sz+'px;height:'+sz+'px;background:'+COL[s.kind]+'">'+(s.n||'?')+'</div>'})}
+ const isBig=s=>(s.n||0)>=DM.big;const passMin=s=>!DM.bigOnly||isBig(s);
+ function visible(){return DM.sites.filter(s=>true).sort((a,b)=>(isBig(b)-isBig(a))||(isBig(a)&&isBig(b)?(b.n-a.n)||(RANK[a.kind]-RANK[b.kind]):(RANK[a.kind]-RANK[b.kind])||(b.n-a.n))).filter(s=>DM.show[s.kind]&&passMin(s)&&(!DM.q||[s.addr,s.pcShow||s.pc,s.o&&s.o.name,s.why].join(' ').toLowerCase().includes(DM.q)))}
+ function pinIcon(s){if(isBig(s)){const sz=Math.round(Math.min(60,30+Math.sqrt(s.n)*5));return L.divIcon({className:'',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2],popupAnchor:[0,-sz/2],html:'<div class="dm-pin big '+(s.kind==='epc'?'epc':'')+'" style="width:'+sz+'px;height:'+sz+'px;background:'+COL[s.kind]+';--c:'+COL[s.kind]+'"><span>'+s.n+'</span><small>homes</small></div>'})}
+  const sz=s.n>=2?16:12;return L.divIcon({className:'',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2],popupAnchor:[0,-sz/2],html:'<div class="dm-pin dot '+(s.kind==='epc'?'epc':'')+'" style="width:'+sz+'px;height:'+sz+'px;background:'+COL[s.kind]+'">'+(s.n>=2?s.n:'')+'</div>'})}
  function kpis(){const base=DM.sites.filter(passMin);const k=t=>{const a=base.filter(s=>s.kind===t);return [a.length,a.reduce((x,s)=>x+(s.n||0),0)]};
-  const box=document.querySelector('#dm_kpis');box.innerHTML=['d','lot','sale','s','epc'].map(t=>{const [n,h]=k(t);return '<div class="dm-kpi '+(t==='epc'?'epc ':'')+(DM.show[t]?'':'off')+'" data-t="'+t+'" style="'+(t==='epc'?'':'background:'+COL[t])+'"><b>'+fmt(n)+' sites · '+fmt(h)+' homes</b><span>'+LBL[t]+(DM.show[t]?'':' (hidden: click to show)')+'</span></div>'}).join('');
+  const box=document.querySelector('#dm_kpis');box.innerHTML=['d','lot','sale','s','epc'].map(t=>{const [n,h]=k(t);const bg=base.filter(s=>s.kind===t&&isBig(s));return '<div class="dm-kpi '+(t==='epc'?'epc ':'')+(DM.show[t]?'':'off')+'" data-t="'+t+'" style="'+(t==='epc'?'':'background:'+COL[t])+'"><b>'+fmt(n)+' sites · '+fmt(h)+' homes</b><span>'+LBL[t]+(DM.show[t]?'':' (hidden: click to show)')+'</span><div style="margin-top:4px;font-weight:700;font-size:13px"><span class="dm-sq" style="border-color:'+(t==='epc'?'#2e7d32':'#fff')+'"></span>'+fmt(bg.length)+' big block'+(bg.length===1?'':'s')+(bg.length?' · '+fmt(bg.reduce((x,s)=>x+s.n,0))+' homes':'')+'</div></div>'}).join('');
   box.querySelectorAll('.dm-kpi').forEach(el=>el.onclick=()=>{DM.show[el.dataset.t]=!DM.show[el.dataset.t];dmDraw(false)})}
  function dmDraw(fit=true){if(!DM.map)return;kpis();if(DM.layer)DM.map.removeLayer(DM.layer);DM.layer=L.layerGroup();DM.markers={};const vis=visible();
   // draw weakest first so red sits on top
-  [...vis].reverse().forEach(s=>{const m=L.marker(s.ll,{icon:pinIcon(s),zIndexOffset:{d:3000,lot:2500,sale:2000,s:1000,epc:0}[s.kind]+Math.min(999,s.n),title:LBL[s.kind]+': '+s.addr});m.bindPopup(()=>popup(s),{maxWidth:400});m.on('popupopen',e=>wirePopup(e.popup.getElement(),s));DM.markers[DM.sites.indexOf(s)]=m;DM.layer.addLayer(m)});
+  [...vis].reverse().forEach(s=>{const m=L.marker(s.ll,{icon:pinIcon(s),zIndexOffset:(isBig(s)?6000:0)+{d:3000,lot:2500,sale:2000,s:1000,epc:0}[s.kind]+Math.min(999,s.n),title:LBL[s.kind]+': '+s.addr});m.bindPopup(()=>popup(s),{maxWidth:400});m.on('popupopen',e=>wirePopup(e.popup.getElement(),s));DM.markers[DM.sites.indexOf(s)]=m;DM.layer.addLayer(m)});
   DM.layer.addTo(DM.map);
-  if(fit&&vis.length){const b=L.latLngBounds(vis.filter(s=>s.kind!=='epc').map(s=>s.ll).concat(vis.length&&!vis.some(s=>s.kind!=='epc')?vis.map(s=>s.ll):[]));if(b.isValid())DM.map.fitBounds(b,{padding:[30,30],maxZoom:14})}
+  if(fit&&vis.length){const bigV=vis.filter(s=>isBig(s)&&s.kind!=='epc');const b=L.latLngBounds((bigV.length>=2?bigV:vis.filter(s=>s.kind!=='epc')).map(s=>s.ll).concat(vis.length&&!vis.some(s=>s.kind!=='epc')?vis.map(s=>s.ll):[]));if(b.isValid())DM.map.fitBounds(b,{padding:[30,30],maxZoom:14})}
   side(vis)}
  function side(vis){const el=document.querySelector('#dm_side');const shown=vis.slice(0,400);
-  el.innerHTML='<h3 style="margin:0 0 4px">'+fmt(vis.length)+' sites, ranked</h3><p class="foot" style="margin:0 0 8px">Red first (owner in insolvency), then forced-sale lots, then strained owners; biggest sites first. Click a row to jump to it.</p>'+
-  (shown.length?shown.map(s=>{const i=DM.sites.indexOf(s);return '<div class="dm-row" data-i="'+i+'" style="border-left-color:'+COL[s.kind]+'"><div class="h"><span><span class="dm-tag" style="background:'+COL[s.kind]+'">'+LBL[s.kind].toUpperCase()+'</span> <span class="dm-n">'+(s.n||'?')+' home'+(s.n===1?'':'s')+'</span></span><span class="foot">'+esc(s.pcShow!=null?s.pcShow:s.pc)+(s.city?' · '+esc(CITYLBL(s.city)):'')+'</span></div><div><b>'+esc(s.addr||s.pc)+'</b></div>'+(s.o?'<div class="foot">Owner: <b>'+esc(s.o.name)+'</b></div>':'')+'<div class="dm-why">'+esc(s.why||'')+'</div></div>'}).join(''):'<p>No sites match. Try "Strained: all sites" or another city.</p>')+(vis.length>shown.length?'<p class="foot">Showing the first 400; narrow with search or the homes filter.</p>':'');
+  const nb=vis.filter(isBig);const row=s=>{const i=DM.sites.indexOf(s);return '<div class="dm-row'+(isBig(s)?' big':'')+'" data-i="'+i+'" style="border-left-color:'+COL[s.kind]+'"><div class="h"><span><span class="dm-tag" style="background:'+COL[s.kind]+'">'+LBL[s.kind].toUpperCase()+'</span> <span class="dm-n">'+(s.n||'?')+' home'+(s.n===1?'':'s')+'</span></span><span class="foot">'+esc(s.pcShow!=null?s.pcShow:s.pc)+(s.city?' · '+esc(CITYLBL(s.city)):'')+'</span></div><div><b>'+esc(s.addr||s.pc)+'</b></div>'+(s.o?'<div class="foot">Owner: <b>'+esc(s.o.name)+'</b></div>':'')+'<div class="dm-why">'+esc(s.why||'')+'</div></div>'};
+  el.innerHTML='<h3 style="margin:0 0 4px">'+fmt(vis.length)+' sites</h3><p class="foot" style="margin:0 0 8px"><span class="dm-sq"></span>Squares = big blocks ('+DM.big+'+ homes at one site), listed first, largest first. Dots = smaller sites. Colour = why it is here. Click a row to jump to it.</p>'+
+  '<div class="dm-sec"><span><span class="dm-sq"></span>Big blocks</span><span>'+fmt(nb.length)+' sites · '+fmt(nb.reduce((x,s)=>x+s.n,0))+' homes</span></div>'+(nb.length?nb.map(row).join(''):'<p class="foot">No big blocks in this view. Try a lower threshold or another city.</p>')+
+  (DM.bigOnly?'':'<div class="dm-sec"><span>Smaller sites</span><span>'+fmt(vis.length-nb.length)+'</span></div>'+shown.filter(s=>!isBig(s)).map(row).join('')+(vis.length>shown.length?'<p class="foot">Showing the first 400 sites; narrow with search or tick big blocks only.</p>':''));
   el.querySelectorAll('.dm-row').forEach(r=>r.onclick=()=>{const s=DM.sites[+r.dataset.i];const m=DM.markers[+r.dataset.i];DM.map.setView(s.ll,Math.max(DM.map.getZoom(),16));setTimeout(()=>m&&m.openPopup(),250)})}
 
  function popup(s){const head='<div class="dm-tag" style="background:'+COL[s.kind]+';font-size:12px">'+LBL[s.kind].toUpperCase()+'</div>';
