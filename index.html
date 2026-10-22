@@ -1124,6 +1124,9 @@ function auCoverageHTML(all){const S=AUCTION_SOURCES;if(!S||!S.sources)return '<
 
 
 
+
+
+
 /* MARKET_ACCURACY_START */
 /* Map accuracy guard. Inject after the authoritative inline modules, before init().
  * No audited valuation schema is assumed here. Raw PPD facts and auction evidence remain.
@@ -1309,6 +1312,167 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
  METRICS.flat_ppsqm[0]='Audited flats £/sqm (strict EPC matches, 5+ sales)';
  const oldRecolour=mRecolor;mRecolor=function(){oldRecolour();const op=$('#map_metric')&&Array.from($('#map_metric').options).find(o=>o.value==='flat_ppsqm');if(op)op.textContent=METRICS.flat_ppsqm[0]};
  const guardedPanel=mPanel;mPanel=function(sec){guardedPanel(sec);const st=secStats(sec),side=$('#map_side');if(side)side.insertAdjacentHTML('afterbegin','<div class="card"><b>Audited flats benchmark:</b> '+(st.flat_ppsqm?'£'+fmt(st.flat_ppsqm)+'/sqm ('+st.flat_ppsqm_n+' retained strict size matches)':'withheld: fewer than 5 matched sales')+'<p class="foot">Not an asset valuation. Use the Local OMV / LHA view for type, size, raw/filtered sensitivity and exact evidence period.</p></div>')};
+})();
+
+/* Distressed blocks: one clear map of sites where a distressed / strained landlord holds homes, plus forced-sale auction lots. 22 Oct 2026. */
+(function(){
+ const DM={started:false,map:null,layer:null,sites:[],titles:null,pc:{},scope:'targets',min:2,show:{d:true,lot:true,s:true,epc:false},q:'',markers:{}};
+ window.DM=DM;
+ const CITIES=['Manchester','Cheltenham','City Of Bristol'];
+ const COL={d:'#c62828',lot:'#6a1b9a',s:'#e08a00',epc:'#2e7d32'};
+ const LBL={d:'Distressed owner',lot:'Forced sale now',s:'Strained owner',epc:'EPC pressure (watch)'};
+ const RANK={d:0,lot:1,s:2,epc:3};
+ const PCRE=/\b([A-Z]{1,2}\d[A-Z\d]?)\s*(\d[A-Z]{2})\b/;
+ const pcNorm=v=>{const m=String(v||'').toUpperCase().match(PCRE);return m?m[1]+' '+m[2]:''};
+ const pcOfTitle=t=>pcNorm(t.postcode)||pcNorm(t.address);
+ const noKey=n=>String(n||'').replace(/^0+/,'').toUpperCase();
+ const css=document.createElement('style');css.textContent=
+  '#subnav [data-v="distress"]{color:#fff;background:#c62828;border:1px solid #c62828;font-weight:700}#subnav [data-v="distress"].on{background:#8e1b1b;border-color:#8e1b1b}'+
+  '.dm-grid{display:grid;grid-template-columns:minmax(0,1fr) 470px;gap:12px}@media(max-width:1100px){.dm-grid{grid-template-columns:1fr}}'+
+  '#dm_map{height:720px;border-radius:8px;border:1px solid var(--line)}#dm_side{max-height:720px;overflow:auto}'+
+  '.dm-pin{border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font:700 12px/1 system-ui,sans-serif;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.5)}'+
+  '.dm-pin.epc{background:#fff!important;color:#2e7d32;border:2px solid #2e7d32}'+
+  '.dm-kpis{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.dm-kpi{flex:1 1 170px;border-radius:8px;padding:10px 12px;color:#fff;cursor:pointer;user-select:none}.dm-kpi.off{opacity:.35}.dm-kpi b{font-size:22px;display:block}.dm-kpi span{font-size:12px}'+
+  '.dm-kpi.epc{background:#fff;color:#2e7d32;border:2px solid #2e7d32}'+
+  '.dm-row{border-left:5px solid #999;padding:7px 9px;margin:0 0 6px;background:#fff;border-radius:6px;cursor:pointer;box-shadow:0 0 0 1px var(--line)}.dm-row:hover{background:#f6f8fb}'+
+  '.dm-row .h{display:flex;gap:8px;align-items:baseline;justify-content:space-between}.dm-n{font-weight:800;font-size:15px}.dm-why{font-size:12px;color:#444;margin-top:2px}'+
+  '.dm-tag{display:inline-block;color:#fff;border-radius:4px;padding:1px 6px;font-size:11px;font-weight:700;letter-spacing:.02em}'+
+  '.dm-pop{min-width:300px;max-width:380px;font-size:13px}.dm-pop h4{margin:6px 0 2px}.dm-pop ul{margin:2px 0 4px 16px;padding:0}.dm-pop .foot{font-size:11px}'+
+  '.dm-key{font-size:13px;line-height:1.5}.dm-key b.c{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:4px}';
+ document.head.appendChild(css);
+
+ // view + nav
+ const sec=document.createElement('section');sec.id='distress_view';sec.className='hidden';sec.style.margin='16px 24px';(document.querySelector('#app')||document.body).appendChild(sec);
+ NAVG.find[1].unshift(['distress','Distressed blocks']);
+ const prevView=viewMode;
+ viewMode=function(mode){const v=document.querySelector('#distress_view');if(v)v.classList.toggle('hidden',mode!=='distress');prevView(mode);if(mode==='distress'){try{navSync('distress')}catch(e){}dmStart()}};
+
+ function shell(){sec.innerHTML=
+  '<div class="card" style="border-left:5px solid #c62828"><div class="ctl" style="margin:0;align-items:center;flex-wrap:wrap;gap:8px">'+
+  '<b style="font-size:18px">Distressed blocks</b><span class="foot">every site where a landlord in trouble owns homes, plus forced-sale lots. Number on the pin = homes at that site. Every distressed and forced-sale site is shown; the homes filter thins out strained owners.</span></div>'+
+  '<div class="ctl" style="margin:8px 0 0;flex-wrap:wrap;gap:8px">'+
+  '<select id="dm_scope"><option value="targets">All 3 target cities</option><option value="Manchester">Manchester</option><option value="Cheltenham">Cheltenham</option><option value="City Of Bristol">Bristol</option></select>'+
+  '<select id="dm_min"><option value="1">Strained: all sites</option><option value="2" selected>Strained: 2+ homes per site</option><option value="5">Strained: 5+ homes per site</option><option value="10">Strained: 10+ homes per site</option></select>'+
+  '<input id="dm_q" placeholder="search owner, street, postcode" style="width:220px">'+
+  '<button class="btn sec" id="dm_csv">Download list (CSV)</button><span id="dm_status" class="foot"></span></div>'+
+  '<div class="dm-kpis" id="dm_kpis"></div>'+
+  '<details class="dm-key"><summary><b>What the colours mean and how we know</b></summary>'+
+  '<p><b class="c" style="background:'+COL.d+'"></b><b>Distressed owner</b>: the company that owns these homes is in an insolvency process that is still running (administration, liquidation, court winding-up, CVA) or a lender has appointed a receiver. An office-holder now controls the property and has to sell it. <i>Source: Companies House filing history (AM01, WU04, LIQ02/600, RM01 etc., with no closing filing).</i></p>'+
+  '<p><b class="c" style="background:'+COL.lot+'"></b><b>Forced sale now</b>: an auction lot whose listing says it is sold by receivers, administrators, a liquidator or the lender. <i>Source: auctioneer lot page, checked date shown on each lot.</i></p>'+
+  '<p><b class="c" style="background:'+COL.s+'"></b><b>Strained owner</b>: no insolvency yet, but a warning sign on the public record: a bridging loan 15+ months old, a loan from a private individual, a second-charge loan, overdue accounts, or an active strike-off notice. Likely seller within months. <i>Source: Companies House charges register and filings.</i></p>'+
+  '<p><b class="c" style="background:#fff;border:2px solid '+COL.epc+'"></b><b>EPC pressure (off by default)</b>: blocks with 5+ privately rented flats rated D-G that must reach EPC C by Oct 2030. A capital call on the owner, <i>not</i> distress. <i>Source: EPC register.</i></p>'+
+  '<p class="foot">Ownership: HM Land Registry company-owned titles (CCOD), grouped by postcode, so a "site" is the homes one landlord owns at one postcode. Homes count = titles held there, or the whole building where the landlord holds its freehold. A filing can be historical: confirm the current position on Companies House before acting. Private (individual) landlords are not in the company file. Edinburgh has no ownership file, so it is not on this map.</p></details></div>'+
+  '<div class="dm-grid" style="margin-top:12px"><div id="dm_map"></div><div id="dm_side" class="card" style="margin:0"><p class="foot">Loading distressed sites...</p></div></div>';
+  const on=(id,ev,f)=>{const el=document.querySelector(id);if(el)el[ev]=f};
+  on('#dm_scope','onchange',e=>{DM.scope=e.target.value;dmBuild().then(dmDraw)});
+  on('#dm_min','onchange',e=>{DM.min=+e.target.value;dmDraw()});
+  on('#dm_q','oninput',e=>{DM.q=e.target.value.trim().toLowerCase();dmDraw(false)});
+  on('#dm_csv','onclick',dmCsv)}
+
+ async function waitData(){for(let i=0;i<60;i++){if(typeof OW!=='undefined'&&OW.length&&D&&D.ownersByKey)return true;await new Promise(r=>setTimeout(r,500))}return false}
+
+ async function dmStart(){if(!DM.started){DM.started=true;shell();
+   if(!(await waitData())){document.querySelector('#dm_side').innerHTML='<p>Landlord data did not load. Refresh the page.</p>';return}
+   await mapLibs();
+   DM.map=L.map('dm_map',{zoomControl:true});
+   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',maxZoom:17}).addTo(DM.map);
+   DM.map.createPane('dmlabels');DM.map.getPane('dmlabels').style.zIndex=450;DM.map.getPane('dmlabels').style.pointerEvents='none';
+   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxZoom:17,pane:'dmlabels'}).addTo(DM.map);
+   DM.map.setView([52.6,-2.2],7);
+   await dmBuild();dmDraw()}
+  else setTimeout(()=>DM.map&&DM.map.invalidateSize(),60)}
+
+ // ---------- data ----------
+ async function pcIndexFor(city){const d=await mLoadCity(city);if(!d._dmIdx){d._dmIdx={};for(const [pc,la,ln] of d.pcs)d._dmIdx[pc]=[la,ln]}return d._dmIdx}
+ async function geocode(pcs){const cache=JSON.parse(localStorage.getItem('ed_dm_pc')||'{}');const need=[...new Set(pcs)].filter(p=>p&&!(p in cache)&&!DM.pc[p]);
+  for(let i=0;i<need.length;i+=100){setStatus('Locating postcodes '+Math.min(i+100,need.length)+' / '+need.length+'...');try{const r=await fetch('https://api.postcodes.io/postcodes',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({postcodes:need.slice(i,i+100)})});const j=await r.json();for(const x of (j.result||[])){const q=x.result;cache[x.query]=q&&q.latitude!=null?[+q.latitude.toFixed(5),+q.longitude.toFixed(5)]:0}}catch(e){}}
+  try{localStorage.setItem('ed_dm_pc',JSON.stringify(cache))}catch(e){}for(const [k,v] of Object.entries(cache))if(v&&!DM.pc[k])DM.pc[k]=v}
+ function setStatus(t){const s=document.querySelector('#dm_status');if(s)s.textContent=t}
+ const level=o=>o&&o.A?o.A.level:null;
+ function whyShort(o){const A=o.A;if(A.level==='d')return A.ongoing.map(p=>p.name+(p.start?' since '+fmtD(p.start.date)+' ('+p.start.code+')':'')).join(' + ');return [...new Set(A.S.map(s=>s.t.replace(/<[^>]+>/g,'')))].join(' + ')}
+ function lotUnits(l,p){if(p&&p.site_scope==='development')return -1;if(/consent|development site|^\s*land\b|\bplots?\b/i.test(String(l.units||'')+' '+String(l.type||'')+' '+String(l.address||'')))return -1;if(p){if(['holiday','non_selfcontained'].includes(p.site_scope))return 0;if(p.site_scope==='single_home')return 1;if(p.site_homes!=null)return +p.site_homes||0;if(p.units_n!=null)return +p.units_n||0}
+  const u=String(l.units||'')+' '+String(l.type||'');const m=u.match(/(\d+)\s*(?:x\s*)?(?:self[- ]contained\s*)?(?:flats?|apartments?|units?|homes?|houses?|dwellings?|studios?|maisonettes?)/i);if(m)return +m[1];if(/^\s*1\s*x/i.test(u)||/house|flat|apartment|bungalow|maisonette|cottage/i.test(u))return 1;return 0}
+
+ async function dmBuild(){setStatus('Loading landlords, titles and buildings...');
+  const scopeCities=DM.scope==='targets'?CITIES:[DM.scope];
+  const idx={};for(const c of CITIES){try{idx[c]=await pcIndexFor(c);for(const [k,v] of Object.entries(idx[c]))DM.pc[k]=v}catch(e){idx[c]={}}}
+  const cityOf=pc=>CITIES.find(c=>idx[c]&&idx[c][pc])||null;
+  const cityGuess=pc=>cityOf(pc)||(/^BS\d/.test(pc)?'City Of Bristol':/^GL5[0-3]\b/.test(pc)?'Cheltenham':/^M\d/.test(pc)?'Manchester':null);
+  // 1. titles of distressed / strained owners
+  if(!DM.titles){const keys=OW.filter(o=>['d','s'].includes(level(o))).map(o=>o.owner_key);let ts=[];
+   for(let i=0;i<keys.length;i+=80){try{ts=ts.concat(await qall('titles?select=owner_key,title_no,address,postcode,tenure,price_paid,date_added&owner_key=in.('+keys.slice(i,i+80).map(k=>'"'+k+'"').join(',')+')'))}catch(e){}}DM.titles=ts}
+  const byNo={};for(const o of OW)if(o.company_no)byNo[noKey(o.company_no)]=o;
+  const S={};const site=(o,pc)=>{const k=o.owner_key+'|'+pc;return S[k]=S[k]||{kind:level(o),o,pc,city:cityOf(pc),titles:[],bld:[],fh:false,n:0}};
+  for(const t of DM.titles){const o=D.ownersByKey[t.owner_key];if(!o||!['d','s'].includes(level(o)))continue;const pc=pcOfTitle(t);if(!pc)continue;site(o,pc).titles.push(t)}
+  // 2. buildings (EPC + Price Paid + CCOD) whose company owners are flagged
+  const blds=[];for(const c of CITIES){try{for(const b of await loadBuildings(c))blds.push(b)}catch(e){}}
+  const flaggedB=new Set();
+  for(const b of blds){const pc=pcNorm(b.postcode);if(!pc)continue;
+   const owners=[...(b.company_owners||[]).map(x=>({...x,fh:false})),...(b.company_freeholds||[]).map(x=>({...x,fh:true}))];
+   for(const x of owners){const o=byNo[noKey(x.company_no)];if(!o||!['d','s'].includes(level(o)))continue;const s=site(o,pc);if(!s.bld.includes(b))s.bld.push(b);s.bTitles=(s.bTitles||0)+(+x.titles||0);if(x.fh){s.fh=true;s.fhHomes=Math.max(s.fhHomes||0,b.homes||0)}flaggedB.add(b)}}
+  const out=[];
+  for(const s of Object.values(S)){s.n=Math.max(1,s.titles.length,s.bTitles||0,s.fh?(s.fhHomes||0):0);s.addr=s.bld[0]?tcase(s.bld[0].address):(s.titles[0]?String(s.titles[0].address).replace(/\s*\([A-Z0-9 ]+\)\s*$/,''):'');if(!s.bld[0]&&s.titles.length>1)s.addr=s.addr.replace(/^(flat|apartment|apt|unit|room|studio)\s+[\w-]+,?\s*/i,'');s.why=whyShort(s.o);out.push(s)}
+  // 3. forced-sale lots (live or unverified, not sold / withdrawn)
+  let feed=[];try{feed=(await sfLoad()).properties||[]}catch(e){}
+  const seen=new Set();const lots=[];
+  const addLot=(l,p)=>{const pc=pcNorm(l.postcode);const key=(l.url||'')+'|'+pc+'|'+(l.address||'');if(seen.has(key))return;seen.add(key);const sl=sellerOf(l);if(sl.k!=='c')return;const st=p?sfState(p):(l.sale_status||'');if(/sold|withdrawn/i.test(st))return;if(lotUnits(l,p)<0)return;lots.push({kind:'lot',l,p,pc,city:cityGuess(pc),n:lotUnits(l,p),addr:String(l.address||''),why:'Sold by '+sl.label+(l.auction_date?' · auction '+fmtD(l.auction_date):''),sl,st})};
+  for(const p of feed)addLot(p,p);
+  for(const l of (typeof LOTS!=='undefined'?LOTS:[])){const p=sfFind(l);addLot(p?{...l,...p}:l,p)}
+  out.push(...lots);
+  // 4. EPC pressure blocks (watch only)
+  for(const b of blds){if(flaggedB.has(b))continue;if((b.subc_prs||0)>=5&&b.homes<=30){const pc=pcNorm(b.postcode);out.push({kind:'epc',b,pc,city:cityOf(pc),n:b.subc_prs,addr:tcase(b.address),why:b.subc_prs+' privately rented homes rated D-G'+(b.cannot_reach_c?' ('+b.cannot_reach_c+' cannot reach C)':'')+'; owner not flagged'})}}
+  // scope + locate
+  let scoped=out.filter(s=>scopeCities.includes(s.city));
+  const miss=scoped.filter(s=>!DM.pc[s.pc]).map(s=>s.pc);if(miss.length)await geocode(miss);
+  scoped=scoped.filter(s=>DM.pc[s.pc]);
+  scoped.forEach((s,i)=>{const ll=DM.pc[s.pc];const same=scoped.filter(x=>x.pc===s.pc);const j=same.indexOf(s);s.ll=j>0?[ll[0]+Math.sin(j*2.4)*0.00018*Math.sqrt(j),ll[1]+Math.cos(j*2.4)*0.00028*Math.sqrt(j)]:ll});
+  scoped.sort((a,b)=>RANK[a.kind]-RANK[b.kind]||b.n-a.n);
+  DM.sites=scoped;setStatus('')}
+
+ // ---------- render ----------
+ const passMin=s=>s.kind==='d'||s.kind==='lot'||s.n>=DM.min;
+ function visible(){return DM.sites.filter(s=>DM.show[s.kind]&&passMin(s)&&(!DM.q||[s.addr,s.pc,s.o&&s.o.name,s.why].join(' ').toLowerCase().includes(DM.q)))}
+ function pinIcon(s){const sz=Math.round(Math.min(46,20+Math.sqrt(Math.max(1,s.n))*5));return L.divIcon({className:'',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2],popupAnchor:[0,-sz/2],html:'<div class="dm-pin '+(s.kind==='epc'?'epc':'')+'" style="width:'+sz+'px;height:'+sz+'px;background:'+COL[s.kind]+'">'+(s.n||'?')+'</div>'})}
+ function kpis(){const base=DM.sites.filter(passMin);const k=t=>{const a=base.filter(s=>s.kind===t);return [a.length,a.reduce((x,s)=>x+(s.n||0),0)]};
+  const box=document.querySelector('#dm_kpis');box.innerHTML=['d','lot','s','epc'].map(t=>{const [n,h]=k(t);return '<div class="dm-kpi '+(t==='epc'?'epc ':'')+(DM.show[t]?'':'off')+'" data-t="'+t+'" style="'+(t==='epc'?'':'background:'+COL[t])+'"><b>'+fmt(n)+' sites · '+fmt(h)+' homes</b><span>'+LBL[t]+(DM.show[t]?'':' (hidden: click to show)')+'</span></div>'}).join('');
+  box.querySelectorAll('.dm-kpi').forEach(el=>el.onclick=()=>{DM.show[el.dataset.t]=!DM.show[el.dataset.t];dmDraw(false)})}
+ function dmDraw(fit=true){if(!DM.map)return;kpis();if(DM.layer)DM.map.removeLayer(DM.layer);DM.layer=L.layerGroup();DM.markers={};const vis=visible();
+  // draw weakest first so red sits on top
+  [...vis].reverse().forEach(s=>{const m=L.marker(s.ll,{icon:pinIcon(s),zIndexOffset:{d:3000,lot:2000,s:1000,epc:0}[s.kind]+Math.min(999,s.n),title:LBL[s.kind]+': '+s.addr});m.bindPopup(()=>popup(s),{maxWidth:400});m.on('popupopen',e=>wirePopup(e.popup.getElement(),s));DM.markers[DM.sites.indexOf(s)]=m;DM.layer.addLayer(m)});
+  DM.layer.addTo(DM.map);
+  if(fit&&vis.length){const b=L.latLngBounds(vis.filter(s=>s.kind!=='epc').map(s=>s.ll).concat(vis.length&&!vis.some(s=>s.kind!=='epc')?vis.map(s=>s.ll):[]));if(b.isValid())DM.map.fitBounds(b,{padding:[30,30],maxZoom:14})}
+  side(vis)}
+ function side(vis){const el=document.querySelector('#dm_side');const shown=vis.slice(0,400);
+  el.innerHTML='<h3 style="margin:0 0 4px">'+fmt(vis.length)+' sites, ranked</h3><p class="foot" style="margin:0 0 8px">Red first (owner in insolvency), then forced-sale lots, then strained owners; biggest sites first. Click a row to jump to it.</p>'+
+  (shown.length?shown.map(s=>{const i=DM.sites.indexOf(s);return '<div class="dm-row" data-i="'+i+'" style="border-left-color:'+COL[s.kind]+'"><div class="h"><span><span class="dm-tag" style="background:'+COL[s.kind]+'">'+LBL[s.kind].toUpperCase()+'</span> <span class="dm-n">'+(s.n||'?')+' home'+(s.n===1?'':'s')+'</span></span><span class="foot">'+esc(s.pc)+(s.city?' · '+esc(CITYLBL(s.city)):'')+'</span></div><div><b>'+esc(s.addr||s.pc)+'</b></div>'+(s.o?'<div class="foot">Owner: <b>'+esc(s.o.name)+'</b></div>':'')+'<div class="dm-why">'+esc(s.why||'')+'</div></div>'}).join(''):'<p>No sites match. Try "Strained: all sites" or another city.</p>')+(vis.length>shown.length?'<p class="foot">Showing the first 400; narrow with search or the homes filter.</p>':'');
+  el.querySelectorAll('.dm-row').forEach(r=>r.onclick=()=>{const s=DM.sites[+r.dataset.i];const m=DM.markers[+r.dataset.i];DM.map.setView(s.ll,Math.max(DM.map.getZoom(),16));setTimeout(()=>m&&m.openPopup(),250)})}
+
+ function popup(s){const head='<div class="dm-tag" style="background:'+COL[s.kind]+';font-size:12px">'+LBL[s.kind].toUpperCase()+'</div>';
+  const gmap='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((s.addr||'')+' '+s.pc);
+  if(s.kind==='lot'){const l=s.l,p=s.p;return '<div class="dm-pop">'+head+'<h4>'+esc(s.addr)+'</h4><div><b>'+(s.n||'?')+' home'+(s.n===1?'':'s')+'</b> · guide '+esc(l.guide||'not stated')+(l.auction_date?' · auction '+fmtD(l.auction_date):'')+'</div>'+(p?sfBadge(p):'')+
+   '<h4>Why it is distressed</h4><div>'+esc(s.sl.why)+'</div><div class="foot">How we know: '+esc(l.auctioneer||'auction')+' listing says seller is "'+esc(l.seller_type||'')+'"'+(p&&p.checked_at?', checked '+esc(String(p.checked_at).slice(0,10)):'')+'.</div>'+
+   (p&&p.scope_note?'<div class="foot">'+esc(p.scope_note)+'</div>':'')+
+   '<div style="margin-top:6px">'+(l.url?'<a href="'+esc(l.url)+'" target="_blank" rel="noopener">open lot / legal pack</a> · ':'')+'<a href="'+gmap+'" target="_blank" rel="noopener">map / street view</a></div>'+uwLink(p&&typeof sfSeed==='function'?sfSeed(p):uwLotSeed(l))+
+   '<div class="foot" style="margin-top:4px"><b>Next:</b> download the legal pack, check tenancies and title, then bid or make a pre-auction offer to the auctioneer.</div></div>'}
+  if(s.kind==='epc'){const b=s.b;return '<div class="dm-pop">'+head+'<h4>'+esc(s.addr)+'</h4><div>'+b.homes+' homes in the building · <b>'+b.subc_prs+' privately rented, rated D-G</b> · '+(b.cannot_reach_c||0)+' cannot reach C</div><div class="foot">Not distress: owners must reach EPC C by Oct 2030 (up to £10k per home). Ownership '+((b.company_owners||[]).length?'includes '+esc(b.company_owners.slice(0,3).map(x=>x.owner).join(', ')):'is mostly private individuals (not in the company file)')+'.</div><div style="margin-top:6px"><a href="'+gmap+'" target="_blank" rel="noopener">map / street view</a> · <a href="https://find-energy-certificate.service.gov.uk/find-a-certificate/search-by-postcode?postcode='+encodeURIComponent(s.pc)+'" target="_blank" rel="noopener">energy certificates</a></div></div>'}
+  const o=s.o,A=o.A;
+  const ev=s.kind==='d'?A.ongoing.map(p=>'<li><b>'+esc(p.name)+'</b> (still running)'+(p.start?', started '+fmtD(p.start.date)+' ('+esc(p.start.code)+')':'')+'.<div class="foot">Who sells: '+esc(p.seller)+'</div></li>').join(''):A.S.map(x=>'<li><b>'+x.t+'</b><div class="foot">'+x.d+'</div></li>').join('');
+  const tnos=new Set(s.titles.map(t=>t.title_no));const tch=(D.ownerCharges||[]).filter(c=>c.title_no&&tnos.has(c.title_no)&&/overdue|private|second|bridging/.test(c.flags||''));
+  const units=s.fh&&s.fhHomes>=s.titles.length?'Holds the <b>freehold of a '+s.fhHomes+'-home building</b>':'Holds <b>'+s.n+' title'+(s.n===1?'':'s')+'</b> at this postcode';
+  const b=s.bld[0];
+  return '<div class="dm-pop">'+head+'<h4>'+esc(s.addr)+', '+esc(s.pc)+'</h4><div>'+units+'</div><div>Owner: <b>'+esc(o.name)+'</b> <span class="foot">('+esc(o.company_no||'')+', '+fmt(o.titles||0)+' titles in total)</span></div>'+
+  '<h4>Why it is '+(s.kind==='d'?'distressed':'under strain')+'</h4><ul>'+ev+'</ul><div class="foot">How we know: Companies House '+(s.kind==='d'?'filing history':'charges register / filings')+'. Ownership: HM Land Registry company titles (CCOD). Confirm the current position before acting.</div>'+
+  (tch.length?'<h4>Loans secured on these titles</h4><ul>'+tch.slice(0,4).map(c=>'<li>'+esc((c.lender||'').split(';')[0])+' · '+esc(c.flags||'')+(c.created_on?' · '+fmtD(c.created_on):'')+'</li>').join('')+'</ul>':'')+
+  (b?'<h4>Building</h4><div>'+esc(tcase(b.address))+': '+b.homes+' homes'+(b.subc_prs?' · '+b.subc_prs+' rented D-G':'')+(b.cannot_reach_c?' · '+b.cannot_reach_c+' cannot reach C':'')+(b.median_sale_24m?' · median sale £'+fmt(b.median_sale_24m):'')+'</div>':'')+
+  (s.titles.length?'<details><summary class="foot">'+s.titles.length+' title'+(s.titles.length===1?'':'s')+' here</summary><ul>'+s.titles.slice(0,15).map(t=>'<li class="foot">'+esc(t.title_no)+' · '+esc(t.tenure||'')+' · '+esc(String(t.address||'').slice(0,80))+'</li>').join('')+'</ul></details>':'')+
+  '<div style="margin-top:6px"><a href="#" data-dmo="1">full landlord evidence &rarr;</a> · <a href="'+CH(o.company_no)+(s.kind==='d'?'/insolvency':'/charges')+'" target="_blank" rel="noopener">Companies House</a> · <a href="'+gmap+'" target="_blank" rel="noopener">map / street view</a></div>'+
+  uwLink({city:s.city||'Other',name:s.addr,pc:s.pc,units:s.n,completionMonth:0,prefill_note:'Distressed-owner site from the Distressed blocks map. Homes = titles held at this postcode (or freehold building homes), not a verified sale pack. Confirm what is for sale, price, bed mix, rent and lease offer.'})+
+  '<div class="foot" style="margin-top:4px"><b>Next:</b> '+(s.kind==='d'?'contact the office-holder named in the filing and ask to be on the buyer list for these titles.':'write to the directors with an off-market offer; the charge names the lender if you need to approach them.')+'</div></div>'}
+ function wirePopup(el,s){const a=el&&el.querySelector('a[data-dmo]');if(a)a.onclick=ev=>{ev.preventDefault();cur.area=null;viewMode('assets');pickOwner(s.o)}}
+
+ function dmCsv(){const rows=[['status','homes','address','postcode','city','owner','company_no','why','link']].concat(visible().map(s=>[LBL[s.kind],s.n||'',s.addr,s.pc,s.city?CITYLBL(s.city):'',s.o?s.o.name:'',s.o?s.o.company_no:'',s.why||'',s.kind==='lot'?(s.l.url||''):s.o?CH(s.o.company_no):'']));
+  const csv=rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='distressed_blocks_'+DM.scope.replace(/\s+/g,'_')+'.csv';a.click()}
+ window.dmStart=dmStart;
 })();
 
 /* MARKET_ACCURACY_END */
