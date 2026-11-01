@@ -38,6 +38,24 @@
     return label + ' ' + (yearNote || '') + ': n=' + stat.n + ', ' + band + ' (' + conf + '). Nominal recorded prices, not a surveyor value.';
   }
 
+  function flatStats(pc) {
+    if (!state.summary || !pc) return null;
+    const city = cityForPc(pc);
+    if (!city) return null;
+    const place = state.summary.places[city];
+    const sec = sectorOf(pc);
+    const dist = String(pc).toUpperCase().split(/\s+/)[0];
+    const node = (sec && place.postcode_sectors[sec]) || place.postcode_districts[dist];
+    if (!node) return null;
+    const years = Object.keys(node).filter(function (y) { return node[y] && node[y].F && node[y].F.median != null; }).sort();
+    if (!years.length) return null;
+    const year = years[years.length - 1];
+    const complete = years.filter(function (y) { return y !== String(new Date().getFullYear()); });
+    const use = complete.length ? complete[complete.length - 1] : year;
+    return { city: city, where: (sec && place.postcode_sectors[sec]) ? sec : dist, year: use, median: node[use].F.median, n: node[use].F.n, thin: !!node[use].F.thin };
+  }
+  window.lcPpdFlat = flatStats;
+
   window.lcPpdLine = function (pc) {
     if (!state.summary || !pc) return '';
     const city = cityForPc(pc);

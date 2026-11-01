@@ -41,5 +41,6 @@ header h1, .lc-product b{color:#fff}
 .comp-bar{height:10px;background:#d5e4f2;border-radius:4px;overflow:hidden}
 .comp-bar span{display:block;height:10px;background:#1d4e89}
 #comps_view table td,#comps_view table th{white-space:normal}
+#rr_card{border-top:4px solid #9DC8ED}
 .lc-tools{margin:0 0 10px}
 #map_legend .sw{border-color:#c5d3df}
