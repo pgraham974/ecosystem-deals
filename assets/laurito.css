@@ -38,5 +38,8 @@ header h1, .lc-product b{color:#fff}
 .lc-note{margin:0;padding:12px 24px 20px;background:#021726;color:#d5e4f2;font-size:12px;line-height:1.5}
 .lc-note a{color:#9DC8ED}
 .pipe-empty{margin:8px 4px;padding:8px;background:#fff;border-radius:6px}
+.comp-bar{height:10px;background:#d5e4f2;border-radius:4px;overflow:hidden}
+.comp-bar span{display:block;height:10px;background:#1d4e89}
+#comps_view table td,#comps_view table th{white-space:normal}
 .lc-tools{margin:0 0 10px}
 #map_legend .sw{border-color:#c5d3df}

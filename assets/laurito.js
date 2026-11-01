@@ -52,19 +52,27 @@
       maxBid: 'Unknown until you enter price, rent and costs in underwriting. A guide or asking price is not a bid.',
       sample: ''
     };
-    if (typeof LO === 'undefined' || !LO || !pc) return out;
+    const attachHistory = function () {
+      if (typeof lcPpdLine === 'function' && pc) {
+        const line = lcPpdLine(pc);
+        if (line) out.history = line;
+      }
+    };
+    if (typeof LO === 'undefined' || !LO || !pc) { attachHistory(); return out; }
     let sector = '';
     try { sector = typeof secOf === 'function' ? secOf(pc) : ''; } catch (e) { sector = ''; }
     const district = String(pc).toUpperCase().split(' ')[0];
     const g = (sector && LO.sectors && LO.sectors[sector]) || (LO.districts && LO.districts[district]) || null;
     if (!g || !g.classes) {
       out.asIs = 'Unknown. No Local OMV cohort for ' + (sector || district || 'this postcode') + '.';
+      attachHistory();
       return out;
     }
     const x = g.classes.flat2 || g.classes.house2 || null;
     const where = sector && LO.sectors && LO.sectors[sector] ? sector : district;
     if (!x) {
       out.asIs = 'Unknown. No flat or house cohort for ' + where + '.';
+      attachHistory();
       return out;
     }
     const thin = !!x.sparse || (x.n != null && x.n < 10);
@@ -74,7 +82,8 @@
     } else {
       out.asIs = where + ' as-is sold benchmark ' + money(x.omv) + ' (' + (x.label || 'recorded sales') + '). n=' + x.n + ' retained of ' + (x.n_raw == null ? x.n : x.n_raw) + (thin ? ', thin sample.' : '.') + ' Middle 50% (IQR) ' + iqr + '. Historical transactions, not a surveyor’s value.';
     }
-    out.sample = 'Outlier rule: ' + (x.outlier_method || 'see Local OMV') + '. Geography is the postcode sector or district named above, not a street comp.';
+    out.sample = 'Outlier rule: ' + (x.outlier_method || 'see Local OMV') + '. Geography is the postcode sector or district named above, not a street comp. This short window is not the full Price Paid history.';
+    attachHistory();
     return out;
   }
 
@@ -144,10 +153,12 @@
       '<h4>Why might the seller need to sell?</h4>' + row(band === 'C' ? 'Estimate' : (band === 'U' ? 'Unknown' : 'Fact'), why) +
       '<h4>Evidence</h4>' + row('Fact', esc(sourceName) + (when ? ', ' + esc(String(when).slice(0, 10)) : ', date Unknown') + (sourceUrl ? ' · <a href="' + esc(sourceUrl) + '" target="_blank" rel="noopener">open source</a>' : '')) +
       '<h4>What might it be worth?</h4>' +
-      row('Estimate', '<b>As-is.</b> ' + esc(worth.asIs) + (worth.sample ? ' ' + esc(worth.sample) : '')) +
+      row('Estimate', '<b>As-is, short audited window.</b> ' + esc(worth.asIs) + (worth.sample ? ' ' + esc(worth.sample) : '')) +
+      (worth.history ? row('Estimate', '<b>As-is, Price Paid history.</b> ' + esc(worth.history)) : (pc ? row('Fact', 'The longer Price Paid history for this postcode is on the Comps tab.') : '')) +
       row('Unknown', '<b>Stabilised.</b> ' + esc(worth.stabilised)) +
       row('Unknown', '<b>Break-up.</b> ' + esc(worth.breakup)) +
       row('Unknown', '<b>Maximum bid.</b> ' + esc(worth.maxBid)) +
+      (pc ? '<p><button type="button" class="btn sec" data-comps-pc="' + esc(pc) + '">Land on comps for ' + esc(pc) + '</button></p>' : '<p class="foot">No postcode on this lead, so a local price cannot be attached. Worth stays Unknown.</p>') +
       row('Fact', esc(ons) + ' An exit yield, including 6–6.5%, is an assumption if you type one into underwriting. It is not evidence from these sales.') +
       '<h4>What could we pay?</h4>' + row('Unknown', 'Unknown until price, rent and costs are entered.' + (guide ? ' Listed guide or asking (not a bid): ' + esc(String(guide)) + '.' : '')) +
       '<h4>Who can sell?</h4>' + row('Fact', 'Sale route: <b>' + esc(route) + '</b>. Contact: ' + contact + '.') +

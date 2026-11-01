@@ -1,0 +1,363 @@
+{
+  "retrieved": "2026-11-01",
+  "rows": [
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115",
+      "address": "Apartment 407, 6 Oldham Road, Manchester, Greater Manchester, M4 5DB",
+      "city": "Manchester",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/leasehold-self-contained-fourth-floor-flat-in-manchester/r261022-115",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
+      "address": "20 Lansdown Place, Cheltenham, Gloucestershire, GL50 2HX",
+      "city": "Cheltenham",
+      "status_on_file": "Sold prior",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-grade-ii-listed-mid-terrace-building-in-cheltenham/r261022-177",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153321",
+      "address": "Land at Waterside Gardens, east side of Waters Meeting Road, Bolton, Greater Manchester BL1 8WD",
+      "city": "Bolton",
+      "status_on_file": "Past auction, result unverified",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153321",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.philipjames.co.uk/property-for-sale/didsbury/an-ideal-investment-opportunity-in-prime-didsbury-village-location/",
+      "address": "41\u201343 Moorland Road, Didsbury, Manchester",
+      "city": "Manchester",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.philipjames.co.uk/property-for-sale/didsbury/an-ideal-investment-opportunity-in-prime-didsbury-village-location/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.philipjames.co.uk/property-for-sale/ladybarn/an-excellent-opportunity-to-acquire-a-residential-investment-in-fallowfield/",
+      "address": "81 Mauldeth Road and 115 Egerton Road, Ladybarn, Manchester",
+      "city": "Manchester",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.philipjames.co.uk/property-for-sale/ladybarn/an-excellent-opportunity-to-acquire-a-residential-investment-in-fallowfield/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018",
+      "address": "Flat A-C, 1, 4, 6,  9 - 20, 30 Montpelier Road, Brighton BN1 2LQ",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/flat-a-c-1-4-6-9-20-30-montpelier-road-brighton-bn1-2lq-25018",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016",
+      "address": "11 & 11A Fulham Broadway, London SW6 1AA",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://auctions.savills.co.uk/auctions/20--21-october-2026-244/11--11a-fulham-broadway-london-sw6-1aa-25016",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154",
+      "address": "395 Harrow Road, Maida Hill, London, W9 3NF",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/investment-freehold-mixed-use-mid-terrace-building-in-london/r261022-154",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137",
+      "address": "17-18 St. Marys Place, Southampton, Hampshire, SO14 3HY",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/investment-vacant-freehold-student-investment-opportunity-in-southampton/r261022-137",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113",
+      "address": "8 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-113",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114",
+      "address": "9 Paradise Place, Paradise Road, Plymouth, Devon, PL1 5QU",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-plymouth/r261022-114",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258",
+      "address": "Flat 1- 4 The Waterhouse, Front Street, Houghton Le Spring, Tyne & Wear, DH5 9JQ",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/vacant-freehold-block-of-flats-in-houghton-le-spring/r261022-258",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
+      "address": "11 Lindum Terrace, Doncaster Road, Rotherham, South Yorkshire S65 1NJ",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.btgeddisonspropertyauctions.com/properties/202609281529sq_lbn6-281026/for-auction-rotherham",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226",
+      "address": "82 Sumner Road, Croydon, Greater London, CR0 3LJ",
+      "city": "Other",
+      "status_on_file": "Withdrawn",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/freehold-mid-terrace-building-in-croydon/r261022-226",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200",
+      "address": "51 St. Andrews Road South, Lytham St. Annes, Lancashire, FY8 1PZ",
+      "city": "Other",
+      "status_on_file": "Sold prior",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/investment-leasehold-mid-terrace-building-in-lytham-st-annes/r261022-200",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.hollismorgan.co.uk/property-details/34912703/bristol-city/bristol/x-apartments-everards-court?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "address": "Flat 1 and Flat 3 Everards Court, and Flat 1 Everards Place, 7 John Street, Bristol",
+      "city": "City Of Bristol",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.hollismorgan.co.uk/property-details/34912703/bristol-city/bristol/x-apartments-everards-court?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.hollismorgan.co.uk/property-details/34984357/somerset/somerset/11?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "address": "Former Bank Premises + 3 Flats, 11 Huntspill Road, Highbridge, Somerset",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.hollismorgan.co.uk/property-details/34984357/somerset/somerset/11?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.hollismorgan.co.uk/property-details/34987048/wiltshire/swindon/crombey-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "address": "54 Crombey Street, Swindon, Wiltshire",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.hollismorgan.co.uk/property-details/34987048/wiltshire/swindon/crombey-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://edwardmellor.co.uk/property-for-sale/10171111/",
+      "address": "20a\u201320d Glegside Road and 47a\u201347e Simonswood Lane, Northwood, Kirkby, Liverpool",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://edwardmellor.co.uk/property-for-sale/10171111/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153682",
+      "address": "18 Palatine Road, Blackpool, Lancashire",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.auctionhouse.co.uk/northwest/auction/lot/153682",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://edwardmellor.co.uk/property-for-sale/10169748/",
+      "address": "320/320A Slade Lane, Burnage, Manchester",
+      "city": "Manchester",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://edwardmellor.co.uk/property-for-sale/10169748/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://edwardmellor.co.uk/property-for-sale/10171330/",
+      "address": "69 Lower Bents Lane, Bredbury, Stockport",
+      "city": "Other",
+      "status_on_file": "Status unverified",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://edwardmellor.co.uk/property-for-sale/10171330/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://auction.paulfosh.com/lot/details/b0dbe63d-7e3f-4560-8180-cd5bcd771647",
+      "address": "17 St. Mary's Square, Gloucester, Gloucestershire, GL1 2QT",
+      "city": "Other",
+      "status_on_file": "Sold",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://auction.paulfosh.com/lot/details/b0dbe63d-7e3f-4560-8180-cd5bcd771647",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.cliveemson.co.uk/properties/269/40/",
+      "address": "Wrotham Court, Wrotham Road, Gravesend, Kent, DA11 0QF",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.cliveemson.co.uk/properties/269/40/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.cliveemson.co.uk/properties/269/46/",
+      "address": "144A High Street, Newport, Isle of Wight, PO30 1TY",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.cliveemson.co.uk/properties/269/46/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.cliveemson.co.uk/properties/269/136/",
+      "address": "16-30 Bidborough Ridge, Bidborough, Tunbridge Wells, Kent, TN3 0XD",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.cliveemson.co.uk/properties/269/136/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.cliveemson.co.uk/properties/269/155/",
+      "address": "Carpenters Court, 4A Lewes Road, Bromley, BR1 2RN",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.cliveemson.co.uk/properties/269/155/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/investmentvacant-eleven-leasehold-selfcontained-one-bedroom-flats-in-halifax/r261118-070",
+      "address": "Flats 1-12 (excluding Flat 10), Arcade Royale Apartments, 28 Commercial Street, Halifax, West Yorkshire, HX1 1TD",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/investmentvacant-eleven-leasehold-selfcontained-one-bedroom-flats-in-halifax/r261118-070",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.allsop.co.uk/lot-overview/freehold-shop-and-residential-investment-in-london/c261111-016",
+      "address": "131-133 Whitecross Street, Islington, London, EC1Y 8JL",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.allsop.co.uk/lot-overview/freehold-shop-and-residential-investment-in-london/c261111-016",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.hollismorgan.co.uk/property-details/34771437/bristol-city/bristol/bath-road-4?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "address": "379 Bath Road, Arnos Vale, Bristol",
+      "city": "City Of Bristol",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 404,
+      "note": "The saved snapshot still stands. This status is not a new instruction and not proof of a withdrawal."
+    },
+    {
+      "url": "https://www.hollismorgan.co.uk/property-details/34893143/bath-and-north-east-somerset/bath/new-king-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "address": "36a New King Street, Bath",
+      "city": "Other",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.hollismorgan.co.uk/property-details/34893143/bath-and-north-east-somerset/bath/new-king-street-1?page=1&bid=11&showstc=on&orderby=lot_no+asc&extra_2%21=501%2C502",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.jackson-stops.co.uk/properties/22151803/sales/cheltenham",
+      "address": "53 London Road, Cheltenham, GL52 6HF",
+      "city": "Cheltenham",
+      "status_on_file": "Availability unverified",
+      "checked_at": "2026-11-01",
+      "http": 403,
+      "note": "The saved snapshot still stands. This status is not a new instruction and not proof of a withdrawal."
+    },
+    {
+      "url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/",
+      "address": "47 Clarence Square, Cheltenham, GL50 4JR",
+      "city": "Cheltenham",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://hmt.co.uk/properties/sale/uncategorized/cheltenham/clarence-square-cheltenham-2/",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://www.cgtsales.co.uk/property-details/10711367/-/cheltenham/hatherley-street",
+      "address": "The Tivoli Collection, 37 Hatherley Street, Cheltenham, GL50",
+      "city": "Cheltenham",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://www.cgtsales.co.uk/property-details/10711367/-/cheltenham/hatherley-street",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://search.savills.com/property-detail/gbhmrscls220410",
+      "address": "43 Portland Street, Cheltenham, GL52 2NX",
+      "city": "Cheltenham",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": 200,
+      "final_url": "https://search.savills.com/property-detail/gbhmrscls220410",
+      "note": "HTTP check only. A 200 does not prove the lot is still for sale."
+    },
+    {
+      "url": "https://surecheltenham.co.uk/property/19413373/",
+      "address": "103 London Road, Cheltenham, GL52 6HL",
+      "city": "Cheltenham",
+      "status_on_file": "Advertised for sale",
+      "checked_at": "2026-11-01",
+      "http": null,
+      "error": "TimeoutError",
+      "note": "Could not re-check this URL. Do not treat that as a change in the listing."
+    }
+  ]
+}
