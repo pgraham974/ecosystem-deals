@@ -1,0 +1,42 @@
+/* Laurito Capital chrome. Red, amber and purple stay on A / C / B only. */
+:root{
+  --bg:#f3f6f8;
+  --card:#fff;
+  --ink:#021726;
+  --mut:#4d5c6b;
+  --line:#d5dee6;
+  --acc:#1d4e89;
+  --brand:#021726;
+  --accent:#9DC8ED;
+  --good:#1d4e89;
+  --bad:#c62828;
+  --warn:#b26a00;
+}
+body{font-family:"Outfit","Avenir Next","Century Gothic","Trebuchet MS","Segoe UI",sans-serif}
+header{background:var(--brand);color:#fff;align-items:center}
+header h1, .lc-product b{color:#fff}
+.lc-brand{display:flex;align-items:center;text-decoration:none;color:#fff}
+.lc-brand img{height:54px;width:auto;display:block}
+.lc-product{margin-left:8px;color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.02em;line-height:1.25}
+.lc-product span{display:block;color:#d5e4f2;font-weight:400;font-size:12px;letter-spacing:0}
+#status{color:#d5e4f2}
+.mainnav{border-bottom-color:#c5d3df}
+.mainb.on,.subb.on,.segb.on{background:var(--brand)!important;color:#fff!important}
+.btn{background:var(--brand)}
+.btn.sec{color:var(--brand);border-color:var(--brand)}
+.step.on{background:var(--brand);color:#d7e8f6}
+.score{background:#7f93a6}
+.score.hi{background:#1d4e89}
+.score.mid{background:#4d7ea8}
+.tag.n{background:#e7f1fb;color:#1d4e89}
+.lvl.b{background:#6a1b9a}
+.lvl.x{background:#5b6472}
+.lc-deal{margin-top:12px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#f7fafc}
+.lc-deal h3{margin:0 0 6px;font-size:15px}
+.lc-deal h4{margin:10px 0 2px;font-size:13px}
+.lc-k{display:inline-block;min-width:64px;margin-right:6px;padding:1px 6px;border-radius:8px;background:#e8eef3;color:#33414d;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.lc-note{margin:0;padding:12px 24px 20px;background:#021726;color:#d5e4f2;font-size:12px;line-height:1.5}
+.lc-note a{color:#9DC8ED}
+.pipe-empty{margin:8px 4px;padding:8px;background:#fff;border-radius:6px}
+.lc-tools{margin:0 0 10px}
+#map_legend .sw{border-color:#c5d3df}
