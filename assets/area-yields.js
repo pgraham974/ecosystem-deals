@@ -202,7 +202,7 @@
       if (subject) warning += ' St James House is left out of this mean, because that quote belongs to the asset rather than the area.';
     }
     if (mode === 'average' && state.niyUserOverride) warning += ' You have typed over the mean. Reset to put the mean back.';
-    box.innerHTML = '<h3>Target entry NIY</h3><div class="ctl"><label><input type="radio" name="niy_mode" value="manual"' + (mode === 'manual' ? ' checked' : '') + '> Manual</label><label><input type="radio" name="niy_mode" value="average"' + (mode === 'average' ? ' checked' : '') + '> Use area average</label></div>' +
+    box.innerHTML = '<h3>Yield you want to buy at</h3><div class="ctl"><label><input type="radio" name="niy_mode" value="manual"' + (mode === 'manual' ? ' checked' : '') + '> Manual</label><label><input type="radio" name="niy_mode" value="average"' + (mode === 'average' ? ' checked' : '') + '> Use area average</label></div>' +
       '<label class="dlf"><small>Evidence for ' + esc(city || 'this deal') + '</small><select id="niy_set">' +
       sets.map(function (s) {
         const tag = s.average ? 'mean ' + pct(s.average.mean) + ' (n=' + s.average.n + ')' : 'no average (n=' + s.used.length + ')';
