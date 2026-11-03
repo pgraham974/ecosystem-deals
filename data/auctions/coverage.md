@@ -2,7 +2,7 @@
 
 Checked: 2026-11-03T11:48:15.054Z
 
-Fresh: 86; stale: 29; commercial/other non-residential inspected records excluded: 29.
+Fresh: 86; stale: 0; commercial/other non-residential inspected records excluded: 29.
 
 ## Town counts (fresh, deduplicated)
 - Manchester: 22
@@ -43,3 +43,8 @@ Fresh: 86; stale: 29; commercial/other non-residential inspected records exclude
 - **SVA Property Auctions**: skipped; 0 eligible lots; 0 non-residential excluded. Auction business ceased February 2023; TLS verification fails. Not a live source.
 
 No lot or sold price is fabricated. A starting/opening/current bid is not a guide or sale price. Missing results do not mean no sales occurred. Unavailable-source rows retain their original scraped_at and are labelled stale.
+
+## Pre-release cleanup
+Retired 29 obsolete pre-release rows collected before the classification correction. No sold/withdrawn status or price was inferred. The 86 verified fresh observations and their original scraped_at timestamps are unchanged.
+
+Two individually identified flats were corrected from Blocks to Flats using their primary lot titles and source addresses; this does not create or remove a lot.

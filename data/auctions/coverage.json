@@ -778,7 +778,30 @@
     }
   },
   "total_fresh": 86,
-  "total_stale": 29,
+  "total_stale": 0,
   "commercial_excluded": 29,
-  "duplicates_removed": 0
+  "duplicates_removed": 0,
+  "bootstrap_cleanup": {
+    "retired_rows": 29,
+    "reason": "Retired pre-release rows collected before corrected source classification; they are not represented as live, sold or withdrawn. Current verified fresh observations are unchanged.",
+    "at": "2026-11-03T12:01:39.471Z",
+    "classification_corrections": [
+      {
+        "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685",
+        "original_title": "2 Bedroom Flat",
+        "address": "5 Hamiltonhill Gardens, Flat 1-1, Glasgow, G22 5PR",
+        "from": "Blocks",
+        "to": "Flats",
+        "reason": "An individually identified flat within a block is not a sale of the whole block."
+      },
+      {
+        "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372",
+        "original_title": "2 Bedroom Flat",
+        "address": "27 Allison Street, Flat 1-1, Glasgow, G42 8NP",
+        "from": "Blocks",
+        "to": "Flats",
+        "reason": "An individually identified flat within a block is not a sale of the whole block."
+      }
+    ]
+  }
 }

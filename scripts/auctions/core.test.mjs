@@ -218,3 +218,31 @@ test('zero guide and sold placeholders are null without changing explicit bid va
   assert.equal(p.provenance[0].guide_price, null); assert.equal(p.provenance[0].sold_price, null);
   assert.equal(p.opening_bid, 45000); assert.equal(p.current_bid, 0);
 });
+
+test('mergePrevious retires corrected inferred subtype at same source URL event and title', () => {
+  const address = '10 Example Street, Manchester, M1 2AB';
+  const fresh = lot({ address, title: 'One bedroom residence', residential_subtype: 'Flats', scraped_at: '2026-11-03T10:00:00Z' });
+  for (const residential_subtype of ['Blocks', 'Portfolios']) {
+    const old = lot({ address, title: 'One bedroom residence', residential_subtype, scraped_at: '2026-11-01T10:00:00Z' });
+    const merged = mergePrevious([fresh], [old], { Test: 'live' }, NOW);
+    assert.equal(merged.length, 1); assert.equal(merged.filter(x => x.stale).length, 0);
+    assert.equal(merged[0].residential_subtype, 'Flats'); assert.equal(merged[0].id, fresh.id);
+    assert.equal(merged[0].scraped_at, fresh.scraped_at); assert.equal(merged[0].provenance.length, 2);
+  }
+});
+test('mergePrevious does not retire different explicit title units sharing a source URL', () => {
+  const address = '10 Example Street, Manchester, M1 2AB';
+  const fresh = lot({ address, title: 'Flat1', residential_subtype: 'Flats' });
+  const old = lot({ address, title: 'Flat2', residential_subtype: 'Blocks', scraped_at: '2026-11-01T10:00:00Z' });
+  const merged = mergePrevious([fresh], [old], { Test: 'live' }, NOW);
+  assert.equal(merged.length, 2); assert.equal(merged.filter(x => x.stale).length, 1);
+  assert.equal(merged.find(x => !x.stale).id, fresh.id);
+});
+test('mergePrevious correction identity never crosses event dates or source ownership', () => {
+  const address = '10 Example Street, Manchester, M1 2AB';
+  const fresh = lot({ address, title: 'One bedroom residence', residential_subtype: 'Flats' });
+  const old = lot({ address, title: 'One bedroom residence', residential_subtype: 'Blocks', auction_date: '2026-12-20', scraped_at: '2026-11-01T10:00:00Z' });
+  assert.equal(mergePrevious([fresh], [old], { Test: 'live' }, NOW).length, 2);
+  const differentSource = { ...old, auction_date: fresh.auction_date, source: 'Other', sources: [{ name: 'Other', url: fresh.source_url }] };
+  assert.equal(mergePrevious([fresh], [differentSource], {}, NOW).length, 2);
+});

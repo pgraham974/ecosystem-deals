@@ -48,6 +48,7 @@ function subtype(primary,evidence=''){
  const facts=clean(evidence).split(/(?<=[.!?;])\s+/).filter(s=>!/(?:comparab|similar propert|\bnear\b|nearby|close to|adjacent|opposite|amenit|neighbou?r|surrounding|local area|within the area|potential|scope for|could|may be|subject to|suitable for|add(?:ition)? to.{0,30}portfolio)/i.test(s));
  for(const s of facts){
   if(/\b(?:licensed|licenced|operating|registered|existing|current)\s+(?:\w+[ -]){0,4}HMO\b|\bHMO\s+(?:licen[cs]e|registration)\s+(?:in place|held|current|valid)\b/i.test(s))return 'HMO';
+  if(base)continue; // A flat within a block is not a sale of the block.
   if(/\b(?:this|the) (?:property|building|lot|subjects|accommodation)\b|\b(?:comprises|comprising|consists of|contains)\b/i.test(s)){
    if(mixed(s))return 'Mixed-use';
    if(block(s))return 'Blocks';

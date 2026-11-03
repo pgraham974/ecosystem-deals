@@ -251,7 +251,12 @@ export function mergePrevious(fresh = [], previous = [], coverage = {}, now = ne
     const observed = +new Date(old.scraped_at), age = current - observed;
     const expiry = String(old.status).toLowerCase() === 'sold' ? 730 * DAY : 30 * DAY;
     if (!Number.isFinite(observed) || age > expiry) continue;
-    const present = result.findIndex(x => assetKey(x) === assetKey(old) && (x.auction_date || null) === (old.auction_date || null) && compatible(x, old));
+    const present = result.findIndex(x => {
+      if ((x.auction_date || null) !== (old.auction_date || null)) return false;
+      const correction = !x.stale && x.source_url && x.source_url === old.source_url && sourceOverlap(x, old)
+        && canon(x.title) && canon(x.title) === canon(old.title) && unitKey(x) === unitKey(old);
+      return correction || (assetKey(x) === assetKey(old) && compatible(x, old));
+    });
     if (present >= 0) {
       const freshRow = result[present], merged = combine(old, freshRow);
       result[present] = { ...freshRow, sources: merged.sources, provenance: merged.provenance };

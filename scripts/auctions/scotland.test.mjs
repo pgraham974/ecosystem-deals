@@ -118,3 +118,8 @@ test('potential HMO conversion does not establish current HMO use', async () => 
   const r = await futureRun(futureDescriptionPage('3 Bedroom Flat', 'The property could become a licensed HMO subject to consent.'));
   assert.equal(r.lots[0].residential_subtype, 'Flats');
 });
+
+test('an individually offered flat within a block is not the whole block', async () => {
+  const r=await futureRun(futurePage()+'<div class="property-description"><p>This property forms part of a block of six flats. The building contains six flats.</p></div>');
+  assert.equal(r.lots[0].residential_subtype,'Flats');
+});
