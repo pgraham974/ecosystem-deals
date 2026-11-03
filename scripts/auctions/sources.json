@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "user_agent": "LauritoAuctionsBot/1.0 (+https://github.com/pgrahamLC/ecosystem-deals)",
+  "towns": [
+    "Manchester",
+    "Glasgow",
+    "Edinburgh",
+    "Bristol",
+    "Cheltenham"
+  ],
+  "sources": [
+    {
+      "id": "auction_house_manchester",
+      "name": "Auction House Manchester",
+      "url": "https://www.auctionhouse.co.uk/manchester",
+      "adapter": "auctionhouse",
+      "enabled": true,
+      "entries": [
+        "https://www.auctionhouse.co.uk/manchester",
+        "https://www.auctionhouse.co.uk/manchester/auction/past-auctions"
+      ],
+      "max_pages": 30,
+      "max_details": 120,
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "review_due": "2027-02-01",
+        "status": "public_metadata_only",
+        "note": "Public pages; no published automation restriction found in inspected terms. Not an open-data licence. Only factual lot metadata is retained, no descriptions, images, documents or legal packs. Robots is checked every run. New restrictions fail closed.",
+        "terms_url": "https://www.auctionhouse.co.uk/",
+        "terms_scope": "Inspected site footer and branch pages; no separate website-reuse terms located. Auction transaction conditions are not a reuse licence."
+      }
+    },
+    {
+      "id": "auction_house_southwest",
+      "name": "Auction House South West (Bristol and Gloucestershire)",
+      "url": "https://www.auctionhouse.co.uk/southwest",
+      "adapter": "auctionhouse",
+      "enabled": true,
+      "entries": [
+        "https://www.auctionhouse.co.uk/southwest",
+        "https://www.auctionhouse.co.uk/southwest/auction/past-auctions"
+      ],
+      "max_pages": 30,
+      "max_details": 120,
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "review_due": "2027-02-01",
+        "status": "public_metadata_only",
+        "note": "Public pages; no published automation restriction found in inspected terms. Not an open-data licence. Only factual lot metadata is retained, no descriptions, images, documents or legal packs. Robots is checked every run. New restrictions fail closed.",
+        "terms_url": "https://www.auctionhouse.co.uk/",
+        "terms_scope": "Inspected site footer and branch pages; no separate website-reuse terms located. Auction transaction conditions are not a reuse licence."
+      }
+    },
+    {
+      "id": "auction_house_scotland",
+      "name": "Auction House Scotland",
+      "url": "https://www.auctionhouse.co.uk/scotland",
+      "adapter": "auctionhouse",
+      "enabled": true,
+      "entries": [
+        "https://www.auctionhouse.co.uk/scotland",
+        "https://www.auctionhouse.co.uk/scotland/auction/past-auctions"
+      ],
+      "max_pages": 30,
+      "max_details": 120,
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "review_due": "2027-02-01",
+        "status": "public_metadata_only",
+        "note": "Public pages; no published automation restriction found in inspected terms. Not an open-data licence. Only factual lot metadata is retained, no descriptions, images, documents or legal packs. Robots is checked every run. New restrictions fail closed.",
+        "terms_url": "https://www.auctionhouse.co.uk/",
+        "terms_scope": "Inspected site footer and branch pages; no separate website-reuse terms located. Auction transaction conditions are not a reuse licence."
+      }
+    },
+    {
+      "id": "future",
+      "name": "Future Property Auctions",
+      "url": "https://www.futurepropertyauctions.co.uk/",
+      "adapter": "scotland",
+      "enabled": true,
+      "entries": [
+        "https://www.futurepropertyauctions.co.uk/auctions.asp",
+        "https://www.futurepropertyauctions.co.uk/catalogue_viewall.asp"
+      ],
+      "max_pages": 30,
+      "max_details": 150,
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "review_due": "2027-02-01",
+        "status": "public_metadata_only",
+        "note": "Public pages; no published automation restriction found in inspected terms. Not an open-data licence. Only factual lot metadata is retained, no descriptions, images, documents or legal packs. Robots is checked every run. New restrictions fail closed.",
+        "terms_url": "https://www.futurepropertyauctions.co.uk/buying_terms.asp"
+      }
+    },
+    {
+      "id": "braveheart",
+      "name": "Braveheart Auctions (Edinburgh and Glasgow)",
+      "url": "https://braveheartauctions.co.uk/",
+      "adapter": "scotland",
+      "enabled": true,
+      "entries": [
+        "https://braveheartauctions.co.uk/auctions/",
+        "https://braveheartauctions.co.uk/all-auctions/"
+      ],
+      "max_pages": 30,
+      "max_details": 150,
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "review_due": "2027-02-01",
+        "status": "public_metadata_only",
+        "note": "Public pages; no published automation restriction found in inspected terms. Not an open-data licence. Only factual lot metadata is retained, no descriptions, images, documents or legal packs. Robots is checked every run. New restrictions fail closed.",
+        "terms_url": "https://braveheartauctions.co.uk/terms-conditions/"
+      }
+    },
+    {
+      "id": "allsop",
+      "name": "Allsop",
+      "url": "https://www.allsop.co.uk/auctions/residential-auctions/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Written consent required for extraction and commercial reuse.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required_automation",
+        "terms_url": "https://www.allsop.co.uk/policies-legal/allsop-llp-policies-legal/legal",
+        "evidence": [
+          "You may not use any data gathering or data extraction tools, such as robots, on the Allsop website ... without the prior written permission of Allsop.",
+          "Any other use of Allsop website content requires the prior written permission of Allsop."
+        ],
+        "robots_url": "https://www.allsop.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "savills_auctions",
+      "name": "Savills auctions",
+      "url": "https://auctions.savills.co.uk/past-auctions",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Do not use GPTBot or treat generic access as commercial copying permission.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required_reuse",
+        "terms_url": "https://www.savills.co.uk/footer/terms-and-conditions.aspx",
+        "evidence": [
+          "You may not make a permanent copy of or reproduce this website or any of its contents in any form.",
+          "You may only print or cache temporary copies of the content for your own personal non-commercial use."
+        ],
+        "robots_url": "https://auctions.savills.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "clive_emson",
+      "name": "Clive Emson",
+      "url": "https://www.cliveemson.co.uk/properties/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "No affirmative reuse licence found. Cheltenham example is ground rent, exclude from residential-unit acquisition/yield comps.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "public_access_rights_unresolved",
+        "terms_url": "https://www.cliveemson.co.uk/about-us/privacy-policy/",
+        "evidence": [
+          "Website footer copyright retained. General website scraping/reuse terms not located; privacy policy is not a reuse licence."
+        ],
+        "robots_url": "https://www.cliveemson.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "pugh",
+      "name": "Pugh",
+      "url": "https://www.pugh-auctions.com/property-search",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Business dashboard extraction/republication requires written consent. Research samples do not confer production permission.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "public_access_commercial_consent_required",
+        "terms_url": "https://www.pugh-auctions.com/terms-of-use",
+        "evidence": [
+          "You are permitted to display ... and to download and print a hard copy for your personal use",
+          "use any of the materials on this website for commercial exploitation without our prior written consent",
+          "establish a link to this website ... without ... prior written consent"
+        ],
+        "robots_url": "https://www.pugh-auctions.com/robots.txt"
+      }
+    },
+    {
+      "id": "sdl",
+      "name": "SDL",
+      "url": "https://www.sdlauctions.co.uk/property-auctions/past-auctions/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Specific bot and query-path exclusions plus unresolved general terms; request licensed route from BTG.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "public_access_rights_unresolved",
+        "terms_url": null,
+        "evidence": [
+          "No general website terms/reuse link found in homepage footer. Bidder terms are auction-sale terms, not a scraping licence.",
+          "Homepage says now part of BTG Eddisons Property Auctions."
+        ],
+        "robots_url": "https://www.sdlauctions.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "bond_wolfe",
+      "name": "Bond Wolfe",
+      "url": "https://www.bondwolfe.com/auctions/properties/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "No permission to incorporate catalogue into commercial dashboard; even website linking term requires consent.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "public_access_reuse_restricted",
+        "terms_url": "https://www.bondwolfe.com/website-terms-of-use/",
+        "evidence": [
+          "2.2 The copying or incorporation into any other work ... is strictly prohibited save ... personal use",
+          "2.2.2 ... individual third parties for their personal information ... acknowledge Bond Wolfe",
+          "4.3 You must not create a link to the Website without ... prior written consent."
+        ],
+        "robots_url": "https://www.bondwolfe.com/robots.txt"
+      }
+    },
+    {
+      "id": "barnard_marcus",
+      "name": "Barnard Marcus",
+      "url": "https://www.barnardmarcusauctions.co.uk/auctions/current/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Explicit automated-access ban. Manual licensed research only, no data extraction implementation.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "manual_only_no_automation",
+        "terms_url": "https://www.barnardmarcusauctions.co.uk/terms-and-conditions/",
+        "evidence": [
+          "Barnard Marcus Auctions may only be accessed manually. The use of automated agents, robots, or automated software, other than search engine spiders, to view the site is specifically forbidden.",
+          "You may not attempt to build a copy of our data or reverse engineer our processes.",
+          "You may not publish or reproduce any part of the data or work derived from the data without our specific written permission."
+        ],
+        "robots_url": "https://www.barnardmarcusauctions.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "mark_jenkinson",
+      "name": "Mark Jenkinson",
+      "url": "https://www.markjenkinson.co.uk/property-search",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Permission required for commercial exploitation and linking; deduplicate shared BTG stock, not separate independent auction flow.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "public_access_commercial_consent_required",
+        "terms_url": "https://www.markjenkinson.co.uk/terms-of-use",
+        "evidence": [
+          "use any of the materials on this website for commercial exploitation without our prior written consent",
+          "Terms page currently repeats Eddisons Pugh company terms; preserve source ambiguity rather than assume broader licence."
+        ],
+        "robots_url": "https://www.markjenkinson.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "strettons",
+      "name": "Strettons",
+      "url": "https://www.strettons.co.uk/auctions/current-catalogue/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Written commercial licence needed. Public Gatsby data transport does not grant reuse rights.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "public_access_commercial_licence_required",
+        "terms_url": "https://www.strettons.co.uk/terms-and-conditions/",
+        "evidence": [
+          "You may print off one copy, and may download extracts ... for your personal reference",
+          "You must not use any part of the materials on our website for commercial purposes without obtaining a written licence"
+        ],
+        "robots_url": "https://www.strettons.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "network_auctions",
+      "name": "Network Auctions",
+      "url": "https://www.btgeddisonspropertyauctions.com/our-acquisitions/network-auctions",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Get current BTG scraping/republication permission and canonical source agreement; /terms-of-use returns404.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "migrated_rights_unresolved",
+        "terms_url": null,
+        "evidence": [
+          "networkauctions.co.uk/robots.txt redirects to HTML acquisition page, NOT a valid robots.txt.",
+          "Official destination says Network Auctions joined BTG Eddisons in 2025.",
+          "BTG footer copyright All Rights Reserved; bidder terms and policies links, no general scraping licence verified."
+        ],
+        "robots_url": "https://www.networkauctions.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "iamsold",
+      "name": "iamsold",
+      "url": "https://www.iamsold.co.uk/available-properties/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Do not crawl lots; request licensed feed. Also review acceptable-use policy linked from website terms.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "robots_lot_access_disallowed",
+        "terms_url": "https://www.iamsold.co.uk/website-terms/",
+        "evidence": [
+          "You must not use any part of the content on our site for commercial purposes without obtaining a licence",
+          "Our site must not be framed ... nor may you create a link to any part ... other than the home page."
+        ],
+        "robots_url": "https://www.iamsold.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "eig",
+      "name": "EIG",
+      "url": "https://www.eigpropertyauctions.co.uk/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Explicit robot ban and redistribution restrictions. A normal subscription is not a feed/republishing licence.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "licence_only_no_robots",
+        "terms_url": "https://www.eigpropertyauctions.co.uk/legal/terms-conditions",
+        "evidence": [
+          "PDF terms as at07/01/2022, p2 clause3.1: No part ... may be copied ... or reduced to any electronic medium or machine readable form without prior written consent",
+          "clause3.1: ... not permitted to use Robots to trawl the EIG website to search for data.",
+          "2.5 No sell-on/distribution;2.9 subscription-service use requires written permission;2.10 no website publication free or restricted without written permission."
+        ],
+        "robots_url": "https://www.eigpropertyauctions.co.uk/robots.txt"
+      }
+    },
+    {
+      "id": "countrywide_property_auctions",
+      "name": "Countrywide Property Auctions",
+      "url": "https://www.countrywidepropertyauctions.co.uk/results.php",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Linked directly from auction-site footer; restrictive copyright terms, obtain permission before commercial extraction/reuse.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "terms_url": "https://www.countrywide.co.uk/notices/terms-of-use/",
+        "evidence": [
+          "You must not copy, transmit or store (in whole or in part) the content of this website without our written permission.",
+          "The downloading of material (including all text, graphics, code, files and links) for anything other than private use is strictly prohibited."
+        ]
+      }
+    },
+    {
+      "id": "town_and_country",
+      "name": "Town And Country",
+      "url": "https://www.townandcountrypropertyauctions.co.uk/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Commercial content licence required; unusually restrictive deep-linking term. Internal audit records source links for provenance, not authorisation to republish deep links.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "terms_url": "https://cdn.eigpropertyauctions.co.uk/ams/images/538/oas/WebsiteTermsAndConditions.pdf",
+        "evidence": [
+          "You must not use any part of the content on our site for commercial purposes without obtaining a licence to do so from us or our licensors.",
+          "Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page.",
+          "You may print off one copy, and may download extracts, of any page(s) from our site for your personal use and you may draw the attention of others within your organisation to content posted on our site."
+        ]
+      }
+    },
+    {
+      "id": "bradleys",
+      "name": "Bradleys",
+      "url": "https://www.bradleys-estate-agents.co.uk/pages/auctions",
+      "enabled": false,
+      "coverage_status": "failed",
+      "reason": "[blocked] robots and live page challenged; terms not verified",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "access_blocked",
+        "evidence": []
+      }
+    },
+    {
+      "id": "bruton_knowles",
+      "name": "Bruton Knowles",
+      "url": "https://www.brutonknowles.co.uk/industry-news/property-auction-confirmed-for-3rd-july/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Permission required for reproduction/distribution. Robots allow crawling but do not override this.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "terms_url": "https://www.brutonknowles.co.uk/copyright",
+        "evidence": [
+          "Reproduction, distribution or transmission of information in this website by any means without the prior permission of Bruton Knowles Ltd is prohibited."
+        ]
+      }
+    },
+    {
+      "id": "moore_allen_innocent",
+      "name": "Moore Allen Innocent",
+      "url": "https://www.mooreallen.co.uk/property-auctions",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Commercial extraction/republication permission not granted.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "terms_url": "https://www.mooreallen.co.uk/terms",
+        "evidence": [
+          "Permission is granted to electronically copy and print in hard copy portions of our site solely for your personal use.",
+          "Any other use of materials on our site (including reproduction for purposes other than those noted above and alteration, modification, distribution or republication) without our prior written permission is strictly prohibited."
+        ]
+      }
+    },
+    {
+      "id": "hollis_morgan",
+      "name": "Hollis Morgan",
+      "url": "https://www.hollismorgan.co.uk/auctions/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Personal/non-commercial permission only. Commercial database/dashboard reproduction needs written permission; no express scraping-specific clause identified.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "terms_url": "https://www.hollismorgan.co.uk/terms-of-use/",
+        "evidence": [
+          "You agree not to adapt, alter or create a derivative work from any of the Content on the Website or to use it for any purpose other than for your personal and non-commercial use.",
+          "Content may not be copied, reproduced, republished, downloaded, posted, broadcast or transmitted in any other way."
+        ]
+      }
+    },
+    {
+      "id": "maggs_and_allen",
+      "name": "Maggs And Allen",
+      "url": "https://www.maggsandallen.co.uk/auctions/bristol-auctioneers.html",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Public accessibility does not permit commercial reuse. Personal storage excludes network-connected servers.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "terms_url": "https://www.maggsandallen.co.uk/terms-of-use/",
+        "evidence": [
+          "You agree not to adapt, alter or create a derivative work from any of the Content on the Website or to use it for any purpose other than for your personal and non-commercial use.",
+          "Content may not be copied, reproduced, republished, downloaded, posted, broadcast or transmitted in any other way."
+        ]
+      }
+    },
+    {
+      "id": "bristol_property_auctions_identity_unresolved",
+      "name": "Bristol Property Auctions Identity Unresolved",
+      "url": null,
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "No distinct official domain established from searches; no invented URL or block bypass.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "permission_required",
+        "evidence": []
+      }
+    },
+    {
+      "id": "opa",
+      "name": "Online Property Auction Group / OPA Scotland",
+      "url": "https://www.opagroup.co.uk/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Website terms prohibit aggregation/republication for another website or commercial gain without approval.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "not_enabled",
+        "terms_url": "https://www.opagroup.co.uk/pages/site-terms-conditions"
+      }
+    },
+    {
+      "id": "scotland_property_auction",
+      "name": "Scotland Property Auction",
+      "url": "https://scotlandpropertyauction.co.uk/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "No public lot catalogue found; terms require permission for reproduction.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "not_enabled",
+        "terms_url": "https://scotlandpropertyauction.co.uk/terms-conditions/"
+      }
+    },
+    {
+      "id": "scottish_property_auctions",
+      "name": "Scottish Property Auctions (name unresolved)",
+      "url": null,
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "No distinct official operator verified; Auction House Scotland, Future and OPA are tracked separately.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "not_enabled",
+        "terms_url": null
+      }
+    },
+    {
+      "id": "sva",
+      "name": "SVA Property Auctions",
+      "url": "https://sva-auctions.co.uk/",
+      "enabled": false,
+      "coverage_status": "skipped",
+      "reason": "Auction business ceased February 2023; TLS verification fails. Not a live source.",
+      "policy": {
+        "reviewed_at": "2026-11-03",
+        "status": "not_enabled",
+        "terms_url": null
+      }
+    }
+  ]
+}
