@@ -169,3 +169,10 @@ test('sale status text cannot masquerade as a missing guide price',async()=>{
  assert.match(h.root.innerHTML,/Guide not published/);
  assert.doesNotMatch(h.root.innerHTML,/<strong>Sold prior<\/strong>/);
 });
+
+test('startup view changes preserve the Auctions deep link until user navigation',()=>{
+ const focus=readFileSync(new URL('../../assets/focus.js',import.meta.url),'utf8');
+ assert.ok(focus.includes("const next = btn.getAttribute('data-v')"));
+ assert.ok(focus.includes("next !== 'auctions' && location.hash === '#auctions'"));
+ assert.ok(!focus.includes("else if (mode !== 'auctions' && location.hash === '#auctions')"));
+});

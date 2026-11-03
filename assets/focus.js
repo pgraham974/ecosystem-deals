@@ -66,7 +66,9 @@
       if (!btn || !bar.contains(btn)) return;
       e.preventDefault();
       closeMore();
-      if (typeof viewMode === 'function') viewMode(btn.getAttribute('data-v'));
+      const next = btn.getAttribute('data-v');
+      if (next !== 'auctions' && location.hash === '#auctions') history.replaceState(null, '', location.pathname + location.search);
+      if (typeof viewMode === 'function') viewMode(next);
     });
     const more = document.getElementById('lc_more_btn');
     more.addEventListener('click', function (e) {
@@ -624,7 +626,6 @@
     const wrapped = function (mode) {
       const out = prev.apply(this, arguments);
       if (mode === 'auctions' && location.hash !== '#auctions') history.replaceState(null, '', '#auctions');
-      else if (mode !== 'auctions' && location.hash === '#auctions') history.replaceState(null, '', location.pathname + location.search);
       const run = function () { tidy(mode); };
       if (out && typeof out.then === 'function') return out.then(function (v) { run(); return v; });
       setTimeout(run, 0);
