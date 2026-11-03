@@ -2,7 +2,7 @@
 
 ## Operation
 
-`index.html#auctions` reads `data/auctions/lots.json` and `coverage.json` without a login or browser-to-auctioneer requests. The workflow `.github/workflows/auctions.yml` runs at 00:23, 06:23, 12:23 and 18:23 UTC, plus manual dispatch and collector-code pushes. GitHub may delay scheduled jobs. Schedules only run on the default branch and may need enabling on a fork after merge.
+`index.html#auctions` reads `data/auctions/lots.json` and `coverage.json` without a login or browser-to-auctioneer requests. The workflow `.github/workflows/auctions.yml` runs at 00:23, 06:23, 12:23 and 18:23 UTC, plus manual dispatch and collector-runtime/configuration pushes. Presentation/test-only pushes run checks without needlessly recrawling auctioneers. GitHub may delay scheduled jobs. Schedules only run on the default branch and may need enabling on a fork after merge.
 
 The collector runs on Node 22 using built-ins only. No API keys, passwords, paid accounts or private endpoints. Run:
 

@@ -162,3 +162,10 @@ test('a source placeholder zero guide is unknown, not a zero-pound offer',async(
  assert.match(h.root.innerHTML,/Guide not published/);
  assert.doesNotMatch(h.root.innerHTML,/<strong>£0<\/strong>/);
 });
+
+test('sale status text cannot masquerade as a missing guide price',async()=>{
+ const h=harness({payload:feed([{...lots[0],status:'sold',guide_price:null,guide_price_text:'Sold prior'}])});
+ await h.api.refresh();h.click({aqStatus:'sold'});
+ assert.match(h.root.innerHTML,/Guide not published/);
+ assert.doesNotMatch(h.root.innerHTML,/<strong>Sold prior<\/strong>/);
+});
