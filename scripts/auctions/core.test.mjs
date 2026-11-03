@@ -146,7 +146,7 @@ test('studios and explicit residential development/conversion require no guessed
   assert.equal(norm({ title: 'Residential development site', property_type: 'Land' }).lot.residential_subtype, 'Development');
   assert.equal(norm({ title: 'Conversion to residential', property_type: 'Development' }).lot.residential_subtype, 'Development');
   assert.equal(norm({ title: 'Building plot', property_type: 'Land', residential_verified: true }).lot.residential_subtype, 'Development');
-  assert.equal(norm({ title: 'Commercial development', property_type: 'Development' }).reason, 'unknown_type');
+  assert.equal(norm({ title: 'Commercial development', property_type: 'Development' }).reason, 'commercial');
 });
 test('metadata whitelist excludes descriptions/images and IDs are stable per asset/event', () => {
   const first = lot({ description: 'Private copied paragraph', images: ['photo.jpg'], arbitrary: 'untrusted' });
@@ -174,4 +174,47 @@ test('public lot page with auth modal allowed, login wall still blocked', async 
   assert.equal((await h.client('https://a.test/lot')).includes('Lot 1'), true);
   const wall = harness('', {'/lot':'<title>Login required</title><form><input type="password">Please log in to continue</form>'});
   await assert.rejects(wall.client('https://a.test/lot'), {code:'CHALLENGE'});
+});
+
+test('original ground-rent and commercial interests override inferred residential labels', () => {
+  for (const residential_subtype of ['Blocks', 'Flats', 'Houses']) {
+    assert.equal(norm({ title: '10 Example Street', lot_type: 'Freehold ground rents over 2 flats', residential_subtype }).reason, 'commercial');
+    assert.equal(norm({ title: 'Named block: Example House', lot_type: 'Ground rent only interest', residential_subtype }).reason, 'commercial');
+    assert.equal(norm({ title: '10 Example Street', lot_type: 'Commercial office', residential_subtype }).reason, 'commercial');
+    assert.equal(norm({ title: 'Commercial office', lot_type: 'Houses', residential_subtype }).reason, 'commercial');
+    assert.equal(norm({ title: '10 Example Street', lot_type: 'Agricultural land', residential_subtype }).reason, 'commercial');
+  }
+  assert.equal(norm({ title: 'Freehold ground rents over a named block', lot_type: 'Blocks', residential_subtype: 'Blocks' }).reason, 'commercial');
+  assert.equal(norm({ title: 'Whole block of 2 flats', lot_type: 'Block of flats', residential_subtype: 'Blocks' }).lot.residential_subtype, 'Blocks');
+});
+test('explicit title unit identifiers distinguish same-building lots and stable IDs', () => {
+  const address = '10 Example Street, Manchester, M1 2AB';
+  const a = lot({ address, title: 'Flat1', property_type: 'Flat' });
+  const b = lot({ address, title: 'Flat2', property_type: 'Flat' });
+  assert.equal(dedupeLots([a, b]).length, 2);
+  assert.equal(a.id === b.id, false);
+  const variant = lot({ address, title: 'Bright investment apartment 1', property_type: 'Apartment' });
+  assert.equal(a.id, variant.id);
+  assert.equal(dedupeLots([a, variant]).length, 1);
+  const explicit = lot({ address: 'Flat 1, ' + address, title: 'Bright investment apartment 1', property_type: 'Apartment' });
+  const marketing = lot({ address: 'Flat 1, ' + address, title: 'Investment opportunity', property_type: 'Apartment' });
+  assert.equal(explicit.id, marketing.id);
+  assert.equal(dedupeLots([explicit, marketing]).length, 1);
+});
+test('actual whole-block and individual-flat interests never merge at same building', () => {
+  const address = '10 Example Street, Manchester, M1 2AB';
+  const block = lot({ address, title: 'Whole block of flats', lot_type: 'Block of flats', residential_subtype: 'Blocks' });
+  const flat = lot({ address, title: 'Flat1', lot_type: 'Flat', residential_subtype: 'Flats' });
+  const unnumbered = lot({ address, title: 'Individual leasehold flat', lot_type: 'Flat', residential_subtype: 'Flats' });
+  assert.equal(dedupeLots([block, flat, unnumbered]).length, 3);
+  assert.equal(block.id === flat.id, false);
+  assert.equal(block.id === unnumbered.id, false);
+  assert.equal(flat.id === unnumbered.id, false);
+});
+
+test('zero guide and sold placeholders are null without changing explicit bid values', () => {
+  const p = lot({ guide_price: 0, sold_price: '£0', opening_bid: 45000, current_bid: 0 });
+  assert.equal(p.guide_price, null); assert.equal(p.sold_price, null);
+  assert.equal(p.provenance[0].guide_price, null); assert.equal(p.provenance[0].sold_price, null);
+  assert.equal(p.opening_bid, 45000); assert.equal(p.current_bid, 0);
 });

@@ -135,3 +135,23 @@ test('shared grade labels and colors are used for evidenced feed grades',async()
   const h=harness({payload:feed([{...lots[0],grade:'B',grade_evidence:'Verified instruction'}]),sharedGrade:{label:g=>'Shared '+g,color:()=> '#6a1b9a'}});await h.api.refresh();
   for(const text of ['Shared B','--aq-grade:#6a1b9a','Verified instruction'])assert.ok(h.root.innerHTML.includes(text));
 });
+
+// Full-page QA caught the redesign's separate navigation and descriptive lot types.
+test('redesign keeps Auctions in its actual primary navigation',()=>{
+  const focus=readFileSync(new URL('../../assets/focus.js',import.meta.url),'utf8');
+  assert.ok(focus.includes("['auctions', 'Auctions']"));
+  assert.ok(focus.includes("screenHost().hidden = mode === 'auctions'"));
+  assert.ok(focus.includes("viewMode(location.hash === '#auctions' || window.lcAuctionsActive ? 'auctions' : 'assets')"));
+  new vm.Script(focus);
+});
+test('descriptive auctioneer lot types filter by the canonical residential subtype',()=>{
+  const {api}=harness();
+  const row={...lots[0],lot_type:'2 Bed Top Floor Apartment',residential_subtype:'Flats'};
+  assert.deepEqual(ids(api.filtered([row],{...base,type:'Flats'})),['one']);
+});
+test('opening bids are labelled separately and never rendered as a guide',async()=>{
+  const h=harness({payload:feed([{...lots[0],guide_price:null,opening_bid:123000}])});
+  await h.api.refresh();
+  assert.match(h.root.innerHTML,/Opening bid, not guide/);
+  assert.match(h.root.innerHTML,/Guide not published/);
+});

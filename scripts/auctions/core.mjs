@@ -129,11 +129,19 @@ const statusOf = value => {
 };
 function subtypeOf(raw) {
   const type = clean(raw.residential_subtype || raw.lot_type || raw.property_type || raw.type), title = clean(raw.title), desc = clean(raw.description);
+  const originalTypes = [raw.lot_type, raw.property_type, raw.type].map(clean).filter(Boolean);
+  const original = originalTypes.join(' ') + ' ' + title;
+  const factualType = clean(raw.lot_type || raw.type || raw.property_type);
   const t = type + ' ' + title, all = t + ' ' + desc;
-  if (/ground[ -]?rents?|freehold reversion|freehold interest (?:only|subject to.*long lease)/i.test(t)) return { reason: 'commercial' };
+  // Canonical adapter labels must never erase the original legal interest/type.
+  if (/ground[ -]?rents?|freehold reversion|freehold interest (?:only|subject to.*long lease)/i.test(original)) return { reason: 'commercial' };
   const consent = /(?:planning (?:permission|consent)|consent|permission)\s+(?:has been |is |was )?(?:granted|approved)|(?:granted|approved)\s+(?:residential )?planning|permitted development rights/i.test(all) && /residential|dwellings?|flats?|houses?|apartments?|homes?|conversion/i.test(all);
   const residential = /residential|houses?|townhouses?|town houses?|flats?|apartments?|bungalows?|maisonettes?|studios?|hmo|dwellings?|homes?/i.test(t);
   const explicitDevelopment = raw.residential_verified === true || /residential (?:development|conversion)|(?:development|conversion) (?:for|to|of) (?:residential|flats?|houses?|apartments?|dwellings?)/i.test(t) || /^Development$/i.test(raw.residential_subtype || '');
+  const originalMixed = /mixed[ -]?use|(?:shop|retail|office|commercial).{0,60}(?:and|with|plus|over|above).{0,30}(?:flat|apartment|residential)/i.test(original);
+  const pureCommercialOriginal = [factualType, title].some(value => /warehouse|industrial|commercial|retail|offices?|shops?|public house|pub|restaurant|hotel/i.test(value) && !/residential|flats?|apartments?|studios?|hmo|dwellings?|mixed[ -]?use/i.test(value));
+  if (pureCommercialOriginal && !originalMixed && !consent && raw.residential_verified !== true && !/residential (?:development|conversion)|conversion (?:for|to) (?:residential|flats?|apartments?)/i.test(original)) return { reason: 'commercial' };
+  if (/\bland\b|agricultural|garages?|parking|car park|paddock/i.test(factualType) && !consent && raw.residential_verified !== true && !/residential (?:development|conversion)|conversion (?:for|to) (?:residential|flats?|apartments?)/i.test(original)) return { reason: 'commercial' };
   if (/mixed[ -]?use/i.test(t) || (/commercial|shops?|retail|offices?/i.test(t) && residential && /(?:and|with|plus|over|above)/i.test(t))) return { type: 'Mixed-use' };
   if (/land|agricultural|garages?|parking|car park|paddock/i.test(type || title)) return consent || explicitDevelopment ? { type: 'Development' } : { reason: 'commercial' };
   if (/warehouse|industrial|commercial|retail|offices?|shops?|pub(?:lic house)?|restaurant|hotel/i.test(type || title) && !residential) return consent ? { type: 'Development' } : { reason: 'commercial' };
@@ -164,8 +172,8 @@ export function normalizeLot(raw, { source, now = new Date() } = {}) {
   if (!grade && forcedURL && !/potential|possible|may |might |could |not instructed|no receiver/i.test(forced) && /instructed by (?:the |a |an )?(?:[\w &.'-]+ )?(?:receivers?|lenders?|mortgagees?)\b|on (?:the )?instructions of (?:the |a |an )?(?:[\w &.'-]+ )?(?:receivers?|lenders?|mortgagees?)\b/i.test(forced)) { grade = 'B'; grade_evidence = forced; grade_evidence_url = forcedURL; }
   const scraped_at = dateISO(raw.scraped_at || now); if (!scraped_at) return { lot: null, reason: 'invalid' };
   const lot = { address, postcode, town, city: town, residential_subtype: subtype.type, lot_type: clean(raw.lot_type || raw.property_type || raw.type || raw.title), property_type: subtype.type, title: clean(raw.title) || address, status, auction_date: auctionISO?.slice(0, 10) || null, source: sourceName, source_url, sources: [{ name: sourceName, url: source_url }], scraped_at, stale: false,
-    guide_price: money(raw.guide_price), guide_price_text: clean(raw.guide_price_text).slice(0, 160) || null, opening_bid: money(raw.opening_bid), current_bid: money(raw.current_bid), sold_price: money(raw.sold_price), grade, grade_evidence, grade_evidence_url, grade_verified: !!grade,
-    provenance: [{ source: sourceName, source_url, scraped_at, status, auction_date: auctionISO?.slice(0, 10) || null, guide_price: money(raw.guide_price), opening_bid: money(raw.opening_bid), current_bid: money(raw.current_bid), sold_price: money(raw.sold_price) }] };
+    guide_price: money(raw.guide_price) || null, guide_price_text: clean(raw.guide_price_text).slice(0, 160) || null, opening_bid: money(raw.opening_bid), current_bid: money(raw.current_bid), sold_price: money(raw.sold_price) || null, grade, grade_evidence, grade_evidence_url, grade_verified: !!grade,
+    provenance: [{ source: sourceName, source_url, scraped_at, status, auction_date: auctionISO?.slice(0, 10) || null, guide_price: money(raw.guide_price) || null, opening_bid: money(raw.opening_bid), current_bid: money(raw.current_bid), sold_price: money(raw.sold_price) || null }] };
   lot.id = stableId(assetKey(lot) + '|' + (lot.auction_date || 'undated'));
   return { lot, reason: null };
 }
@@ -178,11 +186,26 @@ function premiseKey(l) {
   address = address.replace(/\b(?:manchester|glasgow|edinburgh|bristol|cheltenham)\s*[,;\s]*$/i, '').replace(/[,;\s]+$/g, '');
   return canon(address);
 }
-const assetKey = l => premiseKey(l) + '|' + canon(l.postcode);
+function unitKey(l) {
+  const units = [];
+  for (const value of [l.address, l.title]) {
+    for (const m of clean(value).matchAll(/\b(?:flat|apartment|apt|unit|maisonette)\s*#?\s*(\d+[a-z]?(?:[-/]\d+[a-z]?)?|[a-z])\b/gi)) units.push(m[1].toLowerCase().replace(/^0+(?=\d)/, ''));
+    for (const m of clean(value).matchAll(/\b\d{1,2}f\d{1,2}\b/gi)) units.push(m[0].toLowerCase());
+  }
+  return [...new Set(units)].sort().join('&');
+}
+function interestKey(l) {
+  const type = clean(l.residential_subtype || l.property_type || l.lot_type);
+  if (/^Blocks$/i.test(type) || /\bblock of (?:flats|apartments|\d+)|\b(?:whole|entire) (?:block|building)/i.test(l.title || '')) return 'block';
+  if (/^Flats$/i.test(type) || unitKey(l)) return 'flat';
+  return '';
+}
+const assetKey = l => premiseKey(l) + '|' + canon(l.postcode) + '|' + unitKey(l) + '|' + interestKey(l);
 const sourceNames = l => new Set((l.sources || [{ name: l.source }]).map(s => s.name));
 const sourceOverlap = (a, b) => [...sourceNames(a)].some(s => sourceNames(b).has(s));
 const distinct = list => [...new Map(list.filter(Boolean).map(x => [JSON.stringify(x), x])).values()];
 function compatible(a, b) {
+  if (unitKey(a) !== unitKey(b) || interestKey(a) !== interestKey(b)) return false;
   if (!a.title || !b.title || canon(a.title) === canon(b.title)) return true;
   // Different marketing titles are safe only with the same full numbered premise/street.
   const fullPremise = x => /\b\d+[a-z]?(?:[-/]\d+[a-z]?)?\s+[\w.' -]+\b(?:street|road|avenue|lane|drive|crescent|place|terrace|way|court|close|gardens|square|mews|park|quay|st|rd|ave)\b/i.test(x.address) && !/\b(?:land|ground rents?|parking|garage|freehold interest|leasehold interest|reversion)\b/i.test(x.title + ' ' + x.address);

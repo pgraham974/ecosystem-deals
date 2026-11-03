@@ -5,6 +5,7 @@
   const PRIMARY = [
     ['assets', 'Find'],
     ['distress', 'Leads'],
+    ['auctions', 'Auctions'],
     ['deal', 'Deal'],
     ['comps', 'Comps']
   ];
@@ -18,7 +19,7 @@
     ['overview', 'Overview']
   ];
   const COPY = {
-    assets: ['Find', 'Where to look', 'Manchester, Cheltenham and Bristol. Open a town, then a lead, then a deal.'],
+    assets: ['Find', 'Where to look', 'Manchester, Cheltenham, Bristol and Edinburgh. Open a town, then a lead, then a deal.'],
     distress: ['Leads', 'Who has to sell', 'A is a live insolvency. B is a lender or receiver sale. C is a watchlist, not a forced sale.'],
     sales: ['Leads', 'For sale now', 'Checked listings only. An empty list is not proof that nothing is for sale.'],
     deal: ['Deal', 'The decision', 'Rent, operating income, the NIY you are using, the maximum bid, and the return.'],
@@ -124,7 +125,7 @@
 
   function findCounts() {
     const sites = (window.DM && DM.sites) || [];
-    const towns = [['Manchester', 'Manchester'], ['Cheltenham', 'Cheltenham'], ['City Of Bristol', 'Bristol']];
+    const towns = [['Manchester', 'Manchester'], ['Cheltenham', 'Cheltenham'], ['City Of Bristol', 'Bristol'], ['Edinburgh', 'Edinburgh']];
     if (!sites.length) return [];
     return towns.map(function (t) {
       return {
@@ -151,7 +152,7 @@
     ];
   }
 
-  const YIELD = { Manchester: '…', Cheltenham: '…', Bristol: '…' };
+  const YIELD = { Manchester: '…', Cheltenham: '…', Bristol: '…', Edinburgh: 'Not loaded' };
   let dealStep = 0;
 
   function compact(n) {
@@ -205,7 +206,7 @@
   }
 
   function paintFind() {
-    const towns = [['Manchester', 'Manchester'], ['Cheltenham', 'Cheltenham'], ['City Of Bristol', 'Bristol']];
+    const towns = [['Manchester', 'Manchester'], ['Cheltenham', 'Cheltenham'], ['City Of Bristol', 'Bristol'], ['Edinburgh', 'Edinburgh']];
     const host = screenHost();
     host.innerHTML = '<p class="lc-kicker">Find</p><h1>Choose a town</h1><p class="lc-purpose">Tap a town to see who has to sell there.</p><div class="ios-cities">' +
       towns.map(function (t) {
@@ -225,6 +226,8 @@
   }
 
   function paintScreen(mode) {
+    screenHost().hidden = mode === 'auctions';
+    if (mode === 'auctions') { document.body.classList.remove('ios-find', 'ios-deal'); markNav(mode); return; }
     if (mode === 'assets') return paintFind();
     document.body.classList.remove('ios-find');
     if (mode === 'deal') {
@@ -598,7 +601,7 @@
     if (mode === 'distress') foldLeads();
     if (mode === 'deal') shapeDeal();
     if (mode === 'assets') foldStatic();
-    clipLong(document.getElementById(mode + '_view'));
+    if (mode !== 'auctions') clipLong(document.getElementById(mode + '_view'));
   }
 
   function hook(name, after) {
@@ -620,6 +623,8 @@
     const prev = viewMode;
     const wrapped = function (mode) {
       const out = prev.apply(this, arguments);
+      if (mode === 'auctions' && location.hash !== '#auctions') history.replaceState(null, '', '#auctions');
+      else if (mode !== 'auctions' && location.hash === '#auctions') history.replaceState(null, '', location.pathname + location.search);
       const run = function () { tidy(mode); };
       if (out && typeof out.then === 'function') return out.then(function (v) { run(); return v; });
       setTimeout(run, 0);
@@ -665,7 +670,7 @@
       if (view) view.classList.add('hidden');
       if (find) find.classList.remove('hidden');
     }
-    viewMode('assets');
+    viewMode(location.hash === '#auctions' || window.lcAuctionsActive ? 'auctions' : 'assets');
   }, 0);
   let tries = 0;
   const waitSites = setInterval(function () {

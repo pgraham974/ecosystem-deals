@@ -31,7 +31,8 @@ function has(n,c) { return (n.a.class||'').split(/\s+/).includes(c); }
 function first(n,p) { return nodes(n,p)[0]; }
 function money(s) { const m=decode(s).match(/£\s*([\d,]+(?:\.\d{1,2})?)/);return m?Number(m[1].replace(/,/g,'')):null; }
 function dateISO(s) {
-  let m=String(s).match(/\b(\d{1,2})\/(\d{1,2})\/(20\d{2})\b/);if(!m)return null;
+  let m=String(s).match(/\b(\d{1,2})\/(\d{1,2})\/(20\d{2})\b/);
+  if(!m){const n=String(s).match(/\b(\d{1,2})(?:st|nd|rd|th)?\s+(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(20\d{2})\b/i);if(!n)return null;const months=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];m=[n[0],n[1],String(months.indexOf(n[2].slice(0,3).toLowerCase())+1),n[3]];}
   const y=+m[3],mo=+m[2],d=+m[1],dt=new Date(Date.UTC(y,mo-1,d));return dt.getUTCFullYear()===y&&dt.getUTCMonth()===mo-1&&dt.getUTCDate()===d?`${y}-${String(mo).padStart(2,'0')}-${String(d).padStart(2,'0')}`:null;
 }
 function postcode(s) { return String(s).toUpperCase().match(/\b(?:GIR\s?0AA|[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2})\b/)?.[0].replace(/\s*(\d[A-Z]{2})$/,' $1')||null; }
@@ -78,7 +79,10 @@ function detail(html, seed) {
   const dateNode=all.find(n=>has(n,'auction-date'));
   const end=headerLis.map(content).find(x=>/^(?:Bidding Ends|Auction Ends)/i.test(x));
   const opens=headerLis.map(content).find(x=>/^Bidding Opens/i.test(x));
-  const date=dateISO(end||'')||dateISO(dateNode?content(dateNode):'');
+  const summaryHeading=all.find(n=>n.tag==='h4'&&/^Guide Price.{0,80}(?:For sale via|For sale by)/i.test(content(n)));
+  const closing=summaryHeading?content(summaryHeading).match(/\bending(?:\s+on)?\s+(.{0,80})/i)?.[1]:null;
+  const closingDate=dateISO(closing||'');
+  const date=dateISO(end||'')||dateISO(dateNode?content(dateNode):'')||closingDate;
   const typeList=guideNode?all.find(n=>n.tag==='ul'&&n.children.some(c=>typeof c!=='string'&&c.tag==='li'&&/Bedrooms|Tenure/.test(content(c)))):null;
   // No body descriptions or bidding modal text are stored or used as status evidence.
   let type=typeList?nodes(typeList,n=>n.tag==='li').map(content).filter(x=>!/Tenure|Bedrooms/i.test(x)).join(' '):'';
@@ -88,9 +92,10 @@ function detail(html, seed) {
     const summary=html.match(/<h[1-6][^>]*>\s*Description\s*<\/h[1-6]>\s*<p[^>]*>([\s\S]*?)<\/p>/i)?.[1];
     if(summary)type=subtype(text(summary))||(commercial(text(summary))?'Commercial':'');
   }
-  const evidence=[guide,...headerLis.map(content)].filter(Boolean).join(' | ');
+  const saleHeading=all.find(n=>n.tag==='span'&&/^For Sale By Auction\s*\|/i.test(content(n))&&content(n).length<140);
+  const evidence=[guide,...headerLis.map(content),saleHeading?content(saleHeading):''].filter(Boolean).join(' | ');
   const explicit=status(evidence), sold=evidence.match(/\bSold for\s*:?\s*(£[\d,.]+)/i);
-  return {address,postcode:postcode(address),guide_price:money(guide),guide_price_text:guide||null,auction_date:date,status:explicit,sold_price:sold?money(sold[1]):null,type,opens_only:!!opens&&!end&&!dateNode};
+  return {address,postcode:postcode(address),guide_price:money(guide),guide_price_text:guide||null,auction_date:date,status:explicit,sold_price:sold?money(sold[1]):null,type,opens_date:dateISO(opens||''),opens_only:!!opens&&!end&&!dateNode&&!closingDate};
 }
 /** Return partial observations. Null/ambiguous statuses are deliberately retained for parent validation. */
 export async function collect({get,source,now}) {
@@ -150,7 +155,7 @@ export async function collect({get,source,now}) {
     if(!sub){unknown++;continue;}
     const historical=seed.kind==='results';
     if(d&&historical&&d.auction_date&&seed.auction_date&&d.auction_date!==seed.auction_date)err(`Detail date differs from historical result ${seed.source_url}; result event date/amount retained.`);
-    const finalStatus=historical?seed.status:(d?.status||seed.status);
+    const finalStatus=historical?seed.status:(d?.opens_only&&d?.opens_date&&d.opens_date>stamp.slice(0,10)?'upcoming':(d?.status||seed.status));
     const finalGuide=historical?seed.guide_price:(d?.guide_price??seed.guide_price);
     if(!historical&&!d?.auction_date)err(`Current auction date unverified ${seed.source_url}`);
     if(d?.opens_only)err(`Only bidding-opens date public in static HTML ${seed.source_url}; auction_date left null rather than treating an opening date as the auction end.`);

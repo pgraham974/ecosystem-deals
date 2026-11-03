@@ -22,7 +22,7 @@ test('commercial excluded; mixed-use, blocks and residential development retaine
 test('opening-only online date remains null; preserve numbered header address',async()=>{
  const online='https://online.auctionhouse.co.uk/lot/redirect/123';
  const r=await run({[base]:card(1,'3 Bed House').replace(lot(1),online),[online]:`<meta property="og:title" content="High Street, Manchester, M1 1AA - Online Auctions"><nav><li>Unsold Lots</li></nav><div id="lotnav"><ul><li>For Sale By Unconditional Online Auction</li><li>Guide Price*: £150,000</li><li>Bidding Opens 23/11/2026 13:00</li></ul><p><b>1 High Street, Manchester, M1 1AA</b></p></div>`});
- assert.equal(r.lots[0].address,'1 High Street, Manchester, M1 1AA');assert.equal(r.lots[0].status,'available');assert.equal(r.lots[0].auction_date,null);
+ assert.equal(r.lots[0].address,'1 High Street, Manchester, M1 1AA');assert.equal(r.lots[0].status,'upcoming');assert.equal(r.lots[0].auction_date,null);
 });
 test('discovered pagination only; cap and failures explicitly partial',async()=>{
  const r=await run({[base]:card(1,'House')+'<a href="?page=2">2</a><a href="/search-results?page=3">restricted</a>'},{max_pages:1,max_details:0});assert.equal(r.pages,1);assert.ok(r.errors.some(x=>x.includes('max_pages')));assert.ok(r.errors.some(x=>x.includes('max_details')));
@@ -31,4 +31,20 @@ test('discovered pagination only; cap and failures explicitly partial',async()=>
 test('access block and unsafe entries never presented as complete',async()=>{
  const r=await run({[base]:'<title>Just a moment...</title>'});assert.equal(r.lots.length,0);assert.ok(r.errors.some(x=>x.includes('Access block')));
  const x=await run({}, {entries:['https://www.auctionhouse.co.uk/search-results']});assert.equal(x.pages,0);assert.ok(x.errors.some(x=>x.includes('Rejected unsafe')));
+});
+
+test('explicit property sale heading supplies available status without reading navigation prose',async()=>{
+ const r=await run({[base]:card(1,'2 Bed Flat'),[lot(1)]:'<span class="d-block mb-0 fw-medium">For Sale By Auction | 14:00, 26 November 2026</span>'+detail()});
+ assert.equal(r.lots[0].status,'available');
+ assert.equal(r.lots[0].auction_date,'2026-11-26');
+ assert.equal(r.successful_pages,1);
+});
+
+test('explicit ending date in the primary lot heading is not its earlier opening date',async()=>{
+ const online='https://online.auctionhouse.co.uk/lot/redirect/123';
+ const html='<nav id="lotnav"><li>For Sale By Unconditional Online Auction</li><li>Guide Price*: £145,000</li><li>Bidding Opens 16/11/2026 13:00</li><b>1 High Street, Manchester, M1 1AA</b></nav><h4>Guide Price £145,000 (plus fees). For sale via National Online Auction on 16th November 2026 at 13:00pm, ending 17th November 2026 at 11:00am.</h4>';
+ const r=await run({[base]:card(1,'Flat').replace(lot(1),online),[online]:html});
+ assert.equal(r.lots[0].auction_date,'2026-11-17');
+ assert.equal(r.lots[0].status,'available');
+ assert.equal(r.lots[0].sold_price,null);
 });

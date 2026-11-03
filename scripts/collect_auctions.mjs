@@ -24,6 +24,7 @@ export async function run({ root = path.resolve(path.dirname(fileURLToPath(impor
       policy: source.policy, errors: [] };
     sources.push(row);
     if (!source.enabled) { row.status = source.coverage_status || 'skipped'; continue; }
+    console.log('Collecting '+source.name+' at '+new Date().toISOString());
     try {
       if (!source.policy || source.policy.status !== 'public_metadata_only') throw new Error('Policy approval/review missing; collection disabled.');
       if (!source.policy.review_due || now.slice(0, 10) > source.policy.review_due) throw new Error('Policy review expired; re-review terms before enabling collection.');
@@ -47,10 +48,12 @@ export async function run({ root = path.resolve(path.dirname(fileURLToPath(impor
         else if (normalized.reason === 'out_of_area') row.out_of_area_excluded++;
         else row.unknown_excluded++;
       }
+      if (row.unknown_excluded) row.errors.push(row.unknown_excluded+' records omitted because type/status/fields could not be verified.');
       row.status = row.errors.length ? (row.successful_pages ? 'partial' : 'failed') : 'live';
       row.reason = row.errors.length ? row.errors.join('; ') : 'Public factual metadata collected. No open-data licence claimed; see policy scope.';
       if (row.successful_pages === 0) { row.status = 'failed'; row.reason = row.reason || 'No catalogue/result pages successfully read.'; }
     } catch (e) { row.status = 'failed'; row.reason = String(e.message || e); row.errors.push(row.reason); }
+    console.log(source.name+': '+row.status+', '+row.lot_count+' eligible lots, '+row.commercial_excluded+' commercial exclusions.');
   }
   const unique = dedupeLots(fresh);
   const retained = mergePrevious(unique, previous.lots || [], { sources }, now);

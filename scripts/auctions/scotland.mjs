@@ -42,42 +42,49 @@ function subtype(s){
 }
 const commercial=s=>/\bcommercial\b|\bretail\b|\boffice(?:s)?\b|\bwarehouse\b|\bindustrial\b|\brestaurant\b|\bpublic house\b|\bpub\b|\bshop\b/i.test(s)&&!/\bresidential\b|\bflat(?:s)?\b|\bapartment(?:s)?\b|\bHMO\b|\bdwelling\b|\bmixed[ -]use\b|\bconversion\b|\bdevelopment\b/i.test(s);
 const money=s=>{const m=String(s).match(/£\s*([\d,]+(?:\.\d{1,2})?)/);return m?Number(m[1].replace(/,/g,'')):null;};
-function labelledMoney(nodes,label){for(const n of nodes){const t=text(n);if(t.length>220)continue;const a=t.match(new RegExp('(?:'+label+')\\s*[:*=-]?\\s*(£\\s*[\\d,]+(?:\\.\\d{1,2})?)','i'));const b=t.match(new RegExp('(£\\s*[\\d,]+(?:\\.\\d{1,2})?)\\s*(?:'+label+')','i'));if(a||b)return {value:money((a||b)[1]),label:clean((a||b)[0])};}return {value:null,label:null};}
+function labelledMoney(nodes,label){for(const n of nodes){const t=text(n).replace(/^Status\s*:\s*/i,'');if(t.length>220)continue;const a=t.match(new RegExp('^(?:'+label+')\\s*[:*=-]?\\s*(£\\s*[\\d,]+(?:\\.\\d{1,2})?)','i'));const b=t.match(new RegExp('^(£\\s*[\\d,]+(?:\\.\\d{1,2})?)\\s*(?:'+label+')','i'));if(a||b)return {value:money((a||b)[1]),label:clean((a||b)[0])};}return {value:null,label:null};}
 function dateOnly(s){
  s=clean(s);const m=s.match(/\b(\d{1,2})(?:st|nd|rd|th)?\s+(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(20\d{2})\b/i)||s.match(/\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})(?:st|nd|rd|th)?[,]?\s+(20\d{2})\b/i);
  if(m){const dm=/^\d/.test(m[1]);const day=+(dm?m[1]:m[2]);const mo=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'].indexOf((dm?m[2]:m[1]).slice(0,3).toLowerCase())+1;const d=m[3]+'-'+String(mo).padStart(2,'0')+'-'+String(day).padStart(2,'0');return new Date(d+'T12:00:00Z').toISOString().startsWith(d)?d:null;}
  return s.match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0]||null;
 }
 function fields(root,id){
- const h=first(root,n=>n.tag==='h1'&&cls(n,'product_title'))||first(root,n=>/^h[12]$/.test(n.tag));
- let title=text(h).replace(/\s+LOT\s+\d+\s*$/i,'');
- const addr=first(root,n=>cls(n,'listing-address'));
- let address=text(addr)||(id==='braveheart'?title:'');
- const headings=all(root,n=>/^h[1-4]$/.test(n.tag));
- const supplementary=n=>{for(let p=n;p;p=p.parent){if(/(?:description|related|upsells|cross-sells|footer|contentinfo)/i.test((p.a.class||'')+' '+(p.a.id||'')+' '+p.tag))return true;}return false;};
- const small=all(root,n=>['p','li','h2','h3','h4','span','div'].includes(n.tag)&&text(n).length<220&&!supplementary(n));
- const labelled=key=>{for(const n of small){const t=text(n);const m=t.match(new RegExp('^'+key+'\\s*:\\s*(.+)$','i'));if(m)return m[1];}return null;};
+ const ownSupplementary=n=>/(?:description|related|upsells|cross-sells|footer|contentinfo)/i.test((n.a.class||'')+' '+(n.a.id||'')+' '+(n.a.role||'')+' '+n.tag);
+ const supplementary=n=>{for(let p=n;p;p=p.parent)if(ownSupplementary(p))return true;return false;};
+ const containsSupplementary=n=>all(n,p=>p!==n&&ownSupplementary(p)).length>0;
+ const eligible=n=>!supplementary(n)&&!containsSupplementary(n);
+ const h=first(root,n=>n.tag==='h1'&&cls(n,'product_title')&&eligible(n))||first(root,n=>/^h[12]$/.test(n.tag)&&eligible(n));
+ const title=text(h).replace(/\s+LOT\s+\d+\s*$/i,'');
+ const addr=first(root,n=>cls(n,'listing-address')&&eligible(n));
+ const address=text(addr)||(id==='braveheart'?title:'');
+ const headings=all(root,n=>/^h[1-4]$/.test(n.tag)&&eligible(n));
+ // Only atomic lot fields: never search a summary/container's whole subtree.
+ // Inline label/value markup is allowed; nested block fields and supplementary
+ // descendants disqualify a container, including short .summary ancestors.
+ const small=all(root,n=>['p','li','h2','h3','h4','span','div'].includes(n.tag)&&eligible(n)&&text(n).length<220&&!all(n,p=>p!==n&&/^(?:p|li|div|section|article|h[1-6]|form)$/.test(p.tag)).length);
+ const labelled=key=>{for(const n of small){const m=text(n).match(new RegExp('^'+key+'\\s*:\\s*(.+)$','i'));if(m)return m[1];}return null;};
  const propertyType=labelled('Type');
- const description=first(root,n=>cls(n,'woocommerce-Tabs-panel--description')||cls(n,'woocommerce-product-details__short-description')||cls(n,'property-description')||n.a.id==='description');
- // Description may inform categorisation transiently, but is NEVER returned/stored.
+ const description=first(root,n=>(cls(n,'woocommerce-Tabs-panel--description')||cls(n,'woocommerce-product-details__short-description')||cls(n,'property-description')||n.a.id==='description')&&!all(n,p=>p!==n&&/(?:related|upsells|cross-sells)/i.test((p.a.class||'')+' '+(p.a.id||''))).length);
+ // Description informs only categorisation transiently, never price or status.
  const classification=[title,propertyType,text(description),...headings.slice(0,4).map(text)].filter(Boolean).join(' ');
  const type=subtype(classification);
- const amountNodes=small.filter(n=>!cls(n,'related')&&!all(n,p=>p.tag==='form').length);
- const opening=labelledMoney(amountNodes,'opening bid|starting bid');
- let guide=labelledMoney(amountNodes,'guide(?: price)?');
- // Future's document title calls opening bids GUIDE PRICE; <title> is excluded above.
+ const opening=labelledMoney(small,'opening bid|starting bid');
+ let guide=labelledMoney(small,'guide(?: price)?');
  if(guide.value===0)guide={value:null,label:guide.label};
-
- const result=labelledMoney(amountNodes,'sold(?: prior| after| post auction| at auction)?(?: for| at| price)?|hammer(?: price)?');
- let date=null;const dateNodes=small.filter(n=>/Start On:|Ending On:|AUCTION STARTS|auction date|Timed Online Auction/i.test(text(n)));
- for(const n of dateNodes){date=dateOnly(text(n));if(date)break;}
- if(!date&&id==='future'){const headingDate=headings.find(n=>dateOnly(text(n)));date=headingDate?dateOnly(text(headingDate)):null;}
+ const result=labelledMoney(small,'sold(?: prior| after| post auction| at auction)?(?: for| at| price)?|hammer(?: price)?');
+ const labelledDate=pattern=>{for(const n of small){const t=text(n);if(pattern.test(t)){const d=dateOnly(t);if(d)return d;}}return null;};
+ const startDate=labelledDate(/^(?:Start On|Starting On|Auction Starts|Bidding Opens)\s*:/i);
+ // Ending/event date is the operative auction date; start is never allowed to
+ // override an explicit end. Future's single-day event heading remains valid.
+ let date=labelledDate(/^(?:Ending On|End On|Auction Ends|Bidding Closes|Closing Date|End Date)\s*:/i)||labelledDate(/^(?:Auction Date|Timed Online Auction)\b/i);
+ if(!date&&id==='future'){const headingDate=headings.find(n=>dateOnly(text(n))&&!/^(?:Start On|Starting On)\s*:/i.test(text(n)));date=headingDate?dateOnly(text(headingDate)):null;}
+ if(!date)date=startDate;
  const statusText=labelled('Status');
  const stateNodes=small.filter(n=>/^(?:Auction has|Auction is|Sold\b|Withdrawn\b|Postponed\b|Unsold\b|Bidding not|BIDDING OPENS|BIDDING OPEN)/i.test(text(n))||/^(?:Available|For Sale|Under Offer|Sale Agreed|Sold STC)$/i.test(text(n)));
  const states=[statusText,...stateNodes.map(text)].filter(Boolean).join(' | ');
- return {title,address,classification,type,pureCommercial:commercial(classification),opening,guide,result,date,states};
+ return {title,address,classification,type,pureCommercial:commercial(classification),opening,guide,result,date,startDate,states};
 }
-function statusOf(f,now){const s=f.states;if(/\bwithdrawn\b/i.test(s))return 'withdrawn';if(/\bpostponed\b/i.test(s))return 'postponed';if(/\bunsold\b/i.test(s))return 'unsold';if(/sold stc|sale agreed|under offer/i.test(s))return 'under_offer';if(/\bsold\b/i.test(s)||f.result.value!==null)return 'sold';if(/not (?:been )?started|not yet open|BIDDING OPENS/i.test(s)&&f.date&&f.date>now.slice(0,10))return 'upcoming';if(/\bavailable\b|\bfor sale\b/i.test(s))return 'available';if(/bidding open now|auction is live/i.test(s))return 'live';return 'unknown';}
+function statusOf(f,now){const s=f.states;if(/\bwithdrawn\b/i.test(s))return 'withdrawn';if(/\bpostponed\b/i.test(s))return 'postponed';if(/\bunsold\b/i.test(s))return 'unsold';if(/sold stc|sale agreed|under offer/i.test(s))return 'under_offer';if(/\bsold\b/i.test(s)||f.result.value!==null)return 'sold';if(/not (?:been )?started|not yet open|BIDDING OPENS/i.test(s)&&(f.startDate||f.date)&&(f.startDate||f.date)>now.slice(0,10))return 'upcoming';if(/\bavailable\b|\bfor sale\b/i.test(s))return 'available';if(/bidding open now|auction is live/i.test(s))return 'live';return 'unknown';}
 function links(root,base){return all(root,n=>n.tag==='a'&&n.a.href).map(n=>{try{return {n,url:new URL(n.a.href,base),label:text(n)};}catch{return null;}}).filter(Boolean);}
 function allowed(u,base,id){return u.hostname.replace(/^www\./,'')===base.hostname.replace(/^www\./,'')&&/^https?:$/.test(u.protocol)&&!/(?:login|log-in|account|legal|contact_docs|contact_terms|offer_form|deposit|upload|wp-admin|add-to-cart)/i.test(u.href);}
 function detail(u,id){return id==='future'?/\/property_details\.asp$/i.test(u.pathname)&&/^\d+$/.test(u.searchParams.get('id')||''):/^\/product\/[^/]+\/?$/i.test(u.pathname);}
@@ -116,7 +123,7 @@ export async function collect({get,source,now}){
   const address=f.address||c.address;const town=addressTown(address);if(!town)continue;
   if(f.pureCommercial){out.commercial_excluded++;continue;}if(!f.type){out.errors.push(c.url+': unclassified property type; omitted.');continue;}
   const status=statusOf(f,stamp);
-  out.lots.push({title:f.title||address,address,town,postcode:postcode(address),lot_type:f.type,residential_subtype:f.type,guide_price:f.guide.value,guide_price_text:f.guide.label,opening_bid:f.opening.value,auction_date:f.date,status,sold_price:status==='sold'?f.result.value:null,source_url:c.url,source:source.name||source.id,scraped_at:stamp,grade:'',grade_evidence:[]});
+  out.lots.push({title:f.title||address,address,town,postcode:postcode(address),lot_type:f.type,residential_subtype:f.type,guide_price:f.guide.value,guide_price_text:f.guide.label,opening_bid:f.opening.value,auction_date:f.date,auction_start_date:f.startDate,status,sold_price:status==='sold'?f.result.value:null,source_url:c.url,source:source.name||source.id,scraped_at:stamp,grade:'',grade_evidence:[]});
  }
  return out;
 }

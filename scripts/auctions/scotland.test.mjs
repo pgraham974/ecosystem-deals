@@ -60,3 +60,25 @@ for (const [expected, heading] of [
 test('pure commercial is counted and excluded', async () => {
   const r = await braveRun(bravePage('Commercial retail shop', '')); assert.equal(r.lots.length, 0); assert.equal(r.commercial_excluded, 1);
 });
+
+// Regression cases from the read-only audit: short parent containers must not
+// let supplementary descendants leak into the current lot's facts.
+test('short summary ancestor cannot turn a description comparable into sold result', async () => {
+  const html = '<h1 class="product_title">999 Synthetic Test Street, Glasgow, G1 1AA</h1><div class="summary"><h2>Detached house</h2><p>Status: Available</p><div class="woocommerce-product-details__short-description">Comparable Sold for £999,000</div></div>';
+  const r = await braveRun(html); assert.equal(r.lots.length, 1); assert.equal(r.lots[0].sold_price, null); assert.equal(r.lots[0].status, 'available');
+});
+test('short summary with supplementary sold status does not mark the current lot sold', async () => {
+  const html = '<h1 class="product_title">999 Synthetic Test Street, Glasgow, G1 1AA</h1><h2>Detached house</h2><div class="summary"><div class="woocommerce-product-details__short-description">Sold for £999,000</div></div>';
+  const r = await braveRun(html); assert.equal(r.lots[0].sold_price, null); assert.equal(r.lots[0].status, 'unknown');
+});
+test('related development heading cannot classify a garage as residential development', async () => {
+  const html = '<h1 class="product_title">Garage, 999 Synthetic Test Street, Glasgow, G1 1AA</h1><h2>Garage</h2><p>Status: Available</p><section class="related products"><h2>Residential development site</h2></section>';
+  const r = await braveRun(html); assert.equal(r.lots.length, 0);
+});
+test('verified ending date takes precedence over starting date', async () => {
+  const html = '<h1 class="product_title">999 Synthetic Test Street, Glasgow, G1 1AA</h1><h2>Detached house</h2><p>Auction has not been started yet.</p><p>Start On: November 4, 2026 10:00 am</p><p>Ending On: November 9, 2026 2:00 pm</p>';
+  const r = await braveRun(html); assert.equal(r.lots[0].auction_date, '2026-11-09'); assert.equal(r.lots[0].auction_start_date, '2026-11-04');
+});
+test('parent warning and successful-page counter contract is preserved', async () => {
+  const r = await braveRun(); assert.equal(r.errors.length, 0); assert.ok(r.warnings.some(message => message.includes('no open reuse licence'))); assert.equal(r.successful_pages, 2); assert.equal(r.pages, 2);
+});
