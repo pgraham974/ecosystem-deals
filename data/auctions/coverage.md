@@ -1,21 +1,21 @@
 # Auction collection
 
-Checked: 2026-11-03T11:29:30.137Z
+Checked: 2026-11-03T11:48:15.054Z
 
-Fresh: 104; stale: 0; commercial/other non-residential inspected records excluded: 23.
+Fresh: 86; stale: 29; commercial/other non-residential inspected records excluded: 29.
 
 ## Town counts (fresh, deduplicated)
 - Manchester: 22
-- Glasgow: 45
-- Edinburgh: 15
-- Bristol: 17
+- Glasgow: 33
+- Edinburgh: 11
+- Bristol: 15
 - Cheltenham: 5
 
 ## Source coverage
 - **Auction House Manchester**: partial; 17 eligible lots; 1 non-residential excluded. Current auction date unverified https://online.auctionhouse.co.uk/lot/redirect/375975; Only bidding-opens date public in static HTML https://online.auctionhouse.co.uk/lot/redirect/375975; auction_date left null rather than treating an opening date as the auction end.; Unknown residential classification excluded: 3; not counted as commercial.
 - **Auction House South West (Bristol and Gloucestershire)**: partial; 20 eligible lots; 0 non-residential excluded. Current auction date unverified https://online.auctionhouse.co.uk/lot/redirect/375871; Only bidding-opens date public in static HTML https://online.auctionhouse.co.uk/lot/redirect/375871; auction_date left null rather than treating an opening date as the auction end.; Current auction date unverified https://online.auctionhouse.co.uk/lot/redirect/374299; Only bidding-opens date public in static HTML https://online.auctionhouse.co.uk/lot/redirect/374299; auction_date left null rather than treating an opening date as the auction end.; Unknown residential classification excluded: 1; not counted as commercial.; 1 records omitted because type/status/fields could not be verified.
 - **Auction House Scotland**: partial; 8 eligible lots; 3 non-residential excluded. Current auction date unverified https://online.auctionhouse.co.uk/lot/redirect/373474; 2 records omitted because type/status/fields could not be verified.
-- **Future Property Auctions**: partial; 59 eligible lots; 18 non-residential excluded. https://www.futurepropertyauctions.co.uk/auctions.asp: no server-rendered detail links found; JS-only catalogues require a discovered HTML alternative, no AJAX endpoints guessed.; https://www.futurepropertyauctions.co.uk/catalogue_viewall_auction_map.asp?id=10699&: no server-rendered detail links found; JS-only catalogues require a discovered HTML alternative, no AJAX endpoints guessed.; Catalogue page limit reached; collection incomplete.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14293328: unclassified property type; omitted.
+- **Future Property Auctions**: partial; 41 eligible lots; 24 non-residential excluded. https://www.futurepropertyauctions.co.uk/auctions.asp: no server-rendered detail links found; JS-only catalogues require a discovered HTML alternative, no AJAX endpoints guessed.; https://www.futurepropertyauctions.co.uk/catalogue_viewall_auction_map.asp?id=10699&: no server-rendered detail links found; JS-only catalogues require a discovered HTML alternative, no AJAX endpoints guessed.; Catalogue page limit reached; collection incomplete.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523559: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522029: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514583: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506644: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14497447: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14495866: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486244: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14482079: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478815: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478747: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478730: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14293328: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=14112635: unclassified property type; omitted.; https://www.futurepropertyauctions.co.uk/property_details.asp?id=13883832: unclassified property type; omitted.
 - **Braveheart Auctions (Edinburgh and Glasgow)**: partial; 0 eligible lots; 1 non-residential excluded. https://braveheartauctions.co.uk/auctions/: no server-rendered detail links found; JS-only catalogues require a discovered HTML alternative, no AJAX endpoints guessed.; https://braveheartauctions.co.uk/product/95-monteith-row-glasgow-city-of-glasgow/: unclassified property type; omitted.
 - **Allsop**: skipped; 0 eligible lots; 0 non-residential excluded. Written consent required for extraction and commercial reuse.
 - **Savills auctions**: skipped; 0 eligible lots; 0 non-residential excluded. Do not use GPTBot or treat generic access as commercial copying permission.
