@@ -1,6 +1,4687 @@
 {
   "schema_version": 1,
-  "updated_at": null,
-  "attempted_at": null,
-  "lots": []
+  "updated_at": "2026-11-03T11:29:30.137Z",
+  "attempted_at": "2026-11-03T11:29:30.137Z",
+  "lots": [
+    {
+      "address": "8 Temple Street, Middleton, Manchester, Lancashire, M24 2JG",
+      "postcode": "M24 2JG",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Houses",
+      "lot_type": "3 Bed Terraced House",
+      "property_type": "Houses",
+      "title": "8 Temple Street, Middleton, Manchester, Lancashire, M24 2JG",
+      "status": "upcoming",
+      "auction_date": null,
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/375975",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/375975"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 158500,
+      "guide_price_text": "Guide Price* : £158,500+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/375975",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": null,
+          "guide_price": 158500,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-fb49d1e87bbbe54c"
+    },
+    {
+      "address": "Flat 34, Old School Court, 2 Old School Drive, Manchester, M9 8DR",
+      "postcode": "M9 8DR",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "2 Bed Apartment",
+      "property_type": "Flats",
+      "title": "Flat 34, Old School Court, 2 Old School Drive, Manchester, M9 8DR",
+      "status": "unsold",
+      "auction_date": "2026-10-20",
+      "source": "Auction House Manchester",
+      "source_url": "https://www.auctionhouse.co.uk/manchester/auction/lot/153511",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://www.auctionhouse.co.uk/manchester/auction/lot/153511"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 60000,
+      "guide_price_text": "*Guide | £60,000+ (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://www.auctionhouse.co.uk/manchester/auction/lot/153511",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "unsold",
+          "auction_date": "2026-10-20",
+          "guide_price": 60000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-14aba068c0dfbfc9"
+    },
+    {
+      "address": "501 Lincoln Gate, 39 Red Bank, Manchester, M4 4AD",
+      "postcode": "M4 4AD",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Studio",
+      "property_type": "Flats",
+      "title": "501 Lincoln Gate, 39 Red Bank, Manchester, M4 4AD",
+      "status": "unsold",
+      "auction_date": "2026-10-20",
+      "source": "Auction House Manchester",
+      "source_url": "https://www.auctionhouse.co.uk/manchester/auction/lot/152937",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://www.auctionhouse.co.uk/manchester/auction/lot/152937"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 69000,
+      "guide_price_text": "*Guide | £69,000+ (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://www.auctionhouse.co.uk/manchester/auction/lot/152937",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "unsold",
+          "auction_date": "2026-10-20",
+          "guide_price": 69000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-d6aa47cfe60839ac"
+    },
+    {
+      "address": "12 Walnut Street, Manchester, M18 8QA",
+      "postcode": "M18 8QA",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "12 Walnut Street, Manchester, M18 8QA",
+      "status": "sold",
+      "auction_date": "2026-10-27",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/371182",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/371182"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 115000,
+      "guide_price_text": "£115,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 139000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/371182",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-10-27",
+          "guide_price": 115000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 139000
+        }
+      ],
+      "id": "lot-92be0504e01f1b8e"
+    },
+    {
+      "address": "Apartment 307, 6 Ludgate Hill, Manchester, Lancashire, M4 4BW",
+      "postcode": "M4 4BW",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 307, 6 Ludgate Hill, Manchester, Lancashire, M4 4BW",
+      "status": "sold",
+      "auction_date": "2026-07-07",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/352269",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/352269"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 80000,
+      "guide_price_text": "£80,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 86000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/352269",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-07-07",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 86000
+        }
+      ],
+      "id": "lot-01e21215b63b539a"
+    },
+    {
+      "address": "Apartment 22, 427 Ashton Old Road, Manchester, M11 2DL",
+      "postcode": "M11 2DL",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 22, 427 Ashton Old Road, Manchester, M11 2DL",
+      "status": "sold",
+      "auction_date": "2026-06-09",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/346474",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/346474"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 80000,
+      "guide_price_text": "£80,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 88000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/346474",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-06-09",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 88000
+        }
+      ],
+      "id": "lot-40f4f2e39e931800"
+    },
+    {
+      "address": "Apartment 307, 6 Ludgate Hill, Manchester, M4 4BW",
+      "postcode": "M4 4BW",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 307, 6 Ludgate Hill, Manchester, M4 4BW",
+      "status": "sold",
+      "auction_date": "2026-05-19",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/342976",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/342976"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 82000,
+      "guide_price_text": "£82,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 92000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/342976",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-05-19",
+          "guide_price": 82000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 92000
+        }
+      ],
+      "id": "lot-114a9026d806fe87"
+    },
+    {
+      "address": "Flat 2104 City Heights, Victoria Bridge Street, Salford, Manchester, M3 5AS",
+      "postcode": "M3 5AS",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 2104 City Heights, Victoria Bridge Street, Salford, Manchester, M3 5AS",
+      "status": "sold",
+      "auction_date": "2026-04-14",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/338315",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/338315"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 77000,
+      "guide_price_text": "£77,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 84500,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/338315",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-04-14",
+          "guide_price": 77000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 84500
+        }
+      ],
+      "id": "lot-365a34958917e24c"
+    },
+    {
+      "address": "Apartment 401, 6 Oldham Road, Manchester, M4 5DB",
+      "postcode": "M4 5DB",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 401, 6 Oldham Road, Manchester, M4 5DB",
+      "status": "sold",
+      "auction_date": "2026-04-08",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/335623",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/335623"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 87000,
+      "guide_price_text": "£87,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 95000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/335623",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-04-08",
+          "guide_price": 87000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 95000
+        }
+      ],
+      "id": "lot-971017f28b385856"
+    },
+    {
+      "address": "25 Surrey Road, Blackley, Manchester, M9 8AU",
+      "postcode": "M9 8AU",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "25 Surrey Road, Blackley, Manchester, M9 8AU",
+      "status": "sold",
+      "auction_date": "2026-01-13",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/322218",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/322218"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 60000,
+      "guide_price_text": "£60,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 72000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/322218",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-01-13",
+          "guide_price": 60000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 72000
+        }
+      ],
+      "id": "lot-aa1b34c1d9c60bb1"
+    },
+    {
+      "address": "40 Granville Road, Manchester, M14 6AE",
+      "postcode": "M14 6AE",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "40 Granville Road, Manchester, M14 6AE",
+      "status": "sold",
+      "auction_date": "2025-08-12",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/301815",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/301815"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 320000,
+      "guide_price_text": "£320,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 459000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/301815",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-08-12",
+          "guide_price": 320000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 459000
+        }
+      ],
+      "id": "lot-334b74777801523f"
+    },
+    {
+      "address": "Apartment 3005 Beetham Tower, 301 Deansgate, Manchester, M3 4LT",
+      "postcode": "M3 4LT",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 3005 Beetham Tower, 301 Deansgate, Manchester, M3 4LT",
+      "status": "sold",
+      "auction_date": "2025-08-05",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/301832",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/301832"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 120000,
+      "guide_price_text": "£120,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 148000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/301832",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-08-05",
+          "guide_price": 120000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 148000
+        }
+      ],
+      "id": "lot-54d91fc1cbe86094"
+    },
+    {
+      "address": "Apartment 401, 6 Oldham Road, Manchester, M4 5DB",
+      "postcode": "M4 5DB",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 401, 6 Oldham Road, Manchester, M4 5DB",
+      "status": "sold",
+      "auction_date": "2025-08-05",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/302646",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/302646"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 115000,
+      "guide_price_text": "£115,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 129000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/302646",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-08-05",
+          "guide_price": 115000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 129000
+        }
+      ],
+      "id": "lot-7e949939f462bec0"
+    },
+    {
+      "address": "318 Mount Road, Manchester, M19 3HN",
+      "postcode": "M19 3HN",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "318 Mount Road, Manchester, M19 3HN",
+      "status": "sold",
+      "auction_date": "2025-01-14",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/274976",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/274976"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 190000,
+      "guide_price_text": "£190,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 275000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/274976",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-01-14",
+          "guide_price": 190000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 275000
+        }
+      ],
+      "id": "lot-ecba7e17511940cf"
+    },
+    {
+      "address": "3 Cheviot Close, Middleton, Manchester, M24 2FY",
+      "postcode": "M24 2FY",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "3 Cheviot Close, Middleton, Manchester, M24 2FY",
+      "status": "sold",
+      "auction_date": "2024-11-12",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/268990",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/268990"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 80000,
+      "guide_price_text": "£80,000+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 105000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/268990",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2024-11-12",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 105000
+        }
+      ],
+      "id": "lot-42069fbac4af3333"
+    },
+    {
+      "address": "Flat 1 Marantha Lodge, 21 Surrey Road, Manchester, M9 8AU",
+      "postcode": "M9 8AU",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 1 Marantha Lodge, 21 Surrey Road, Manchester, M9 8AU",
+      "status": "sold",
+      "auction_date": "2024-11-05",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/269091",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/269091"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 37500,
+      "guide_price_text": "£37,500+",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 49000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/269091",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2024-11-05",
+          "guide_price": 37500,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 49000
+        }
+      ],
+      "id": "lot-42b101b4dc0b7906"
+    },
+    {
+      "address": "Apartment 3 Wince Brook Court Grimshaw Lane, Middleton, Manchester, M24 2RG",
+      "postcode": "M24 2RG",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 3 Wince Brook Court Grimshaw Lane, Middleton, Manchester, M24 2RG",
+      "status": "sold",
+      "auction_date": "2023-09-26",
+      "source": "Auction House Manchester",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/220737",
+      "sources": [
+        {
+          "name": "Auction House Manchester",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/220737"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 40000,
+      "guide_price_text": "£40,000 - £50,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 70000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/220737",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2023-09-26",
+          "guide_price": 40000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 70000
+        }
+      ],
+      "id": "lot-e3922b35d7483ac5"
+    },
+    {
+      "address": "15 Dragonfly Close Kingswood, Bristol, Avon, BS15 8JR",
+      "postcode": "BS15 8JR",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "1 Bed Apartment",
+      "property_type": "Flats",
+      "title": "15 Dragonfly Close Kingswood, Bristol, Avon, BS15 8JR",
+      "status": "upcoming",
+      "auction_date": "2026-11-17",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/374990",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/374990"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 125000,
+      "guide_price_text": "Guide Price* : £125,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/374990",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-17",
+          "guide_price": 125000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-37bb4f561c90001a"
+    },
+    {
+      "address": "Flat 4 Arlington House 54-56, Cheltenham, Gloucestershire, GL53 7HJ",
+      "postcode": "GL53 7HJ",
+      "town": "Cheltenham",
+      "city": "Cheltenham",
+      "residential_subtype": "Flats",
+      "lot_type": "2 Bed Apartment",
+      "property_type": "Flats",
+      "title": "Flat 4 Arlington House 54-56, Cheltenham, Gloucestershire, GL53 7HJ",
+      "status": "upcoming",
+      "auction_date": "2026-11-17",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/376056",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/376056"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 145000,
+      "guide_price_text": "Guide Price* : £145,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/376056",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-17",
+          "guide_price": 145000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-65135287ba168f3d"
+    },
+    {
+      "address": "Loft Space 58 High Street, Bristol, Avon, BS16 5HN",
+      "postcode": "BS16 5HN",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Development",
+      "lot_type": "1 Bed Residential Development",
+      "property_type": "Development",
+      "title": "Loft Space 58 High Street, Bristol, Avon, BS16 5HN",
+      "status": "upcoming",
+      "auction_date": "2026-11-17",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/376573",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/376573"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 10000,
+      "guide_price_text": "Guide Price* : £10,000 - £20,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/376573",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-17",
+          "guide_price": 10000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-cbe79a7373b0172b"
+    },
+    {
+      "address": "25 Newent Avenue, Bristol, Avon, BS15 8AQ",
+      "postcode": "BS15 8AQ",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Houses",
+      "lot_type": "3 Bed Terraced House",
+      "property_type": "Houses",
+      "title": "25 Newent Avenue, Bristol, Avon, BS15 8AQ",
+      "status": "upcoming",
+      "auction_date": null,
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/375871",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/375871"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 220000,
+      "guide_price_text": "Guide Price* : £220,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/375871",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": null,
+          "guide_price": 220000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-6491097386d2eb79"
+    },
+    {
+      "address": "Flat 3 23A-25A East Street, Bristol, Avon, BS3 4HH",
+      "postcode": "BS3 4HH",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "2 Bed Apartment",
+      "property_type": "Flats",
+      "title": "Flat 3 23A-25A East Street, Bristol, Avon, BS3 4HH",
+      "status": "upcoming",
+      "auction_date": null,
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/374299",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/374299"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 200000,
+      "guide_price_text": "Guide Price* : £200,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/374299",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": null,
+          "guide_price": 200000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-9b87281ce007325a"
+    },
+    {
+      "address": "Apartment 3 Millennium Plaza, Cheltenham, Gloucestershire, GL52 2NB",
+      "postcode": "GL52 2NB",
+      "town": "Cheltenham",
+      "city": "Cheltenham",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Apartment 3 Millennium Plaza, Cheltenham, Gloucestershire, GL52 2NB",
+      "status": "sold",
+      "auction_date": "2026-10-27",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/373081",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/373081"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 80000,
+      "guide_price_text": "£80,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 88000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/373081",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-10-27",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 88000
+        }
+      ],
+      "id": "lot-e4ded6a261841ff7"
+    },
+    {
+      "address": "44 Windsor Street, Cheltenham, Gloucestershire, GL52 2DE",
+      "postcode": "GL52 2DE",
+      "town": "Cheltenham",
+      "city": "Cheltenham",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "44 Windsor Street, Cheltenham, Gloucestershire, GL52 2DE",
+      "status": "sold",
+      "auction_date": "2026-10-27",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/370826",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/370826"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 140000,
+      "guide_price_text": "£140,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 180000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/370826",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-10-27",
+          "guide_price": 140000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 180000
+        }
+      ],
+      "id": "lot-17e7f0f1696f451d"
+    },
+    {
+      "address": "17 Peache Road, Bristol, Avon, BS16 5RN",
+      "postcode": "BS16 5RN",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "17 Peache Road, Bristol, Avon, BS16 5RN",
+      "status": "unsold",
+      "auction_date": "2026-08-25",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/361233",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/361233"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 325000,
+      "guide_price_text": "£325,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/361233",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "unsold",
+          "auction_date": "2026-08-25",
+          "guide_price": 325000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-4f805b5232908805"
+    },
+    {
+      "address": "273 Redcatch Road, Bristol, Avon, BS3 5DY",
+      "postcode": "BS3 5DY",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "273 Redcatch Road, Bristol, Avon, BS3 5DY",
+      "status": "sold",
+      "auction_date": "2026-08-11",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/359581",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/359581"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 325000,
+      "guide_price_text": "£325,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 350000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/359581",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-08-11",
+          "guide_price": 325000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 350000
+        }
+      ],
+      "id": "lot-a76cae8bcc0c3441"
+    },
+    {
+      "address": "23 Irving House Pittville Circus Road, Cheltenham, Gloucestershire, GL52 2PZ",
+      "postcode": "GL52 2PZ",
+      "town": "Cheltenham",
+      "city": "Cheltenham",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "23 Irving House Pittville Circus Road, Cheltenham, Gloucestershire, GL52 2PZ",
+      "status": "sold",
+      "auction_date": "2026-07-28",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/356021",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/356021"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 50000,
+      "guide_price_text": "£50,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 55000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/356021",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-07-28",
+          "guide_price": 50000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 55000
+        }
+      ],
+      "id": "lot-b482ba2d3d0ad4c5"
+    },
+    {
+      "address": "83 Moravian Road, Bristol, Avon, BS15 8ND",
+      "postcode": "BS15 8ND",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "83 Moravian Road, Bristol, Avon, BS15 8ND",
+      "status": "sold",
+      "auction_date": "2026-07-14",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/346916",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/346916"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 110000,
+      "guide_price_text": "£110,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 110000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/346916",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-07-14",
+          "guide_price": 110000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 110000
+        }
+      ],
+      "id": "lot-520849f141d73373"
+    },
+    {
+      "address": "16 Somerset Square Nailsea, Bristol, Avon, BS48 1RP",
+      "postcode": "BS48 1RP",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "16 Somerset Square Nailsea, Bristol, Avon, BS48 1RP",
+      "status": "sold",
+      "auction_date": "2026-02-17",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/327578",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/327578"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 125000,
+      "guide_price_text": "£125,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 135000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/327578",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-02-17",
+          "guide_price": 125000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 135000
+        }
+      ],
+      "id": "lot-b6ab83990957a4f5"
+    },
+    {
+      "address": "Grange Cottage Latteridge Road, Bristol, Avon, BS37 9TJ",
+      "postcode": "BS37 9TJ",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "Grange Cottage Latteridge Road, Bristol, Avon, BS37 9TJ",
+      "status": "sold",
+      "auction_date": "2026-01-13",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/323169",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/323169"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 280000,
+      "guide_price_text": "£280,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 310000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/323169",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-01-13",
+          "guide_price": 280000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 310000
+        }
+      ],
+      "id": "lot-35962e650b4219ae"
+    },
+    {
+      "address": "Flat 4 24 Evesham Road, Cheltenham, Gloucestershire, GL52 2AB",
+      "postcode": "GL52 2AB",
+      "town": "Cheltenham",
+      "city": "Cheltenham",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 4 24 Evesham Road, Cheltenham, Gloucestershire, GL52 2AB",
+      "status": "sold",
+      "auction_date": "2026-01-13",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/321749",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/321749"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 75000,
+      "guide_price_text": "£75,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 82500,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/321749",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-01-13",
+          "guide_price": 75000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 82500
+        }
+      ],
+      "id": "lot-0556142cf079e044"
+    },
+    {
+      "address": "Flat 2, 3 Marsh Street, Bristol, Avon, BS1 1RT",
+      "postcode": "BS1 1RT",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 2, 3 Marsh Street, Bristol, Avon, BS1 1RT",
+      "status": "sold",
+      "auction_date": "2025-09-09",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/306882",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/306882"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 150000,
+      "guide_price_text": "£150,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 166000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/306882",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-09-09",
+          "guide_price": 150000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 166000
+        }
+      ],
+      "id": "lot-5659a66ff9365eb2"
+    },
+    {
+      "address": "Flat 12, Caslon Court, Somerset Street, Bristol, Avon, BS1 6DD",
+      "postcode": "BS1 6DD",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 12, Caslon Court, Somerset Street, Bristol, Avon, BS1 6DD",
+      "status": "sold",
+      "auction_date": "2025-07-22",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/300391",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/300391"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 160000,
+      "guide_price_text": "£160,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/300391",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-07-22",
+          "guide_price": 160000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-65b84090a38f06cf"
+    },
+    {
+      "address": "Flat 3, 79 East Street, Bristol, Avon, BS3 4EX",
+      "postcode": "BS3 4EX",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 3, 79 East Street, Bristol, Avon, BS3 4EX",
+      "status": "sold",
+      "auction_date": "2025-03-11",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/281428",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/281428"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 39000,
+      "guide_price_text": "£39,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 110000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/281428",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-03-11",
+          "guide_price": 39000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 110000
+        }
+      ],
+      "id": "lot-165f036b1eef24c2"
+    },
+    {
+      "address": "Flat 5, 3 Cannon Street, Bristol, Avon, BS3 1BH",
+      "postcode": "BS3 1BH",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 5, 3 Cannon Street, Bristol, Avon, BS3 1BH",
+      "status": "sold",
+      "auction_date": "2025-02-11",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/278731",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/278731"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 110000,
+      "guide_price_text": "£110,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/278731",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2025-02-11",
+          "guide_price": 110000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-4f893e1589a78512"
+    },
+    {
+      "address": "Basement Flat 141 Staple Hill Road, Bristol, Avon, BS16 5AG",
+      "postcode": "BS16 5AG",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Basement Flat 141 Staple Hill Road, Bristol, Avon, BS16 5AG",
+      "status": "sold",
+      "auction_date": "2024-11-26",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/271041",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/271041"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 140000,
+      "guide_price_text": "£140,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 150000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/271041",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2024-11-26",
+          "guide_price": 140000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 150000
+        }
+      ],
+      "id": "lot-ccef18e57fa37337"
+    },
+    {
+      "address": "Flat 11 Don John House, 312 Church Road, Bristol, Avon, BS5 8AJ",
+      "postcode": "BS5 8AJ",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "Flat 11 Don John House, 312 Church Road, Bristol, Avon, BS5 8AJ",
+      "status": "sold",
+      "auction_date": "2023-04-25",
+      "source": "Auction House South West (Bristol and Gloucestershire)",
+      "source_url": "https://online.auctionhouse.co.uk/lot/redirect/203338",
+      "sources": [
+        {
+          "name": "Auction House South West (Bristol and Gloucestershire)",
+          "url": "https://online.auctionhouse.co.uk/lot/redirect/203338"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 91000,
+      "guide_price_text": "£91,000",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": 100000,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/203338",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2023-04-25",
+          "guide_price": 91000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 100000
+        }
+      ],
+      "id": "lot-057f8de5c6097ff9"
+    },
+    {
+      "address": "3/2, 20 Lochburn Gate, Glasgow, Glasgow City G20 0SN",
+      "postcode": "G20 0SN",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "3 Bed Maisonette",
+      "property_type": "Flats",
+      "title": "3/2, 20 Lochburn Gate, Glasgow, Glasgow City G20 0SN",
+      "status": "upcoming",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153558",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153558"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 180000,
+      "guide_price_text": "*Guide | £180,000 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153558",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 180000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-705e848e3acbe832"
+    },
+    {
+      "address": "38 Hillwood Terrace, Ratho Station, Newbridge, City Of Edinburgh EH28 8QA",
+      "postcode": "EH28 8QA",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Houses",
+      "lot_type": "4 Bed Terraced House",
+      "property_type": "Houses",
+      "title": "38 Hillwood Terrace, Ratho Station, Newbridge, City Of Edinburgh EH28 8QA",
+      "status": "upcoming",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153580",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153580"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 140000,
+      "guide_price_text": "*Guide | £140,000 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153580",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 140000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-dce7d8f53c8edd6e"
+    },
+    {
+      "address": "1/1, 58 Bell Street, Glasgow, Glasgow City G1 1LQ",
+      "postcode": "G1 1LQ",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "1 Bed Flat",
+      "property_type": "Flats",
+      "title": "1/1, 58 Bell Street, Glasgow, Glasgow City G1 1LQ",
+      "status": "upcoming",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153581",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153581"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 128000,
+      "guide_price_text": "*Guide | £128,000 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153581",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 128000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-268a05d1e67b62e6"
+    },
+    {
+      "address": "Flat R, 63 Cumlodden Drive, Glasgow, Glasgow City G20 0JJ",
+      "postcode": "G20 0JJ",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "2 Bed Maisonette",
+      "property_type": "Flats",
+      "title": "Flat R, 63 Cumlodden Drive, Glasgow, Glasgow City G20 0JJ",
+      "status": "sold",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153614",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153614"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": "Sold prior",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153614",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "sold",
+          "auction_date": "2026-11-26",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-316156a86eeec439"
+    },
+    {
+      "address": "Flat 21, 5 Simpson Loan, Edinburgh, City Of Edinburgh EH3 9GX",
+      "postcode": "EH3 9GX",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Flats",
+      "lot_type": "2 Bed Flat",
+      "property_type": "Flats",
+      "title": "Flat 21, 5 Simpson Loan, Edinburgh, City Of Edinburgh EH3 9GX",
+      "status": "upcoming",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153622",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153622"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 475000,
+      "guide_price_text": "*Guide | £475,000 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153622",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 475000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-39cef8e45743be9f"
+    },
+    {
+      "address": "55 Meiklehill Road, Kirkintilloch, Glasgow, East Dunbartonshire G66 2JY",
+      "postcode": "G66 2JY",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Houses",
+      "lot_type": "2 Bed Cottage",
+      "property_type": "Houses",
+      "title": "55 Meiklehill Road, Kirkintilloch, Glasgow, East Dunbartonshire G66 2JY",
+      "status": "upcoming",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153781",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153781"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 55000,
+      "guide_price_text": "*Guide | £55,000 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153781",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 55000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-58f9ef69231e96c3"
+    },
+    {
+      "address": "58 Yair Drive, Glasgow, Glasgow City G52 2LE",
+      "postcode": "G52 2LE",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "3 Bed Flat",
+      "property_type": "Flats",
+      "title": "58 Yair Drive, Glasgow, Glasgow City G52 2LE",
+      "status": "upcoming",
+      "auction_date": "2026-11-26",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153855",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153855"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 89500,
+      "guide_price_text": "*Guide | £89,500 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153855",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 89500,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-0fccfb1431e29cc6"
+    },
+    {
+      "address": "24 West Pilton Lea, Edinburgh, City Of Edinburgh EH4 4ES",
+      "postcode": "EH4 4ES",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Houses",
+      "lot_type": "2 Bed Terraced House",
+      "property_type": "Houses",
+      "title": "24 West Pilton Lea, Edinburgh, City Of Edinburgh EH4 4ES",
+      "status": "unsold",
+      "auction_date": "2026-10-28",
+      "source": "Auction House Scotland",
+      "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153663",
+      "sources": [
+        {
+          "name": "Auction House Scotland",
+          "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153663"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": 132000,
+      "guide_price_text": "*Guide | £132,000 (plus fees)",
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153663",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "unsold",
+          "auction_date": "2026-10-28",
+          "guide_price": 132000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-22830b13f50044ba"
+    },
+    {
+      "address": "33 Summerton Road, Flat 3-1, Glasgow, G51 2QA",
+      "postcode": "G51 2QA",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524239",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524239"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524239",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-77bfbed8c7ff20f0"
+    },
+    {
+      "address": "21 St Peters Street, Flat A, St. Georges Cross, Glasgow, G4 9HH",
+      "postcode": "G4 9HH",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-12",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523967",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523967"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523967",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-dc61e90a95320547"
+    },
+    {
+      "address": "Land Parcel at Westerland Drive, Newton Mearns, Glasgow, G77 6YB",
+      "postcode": "G77 6YB",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523559",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523559"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523559",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-2d01cfb7d6a6a403"
+    },
+    {
+      "address": "50-58 Jamaica Street, Flat 6-08, Glasgow, G1 4QG",
+      "postcode": "G1 4QG",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523253",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523253"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523253",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-3f22373f801386d2"
+    },
+    {
+      "address": "50-58 Cantral House, Jamaica Street, Flat 5-09, Glasgow, G1 4NN",
+      "postcode": "G1 4NN",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-12",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523117",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523117"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523117",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-de069c44ed8e46e5"
+    },
+    {
+      "address": "21 St Andrews Court, 3.22, Merchant City, Glasgow, G1 5PW",
+      "postcode": "G1 5PW",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522573",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522573"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522573",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-4855f9a376fe706f"
+    },
+    {
+      "address": "10 Barlia Terrace, Glasgow, G45 0AU",
+      "postcode": "G45 0AU",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "3 Bedroom House",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522250",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522250"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522250",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-82bea98579d91774"
+    },
+    {
+      "address": "Land at Barrhead Road, Newton Mearns, Glasgow, G77 6YE",
+      "postcode": "G77 6YE",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522029",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522029"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522029",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-f6d469f8570030df"
+    },
+    {
+      "address": "21 St Andrews Court, Apartment 1-16, Saltmarket, Glasgow, G1 5PW",
+      "postcode": "G1 5PW",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521910",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521910"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521910",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-d088c0f00cbf568e"
+    },
+    {
+      "address": "133-135 Stockwell Street, Merchant City, Glasgow, G1 4LR",
+      "postcode": "G1 4LR",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "Vacant Commercial",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521485",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521485"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521485",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-b1003953ee47dcbc"
+    },
+    {
+      "address": "1 Glenmore Place, Flat 1-2, Glasgow, G42 0EA",
+      "postcode": "G42 0EA",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520992",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520992"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520992",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-5117de7f14a2e83b"
+    },
+    {
+      "address": "54 Westmuir Street, Glasgow, G31 5BJ",
+      "postcode": "G31 5BJ",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520805",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520805"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520805",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-802af2cfdc140fe1"
+    },
+    {
+      "address": "1399 Maryhill Road, Glasgow, G20 9AA",
+      "postcode": "G20 9AA",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "Vacant Commercial",
+      "status": "upcoming",
+      "auction_date": "2026-11-12",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520550",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520550"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520550",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-4430e9a2ac1063ec"
+    },
+    {
+      "address": "34 Garturk Street, Flat 0-2, Glasgow, G42 8JF",
+      "postcode": "G42 8JF",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "3 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519904",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519904"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519904",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-a4ce795ea0700554"
+    },
+    {
+      "address": "7 East Pilton Farm Crescent, Flat 2, Edinburgh, EH5 2GF",
+      "postcode": "EH5 2GF",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-12",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519224",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519224"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519224",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-4bec94c02ca8ff46"
+    },
+    {
+      "address": "220 Howard Street, Flat 3-2, Glasgow, G1 5HE",
+      "postcode": "G1 5HE",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14517915",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14517915"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14517915",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-3132ec247be0dfc3"
+    },
+    {
+      "address": "2 Spey Street, Flat 1, Edinburgh, EH7 4PY",
+      "postcode": "EH7 4PY",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516997",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516997"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516997",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-8f57bd017d6f7c27"
+    },
+    {
+      "address": "100 Thirlestane Road, Flat 4F, Edinburgh, EH9 1AS",
+      "postcode": "EH9 1AS",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "HMO",
+      "lot_type": "HMO",
+      "property_type": "HMO",
+      "title": "3 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516555",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516555"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516555",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-d1d57b141f35674b"
+    },
+    {
+      "address": "7 Langbar Path, Flat 0-2, Glasgow, G33 4HY",
+      "postcode": "G33 4HY",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516504",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516504"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516504",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-3baf82d6fd9dd8ae"
+    },
+    {
+      "address": "23 Croftfoot Road, Glasgow, G44 5JR",
+      "postcode": "G44 5JR",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "3 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14515739",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14515739"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14515739",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-700fe3f02618c5c0"
+    },
+    {
+      "address": "5 Hamiltonhill Gardens, Flat 1-1, Glasgow, G22 5PR",
+      "postcode": "G22 5PR",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Blocks",
+      "lot_type": "Blocks",
+      "property_type": "Blocks",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-d6bb55b05146ee4d"
+    },
+    {
+      "address": "Site at Station Road, Dalmeny, Edinburgh, EH30 9JX",
+      "postcode": "EH30 9JX",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514583",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514583"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514583",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-ade38b89d9f58fb9"
+    },
+    {
+      "address": "46 Thornwood Avenue, Flat 0-1, West End, Glasgow, G11 7PQ",
+      "postcode": "G11 7PQ",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514447",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514447"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514447",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-d14ba5487ef8f582"
+    },
+    {
+      "address": "13 Corrour Place, Newlands, Glasgow, G43 2DX",
+      "postcode": "G43 2DX",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "Tenanted Commercial",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514141",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514141"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514141",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-6310165086d043e9"
+    },
+    {
+      "address": "82 Cardowan Road, Glasgow, G32 6QP",
+      "postcode": "G32 6QP",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513699",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513699"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513699",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-315422872eee6872"
+    },
+    {
+      "address": "134 Montgomery House, Demense Road, Manchester, M16 8PH",
+      "postcode": "M16 8PH",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513478",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513478"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513478",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-22e049cd19263ffe"
+    },
+    {
+      "address": "136 Renfrew Chambers, Flat 1-1, Glasgow, G2 3AU",
+      "postcode": "G2 3AU",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513070",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513070"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513070",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-833dd695ce98eb15"
+    },
+    {
+      "address": "221 Langside Road, Flat 1-1, Glasgow, G42 8XY",
+      "postcode": "G42 8XY",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "3 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513053",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513053"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513053",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-2e70cb630fc66a8b"
+    },
+    {
+      "address": "10 Franklin Street, Glasgow, G40 4BP",
+      "postcode": "G40 4BP",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14512509",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14512509"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14512509",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-ba29694cce238fdb"
+    },
+    {
+      "address": "502 Allison Street, Glasgow, G42 8TB",
+      "postcode": "G42 8TB",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "3 Bedroom House",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511387",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511387"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511387",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-f71b1d48bf05a22a"
+    },
+    {
+      "address": "70 and 70a Kingston Avenue, Edinburgh, EH16 5SW",
+      "postcode": "EH16 5SW",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "Portfolio of Properties",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511302",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511302"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511302",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-8a32978349ab9ad8"
+    },
+    {
+      "address": "444 Dumbarton Road, Glasgow, G11 6SE",
+      "postcode": "G11 6SE",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "Tenanted Commercial",
+      "status": "upcoming",
+      "auction_date": "2026-11-12",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14510078",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14510078"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14510078",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-aaff2134c13ad43b"
+    },
+    {
+      "address": "336 Montgomery House, Demense Road, Manchester, M16 8PH",
+      "postcode": "M16 8PH",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509976",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509976"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509976",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-7b73beea0ee8909a"
+    },
+    {
+      "address": "335 Montgomery House, Demense Road, Manchester, M16 8PH",
+      "postcode": "M16 8PH",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509619",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509619"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509619",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-8f23b83f4116ea43"
+    },
+    {
+      "address": "220 Wallace Street, Apartment 4-20, Glasgow, G5 8AH",
+      "postcode": "G5 8AH",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509109",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509109"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509109",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-194b8e064ed967f2"
+    },
+    {
+      "address": "125 Montgomery House, Demesne Road, Manchester, M16 8PH",
+      "postcode": "M16 8PH",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506780",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506780"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506780",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-685e045468d42e46"
+    },
+    {
+      "address": "Area at Dalmellington Road, Crookston, Glasgow, G53 7FL",
+      "postcode": "G53 7FL",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506644",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506644"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506644",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-3e148027a73e634e"
+    },
+    {
+      "address": "50-58 Jamaica Street, 4-05, Glasgow, G1 4NN",
+      "postcode": "G1 4NN",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506389",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506389"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506389",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-504fa7485344f482"
+    },
+    {
+      "address": "27 Allison Street, Flat 1-1, Glasgow, G42 8NP",
+      "postcode": "G42 8NP",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Blocks",
+      "lot_type": "Blocks",
+      "property_type": "Blocks",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-6cbd9309da8babc6"
+    },
+    {
+      "address": "275 Chirnside Road, Glasgow, G52 2LG",
+      "postcode": "G52 2LG",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "3 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14504961",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14504961"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14504961",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-9d41d8ec0db23293"
+    },
+    {
+      "address": "80 Craigentinny Road, Flat 6, Edinburgh, EH7 6ND",
+      "postcode": "EH7 6ND",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500609",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500609"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500609",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-b7d5717451d9d5ed"
+    },
+    {
+      "address": "76 Pitt Street, Flat 4, Edinburgh, EH6 4DB",
+      "postcode": "EH6 4DB",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500320",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500320"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500320",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-58077163fd33e8d6"
+    },
+    {
+      "address": "151 Gallowgate, Glasgow, G1 5AX",
+      "postcode": "G1 5AX",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14499062",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14499062"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14499062",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-44f8f6abcd32ae77"
+    },
+    {
+      "address": "Land at Bargany Place, Crookston, Glasgow, G53 7ER",
+      "postcode": "G53 7ER",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14497447",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14497447"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14497447",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-976efb946d2950fa"
+    },
+    {
+      "address": "1.33 Acres at Rouken Glen Road, Rouken Glen, Glasgow, G46 7HT",
+      "postcode": "G46 7HT",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14495866",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14495866"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14495866",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-0bf0d41766630e66"
+    },
+    {
+      "address": "49 Restalrig Road, Edinburgh, EH6 8BD",
+      "postcode": "EH6 8BD",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14494234",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14494234"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14494234",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-b9db259d6d9d0964"
+    },
+    {
+      "address": "309 Montgomery House, Demense Road, Manchester, M16 8PH",
+      "postcode": "M16 8PH",
+      "town": "Manchester",
+      "city": "Manchester",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14493996",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14493996"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14493996",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-55a4a70d0c777c3c"
+    },
+    {
+      "address": "Site at Burdiehouse Road, Edinburgh, EH17 8BJ",
+      "postcode": "EH17 8BJ",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14488165",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14488165"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14488165",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-c7f495938c164d60"
+    },
+    {
+      "address": "108 Allison Street, Flat 3-1, Glasgow, G42 8ND",
+      "postcode": "G42 8ND",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486465",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486465"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486465",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-30deed1c093e7502"
+    },
+    {
+      "address": "Plot at Little Green Lane, Severn Beach, Bristol, BS35 4NJ",
+      "postcode": "BS35 4NJ",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486244",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486244"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486244",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-a63a0f234e9079da"
+    },
+    {
+      "address": "Plot SBA12 Little Green Lane, Bristol, BS35 4NJ",
+      "postcode": "BS35 4NJ",
+      "town": "Bristol",
+      "city": "Bristol",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14482079",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14482079"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14482079",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-0b31a2028f3c4278"
+    },
+    {
+      "address": "3 Harelaw, Development with Full Planning, Shawfair, Danderhall, Edinburgh, EH22 1SB",
+      "postcode": "EH22 1SB",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478815",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478815"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478815",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-0f118d410378320d"
+    },
+    {
+      "address": "Plot 6 West of Boghall Farmhouse, Biggar Rd, Edinburgh, EH10 7DX",
+      "postcode": "EH10 7DX",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478747",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478747"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478747",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-fdd25f9df77a2f4d"
+    },
+    {
+      "address": "Plot 7, Land West of Boghall Farmhouse, Bigger Road, Edinburgh, EH10 7DX",
+      "postcode": "EH10 7DX",
+      "town": "Edinburgh",
+      "city": "Edinburgh",
+      "residential_subtype": "Development",
+      "lot_type": "Development",
+      "property_type": "Development",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478730",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478730"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14478730",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-35432167178e3e4b"
+    },
+    {
+      "address": "101-105 New City Road, Glasgow, G4 9JX",
+      "postcode": "G4 9JX",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Mixed-use",
+      "lot_type": "Mixed-use",
+      "property_type": "Mixed-use",
+      "title": "Vacant Commercial",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14293362",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14293362"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14293362",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-96917ad898a45471"
+    },
+    {
+      "address": "21 St Andrews Court, 2-07, Merchant City, Glasgow, G1 5PW",
+      "postcode": "G1 5PW",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14286358",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14286358"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14286358",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-1ce1ac980a6f27c9"
+    },
+    {
+      "address": "Land to the rear of 418 Mearns Road, Glasgow, G77 5RH",
+      "postcode": "G77 5RH",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-19",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14112635",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14112635"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14112635",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-19",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-e0d1746ecd86a5a4"
+    },
+    {
+      "address": "3 Plots at Parkhouse, Darnley, Glasgow, G53 7HU",
+      "postcode": "G53 7HU",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Houses",
+      "lot_type": "Houses",
+      "property_type": "Houses",
+      "title": "Plot of Land",
+      "status": "upcoming",
+      "auction_date": "2026-11-19",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13883832",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13883832"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13883832",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-19",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-6e79023ee06f2a13"
+    },
+    {
+      "address": "296C London Road, Glasgow, G40 1PN",
+      "postcode": "G40 1PN",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Portfolios",
+      "lot_type": "Portfolios",
+      "property_type": "Portfolios",
+      "title": "1 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-19",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13876199",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13876199"
+        }
+      ],
+      "scraped_at": "2026-11-03T11:29:30.137Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13876199",
+          "scraped_at": "2026-11-03T11:29:30.137Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-19",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-5bceda7258fdf711"
+    }
+  ]
 }
