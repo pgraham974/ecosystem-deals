@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T11:48:15.054Z",
-  "attempted_at": "2026-11-03T11:48:15.054Z",
+  "updated_at": "2026-11-03T13:21:59.155Z",
+  "attempted_at": "2026-11-03T13:21:59.155Z",
   "lots": [
     {
       "address": "8 Temple Street, Middleton, Manchester, Lancashire, M24 2JG",
@@ -22,7 +22,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/375975"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 158500,
       "guide_price_text": "Guide Price* : £158,500+",
@@ -55,6 +55,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/375975",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": null,
+          "guide_price": 158500,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-fb49d1e87bbbe54c"
@@ -78,7 +89,7 @@
           "url": "https://www.auctionhouse.co.uk/manchester/auction/lot/153511"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 60000,
       "guide_price_text": "*Guide | £60,000+ (plus fees)",
@@ -111,6 +122,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://www.auctionhouse.co.uk/manchester/auction/lot/153511",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "unsold",
+          "auction_date": "2026-10-20",
+          "guide_price": 60000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-14aba068c0dfbfc9"
@@ -134,7 +156,7 @@
           "url": "https://www.auctionhouse.co.uk/manchester/auction/lot/152937"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 69000,
       "guide_price_text": "*Guide | £69,000+ (plus fees)",
@@ -167,6 +189,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://www.auctionhouse.co.uk/manchester/auction/lot/152937",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "unsold",
+          "auction_date": "2026-10-20",
+          "guide_price": 69000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-d6aa47cfe60839ac"
@@ -190,7 +223,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/371182"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 115000,
       "guide_price_text": "£115,000+",
@@ -223,6 +256,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 139000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/371182",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-10-27",
+          "guide_price": 115000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 139000
         }
       ],
       "id": "lot-92be0504e01f1b8e"
@@ -246,7 +290,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/352269"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 80000,
       "guide_price_text": "£80,000+",
@@ -279,6 +323,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 86000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/352269",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-07-07",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 86000
         }
       ],
       "id": "lot-01e21215b63b539a"
@@ -302,7 +357,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/346474"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 80000,
       "guide_price_text": "£80,000+",
@@ -335,6 +390,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 88000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/346474",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-06-09",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 88000
         }
       ],
       "id": "lot-40f4f2e39e931800"
@@ -358,7 +424,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/342976"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 82000,
       "guide_price_text": "£82,000+",
@@ -391,6 +457,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 92000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/342976",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-05-19",
+          "guide_price": 82000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 92000
         }
       ],
       "id": "lot-114a9026d806fe87"
@@ -414,7 +491,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/338315"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 77000,
       "guide_price_text": "£77,000+",
@@ -447,6 +524,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 84500
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/338315",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-04-14",
+          "guide_price": 77000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 84500
         }
       ],
       "id": "lot-365a34958917e24c"
@@ -470,7 +558,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/335623"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 87000,
       "guide_price_text": "£87,000+",
@@ -503,6 +591,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 95000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/335623",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-04-08",
+          "guide_price": 87000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 95000
         }
       ],
       "id": "lot-971017f28b385856"
@@ -526,7 +625,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/322218"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 60000,
       "guide_price_text": "£60,000+",
@@ -559,6 +658,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 72000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/322218",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-01-13",
+          "guide_price": 60000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 72000
         }
       ],
       "id": "lot-aa1b34c1d9c60bb1"
@@ -582,7 +692,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/301815"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 320000,
       "guide_price_text": "£320,000+",
@@ -615,6 +725,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 459000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/301815",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-08-12",
+          "guide_price": 320000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 459000
         }
       ],
       "id": "lot-334b74777801523f"
@@ -638,7 +759,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/301832"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 120000,
       "guide_price_text": "£120,000+",
@@ -671,6 +792,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 148000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/301832",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-08-05",
+          "guide_price": 120000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 148000
         }
       ],
       "id": "lot-54d91fc1cbe86094"
@@ -694,7 +826,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/302646"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 115000,
       "guide_price_text": "£115,000+",
@@ -727,6 +859,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 129000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/302646",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-08-05",
+          "guide_price": 115000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 129000
         }
       ],
       "id": "lot-7e949939f462bec0"
@@ -750,7 +893,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/274976"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 190000,
       "guide_price_text": "£190,000+",
@@ -783,6 +926,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 275000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/274976",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-01-14",
+          "guide_price": 190000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 275000
         }
       ],
       "id": "lot-ecba7e17511940cf"
@@ -806,7 +960,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/268990"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 80000,
       "guide_price_text": "£80,000+",
@@ -839,6 +993,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 105000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/268990",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2024-11-12",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 105000
         }
       ],
       "id": "lot-42069fbac4af3333"
@@ -862,7 +1027,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/269091"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 37500,
       "guide_price_text": "£37,500+",
@@ -895,6 +1060,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 49000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/269091",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2024-11-05",
+          "guide_price": 37500,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 49000
         }
       ],
       "id": "lot-42b101b4dc0b7906"
@@ -918,7 +1094,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/220737"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 40000,
       "guide_price_text": "£40,000 - £50,000",
@@ -951,6 +1127,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 70000
+        },
+        {
+          "source": "Auction House Manchester",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/220737",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2023-09-26",
+          "guide_price": 40000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 70000
         }
       ],
       "id": "lot-e3922b35d7483ac5"
@@ -974,7 +1161,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/374990"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 125000,
       "guide_price_text": "Guide Price* : £125,000",
@@ -1007,6 +1194,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/374990",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-17",
+          "guide_price": 125000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-37bb4f561c90001a"
@@ -1030,7 +1228,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/376056"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 145000,
       "guide_price_text": "Guide Price* : £145,000",
@@ -1063,6 +1261,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/376056",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-17",
+          "guide_price": 145000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-65135287ba168f3d"
@@ -1086,7 +1295,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/376573"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 10000,
       "guide_price_text": "Guide Price* : £10,000 - £20,000",
@@ -1119,6 +1328,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/376573",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-17",
+          "guide_price": 10000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-cbe79a7373b0172b"
@@ -1142,7 +1362,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/375871"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 220000,
       "guide_price_text": "Guide Price* : £220,000",
@@ -1175,6 +1395,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/375871",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": null,
+          "guide_price": 220000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-6491097386d2eb79"
@@ -1198,7 +1429,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/374299"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 200000,
       "guide_price_text": "Guide Price* : £200,000",
@@ -1231,6 +1462,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/374299",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": null,
+          "guide_price": 200000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-9b87281ce007325a"
@@ -1254,7 +1496,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/373081"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 80000,
       "guide_price_text": "£80,000",
@@ -1287,6 +1529,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 88000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/373081",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-10-27",
+          "guide_price": 80000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 88000
         }
       ],
       "id": "lot-e4ded6a261841ff7"
@@ -1310,7 +1563,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/370826"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 140000,
       "guide_price_text": "£140,000",
@@ -1343,6 +1596,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 180000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/370826",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-10-27",
+          "guide_price": 140000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 180000
         }
       ],
       "id": "lot-17e7f0f1696f451d"
@@ -1366,7 +1630,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/361233"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 325000,
       "guide_price_text": "£325,000",
@@ -1399,6 +1663,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/361233",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "unsold",
+          "auction_date": "2026-08-25",
+          "guide_price": 325000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-4f805b5232908805"
@@ -1422,7 +1697,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/359581"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 325000,
       "guide_price_text": "£325,000",
@@ -1455,6 +1730,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 350000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/359581",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-08-11",
+          "guide_price": 325000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 350000
         }
       ],
       "id": "lot-a76cae8bcc0c3441"
@@ -1478,7 +1764,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/356021"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 50000,
       "guide_price_text": "£50,000",
@@ -1511,6 +1797,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 55000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/356021",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-07-28",
+          "guide_price": 50000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 55000
         }
       ],
       "id": "lot-b482ba2d3d0ad4c5"
@@ -1534,7 +1831,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/346916"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 110000,
       "guide_price_text": "£110,000",
@@ -1567,6 +1864,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 110000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/346916",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-07-14",
+          "guide_price": 110000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 110000
         }
       ],
       "id": "lot-520849f141d73373"
@@ -1590,7 +1898,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/327578"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 125000,
       "guide_price_text": "£125,000",
@@ -1623,6 +1931,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 135000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/327578",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-02-17",
+          "guide_price": 125000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 135000
         }
       ],
       "id": "lot-b6ab83990957a4f5"
@@ -1646,7 +1965,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/323169"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 280000,
       "guide_price_text": "£280,000",
@@ -1679,6 +1998,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 310000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/323169",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-01-13",
+          "guide_price": 280000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 310000
         }
       ],
       "id": "lot-35962e650b4219ae"
@@ -1702,7 +2032,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/321749"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 75000,
       "guide_price_text": "£75,000",
@@ -1735,6 +2065,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 82500
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/321749",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-01-13",
+          "guide_price": 75000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 82500
         }
       ],
       "id": "lot-0556142cf079e044"
@@ -1758,7 +2099,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/306882"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 150000,
       "guide_price_text": "£150,000",
@@ -1791,6 +2132,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 166000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/306882",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-09-09",
+          "guide_price": 150000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 166000
         }
       ],
       "id": "lot-5659a66ff9365eb2"
@@ -1814,7 +2166,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/300391"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 160000,
       "guide_price_text": "£160,000",
@@ -1847,6 +2199,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/300391",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-07-22",
+          "guide_price": 160000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-65b84090a38f06cf"
@@ -1870,7 +2233,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/281428"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 39000,
       "guide_price_text": "£39,000",
@@ -1903,6 +2266,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 110000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/281428",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-03-11",
+          "guide_price": 39000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 110000
         }
       ],
       "id": "lot-165f036b1eef24c2"
@@ -1926,7 +2300,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/278731"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 110000,
       "guide_price_text": "£110,000",
@@ -1959,6 +2333,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/278731",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2025-02-11",
+          "guide_price": 110000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-4f893e1589a78512"
@@ -1982,7 +2367,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/271041"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 140000,
       "guide_price_text": "£140,000",
@@ -2015,6 +2400,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 150000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/271041",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2024-11-26",
+          "guide_price": 140000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 150000
         }
       ],
       "id": "lot-ccef18e57fa37337"
@@ -2038,7 +2434,7 @@
           "url": "https://online.auctionhouse.co.uk/lot/redirect/203338"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 91000,
       "guide_price_text": "£91,000",
@@ -2071,6 +2467,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": 100000
+        },
+        {
+          "source": "Auction House South West (Bristol and Gloucestershire)",
+          "source_url": "https://online.auctionhouse.co.uk/lot/redirect/203338",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2023-04-25",
+          "guide_price": 91000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": 100000
         }
       ],
       "id": "lot-057f8de5c6097ff9"
@@ -2094,7 +2501,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153558"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 180000,
       "guide_price_text": "*Guide | £180,000 (plus fees)",
@@ -2127,6 +2534,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153558",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 180000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-705e848e3acbe832"
@@ -2150,7 +2568,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153580"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 140000,
       "guide_price_text": "*Guide | £140,000 (plus fees)",
@@ -2183,6 +2601,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153580",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 140000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-dce7d8f53c8edd6e"
@@ -2206,7 +2635,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153581"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 128000,
       "guide_price_text": "*Guide | £128,000 (plus fees)",
@@ -2239,6 +2668,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153581",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 128000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-268a05d1e67b62e6"
@@ -2262,7 +2702,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153614"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": "Sold prior",
@@ -2295,6 +2735,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153614",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "sold",
+          "auction_date": "2026-11-26",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-316156a86eeec439"
@@ -2318,7 +2769,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153622"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 475000,
       "guide_price_text": "*Guide | £475,000 (plus fees)",
@@ -2351,6 +2802,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153622",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 475000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-39cef8e45743be9f"
@@ -2374,7 +2836,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153781"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 55000,
       "guide_price_text": "*Guide | £55,000 (plus fees)",
@@ -2407,6 +2869,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153781",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 55000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-58f9ef69231e96c3"
@@ -2430,7 +2903,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153855"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 89500,
       "guide_price_text": "*Guide | £89,500 (plus fees)",
@@ -2463,6 +2936,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153855",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-26",
+          "guide_price": 89500,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-0fccfb1431e29cc6"
@@ -2486,7 +2970,7 @@
           "url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153663"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": 132000,
       "guide_price_text": "*Guide | £132,000 (plus fees)",
@@ -2519,9 +3003,65 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Auction House Scotland",
+          "source_url": "https://www.auctionhouse.co.uk/scotland/auction/lot/153663",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "unsold",
+          "auction_date": "2026-10-28",
+          "guide_price": 132000,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-22830b13f50044ba"
+    },
+    {
+      "address": "45 Glencorse Street, Glasgow, G32 6JQ",
+      "postcode": "G32 6JQ",
+      "town": "Glasgow",
+      "city": "Glasgow",
+      "residential_subtype": "Flats",
+      "lot_type": "Flats",
+      "property_type": "Flats",
+      "title": "2 Bedroom Flat",
+      "status": "upcoming",
+      "auction_date": "2026-11-05",
+      "source": "Future Property Auctions",
+      "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524579",
+      "sources": [
+        {
+          "name": "Future Property Auctions",
+          "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524579"
+        }
+      ],
+      "scraped_at": "2026-11-03T13:21:59.155Z",
+      "stale": false,
+      "guide_price": null,
+      "guide_price_text": null,
+      "opening_bid": null,
+      "current_bid": null,
+      "sold_price": null,
+      "grade": null,
+      "grade_evidence": null,
+      "grade_evidence_url": null,
+      "grade_verified": false,
+      "provenance": [
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524579",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        }
+      ],
+      "id": "lot-82aa704933a3a914"
     },
     {
       "address": "33 Summerton Road, Flat 3-1, Glasgow, G51 2QA",
@@ -2542,7 +3082,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524239"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2569,6 +3109,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524239",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14524239",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -2598,7 +3149,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523967"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2625,6 +3176,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523967",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523967",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-12",
           "guide_price": null,
@@ -2654,7 +3216,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523253"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2681,6 +3243,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523253",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523253",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -2710,7 +3283,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523117"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2737,6 +3310,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523117",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14523117",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-12",
           "guide_price": null,
@@ -2766,7 +3350,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522573"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2782,6 +3366,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522573",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522573",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -2811,7 +3406,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522250"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2838,6 +3433,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522250",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14522250",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -2867,7 +3473,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521910"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2894,6 +3500,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521910",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14521910",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -2923,7 +3540,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520992"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -2950,6 +3567,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520992",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520992",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -2979,7 +3607,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520805"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3006,6 +3634,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520805",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14520805",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3035,7 +3674,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519904"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3062,6 +3701,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519904",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519904",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3091,7 +3741,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519224"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3118,6 +3768,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519224",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-12",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14519224",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-12",
           "guide_price": null,
@@ -3147,7 +3808,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14517915"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3174,6 +3835,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14517915",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14517915",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3203,7 +3875,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516997"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3230,6 +3902,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516997",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516997",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3259,7 +3942,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516555"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3286,6 +3969,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516555",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516555",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3315,7 +4009,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516504"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3342,6 +4036,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516504",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14516504",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3371,7 +4076,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14515739"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3398,6 +4103,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14515739",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14515739",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3427,7 +4143,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3460,9 +4176,20 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
-      "id": "lot--462ce5a0284121fb"
+      "id": "lot-b9d31a5fd7bede05"
     },
     {
       "address": "46 Thornwood Avenue, Flat 0-1, West End, Glasgow, G11 7PQ",
@@ -3483,7 +4210,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514447"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3510,6 +4237,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514447",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514447",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3539,7 +4277,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513699"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3555,6 +4293,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513699",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513699",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3584,7 +4333,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513478"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3600,6 +4349,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513478",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513478",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3629,7 +4389,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513070"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3656,6 +4416,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513070",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513070",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3685,7 +4456,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513053"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3712,6 +4483,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513053",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14513053",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3741,7 +4523,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14512509"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3768,6 +4550,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14512509",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14512509",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3797,7 +4590,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511387"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3813,6 +4606,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511387",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511387",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3842,7 +4646,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511302"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3869,6 +4673,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511302",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14511302",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3898,7 +4713,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509976"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3914,6 +4729,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509976",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509976",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3943,7 +4769,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509619"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -3959,6 +4785,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509619",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509619",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -3988,7 +4825,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509109"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4015,6 +4852,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509109",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14509109",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4044,7 +4892,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506780"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4060,6 +4908,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506780",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506780",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4089,7 +4948,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506389"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4105,6 +4964,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506389",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506389",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4134,7 +5004,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4167,9 +5037,20 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
-      "id": "lot--7590cb32350efc74"
+      "id": "lot-8a6f34cdcaf1038c"
     },
     {
       "address": "275 Chirnside Road, Glasgow, G52 2LG",
@@ -4190,7 +5071,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14504961"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4217,6 +5098,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14504961",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14504961",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4246,7 +5138,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500609"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4273,6 +5165,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500609",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500609",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4302,7 +5205,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500320"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4329,6 +5232,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500320",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14500320",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4358,7 +5272,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14499062"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4385,6 +5299,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14499062",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14499062",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4414,7 +5339,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14494234"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4441,6 +5366,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14494234",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14494234",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4470,7 +5406,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14493996"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4486,6 +5422,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14493996",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14493996",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4515,7 +5462,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14488165"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4542,6 +5489,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14488165",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14488165",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4571,7 +5529,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486465"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4604,6 +5562,17 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14486465",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-30deed1c093e7502"
@@ -4627,7 +5596,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14286358"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4643,6 +5612,17 @@
           "source": "Future Property Auctions",
           "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14286358",
           "scraped_at": "2026-11-03T11:48:15.054Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-05",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14286358",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
           "status": "upcoming",
           "auction_date": "2026-11-05",
           "guide_price": null,
@@ -4672,7 +5652,7 @@
           "url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13876199"
         }
       ],
-      "scraped_at": "2026-11-03T11:48:15.054Z",
+      "scraped_at": "2026-11-03T13:21:59.155Z",
       "stale": false,
       "guide_price": null,
       "guide_price_text": null,
@@ -4694,32 +5674,20 @@
           "opening_bid": null,
           "current_bid": null,
           "sold_price": null
+        },
+        {
+          "source": "Future Property Auctions",
+          "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=13876199",
+          "scraped_at": "2026-11-03T13:21:59.155Z",
+          "status": "upcoming",
+          "auction_date": "2026-11-19",
+          "guide_price": null,
+          "opening_bid": null,
+          "current_bid": null,
+          "sold_price": null
         }
       ],
       "id": "lot-5f7dbdb955522ab4"
     }
-  ],
-  "bootstrap_cleanup": {
-    "retired_rows": 29,
-    "reason": "Retired pre-release rows collected before corrected source classification; they are not represented as live, sold or withdrawn. Current verified fresh observations are unchanged.",
-    "at": "2026-11-03T12:01:39.471Z",
-    "classification_corrections": [
-      {
-        "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14514685",
-        "original_title": "2 Bedroom Flat",
-        "address": "5 Hamiltonhill Gardens, Flat 1-1, Glasgow, G22 5PR",
-        "from": "Blocks",
-        "to": "Flats",
-        "reason": "An individually identified flat within a block is not a sale of the whole block."
-      },
-      {
-        "source_url": "https://www.futurepropertyauctions.co.uk/property_details.asp?id=14506372",
-        "original_title": "2 Bedroom Flat",
-        "address": "27 Allison Street, Flat 1-1, Glasgow, G42 8NP",
-        "from": "Blocks",
-        "to": "Flats",
-        "reason": "An individually identified flat within a block is not a sale of the whole block."
-      }
-    ]
-  }
+  ]
 }
