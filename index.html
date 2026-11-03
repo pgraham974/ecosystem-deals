@@ -60,7 +60,7 @@ tbody tr{cursor:pointer}tbody tr:hover td{background:#f1f5ff}.scroll{max-height:
 #deal_body [id^="uw_"].dlf input,#deal_body .dlf input,#deal_body .dlf select,#uw_units input,#uw_units select{color:#1748b5}#uw_units td{min-width:80px}#uw_units th{white-space:normal}#uw_results .kpi b{overflow-wrap:anywhere}
 
 #subnav [data-v="sales"]{color:#176640;border:1px solid #7bad8c;background:#edf7f0}#sales_body .opgrid .card{min-width:0}#fw_body a{overflow-wrap:anywhere}
-</style><link rel="stylesheet" href="assets/laurito.css"><link rel="stylesheet" href="assets/auctions.css"></head><body>
+</style><link rel="stylesheet" href="assets/laurito.css?v=auctions-20261103-2"><link rel="stylesheet" href="assets/auctions.css?v=auctions-20261103-2"></head><body>
 <header><a class="lc-brand" href="#find"><img src="assets/laurito-lockup.png" alt="Laurito Capital"></a><div class="lc-product">Distressed acquisition<span>Manchester, Cheltenham, Bristol and Edinburgh. Auctions also cover Glasgow.</span></div><div id="status">connecting...</div></header>
 <div id="app">
 <nav id="nav2"><div class="mainnav"><button class="mainb" data-g="find">Find</button><button class="mainb" data-g="auctions">Auctions</button><button class="mainb" data-g="deal">Deal</button><button class="mainb" data-g="partners">Partners</button><button class="mainb" data-g="pipe">Pipeline</button></div><div id="subnav"></div></nav><nav class="ctl" style="display:none"><button class="btn sec" id="overview_tab">Overview</button><button class="btn sec" id="accom_tab">Accommodation (TA / DA)</button><button class="btn" id="assets_tab">Funnel</button><button class="btn sec" id="map_tab">Map</button><button class="btn sec" id="operators_tab">Operators</button><button class="btn sec" id="frameworks_tab">Frameworks</button><button class="btn sec" id="pipeline_tab">Pipeline</button><button class="btn sec" id="shortlist_tab">Shortlist</button><button class="btn sec" id="contracts_tab" style="display:none">Contracts to bid for</button><button class="btn sec" id="partners_tab" style="display:none">Partners &amp; returns</button></nav><section id="auctions_view" class="hidden" aria-label="Auctions"><main class="aq-shell" id="auctions_body"><p>Loading auction interface...</p></main></section><div id="assets_view">
@@ -1524,10 +1524,10 @@ async function vaComps(){const el=$('#va_comps');el.innerHTML='<p>Loading transa
 init().then(async()=>{try{await sfLoad();renderBest()}catch(e){console.log(e)}try{navGo(location.hash === "#auctions" || window.lcAuctionsActive ? "auctions" : "find")}catch(e){console.log(e)}});try{navSync("assets")}catch(e){}
 </script>
 <script src="assets/grades.js"></script>
-<script src="assets/laurito.js"></script>
+<script src="assets/laurito.js?v=auctions-20261103-2"></script>
 <script src="assets/comps.js"></script>
 <script src="assets/rent-roll.js"></script>
 <script src="assets/area-yields.js"></script>
-<script src="assets/focus.js"></script>
-<script src="assets/auctions.js"></script>
+<script src="assets/focus.js?v=auctions-20261103-2"></script>
+<script src="assets/auctions.js?v=auctions-20261103-2"></script>
 </body></html>
