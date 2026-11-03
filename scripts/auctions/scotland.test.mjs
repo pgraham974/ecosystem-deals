@@ -82,3 +82,39 @@ test('verified ending date takes precedence over starting date', async () => {
 test('parent warning and successful-page counter contract is preserved', async () => {
   const r = await braveRun(); assert.equal(r.errors.length, 0); assert.ok(r.warnings.some(message => message.includes('no open reuse licence'))); assert.equal(r.successful_pages, 2); assert.equal(r.pages, 2);
 });
+
+function futureDescriptionPage(title, description) {
+  return futurePage().replace('2 Bedroom Flat <span>', title + ' <span>') + '<div class="property-description">' + description + '</div>';
+}
+test('single flat portfolio-addition marketing stays Flats', async () => {
+  const r = await futureRun(futureDescriptionPage('1 Bedroom Flat', 'The perfect addition to any investment portfolio. Add this property to your portfolio.'));
+  assert.equal(r.lots[0].residential_subtype, 'Flats');
+});
+test('actual Portfolio of Properties title remains Portfolios', async () => {
+  const r = await futureRun(futureDescriptionPage('Portfolio of Properties', 'Two properties offered together.'));
+  assert.equal(r.lots[0].residential_subtype, 'Portfolios');
+});
+test('single flat with explicit licensed HMO use remains HMO', async () => {
+  const r = await futureRun(futureDescriptionPage('3 Bedroom Flat', 'The property is a fully licensed HMO with an existing tenancy.'));
+  assert.equal(r.lots[0].residential_subtype, 'HMO');
+});
+test('single flat with explicit licenced operating HMO use remains HMO', async () => {
+  const r = await futureRun(futureDescriptionPage('5 Bedroom Flat', 'Currently operating as a licenced HMO.'));
+  assert.equal(r.lots[0].residential_subtype, 'HMO');
+});
+test('single flat with shops nearby stays Flats', async () => {
+  const r = await futureRun(futureDescriptionPage('1 Bedroom Flat', 'The property is near a shop with upper residential accommodation. Nearby mixed-use properties and local shops.'));
+  assert.equal(r.lots[0].residential_subtype, 'Flats');
+});
+test('single flat with a nearby block stays Flats', async () => {
+  const r = await futureRun(futureDescriptionPage('2 Bedroom Flat', 'Nearby building comprises six flats. A neighbouring block of flats offers comparable investment opportunities.'));
+  assert.equal(r.lots[0].residential_subtype, 'Flats');
+});
+test('single flat with vague development potential stays Flats', async () => {
+  const r = await futureRun(futureDescriptionPage('2 Bedroom Flat', 'Excellent development potential. The property could be a residential development site subject to planning.'));
+  assert.equal(r.lots[0].residential_subtype, 'Flats');
+});
+test('potential HMO conversion does not establish current HMO use', async () => {
+  const r = await futureRun(futureDescriptionPage('3 Bedroom Flat', 'The property could become a licensed HMO subject to consent.'));
+  assert.equal(r.lots[0].residential_subtype, 'Flats');
+});

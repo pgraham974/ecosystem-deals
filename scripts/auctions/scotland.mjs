@@ -30,14 +30,39 @@ function addressTown(address){
  return null;
 }
 const postcode=s=>clean(s).match(/\b(?:GIR\s?0AA|[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2})\b/i)?.[0].toUpperCase().replace(/\s/g,'').replace(/(.{3})$/,' $1')||null;
-function subtype(s){
- if(/\bmixed[ -]use\b|(?:shop|commercial|retail).{0,60}(?:flat|apartment|residential)|(?:flat|apartment|residential).{0,60}(?:shop|commercial|retail)/i.test(s))return 'Mixed-use';
- if(/\bportfolio\b|\bcollection of (?:properties|houses|flats)\b/i.test(s))return 'Portfolios';
- if(/\bHMO\b|house (?:in|of) multiple occupation/i.test(s))return 'HMO';
- if(/\bblock of\b|\b(?:building|comprising|contains|converted into|arranged as)\s+(?:of\s+)?(?:\d+|two|three|four|five|six|seven|eight|nine|ten)\s+(?:self[ -]contained\s+)?(?:flats|apartments)/i.test(s))return 'Blocks';
- if(/\bdevelopment\b|\bplanning (?:permission|consent)\b|\bconversion (?:opportunity|to residential)\b/i.test(s))return 'Development';
- if(/\bflat(?:s)?\b|\bapartment(?:s)?\b|\bmaisonette\b|\bstudio\b/i.test(s))return 'Flats';
- if(/\bhouse(?:s)?\b|\bbungalow\b|\bcottage\b|\bresidential\b|\bdwelling\b/i.test(s))return 'Houses';
+function subtype(primary,evidence=''){
+ // Titles and dedicated Type fields are authoritative. Marketing prose about
+ // adding one dwelling to a portfolio is not evidence of a portfolio sale.
+ const portfolio=s=>/\bportfolio of (?:properties|houses|flats|apartments|residential units)\b|\bresidential (?:property )?portfolio\b|\bcollection of (?:properties|houses|flats)\b/i.test(s);
+ const block=s=>/\bblock of (?:\w+[ -])?(?:flats|apartments)\b|\b(?:building|comprising|comprises|contains|consists of|converted into|arranged as)\s+(?:of\s+)?(?:\d+|two|three|four|five|six|seven|eight|nine|ten)\s+(?:self[ -]contained\s+)?(?:flats|apartments)\b/i.test(s);
+ const mixed=s=>/\bmixed[ -]use\b|\b(?:ground[ -]floor )?(?:shop|retail|commercial unit).{0,60}(?:with|and|plus).{0,30}(?:upper |above |first[ -]floor )?(?:residential accommodation|flat(?:s)?|apartment(?:s)?)\b|\b(?:upper|above|first[ -]floor) residential accommodation.{0,60}(?:shop|retail|commercial)\b/i.test(s);
+ const development=s=>/\bresidential development (?:site|opportunity|land|plot)\b|\bdevelopment (?:site|land|plot).{0,60}(?:for|with consent for)\s+(?:\d+\s+)?(?:houses|homes|flats|apartments|dwellings)\b|\b(?:approved|granted|extant)\s+(?:residential )?planning (?:permission|consent).{0,90}(?:residential|dwellings|flats|apartments|houses)\b/i.test(s);
+ if(portfolio(primary))return 'Portfolios';
+ if(/\bHMO\b|house (?:in|of) multiple occupation/i.test(primary))return 'HMO';
+ if(mixed(primary))return 'Mixed-use';
+ if(block(primary))return 'Blocks';
+ if(development(primary))return 'Development';
+ let base=/\bflats?\b|\bapartments?\b|\bmaisonette\b|\bstudio\b/i.test(primary)?'Flats':/\bhouses?\b|\bbungalow\b|\bcottage\b|\bresidential\b|\bdwelling\b/i.test(primary)?'Houses':null;
+ // Supplementary prose can establish a use only with affirmative, lot-specific
+ // evidence. Reject comparisons, local-area descriptions and hypothetical use.
+ const facts=clean(evidence).split(/(?<=[.!?;])\s+/).filter(s=>!/(?:comparab|similar propert|\bnear\b|nearby|close to|adjacent|opposite|amenit|neighbou?r|surrounding|local area|within the area|potential|scope for|could|may be|subject to|suitable for|add(?:ition)? to.{0,30}portfolio)/i.test(s));
+ for(const s of facts){
+  if(/\b(?:licensed|licenced|operating|registered|existing|current)\s+(?:\w+[ -]){0,4}HMO\b|\bHMO\s+(?:licen[cs]e|registration)\s+(?:in place|held|current|valid)\b/i.test(s))return 'HMO';
+  if(/\b(?:this|the) (?:property|building|lot|subjects|accommodation)\b|\b(?:comprises|comprising|consists of|contains)\b/i.test(s)){
+   if(mixed(s))return 'Mixed-use';
+   if(block(s))return 'Blocks';
+   if(development(s))return 'Development';
+  }
+ }
+ if(base)return base;
+ // If the address is the title, a clear description of the actual offered
+ // dwelling can supply its basic class, but never infer a portfolio from prose.
+ for(const s of facts){
+  if(/^(?:this |the |a |an |offered (?:for sale )?(?:is )?)*(?:\w+[ -]){0,5}(?:house|flat|apartment|bungalow|cottage)\b/i.test(s)){
+   if(/\bflat\b|\bapartment\b/i.test(s))return 'Flats';
+   if(/\bhouse\b|\bbungalow\b|\bcottage\b/i.test(s))return 'Houses';
+  }
+ }
  return null;
 }
 const commercial=s=>/\bcommercial\b|\bretail\b|\boffice(?:s)?\b|\bwarehouse\b|\bindustrial\b|\brestaurant\b|\bpublic house\b|\bpub\b|\bshop\b/i.test(s)&&!/\bresidential\b|\bflat(?:s)?\b|\bapartment(?:s)?\b|\bHMO\b|\bdwelling\b|\bmixed[ -]use\b|\bconversion\b|\bdevelopment\b/i.test(s);
@@ -66,8 +91,12 @@ function fields(root,id){
  const propertyType=labelled('Type');
  const description=first(root,n=>(cls(n,'woocommerce-Tabs-panel--description')||cls(n,'woocommerce-product-details__short-description')||cls(n,'property-description')||n.a.id==='description')&&!all(n,p=>p!==n&&/(?:related|upsells|cross-sells)/i.test((p.a.class||'')+' '+(p.a.id||''))).length);
  // Description informs only categorisation transiently, never price or status.
- const classification=[title,propertyType,text(description),...headings.slice(0,4).map(text)].filter(Boolean).join(' ');
- const type=subtype(classification);
+ const typeHeading=headings.find(n=>n!==h&&n.tag==='h2'&&text(n).length<140);
+ const primary=[title,propertyType].filter(Boolean).join(' ');
+ const headingType=typeHeading?text(typeHeading):'';
+ const basePrimary=subtype(primary);
+ const classification=[primary,headingType].filter(Boolean).join(' ');
+ const type=subtype(basePrimary?primary:classification,text(description));
  const opening=labelledMoney(small,'opening bid|starting bid');
  let guide=labelledMoney(small,'guide(?: price)?');
  if(guide.value===0)guide={value:null,label:guide.label};

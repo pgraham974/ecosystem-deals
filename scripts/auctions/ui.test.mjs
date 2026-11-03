@@ -155,3 +155,10 @@ test('opening bids are labelled separately and never rendered as a guide',async(
   assert.match(h.root.innerHTML,/Opening bid, not guide/);
   assert.match(h.root.innerHTML,/Guide not published/);
 });
+
+test('a source placeholder zero guide is unknown, not a zero-pound offer',async()=>{
+ const h=harness({payload:feed([{...lots[0],guide_price:null,guide_price_text:'£0'}])});
+ await h.api.refresh();
+ assert.match(h.root.innerHTML,/Guide not published/);
+ assert.doesNotMatch(h.root.innerHTML,/<strong>£0<\/strong>/);
+});
