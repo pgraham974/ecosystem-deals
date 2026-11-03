@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createClient, normalizeLot, dedupeLots, mergePrevious } from './auctions/core.mjs';
+import { createClient, normalizeLot, dedupeLots, mergePrevious, sortLotsByGrade } from './auctions/core.mjs';
 import { collect as auctionhouse } from './auctions/auctionhouse.mjs';
 import { collect as scotland } from './auctions/scotland.mjs';
 
@@ -57,7 +57,7 @@ export async function run({ root = path.resolve(path.dirname(fileURLToPath(impor
   }
   const unique = dedupeLots(fresh);
   const retained = mergePrevious(unique, previous.lots || [], { sources }, now);
-  const lots = dedupeLots(Array.isArray(retained) ? retained : retained.lots || []);
+  const lots = sortLotsByGrade(dedupeLots(Array.isArray(retained) ? retained : retained.lots || []));
   const success = sources.some(s => s.status === 'live' || s.status === 'partial');
   const lastSuccess = success ? now : previous.updated_at || null;
   const counts = Object.fromEntries(config.towns.map(town => [town, lots.filter(l => l.town === town && !l.stale).length]));

@@ -502,10 +502,10 @@
     {
       "id": "sva",
       "name": "SVA Property Auctions",
-      "url": "https://sva-auctions.co.uk/",
+      "url": null,
       "enabled": false,
       "coverage_status": "skipped",
-      "reason": "Auction business ceased February 2023; TLS verification fails. Not a live source.",
+      "reason": "Auction business ceased February 2023. The old website is not linked.",
       "policy": {
         "reviewed_at": "2026-11-03",
         "status": "not_enabled",

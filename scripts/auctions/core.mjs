@@ -267,3 +267,17 @@ export function mergePrevious(fresh = [], previous = [], coverage = {}, now = ne
   }
   return dedupeLots(result);
 }
+const INSTRUCTION = /instructed by (?:the |a |an )?(?:[\w &.'-]{0,60}?)?(?:receivers?|lenders?|mortgagees?)\b|on (?:the )?instructions of (?:the |a |an )?(?:[\w &.'-]{0,60}?)?(?:receivers?|lenders?|mortgagees?)\b/i;
+const HEDGE = /potential|possible|may |might |could |not instructed|no receiver/i;
+export function instructionEvidence(value) {
+  const text = clean(String(value || '').replace(/<[^>]+>/g, ' '));
+  const match = text.match(INSTRUCTION);
+  if (!match || match.index == null) return '';
+  const slice = text.slice(Math.max(0, match.index - 80), match.index + match[0].length + 80).trim();
+  if (HEDGE.test(slice)) return '';
+  return slice;
+}
+export function sortLotsByGrade(lots = []) {
+  const rank = grade => ({ A: 0, B: 1, C: 2 })[grade] ?? 3;
+  return lots.slice().sort((a, b) => rank(a && a.grade) - rank(b && b.grade) || String(a && a.address || '').localeCompare(String(b && b.address || '')));
+}

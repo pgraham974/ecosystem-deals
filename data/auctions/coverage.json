@@ -696,10 +696,10 @@
     {
       "id": "sva",
       "name": "SVA Property Auctions",
-      "url": "https://sva-auctions.co.uk/",
+      "url": null,
       "checked_at": "2026-11-03T13:21:59.155Z",
       "status": "skipped",
-      "reason": "Auction business ceased February 2023; TLS verification fails. Not a live source.",
+      "reason": "Auction business ceased February 2023. The old website is not linked.",
       "lot_count": 0,
       "commercial_excluded": 0,
       "out_of_area_excluded": 0,

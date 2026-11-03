@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createClient, normalizeLot, dedupeLots, mergePrevious } from './core.mjs';
+import { createClient, normalizeLot, dedupeLots, mergePrevious, sortLotsByGrade } from './core.mjs';
 const NOW = '2026-11-03T10:00:00Z';
 const raw = extra => ({ address: 'Flat 1, 10 Example Street, Manchester, M1 2AB', title: 'Flat 1', property_type: 'Flat', status: 'Upcoming', auction_date: '2026-11-20', source_url: 'https://example.test/lot/1', ...extra });
 const norm = extra => normalizeLot(raw(extra), { source: 'Test', now: NOW });
@@ -100,6 +100,15 @@ test('unknown and stale upcoming statuses never fabricated, prices stay separate
   const l = lot({ guide_price: '£100,000+', opening_bid: 90000, current_bid: 101000, price: 999999, sold_price: null });
   assert.deepEqual([l.guide_price, l.opening_bid, l.current_bid, l.sold_price], [100000, 90000, 101000, null]);
   assert.equal(lot({ guide_price: '£100,000 - £120,000' }).guide_price, null);
+});
+test('lots sort A, then B, then C, then ungraded, without inventing a grade', () => {
+  const ranked = sortLotsByGrade([
+    lot({ address: '10 Ungraded Street, Manchester, M1 1AA', grade: 'A', title: 'potential receiver' }),
+    lot({ address: '12 Watch Street, Manchester, M1 1AA', grade: 'C', grade_verified: true, grade_evidence: 'Watchlist filing', grade_evidence_url: 'https://registry.test/c' }),
+    lot({ address: '11 Receiver Street, Manchester, M1 1AA', forced_sale_evidence: 'Instructed by the receiver', forced_sale_evidence_url: 'https://example.test/receiver' }),
+    lot({ address: '9 Admin Street, Manchester, M1 1AA', grade: 'A', grade_verified: true, grade_evidence: 'Live administration', grade_evidence_url: 'https://registry.test/a' })
+  ]);
+  assert.deepEqual(ranked.map(row => row.grade), ['A', 'B', 'C', null]);
 });
 test('grading requires explicit verified evidence and link, not auction or potential receiver', () => {
   assert.equal(lot({ grade: 'A', title: 'Auction flat receiver potential' }).grade, null);

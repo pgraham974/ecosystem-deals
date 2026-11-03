@@ -5,6 +5,8 @@
   const FEE = 0.018;
   const AREAS = ['Manchester', 'Cheltenham', 'Bristol', 'Glasgow', 'Edinburgh'];
   const CLASSES = ['Resi block', 'Houses', 'Flats', 'HMO', 'Mixed-use', 'Office', 'Development'];
+  const RESIDENTIAL = ['Resi block', 'Houses', 'Flats', 'HMO', 'Mixed-use'];
+  const FLOOR = 40000;
 
   function round2(n) {
     return Math.round((n + Number.EPSILON) * 100) / 100;
@@ -25,6 +27,7 @@
   }
 
   function sdltAdditional(price) {
+    if (!(price >= FLOOR)) return 0;
     return bands(price, [[125000, 0.05], [250000, 0.07], [925000, 0.10], [1500000, 0.15], [Infinity, 0.17]]);
   }
 
@@ -33,6 +36,7 @@
   }
 
   function lbttWithAds(price) {
+    if (!(price >= FLOOR)) return 0;
     const lbtt = bands(price, [[145000, 0], [250000, 0.02], [325000, 0.05], [750000, 0.10], [Infinity, 0.12]]);
     return lbtt + price * 0.08;
   }
@@ -45,6 +49,31 @@
     if (/cheltenham/i.test(t)) return 'Cheltenham';
     if (/manchester/i.test(t)) return 'Manchester';
     return t;
+  }
+
+  function areaLabel(city) {
+    return cityName(city) === 'Manchester' ? 'Greater Manchester' : cityName(city);
+  }
+
+  function townOf(row) {
+    const named = String((row && (row.sub_area || row.subArea)) || '').trim();
+    if (named) return named;
+    if (cityName(row && row.city) !== 'Manchester') return '';
+    const blob = [row && row.address, row && row.location, row && row.postcode].join(' ');
+    const towns = [
+      [/bolton|\bBL\d/i, 'Bolton'],
+      [/stockport|\bSK\d/i, 'Stockport'],
+      [/oldham|\bOL\d/i, 'Oldham'],
+      [/salford/i, 'Salford'],
+      [/wigan|\bWN\d/i, 'Wigan'],
+      [/\bbury\b/i, 'Bury'],
+      [/rochdale/i, 'Rochdale'],
+      [/trafford|stretford|altrincham/i, 'Trafford'],
+      [/ashton-under-lyne|tameside|\bdenton\b|droylsden|\bhyde\b|stalybridge/i, 'Tameside'],
+      [/warrington|\bWA\d/i, 'Warrington']
+    ];
+    for (let i = 0; i < towns.length; i++) if (towns[i][0].test(blob)) return towns[i][1];
+    return 'Manchester';
   }
 
   function scotland(city) {
@@ -62,6 +91,9 @@
   }
 
   function costs(price, city, type) {
+    if (!(price >= FLOOR)) {
+      return { tax: 0, label: 'Higher rates of SDLT, and the Scottish additional dwelling supplement, do not apply when the price is under £40,000' };
+    }
     const count = dwellingCount(type);
     const many = count != null && count >= 6;
     if (scotland(city)) {
@@ -75,8 +107,10 @@
 
   function assetClass(type) {
     const t = String(type || '');
-    if (/office/i.test(t)) return 'Office';
+    const homes = /flat|apartment|house|hmo|residential|dwelling|maisonette|studio|block of|\d+\s+flats\b|\d+\s+apartments\b/i.test(t);
     if (/mixed/i.test(t)) return 'Mixed-use';
+    if (/office/i.test(t) && !homes) return 'Office';
+    if (/retail|\bshop\b|public house|\bpub\b|restaurant|nightclub|industrial|warehouse/i.test(t) && !homes) return 'Retail';
     if (/hmo/i.test(t)) return 'HMO';
     if (/development|conversion|building plot/i.test(t)) return 'Development';
     if (/portfolio|resi block|block of|apartment block|\d+\s+flats\b|\d+\s+apartments\b/i.test(t)) return 'Resi block';
@@ -133,7 +167,7 @@
       rent: row.rent_pa,
       url: row.url || '',
       source: row.auctioneer || 'Auction catalogue',
-      subArea: row.sub_area || '',
+      subArea: row.sub_area || townOf(row),
       rentWords: row.rent_text || '',
       rentKind: row.rent_basis || '',
       priceKind: basisPrice
@@ -151,9 +185,11 @@
     const review = outlier(d.pct);
     const qualified = passing && basisPrice === 'sold';
     const verified = row.verified === true && qualified;
-    const average = qualified && (!review || verified);
+    const commercial = klass === 'Office' || klass === 'Retail';
+    const average = !commercial && qualified && (!review || verified);
     let why = '';
-    if (!qualified) why = 'Unverified. An average uses only passing rent and a completed sold price.';
+    if (commercial) why = 'Kept out. Office and retail comps are not in the residential averages.';
+    else if (!qualified) why = 'Unverified. An average uses only passing rent and a completed sold price.';
     else if (review && !verified) why = 'Review. The derived NIY is outside 3% to 12% and has not been verified, so it is kept out of the average.';
     return Object.assign(base, {
       basis: qualified ? 'derived' : 'unverified',
@@ -176,6 +212,7 @@
       url: row.url || '',
       source: row.source || '',
       quote: row.quote_status || '',
+      subArea: townOf({ city: row.city, address: row.location, sub_area: row.sub_area }),
       inFile: row.in_average !== false && row.yield_kind !== 'agent_view' && row.set_id !== 'agent-view'
     };
     if (row.yield_kind === 'agent_view' || row.set_id === 'agent-view') {
@@ -191,9 +228,11 @@
       const review = outlier(Number(row.yield_pct));
       const conflict = /disagree|not used in an average|not averaged|counted twice|left out of the average/i.test(row.notes || '');
       const verified = row.verified === true && sold;
-      const average = sold && !conflict && (!review || verified);
+      const commercial = klass === 'Office' || klass === 'Retail';
+      const average = !commercial && row.in_average !== false && sold && !conflict && (!review || verified);
       let why = '';
-      if (!sold) why = 'Unverified. The figure is an asking quote, not a completed sale.';
+      if (commercial) why = 'Kept out. Office and retail comps are not in the residential averages.';
+      else if (!sold) why = 'Unverified. The figure is an asking quote, not a completed sale.';
       else if (conflict) why = 'Kept out. The notes say this figure double-counts a building or disagrees with another source.';
       else if (review && !verified) why = 'Review. Published NIY is outside 3% to 12% and is not verified for the average.';
       return Object.assign(base, {
@@ -242,7 +281,7 @@
     });
     const out = [];
     AREAS.forEach(function (city) {
-      CLASSES.forEach(function (asset) {
+      RESIDENTIAL.forEach(function (asset) {
         const rows = usable.filter(function (c) { return c.city === city && c.asset === asset; });
         const stat = summarise(rows);
         out.push({
@@ -260,7 +299,6 @@
   function hintAsset(state) {
     const blob = [state && state.name, state && state.tenant, state && state.prefill_note, state && state.pc].join(' ');
     const units = (state && state.rows || []).reduce(function (n, r) { return n + (Number(r.units) || 0); }, 0);
-    if (/office/i.test(blob)) return 'Office';
     if (/hmo/i.test(blob)) return 'HMO';
     if (/mixed/i.test(blob)) return 'Mixed-use';
     if (/development|conversion/i.test(blob)) return 'Development';
@@ -302,6 +340,9 @@
     FEE: FEE,
     AREAS: AREAS,
     CLASSES: CLASSES,
+    RESIDENTIAL: RESIDENTIAL,
+    areaLabel: areaLabel,
+    townOf: townOf,
     derive: derive,
     costs: costs,
     assetClass: assetClass,

@@ -5,7 +5,7 @@
   const TYPES = ['All', 'Blocks', 'Houses', 'Flats', 'HMO', 'Portfolios', 'Mixed-use', 'Development'];
   const STATUSES = ['upcoming', 'sold', 'unsold', 'withdrawn'];
   const MAX_AGE = 48 * 60 * 60 * 1000;
-  const state = { town: '', type: 'All', status: 'upcoming', sort: 'date', lots: null, coverage: null, error: '', coverageError: '', loading: false };
+  const state = { town: '', type: 'All', status: 'upcoming', sort: 'grade', lots: null, coverage: null, error: '', coverageError: '', loading: false };
   const escape = v => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function url(v) { try { const u = new URL(v); return /^https?:$/.test(u.protocol) ? u.href : ''; } catch (_) { return ''; } }
   function link(u, label) { const safe = url(u); return safe ? '<a href="'+escape(safe)+'" target="_blank" rel="noopener noreferrer">'+escape(label)+'</a>' : '<span>'+escape(label)+' (link unavailable)</span>'; }
@@ -28,7 +28,7 @@
       else if (s.sort === 'price-desc') d = number(b.guide_price, -Infinity) - number(a.guide_price, -Infinity);
       else if (s.sort === 'sold-desc') d = number(b.sold_price, -Infinity) - number(a.sold_price, -Infinity);
       else if (s.sort === 'updated') d = (stamp(b.scraped_at) || 0) - (stamp(a.scraped_at) || 0);
-      else if (s.sort === 'grade') { const rank = g => ({A:0,B:1,C:2})[g] ?? 3; d = rank(grade(a)) - rank(grade(b)); }
+      else if (s.sort === 'grade') { const rank = g => ({A:0,B:1,C:2})[g] ?? 3; d = rank(grade(a)) - rank(grade(b)); if (!d) { const aDate=stamp(a.auction_date), bDate=stamp(b.auction_date); d = aDate === null ? (bDate === null ? 0 : 1) : bDate === null ? -1 : s.status === 'sold' ? bDate-aDate : aDate-bDate; } }
       else { const aDate=stamp(a.auction_date), bDate=stamp(b.auction_date); d = aDate === null ? (bDate === null ? 0 : 1) : bDate === null ? -1 : s.status === 'sold' ? bDate-aDate : aDate-bDate; }
       return (Number.isFinite(d) && d !== 0 ? d : d === Infinity ? 1 : d === -Infinity ? -1 : 0) || String(a.address || a.title || '').localeCompare(String(b.address || b.title || ''));
     });
@@ -78,7 +78,7 @@
   const api = {start, refresh:load, town, type, grade, filtered, stale}; window.lcAuctions=api;
   function boot() {
     const root=document.getElementById('auctions_body');if(!root)return;
-    root.addEventListener('click', e => {const b=e.target.closest('button');if(!b)return;if(b.dataset.aqStatus){state.status=b.dataset.aqStatus;render();}if(b.dataset.aqAction === 'refresh')load();if(b.dataset.aqAction === 'reset'){Object.assign(state,{town:'',type:'All',status:'all',sort:'date'});render();}});
+    root.addEventListener('click', e => {const b=e.target.closest('button');if(!b)return;if(b.dataset.aqStatus){state.status=b.dataset.aqStatus;render();}if(b.dataset.aqAction === 'refresh')load();if(b.dataset.aqAction === 'reset'){Object.assign(state,{town:'',type:'All',status:'all',sort:'grade'});render();}});
     root.addEventListener('change',e => {const key=e.target.dataset.aqFilter;if(key && e.target.value !== ''){state[key]=e.target.value;render();}else if(key === 'town'){state.town='';render();}});
     // Laurito's shared chrome contains old parked copy. Correct only that exact dated copy, not other modules.
     const footer=document.querySelector('footer.lc-note');if(footer)footer.innerHTML=footer.innerHTML.replace('Edinburgh is parked.','Edinburgh is included where source data is loaded; missing data is not zero.').replace('Focus: Manchester, Cheltenham, Bristol, and','Focus: Manchester, Cheltenham, Bristol and Edinburgh, and');

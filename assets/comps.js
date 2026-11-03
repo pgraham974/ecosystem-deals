@@ -317,7 +317,7 @@
       const citySel = document.getElementById('comp_city');
       Object.keys(state.summary.places).forEach(function (name) {
         const o = document.createElement('option');
-        o.value = name; o.textContent = name;
+        o.value = name; o.textContent = name === 'Manchester' ? 'Greater Manchester' : name;
         citySel.appendChild(o);
       });
       fillYears();

@@ -21,7 +21,7 @@
   const COPY = {
     assets: ['Find', 'Where to look', 'Manchester, Cheltenham, Bristol and Edinburgh. Open a town, then a lead, then a deal.'],
     distress: ['Leads', 'Who has to sell', 'A is a live insolvency. B is a lender or receiver sale. C is a watchlist, not a forced sale.'],
-    sales: ['Leads', 'For sale now', 'Checked listings only. An empty list is not proof that nothing is for sale.'],
+    sales: ['More', 'For sale now', 'The live residential auction feed. An empty list is not proof that nothing is for sale.'],
     deal: ['Deal', 'The decision', 'Rent, operating income, the NIY you are using, the maximum bid, and the return.'],
     comps: ['Comps', 'What sold nearby', 'Land Registry prices for this town. A yield is shown only when the same lot states rent and price.'],
     map: ['Find', 'Map', 'One town at a time. Colour is a screen, not a valuation.'],
@@ -66,6 +66,7 @@
       if (!btn || !bar.contains(btn)) return;
       e.preventDefault();
       closeMore();
+      window.lcUserNav = true;
       const next = btn.getAttribute('data-v');
       if (next !== 'auctions' && location.hash === '#auctions') history.replaceState(null, '', location.pathname + location.search);
       if (typeof viewMode === 'function') viewMode(next);
@@ -131,7 +132,7 @@
     if (!sites.length) return [];
     return towns.map(function (t) {
       return {
-        n: sites.filter(function (s) { return s.city === t[0] && (s.kind === 'd' || s.kind === 'lot'); }).length,
+        n: sites.filter(function (s) { return cityKey(s.city) === cityKey(t[0]) && (s.kind === 'd' || s.kind === 'lot' || s.kind === 'pre' || s.kind === 's'); }).length,
         l: t[1] + ' A/B'
       };
     });
@@ -154,7 +155,7 @@
     ];
   }
 
-  const YIELD = { Manchester: '…', Cheltenham: '…', Bristol: '…', Edinburgh: 'Not loaded' };
+  const YIELD = { Manchester: '…', Cheltenham: '…', Bristol: '…', Edinburgh: '…' };
   let dealStep = 0;
 
   function compact(n) {
@@ -175,26 +176,47 @@
     return v.toFixed(1) + '%';
   }
 
+  function cityKey(city) {
+    const t = String(city || '');
+    if (/edinburgh/i.test(t)) return 'Edinburgh';
+    if (/bristol/i.test(t)) return 'Bristol';
+    if (/cheltenham|gloucester/i.test(t)) return 'Cheltenham';
+    if (/manchester|salford|bolton|stockport|oldham|bury|wigan|trafford/i.test(t)) return 'Manchester';
+    return t;
+  }
+
   function loadYields() {
-    fetch('comps/area-yields.json').then(function (r) { return r.json(); }).then(function (data) {
-      function mean(city, setId) {
-        const rows = (data.rows || []).filter(function (row) { return row.city === city && row.set_id === setId && row.in_average; });
-        if (rows.length < 2) return null;
-        return rows.reduce(function (sum, row) { return sum + Number(row.yield_pct); }, 0) / rows.length;
-      }
-      const sold = mean('Manchester', 'manchester-office-sold');
-      const asking = mean('Cheltenham', 'cheltenham-office-asking');
-      YIELD.Manchester = sold ? sold.toFixed(1) + '% sold' : 'No sold average';
-      YIELD.Cheltenham = asking ? asking.toFixed(1) + '% asking' : 'No asking average';
-      YIELD.Bristol = '9% asking, one lot';
+    Promise.all([
+      fetch('comps/area-yields.json').then(function (r) { return r.json(); }),
+      fetch('comps/yields.json').then(function (r) { return r.json(); })
+    ]).then(function (pair) {
+      if (!window.lcNiy) return;
+      const comps = window.lcNiy.book(pair[0], pair[1]);
+      const avgs = window.lcNiy.averages(comps);
+      ['Manchester', 'Cheltenham', 'Bristol', 'Edinburgh'].forEach(function (city) {
+        const rows = avgs.filter(function (row) { return row.city === city && window.lcNiy.usableAverage(row); });
+        rows.sort(function (a, b) { return b.stat.n - a.stat.n; });
+        const best = rows[0];
+        YIELD[city] = best
+          ? best.stat.mean.toFixed(1) + '% residential · n=' + best.stat.n
+          : 'No residential average with 3 or more comps';
+      });
       if (document.body.classList.contains('ios-find')) paintFind();
-    }).catch(function () {});
+    }).catch(function () {
+      ['Manchester', 'Cheltenham', 'Bristol', 'Edinburgh'].forEach(function (city) {
+        if (YIELD[city] === '…') YIELD[city] = 'No residential average with 3 or more comps';
+      });
+      if (document.body.classList.contains('ios-find')) paintFind();
+    });
   }
 
   function leadCount(city) {
     const sites = (window.DM && DM.sites) || [];
     if (!sites.length) return null;
-    return sites.filter(function (s) { return s.city === city && (s.kind === 'd' || s.kind === 'lot'); }).length;
+    const want = cityKey(city);
+    return sites.filter(function (s) {
+      return cityKey(s.city) === want && (s.kind === 'd' || s.kind === 'lot' || s.kind === 'pre' || s.kind === 's');
+    }).length;
   }
 
   function openCity(city) {
@@ -213,7 +235,7 @@
     host.innerHTML = '<p class="lc-kicker">Find</p><h1>Choose a town</h1><p class="lc-purpose">Tap a town to see who has to sell there.</p><div class="ios-cities">' +
       towns.map(function (t) {
         const n = leadCount(t[0]);
-        return '<button type="button" class="ios-city" data-city="' + esc(t[0]) + '"><span class="ios-city-name">' + esc(t[1]) + '</span><span class="ios-city-meta">' + (n == null ? 'Leads' : n + ' lead' + (n === 1 ? '' : 's')) + '</span><span class="ios-city-yield">' + esc(YIELD[t[1]] || '') + '</span></button>';
+        return '<button type="button" class="ios-city" data-city="' + esc(t[0]) + '"><span class="ios-city-name">' + esc(t[1] === 'Manchester' ? 'Greater Manchester' : t[1]) + '</span><span class="ios-city-meta">' + (n == null ? 'A/B/C leads' : n + ' A/B/C lead' + (n === 1 ? '' : 's')) + '</span><span class="ios-city-yield">' + esc(YIELD[t[1]] || '') + '</span></button>';
       }).join('') + '</div><button type="button" class="ios-text" id="lc_details">' + (document.body.classList.contains('ios-details') ? 'Hide details' : 'Details') + '</button>';
     host.querySelectorAll('.ios-city').forEach(function (btn) {
       btn.onclick = function () { openCity(btn.getAttribute('data-city')); };
@@ -664,7 +686,8 @@
   });
   const dealBody = document.getElementById('deal_body');
   if (dealBody) watch.observe(dealBody, { childList: true, subtree: true });
-  setTimeout(function () {
+    setTimeout(function () {
+    if (window.lcUserNav) return;
     if (!(window.DM && DM.sites && DM.sites.length) && typeof dmStart === 'function') {
       try { dmStart(); } catch (e) {}
       const view = document.getElementById('distress_view');

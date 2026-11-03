@@ -2,6 +2,7 @@
  * Transport MUST enforce robots, identified UA, crawl delay and block handling.
  * Public access is not a commercial reuse licence; no affirmative licence located.
  */
+import { instructionEvidence } from './core.mjs';
 const POLICY = 'Policy caveat: public factual metadata only; no published automation-specific/reuse restriction located in audit, but not licensed for reuse.';
 function decode(s = '') {
   return String(s).replace(/&(#x[\da-f]+|#\d+|pound|amp|nbsp|quot|apos|lt|gt);/gi, (a, b) => {
@@ -95,7 +96,7 @@ function detail(html, seed) {
   const saleHeading=all.find(n=>n.tag==='span'&&/^For Sale By Auction\s*\|/i.test(content(n))&&content(n).length<140);
   const evidence=[guide,...headerLis.map(content),saleHeading?content(saleHeading):''].filter(Boolean).join(' | ');
   const explicit=status(evidence), sold=evidence.match(/\bSold for\s*:?\s*(£[\d,.]+)/i);
-  return {address,postcode:postcode(address),guide_price:money(guide),guide_price_text:guide||null,auction_date:date,status:explicit,sold_price:sold?money(sold[1]):null,type,opens_date:dateISO(opens||''),opens_only:!!opens&&!end&&!dateNode&&!closingDate};
+  return {address,postcode:postcode(address),guide_price:money(guide),guide_price_text:guide||null,auction_date:date,status:explicit,sold_price:sold?money(sold[1]):null,type,opens_date:dateISO(opens||''),opens_only:!!opens&&!end&&!dateNode&&!closingDate,sale_by:instructionEvidence(html)};
 }
 /** Return partial observations. Null/ambiguous statuses are deliberately retained for parent validation. */
 export async function collect({get,source,now}) {
@@ -159,7 +160,7 @@ export async function collect({get,source,now}) {
     const finalGuide=historical?seed.guide_price:(d?.guide_price??seed.guide_price);
     if(!historical&&!d?.auction_date)err(`Current auction date unverified ${seed.source_url}`);
     if(d?.opens_only)err(`Only bidding-opens date public in static HTML ${seed.source_url}; auction_date left null rather than treating an opening date as the auction end.`);
-    const lot={title:d?.address||seed.address,address:d?.address||seed.address,postcode:d?.postcode||postcode(seed.address),lot_type:seed.type||d?.type||sub,residential_subtype:sub,guide_price:finalGuide,guide_price_text:historical?seed.guide_price_text:(d?.guide_price_text||seed.guide_price_text),auction_date:historical?seed.auction_date:(d?.auction_date||null),status:finalStatus||null,sold_price:historical?seed.sold_price:(d?.sold_price??null),source_url:seed.source_url,source:source.name||source.id,scraped_at:stamp,grade:'',grade_evidence:`${verification}; factual ${seed.kind} metadata from ${seed.entry}; policy caveat: not licensed`};
+    const lot={title:d?.address||seed.address,address:d?.address||seed.address,postcode:d?.postcode||postcode(seed.address),lot_type:seed.type||d?.type||sub,residential_subtype:sub,guide_price:finalGuide,guide_price_text:historical?seed.guide_price_text:(d?.guide_price_text||seed.guide_price_text),auction_date:historical?seed.auction_date:(d?.auction_date||null),status:finalStatus||null,sold_price:historical?seed.sold_price:(d?.sold_price??null),source_url:seed.source_url,source:source.name||source.id,scraped_at:stamp,grade:'',forced_sale_evidence:d?.sale_by||'',forced_sale_evidence_url:d?.sale_by?seed.source_url:''};
     result.lots.push(lot);
   }
   if(unverified)err(`PARTIAL: max_details=${maxDetails} reached; ${unverified} residential/unknown candidates not detail-verified.`);
