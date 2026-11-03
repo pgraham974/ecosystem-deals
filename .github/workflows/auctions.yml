@@ -59,7 +59,7 @@ jobs:
           node --check assets/auctions.js
 
   collect:
-    if: github.event_name != 'pull_request' && needs.test.outputs.refresh == 'true'
+    if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch && needs.test.outputs.refresh == 'true'
     needs: test
     runs-on: ubuntu-latest
     timeout-minutes: 40
@@ -87,12 +87,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/auctions/
-          if ! git diff --cached --quiet; then
-            git commit -m 'data: refresh live residential auctions and coverage'
-            # Refuse a stale-base push rather than overwrite concurrent human changes.
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          fi
+          node scripts/auctions/publish.mjs
       - name: Publish readable coverage in run summary
         if: always()
         run: cat data/auctions/coverage.md >> "$GITHUB_STEP_SUMMARY"
