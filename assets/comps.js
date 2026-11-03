@@ -231,14 +231,14 @@
     }
     const rows = filteredSales(state.sales[slug]);
     state.lastFilter = rows;
-    document.getElementById('comp_sales_note').textContent = rows.length + ' standard existing-home sales in this filter. The table shows the latest 200. The CSV is the full filter.';
+    document.getElementById('comp_sales_note').textContent = rows.length + ' standard existing-home sales in this filter. Every one is NIY unavailable: Price Paid does not state the rent, so these rows are excluded from the area averages. The table shows the latest 200.';
     if (!render) return rows;
     const shown = rows.slice().sort(function (a, b) { return b.date.localeCompare(a.date); }).slice(0, 200);
-    document.getElementById('comp_sales').innerHTML = '<div class="scroll" style="max-height:420px"><table><thead><tr><th>Date</th><th class="l">Address</th><th>Postcode</th><th>Type</th><th>Tenure</th><th>Price</th><th></th></tr></thead><tbody>' +
+    document.getElementById('comp_sales').innerHTML = '<div class="scroll" style="max-height:420px"><table><thead><tr><th>Date</th><th class="l">Address</th><th>Postcode</th><th>Type</th><th>Tenure</th><th>Price</th><th>NIY</th><th class="l">Basis</th><th></th></tr></thead><tbody>' +
       shown.map(function (r) {
         const addr = [r.saon, r.paon, r.street].filter(Boolean).join(', ');
         const href = 'https://landregistry.data.gov.uk/data/ppi/transaction/' + encodeURIComponent(r.id) + '/current';
-        return '<tr><td>' + esc(r.date) + '</td><td class="l">' + esc(addr) + '</td><td>' + esc(r.postcode) + '</td><td>' + esc(TYPE_LABEL[r.type] || r.type) + '</td><td>' + esc(r.tenure) + '</td><td>' + money(r.price) + '</td><td><a href="' + href + '" target="_blank" rel="noopener">Land Registry</a></td></tr>';
+        return '<tr><td>' + esc(r.date) + '</td><td class="l">' + esc(addr) + '</td><td>' + esc(r.postcode) + '</td><td>' + esc(TYPE_LABEL[r.type] || r.type) + '</td><td>' + esc(r.tenure) + '</td><td>' + money(r.price) + '</td><td>NIY unavailable</td><td class="l">Unavailable. Land Registry does not publish the rent, so none is inferred.</td><td><a href="' + href + '" target="_blank" rel="noopener">Land Registry</a></td></tr>';
       }).join('') + '</tbody></table></div>';
     return rows;
   }
@@ -289,11 +289,14 @@
       if (state.level === 'district') return pc.split(' ')[0] === area;
       return sectorOf(pc) === area;
     });
-    host.innerHTML = '<h3>Yield evidence: price and income on the same lot</h3><p class="foot">' + esc(state.yields.rule) + '</p>' +
-      (matched.length ? '<div class="scroll" style="max-height:360px"><table><thead><tr><th>Sold</th><th class="l">Lot</th><th>Price</th><th>Rent / year</th><th>Gross</th><th>Basis</th></tr></thead><tbody>' +
+    const niy = window.lcNiy;
+    host.innerHTML = '<h3>Yield evidence: NIY on the same lot</h3><p class="foot">Where the auctioneer did not print an NIY, it is derived from the rent and price stated on that lot: rent ÷ (price + SDLT or LBTT + 1.8% fees). A missing rent is NIY unavailable and is left out of the averages. ONS rent and LHA are not used.</p>' +
+      (matched.length ? '<div class="scroll" style="max-height:420px"><table><thead><tr><th>Sold</th><th class="l">Lot</th><th>Price</th><th>Rent / year</th><th>NIY</th><th class="l">Basis</th></tr></thead><tbody>' +
         matched.map(function (r) {
-          return '<tr><td>' + esc(r.sold_date || 'Unknown') + '</td><td class="l"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.address) + '</a><div class="foot">' + esc(r.postcode || '') + ' · ' + esc(r.auctioneer || '') + '</div></td><td>' + money(r.sold_price) + '</td><td>' + money(r.rent_pa) + '</td><td>' + (r.gross_yield * 100).toFixed(1) + '%</td><td>' + esc(r.rent_basis) + '</td></tr>';
-        }).join('') + '</tbody></table></div><p class="foot">' + matched.length + ' lot' + (matched.length === 1 ? '' : 's') + ' in this cut. ' + (matched.length < 5 ? 'Fewer than 5, so this is not a sector yield.' : 'You may read these together, but they are still lot evidence, not an index.') + '</p>' : '<p>No lot in this cut states both a sold price and a rent. No yield is inferred from ONS rent or from LHA.</p>');
+          const row = niy ? niy.fromAuction(r) : { pct: null, basis: 'unavailable', note: 'NIY unavailable.' };
+          const shown = row.pct == null ? 'NIY unavailable' : row.pct.toFixed(2) + '%' + (row.review ? ' · review' : '');
+          return '<tr><td>' + esc(r.sold_date || 'Unknown') + '</td><td class="l"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.address) + '</a><div class="foot">' + esc(r.postcode || '') + ' · ' + esc(r.auctioneer || '') + ' · ' + esc(niy ? niy.assetClass(r.type) : r.type) + '</div></td><td>' + money(r.sold_price || r.guide_price) + '</td><td>' + money(r.rent_pa) + '</td><td>' + shown + '</td><td class="l">' + esc(row.basis) + '. ' + esc(row.note) + '</td></tr>';
+        }).join('') + '</tbody></table></div>' : '<p>No lot in this cut. No yield is inferred from ONS rent or from LHA.</p>');
   }
 
   async function renderComps() {

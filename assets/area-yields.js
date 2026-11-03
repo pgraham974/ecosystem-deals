@@ -128,26 +128,58 @@
       }).join('') + '</tbody></table></div>';
   }
 
+  function niyBook() {
+    if (!window.lcNiy) return [];
+    return window.lcNiy.book(cache.evidence, cache.auctions);
+  }
+
+  function averageTable(rows) {
+    const areas = (window.lcNiy && window.lcNiy.AREAS) || [];
+    const body = areas.map(function (city) {
+      const mine = rows.filter(function (r) { return r.city === city && r.stat; });
+      if (!mine.length) return '<tr><td class="l">' + esc(city) + '</td><td class="l" colspan="6">No NIY comps. Nothing was estimated.</td></tr>';
+      return mine.map(function (r) {
+        const s = r.stat;
+        const dates = (s.from || '—') + (s.to && s.to !== s.from ? ' to ' + s.to : '');
+        const low = s.n < 3 ? ' · low sample' : '';
+        return '<tr' + (s.n < 3 ? ' class="niy-low"' : '') + '><td class="l">' + esc(r.city) + '</td><td class="l">' + esc(r.asset) + low + '</td><td class="niy-mean"><b>' + pct(s.mean) + '</b> <span class="niy-n">n=' + s.n + '</span></td><td>' + pct(s.median) + '</td><td class="niy-mean"><span class="niy-n">n=' + s.n + '</span></td><td>' + pct(s.min) + ' – ' + pct(s.max) + '</td><td>' + esc(dates) + '</td></tr>';
+      }).join('');
+    }).join('');
+    return '<div class="scroll"><table class="niy-avg"><thead><tr><th class="l">Area</th><th class="l">Asset</th><th>Mean</th><th>Median</th><th>n</th><th>Range</th><th>Dates</th></tr></thead><tbody>' + body + '</tbody></table></div>';
+  }
+
   function drawPanel(city) {
     const host = document.getElementById('comp_area_yields');
     if (!host || !cache.evidence) return;
     const key = cityKey(city || 'Cheltenham');
-    const all = rowsFor(cache.evidence, cache.auctions);
-    const sets = setsForCity(all, key, null);
-    const agents = all.filter(function (r) { return r.city === key && r.yield_kind === 'agent_view'; });
-    const headlines = sets.map(function (set) {
-      if (!set.average) return '<p><b>' + esc(set.asset) + '</b> ' + esc(set.status) + '. ' + set.members.length + ' row' + (set.members.length === 1 ? '' : 's') + '. Fewer than two comparable rows, so there is no average.</p>';
-      const kind = set.kind === 'gross' ? ' This is a gross yield, not an NIY.' : '';
-      const thin = set.average.thin ? ' Thin sample (fewer than 5).' : '';
-      const asking = set.used.every(function (r) { return r.quote_status === 'asking'; }) ? ' All of these are asking quotes, not completed sales.' : '';
-      return '<p><b>' + esc(set.asset) + '</b> unweighted mean ' + pct(set.average.mean) + ' from ' + set.average.n + ' rows.' + esc(thin + asking + kind) + '</p>';
+    const comps = niyBook();
+    const counts = window.lcNiy ? window.lcNiy.counts(comps) : { published: 0, derived: 0, unavailable: 0 };
+    const avgs = window.lcNiy ? window.lcNiy.averages(comps) : [];
+    const here = comps.filter(function (r) { return r.city === key; });
+    const lines = here.map(function (r) {
+      const link = r.url ? '<a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.source) + '</a>' : esc(r.source);
+      const niy = r.pct == null ? 'NIY unavailable' : pct(r.pct) + (r.review ? ' · review' : '');
+      const where = r.subArea && r.subArea !== r.city ? esc(r.address) + ' <span class="foot">' + esc(r.subArea) + '</span>' : esc(r.address);
+      return '<tr><td class="l">' + where + '</td><td class="l">' + esc(r.asset) + '</td><td>' + niy + '</td><td>' + esc(r.basis) + '</td><td>' + esc(r.date || '—') + '</td><td class="l">' + link + '<div class="foot">' + esc(r.note) + (r.average === false ? ' Not in an average.' : '') + '</div></td></tr>';
     }).join('');
-    const cheltenhamGap = key === 'Cheltenham' && !(cache.auctions.rows || []).some(function (r) { return r.city === 'Cheltenham'; })
-      ? '<p class="foot">No Cheltenham auction lot in this copy states both a sold price and a rent, so there is no Cheltenham residential gross yield.</p>' : '';
-    host.innerHTML = '<h2>Yields by place</h2><p class="lead">' + esc(key) + ' only. Manchester, Cheltenham and Bristol are kept apart. ' + esc(cache.evidence.rule) + '</p>' +
-      headlines + cheltenhamGap + rowTable(all.filter(function (r) { return r.city === key; })) +
-      (agents.length ? '' : '') +
-      '<p class="foot">Residential rows come from auction lots already on this site where the same lot states a price and a rent. Office rows are the published sources named in the table. Savills’ prime and secondary yields, where shown, are that firm’s market view and are not averaged.</p>';
+    const tally = {};
+    ((window.lcNiy && window.lcNiy.AREAS) || []).forEach(function (name) { tally[name] = { verified: 0, inAverage: 0 }; });
+    comps.forEach(function (r) {
+      if (!tally[r.city]) return;
+      if (r.basis === 'derived' || (r.basis === 'published' && r.average)) tally[r.city].verified += 1;
+      if (r.average) tally[r.city].inAverage += 1;
+    });
+    const tallyHtml = '<div class="niy-area-counts">' + Object.keys(tally).map(function (name) {
+      const t = tally[name];
+      return '<div><b>n=' + t.verified + '</b>' + esc(name) + '<span class="foot">' + t.inAverage + ' in the 3–12% averages · target 100</span></div>';
+    }).join('') + '</div>';
+    host.innerHTML = '<h2>NIY by area and asset</h2><p class="lead">Each average is shown with its sample size. A verified comp has a passing rent and a completed sold price on the same source. The target is 100 verified comps in each area, including labelled surrounding towns. Nothing is estimated.</p>' +
+      tallyHtml +
+      '<p class="foot">In this evidence file: ' + (counts.published || 0) + ' published, ' + (counts.derived || 0) + ' derived from passing rent and a sold price, ' + (counts.unverified || 0) + ' unverified (kept out), ' + (counts.unavailable || 0) + ' unavailable, ' + (counts.review || 0) + ' flagged because the NIY is outside 3% to 12%. ' + (counts.inAverage || 0) + ' comps go into an average. Averages with fewer than 3 comps are marked low sample and are not in the deal picker.</p>' +
+      averageTable(avgs) +
+      '<h3>' + esc(key) + ' comps</h3>' +
+      (lines ? '<div class="scroll"><table><thead><tr><th class="l">Comp</th><th class="l">Asset</th><th>NIY</th><th>Basis</th><th>Date</th><th class="l">Source</th></tr></thead><tbody>' + lines + '</tbody></table></div>' : '<p>No comp loaded for ' + esc(key) + '.</p>') +
+      '<p class="foot">Agent market views are shown with their published figure and are not in the averages. Land Registry sales have no rent, so their NIY is unavailable and they are not in this table.</p>';
   }
 
   function draw() {
@@ -161,13 +193,14 @@
   }
 
   function applyAverage(set, state) {
-    if (!set || !set.average) return;
-    state.entryYield = set.average.mean;
+    const mean = set && (set.stat ? set.stat.mean : (set.average && set.average.mean));
+    if (mean == null) return;
+    state.entryYield = mean;
     state.niyMode = 'average';
     state.niySet = set.id;
     state.niyUserOverride = false;
     const input = document.getElementById('uw_entryYield');
-    if (input) input.value = String(set.average.mean);
+    if (input) input.value = String(mean);
   }
 
   function mountDeal() {
@@ -185,45 +218,43 @@
     const box = document.getElementById('niy_box');
     const state = (typeof UW !== 'undefined' && UW.state) || null;
     if (!box || !state || !cache.evidence) return;
-    const city = cityKey(state.city);
-    const subject = isStJames(state) ? 'st-james-house' : '';
-    const sets = setsForCity(rowsFor(cache.evidence, cache.auctions), city, subject);
-    const chosenId = state.niySet && sets.some(function (s) { return s.id === state.niySet; }) ? state.niySet : (DEFAULT_SET[city] || (sets[0] && sets[0].id) || '');
-    const chosen = sets.filter(function (s) { return s.id === chosenId; })[0] || sets[0];
+    const comps = niyBook();
+    const rows = window.lcNiy ? window.lcNiy.averages(comps).filter(function (r) { return r.stat; }) : [];
+    const hinted = window.lcNiy ? window.lcNiy.pickId(comps, state) : '';
+    const chosenId = state.niySet && rows.some(function (r) { return r.id === state.niySet && r.stat.n >= 3; }) ? state.niySet : hinted;
+    const chosen = rows.filter(function (r) { return r.id === chosenId && r.stat.n >= 3; })[0];
     const mode = state.niyMode === 'average' ? 'average' : 'manual';
-    const quote = city === 'Cheltenham' ? subjectQuote() : null;
-    const avg = chosen && chosen.average;
-    let warning = '';
-    if (chosen && !avg) warning = 'This set has fewer than two comparable rows, so it is not an average. The rows are listed below. Type an NIY if you want a number in the model.';
-    else if (avg) {
-      warning = 'Unweighted mean of ' + avg.n + ' row' + (avg.n === 1 ? '' : 's') + (avg.thin ? '. Thin sample: fewer than 5.' : '.');
-      if (chosen.used.every(function (r) { return r.quote_status === 'asking'; })) warning += ' Every row is an asking quote, not a completed sale.';
-      if (chosen.kind === 'gross') warning += ' These are gross yields (rent ÷ price), not net initial yields. Putting a gross yield in the NIY box prices the deal as if costs, voids and management were nil.';
-      if (subject) warning += ' St James House is left out of this mean, because that quote belongs to the asset rather than the area.';
-    }
-    if (mode === 'average' && state.niyUserOverride) warning += ' You have typed over the mean. Reset to put the mean back.';
-    box.innerHTML = '<h3>Yield you want to buy at</h3><div class="ctl"><label><input type="radio" name="niy_mode" value="manual"' + (mode === 'manual' ? ' checked' : '') + '> Manual</label><label><input type="radio" name="niy_mode" value="average"' + (mode === 'average' ? ' checked' : '') + '> Use area average</label></div>' +
-      '<label class="dlf"><small>Evidence for ' + esc(city || 'this deal') + '</small><select id="niy_set">' +
-      sets.map(function (s) {
-        const tag = s.average ? 'mean ' + pct(s.average.mean) + ' (n=' + s.average.n + ')' : 'no average (n=' + s.used.length + ')';
-        return '<option value="' + esc(s.id) + '"' + (chosen && s.id === chosen.id ? ' selected' : '') + '>' + esc(s.asset) + ' — ' + esc(s.status) + ' — ' + tag + '</option>';
+    const quote = cityKey(state.city) === 'Cheltenham' ? subjectQuote() : null;
+    const avg = chosen && chosen.stat;
+    const matchNote = window.lcNiy && window.lcNiy.hintAsset(state)
+      ? ' Pre-selected from the deal’s town and type (' + window.lcNiy.hintAsset(state) + ').'
+      : ' No asset type is named on the deal, so the largest sample in the town is pre-selected.';
+    const inUse = chosen && avg
+      ? chosen.city + ' · ' + chosen.asset + ' · ' + pct(avg.mean) + ' (n=' + avg.n + ') · median ' + pct(avg.median)
+      : 'No average selected';
+    box.innerHTML = '<h3>Yield you want to buy at</h3><div class="ctl"><label><input type="radio" name="niy_mode" value="manual"' + (mode === 'manual' ? ' checked' : '') + '> Enter a figure</label><label><input type="radio" name="niy_mode" value="average"' + (mode === 'average' ? ' checked' : '') + '> Use an area average</label></div>' +
+      '<p class="niy-inuse"><b>In use:</b> ' + esc(mode === 'average' ? inUse : 'Your own figure') + '</p>' +
+      '<label class="dlf"><small>Every area and asset type</small><select id="niy_set">' +
+      (!chosen ? '<option value="" selected>No average with 3 or more comps for this town</option>' : '') +
+      rows.map(function (s) {
+        const low = s.stat.n < 3;
+        return '<option value="' + esc(s.id) + '"' + (low ? ' disabled' : '') + (chosen && s.id === chosen.id ? ' selected' : '') + '>' + esc(s.city) + ' · ' + esc(s.asset) + ' · ' + pct(s.stat.mean) + ' (n=' + s.stat.n + ')' + (low ? ' · low sample' : '') + '</option>';
       }).join('') + '</select></label>' +
-      (quote ? '<p><b>' + (subject ? 'Vendor quote on this asset. ' : 'Vendor quote on St James House, kept separate from the area average. ') + '</b>' + pct(quote.yield_pct) + ' NIY, asking, not a completed sale. Offers in excess of £20 million, purchaser’s costs assumed at 6.80%. <a href="' + esc(quote.url) + '" target="_blank" rel="noopener">Source</a>. The January 2021 sale of the same building was 7.5% NIY at £21.8 million. Neither figure is the area average.</p>' : '') +
-      '<p>' + esc(warning || 'Choose manual and the number in the NIY box is yours. 5.55% is only the model’s starting assumption.') + '</p>' +
-      (mode === 'average' && avg ? '<p><button class="btn sec" id="niy_reset" type="button">Reset to the ' + pct(avg.mean) + ' mean</button></p>' : '') +
-      (chosen ? rowTable(chosen.members.map(function (r) {
-        const copy = Object.assign({}, r);
-        if (subject && r.subject_id === subject) copy.notes = 'Left out of the area average while this deal is St James House. ' + r.notes;
-        return copy;
-      })) : '') +
-      '<p class="foot">Changing the NIY box after you choose the average keeps your figure and still shows the evidence.</p>';
+      '<p class="foot">' + esc(matchNote) + (avg && avg.n < 5 ? ' Thin sample.' : '') + '</p>' +
+      (quote ? '<p><b>' + (isStJames(state) ? 'Vendor quote on this asset. ' : 'Vendor quote on St James House, kept separate. ') + '</b>' + pct(quote.yield_pct) + ' published NIY, asking. <a href="' + esc(quote.url) + '" target="_blank" rel="noopener">Source</a>.</p>' : '') +
+      (mode === 'average' && avg ? '<p><button class="btn sec" id="niy_reset" type="button">Reset to the ' + pct(avg.mean) + ' mean (n=' + avg.n + ')</button></p>' : '') +
+      '<details class="ios-disc"><summary>Mean, median, n, range and dates</summary>' + averageTable(window.lcNiy ? window.lcNiy.averages(comps) : []) +
+      (chosen ? '<p class="foot">Comps in the selected average</p><ul>' + chosen.rows.map(function (r) {
+        return '<li>' + esc(r.address) + ' · ' + (r.pct == null ? 'NIY unavailable' : pct(r.pct)) + ' · ' + esc(r.basis) + '</li>';
+      }).join('') + '</ul>' : '') + '</details>' +
+      '<p class="foot">Changing the NIY box after you choose an average keeps your figure. The list still shows which average you picked.</p>';
     box.querySelectorAll('input[name="niy_mode"]').forEach(function (el) {
       el.onchange = function () {
         state.niyMode = el.value;
         state.niySet = (document.getElementById('niy_set') || {}).value || chosenId;
         if (el.value === 'average') {
-          const next = sets.filter(function (s) { return s.id === state.niySet; })[0];
-          if (next && next.average) applyAverage(next, state);
+          const next = rows.filter(function (s) { return s.id === state.niySet; })[0];
+          if (next && next.stat && next.stat.n >= 3) applyAverage(next, state);
         }
         if (typeof uwStore === 'function') uwStore();
         if (typeof uwUpdate === 'function') uwUpdate();
@@ -234,8 +265,8 @@
     if (sel) sel.onchange = function () {
       state.niySet = sel.value;
       if (state.niyMode === 'average') {
-        const next = sets.filter(function (s) { return s.id === sel.value; })[0];
-        if (next && next.average) applyAverage(next, state);
+        const next = rows.filter(function (s) { return s.id === sel.value; })[0];
+        if (next && next.stat && next.stat.n >= 3) applyAverage(next, state);
         else state.niyUserOverride = false;
       }
       if (typeof uwStore === 'function') uwStore();
@@ -256,11 +287,13 @@
       el.addEventListener('change', function () {
         const now = UW.state;
         if (!now) return;
-        const nextSets = setsForCity(rowsFor(cache.evidence, cache.auctions), now.city, isStJames(now) ? 'st-james-house' : '');
-        if (!nextSets.some(function (s) { return s.id === now.niySet; })) now.niySet = (DEFAULT_SET[cityKey(now.city)] || (nextSets[0] && nextSets[0].id) || '');
+        const compsNow = niyBook();
+        const nextId = window.lcNiy ? window.lcNiy.pickId(compsNow, now) : '';
+        const nextRows = window.lcNiy ? window.lcNiy.averages(compsNow).filter(function (r) { return r.stat; }) : [];
+        if (!nextRows.some(function (s) { return s.id === now.niySet; })) now.niySet = nextId;
         if (now.niyMode === 'average' && !now.niyUserOverride) {
-          const next = nextSets.filter(function (s) { return s.id === now.niySet; })[0];
-          if (next && next.average) applyAverage(next, now);
+          const next = nextRows.filter(function (s) { return s.id === now.niySet; })[0];
+          if (next && next.stat && next.stat.n >= 3) applyAverage(next, now);
         }
         paintDeal();
       });
@@ -274,9 +307,9 @@
     input.addEventListener('input', function () {
       const state = UW.state;
       if (!state || state.niyMode !== 'average') return;
-      const sets = setsForCity(rowsFor(cache.evidence, cache.auctions), state.city, isStJames(state) ? 'st-james-house' : '');
-      const chosen = sets.filter(function (s) { return s.id === state.niySet; })[0];
-      const mean = chosen && chosen.average && chosen.average.mean;
+      const rows = window.lcNiy ? window.lcNiy.averages(niyBook()).filter(function (r) { return r.stat; }) : [];
+      const chosen = rows.filter(function (s) { return s.id === state.niySet; })[0];
+      const mean = chosen && chosen.stat && chosen.stat.mean;
       state.niyUserOverride = mean == null || Number(input.value) !== mean;
     });
   }

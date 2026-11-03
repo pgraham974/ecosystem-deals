@@ -295,7 +295,8 @@
     const table = document.getElementById('comp_table');
     if (table && table.childElementCount) fold(table, 'Full table');
     fold(document.getElementById('comp_sales'), 'Full table');
-    fold(document.getElementById('comp_area_yields'), 'Evidence');
+    const yields = document.getElementById('comp_area_yields');
+    if (yields && yields.closest('details.lc-fold')) yields.closest('details.lc-fold').open = true;
     fold(document.getElementById('comp_rents'), 'Sources');
     fold(document.getElementById('comp_yields'), 'Evidence');
     const lead = document.querySelector('#comps_view .lead');

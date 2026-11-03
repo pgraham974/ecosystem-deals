@@ -342,6 +342,18 @@ body.ios-deal select{appearance:none;background-image:linear-gradient(45deg,tran
 .dm-kpi{background:#fff!important;color:var(--ink)!important;border:1px solid var(--line);border-radius:0!important}
 .dm-kpi b,.dm-kpi span{color:var(--ink)!important}
 #map_legend .sw{border-color:#c5d3df}
+.niy-avg{width:100%;border-collapse:collapse;font-size:15px}
+.niy-avg th,.niy-avg td{text-align:right;padding:12px 10px;border-bottom:1px solid #e6eef3}
+.niy-avg th:first-child,.niy-avg td:first-child,.niy-avg th:nth-child(2),.niy-avg td:nth-child(2){text-align:left}
+.niy-inuse{font-size:17px;margin:12px 0}
+.niy-low{color:#6a7782}
+.niy-n{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:#e7f2fa;color:#021726;font-weight:700;font-size:14px;letter-spacing:0}
+.niy-mean{white-space:nowrap}
+.niy-area-counts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+.niy-area-counts div{background:#f4f8fb;border-radius:12px;padding:10px 12px;min-width:140px}
+.niy-area-counts b{display:block;font-size:22px;line-height:1.1}
+#niy_set option:disabled{color:#8b95a1}
+#niy_set{min-height:44px;width:100%}
 .grade-legend{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:12px 4px 4px;font-size:15px}
 .grade-legend details{flex-basis:100%}
 .grade-legend summary{cursor:pointer;color:#3d4c59;min-height:44px;display:inline-flex;align-items:center}
