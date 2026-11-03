@@ -1,0 +1,4 @@
+Unit,Tenant,Rent PCM,Lease start,Lease end,Status,Service charge PCM,Other income PA
+Flat 1,Example tenant A,850,2024-06-01,2026-05-31,Let,40,0
+Flat 2,Example tenant B,900,2025-01-15,2026-01-14,Let,40,0
+Flat 3,,0,,,Vacant,0,0
